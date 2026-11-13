@@ -76,3 +76,21 @@ intermediate report versions are not part of the repository.
 ## Citation
 
 Citation metadata is provided in `CITATION.cff`.
+
+### Reference clinical study
+
+- Li, J., Huang, L., Liao, C., Liu, G., Tian, Y., and Chen, S. (2023).
+  [Two machine learning-based nomogram to predict risk and prognostic factors
+  for liver metastasis from pancreatic neuroendocrine tumors: a multicenter
+  study](https://doi.org/10.1186/s12885-023-10893-4). *BMC Cancer*, 23, 529.
+
+### TabPFN foundation papers
+
+- Hollmann, N., Müller, S., Eggensperger, K., and Hutter, F. (2023).
+  [TabPFN: A Transformer That Solves Small Tabular Classification Problems in a
+  Second](https://arxiv.org/abs/2207.01848). *International Conference on
+  Learning Representations (ICLR)*.
+- Hollmann, N., Müller, S., Purucker, L., Krishnakumar, A., Körfer, M., Hoo,
+  S. B., Schirrmeister, R. T., and Hutter, F. (2025).
+  [Accurate predictions on small data with a tabular foundation
+  model](https://doi.org/10.1038/s41586-024-08328-6). *Nature*, 637, 319–326.
