@@ -1,0 +1,25 @@
+term,coefficient,lambda_used,lambda_value,original_variable
+surgery_primaryYes,-2.2605541922111776,lambda.min,0.0034939556292543916,surgery_primary
+chemotherapyYes,1.9386939559780112,lambda.min,0.0034939556292543916,chemotherapy
+mets_brainYes,-1.781775725502224,lambda.min,0.0034939556292543916,mets_brain
+"histology_paperVipoma, malignant",1.2531668422459417,lambda.min,0.0034939556292543916,histology_paper
+n_stage_positiveN1,0.8010120221199318,lambda.min,0.0034939556292543916,n_stage_positive
+ajcc_tT1,-0.7953727958918189,lambda.min,0.0034939556292543916,ajcc_t
+mets_boneYes,0.793625610112034,lambda.min,0.0034939556292543916,mets_bone
+tumor_size_group>36 mm,0.7837110226338723,lambda.min,0.0034939556292543916,tumor_size_group
+grade3,0.7097784955736844,lambda.min,0.0034939556292543916,grade
+primary_site_groupTail of pancreas,0.6307369533082763,lambda.min,0.0034939556292543916,primary_site_group
+tumor_size_group26-36 mm,0.4394388525014812,lambda.min,0.0034939556292543916,tumor_size_group
+ajcc_tT3,0.38632503621144687,lambda.min,0.0034939556292543916,ajcc_t
+grade2,0.32618883276758853,lambda.min,0.0034939556292543916,grade
+"histology_paperNeuroendocrine carcinoma, NOS",0.2948914977988957,lambda.min,0.0034939556292543916,histology_paper
+primary_site_groupOthers,0.12761170206742803,lambda.min,0.0034939556292543916,primary_site_group
+marriedMarried,-0.11908073274360029,lambda.min,0.0034939556292543916,married
+radiotherapyYes,0.10535232732427134,lambda.min,0.0034939556292543916,radiotherapy
+raceAsian or Pacific Islander,0.09666803398755065,lambda.min,0.0034939556292543916,race
+"histology_paperInsulinoma, malignant",-0.07490132580465593,lambda.min,0.0034939556292543916,histology_paper
+raceBlack,-0.0393141581117213,lambda.min,0.0034939556292543916,race
+primary_site_groupBody of pancreas,-0.03084397685736725,lambda.min,0.0034939556292543916,primary_site_group
+histology_paperAtypical carcinoid tumor,0.01895052529035345,lambda.min,0.0034939556292543916,histology_paper
+sex_maleMale,-0.01675742146619124,lambda.min,0.0034939556292543916,sex_male
+age_at_diagnosis,-0.00959945915457276,lambda.min,0.0034939556292543916,age_at_diagnosis

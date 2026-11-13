@@ -1,0 +1,17 @@
+variable
+grade
+surgery_primary
+age_at_diagnosis
+surgery_lymph_node
+histology_prognostic_group
+chemotherapy
+n_stage_positive
+primary_site_group
+mets_lung
+race
+sex_male
+mets_bone
+mets_brain
+radiotherapy
+ajcc_t
+married

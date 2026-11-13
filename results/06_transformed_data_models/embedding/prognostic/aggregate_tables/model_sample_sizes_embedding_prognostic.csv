@@ -1,0 +1,7 @@
+"script","model_name","n_total","n_used","n_dropped"
+"00_setup","join_split",462,462,0
+"01_embedding_cox_model","embedding_ridge_cox",462,323,139
+"01_embedding_cox_model","tn_baseline",462,323,139
+"00_setup","join_split",462,462,0
+"01_embedding_cox_model","embedding_ridge_cox",462,323,139
+"01_embedding_cox_model","tn_baseline",462,323,139

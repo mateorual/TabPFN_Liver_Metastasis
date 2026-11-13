@@ -1,0 +1,9 @@
+# CPU-only; no GPU and no network access required.
+pandas>=2.3
+numpy>=1.26
+scikit-learn>=1.6
+scipy>=1.16
+statsmodels>=0.14
+lifelines>=0.30
+matplotlib>=3.10
+tabulate>=0.9

@@ -1,0 +1,7 @@
+"script","model_name","n_total","n_used","n_dropped"
+"00_setup","join_clinical_baseline",2672,2672,0
+"01_embedding_model","embedding_ridge_logistic",2672,2672,0
+"01_embedding_model","tnm_baseline",2672,2672,0
+"00_setup","join_clinical_baseline",2672,2672,0
+"01_embedding_model","embedding_ridge_logistic",2672,2672,0
+"01_embedding_model","tnm_baseline",2672,2672,0

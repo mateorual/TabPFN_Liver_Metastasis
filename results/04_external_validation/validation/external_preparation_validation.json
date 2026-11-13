@@ -1,0 +1,166 @@
+{
+  "run_id": "ukerl_ext_v2",
+  "stage": "preparation",
+  "status": "passed",
+  "n_checks": 22,
+  "n_passed": 22,
+  "checks": [
+    {
+      "check": "worksheet_identity",
+      "passed": true,
+      "detail": {
+        "sheet": "Tabelle1",
+        "sheet_names": [
+          "Tabelle1"
+        ]
+      }
+    },
+    {
+      "check": "row_and_column_counts",
+      "passed": true,
+      "detail": {
+        "n_rows": 30,
+        "n_columns": 21
+      }
+    },
+    {
+      "check": "unique_source_codes_and_pseudonyms",
+      "passed": true,
+      "detail": {
+        "n_codes": 30,
+        "n_unique_pseudonyms": 30
+      }
+    },
+    {
+      "check": "one_to_one_code_pseudonym_mapping",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "diagnostic_schema_and_order",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "prognostic_schema_and_order",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "reference_column_lists_match_seer_files",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "diagnostic_count_is_expected",
+      "passed": true,
+      "detail": {
+        "n": 30
+      }
+    },
+    {
+      "check": "prognostic_count_is_expected",
+      "passed": true,
+      "detail": {
+        "n": 11,
+        "note": "a change requires source-data review"
+      }
+    },
+    {
+      "check": "prognostic_subset_is_observed_mets_liver_1",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "no_source_row_duplication_or_loss",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "diagnostic_target_valid",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "prognostic_survival_outcome_valid",
+      "passed": true,
+      "detail": {
+        "n_zero_times": 0
+      }
+    },
+    {
+      "check": "no_unexpected_categories_vs_seer_training_vocabulary",
+      "passed": true,
+      "detail": {
+        "columns_with_unexpected": []
+      }
+    },
+    {
+      "check": "predictor_mapping_is_outcome_independent",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "tumor_size_bounds_without_invented_mm",
+      "passed": true,
+      "detail": {
+        "n_bound_entries": 4,
+        "n_ambiguous": 0
+      }
+    },
+    {
+      "check": "model_specific_complete_case_counts_recorded",
+      "passed": true,
+      "detail": {
+        "diagnostic:nomogram_figure": 29,
+        "diagnostic:paper_text": 29,
+        "diagnostic:pipeline_selected": 29,
+        "diagnostic:tnm_baseline": 29,
+        "prognostic:nomogram_figure": 11,
+        "prognostic:tn_baseline": 10,
+        "prognostic:text_screened": 10,
+        "prognostic:cox_aic_selected": 8,
+        "prognostic:rf_rfe_selected": 8,
+        "prognostic:pipeline_selected": 10
+      }
+    },
+    {
+      "check": "workbook_identity",
+      "passed": true,
+      "detail": {
+        "sha256": "b2a36bf63e76e159ec2bf5ba0b680e17f5fa2721cc2fb256e4a6f28608993672",
+        "metadata_only_change": false,
+        "cell_values_sha256": "b34c85ca89f213f2bfa622a4797d3a8afac37c87c63c2e6306aef33fdf74886a"
+      }
+    },
+    {
+      "check": "no_raw_codes_or_pseudonyms_in_public_preparation_tables",
+      "passed": true,
+      "detail": {
+        "offending_files": []
+      }
+    },
+    {
+      "check": "no_patient_level_rows_outside_local_only",
+      "passed": true,
+      "detail": {
+        "offending_files": []
+      }
+    },
+    {
+      "check": "source_workbook_byte_identical_after_run",
+      "passed": true,
+      "detail": {
+        "pre_sha256": "b2a36bf63e76e159ec2bf5ba0b680e17f5fa2721cc2fb256e4a6f28608993672",
+        "post_sha256": "b2a36bf63e76e159ec2bf5ba0b680e17f5fa2721cc2fb256e4a6f28608993672"
+      }
+    },
+    {
+      "check": "no_raw_codes_or_pseudonyms_in_any_public_module_file",
+      "passed": true,
+      "detail": {
+        "offending_files": []
+      }
+    }
+  ]
+}

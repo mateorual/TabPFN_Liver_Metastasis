@@ -1,0 +1,1296 @@
+task,block,model_id,representation,augmentation_size,model_seed,unit_id,fit_seconds,predict_seconds,wall_seconds,fit_semantics,n_context_or_training_rows,device,query_settings,ram_rss_mb_after,cuda_max_allocated_mb
+diagnostic,B,tabdpt,clinical,5000,20230529,repeat_03_fold_02,1.047,1.342,2.62,in_context: fit stores context; no weight update,7138,cuda,,4309.0,553.6
+diagnostic,B,mlp_clinical,clinical,10000,20230529,repeat_00_fold_03,10.813,0.003,11.01,gradient training (weights updated),12138,cuda,,1406.2,66.8
+prognostic,B,survivalpfn_native,clinical,15000,20230529,split_01,5.439,2.712,9.09,in_context: fit stores context; no weight update,15323,cuda,one call per outer-test split in test-ID order,4175.5,64.0
+diagnostic,B,tabdpt,clinical,0,20230529,repeat_00_fold_03,0.932,0.214,1.36,in_context: fit stores context; no weight update,2138,cuda,,4356.4,553.6
+diagnostic,B,tabdpt,clinical,15000,20230529,repeat_04_fold_04,1.051,7.38,8.7,in_context: fit stores context; no weight update,17138,cuda,,4319.3,828.5
+prognostic,B,random_survival_forest_or_fallback,clinical,10000,20230529,split_00,2.676,0.207,3.22,trained from scratch per fit,10323,cpu,,2916.8,64.0
+diagnostic,B,tabpfn_classifier,clinical,5000,20230529,repeat_02_fold_00,0.744,4.899,5.85,in_context: fit stores context; no weight update,7137,cuda,,2294.0,742.0
+diagnostic,B,regularized_logistic,clinical,15000,20230529,repeat_03_fold_04,0.177,0.002,0.35,trained from scratch per fit,17138,cpu,,1424.5,64.0
+diagnostic,B,tabdpt,clinical,15000,20230529,repeat_01_fold_04,1.027,7.355,8.64,in_context: fit stores context; no weight update,17138,cuda,,4318.6,828.5
+diagnostic,B,xgboost_or_histgb,clinical,1000,20230529,repeat_02_fold_00,0.17,0.001,0.3,trained from scratch per fit,3137,cpu,,1426.5,64.0
+diagnostic,B,mlp_clinical,clinical,0,20230531,repeat_02_fold_03,0.781,0.002,0.93,gradient training (weights updated),2138,cuda,,1410.5,65.4
+diagnostic,B,mlp_clinical,clinical,10000,20230529,repeat_00_fold_04,5.191,0.003,5.4,gradient training (weights updated),12138,cuda,,1406.3,66.9
+diagnostic,C,mlp_embedding,embedding,0,20230531,repeat_00_fold_03,0.211,0.003,1.07,gradient training (weights updated),2138,cuda,,1427.3,69.9
+diagnostic,B,mlp_clinical,clinical,0,20230529,repeat_03_fold_03,1.136,0.002,1.3,gradient training (weights updated),2138,cuda,,1392.4,65.4
+diagnostic,B,tabpfn_classifier,clinical,0,20230529,repeat_02_fold_03,0.677,1.984,2.85,in_context: fit stores context; no weight update,2138,cuda,,2450.5,485.5
+prognostic,B,tabpfn_landmark_survival,clinical,0,20230529,split_03,1.893,3.825,5.93,in_context: fit stores context; no weight update,323,cuda,,2502.0,781.2
+diagnostic,B,xgboost_or_histgb,clinical,10000,20230529,repeat_01_fold_01,0.292,0.002,0.45,trained from scratch per fit,12137,cpu,,1432.8,64.0
+diagnostic,B,mlp_clinical,clinical,15000,20230529,repeat_04_fold_02,7.449,0.001,7.64,gradient training (weights updated),17138,cuda,,1412.1,67.5
+diagnostic,B,xgboost_or_histgb,clinical,0,20230529,repeat_02_fold_04,0.155,0.002,0.29,trained from scratch per fit,2138,cpu,,1425.0,64.0
+diagnostic,B,tabpfn_classifier,clinical,5000,20230529,repeat_04_fold_02,0.732,4.969,5.91,in_context: fit stores context; no weight update,7138,cuda,,2294.3,741.6
+diagnostic,B,mlp_clinical,clinical,5000,20230531,repeat_00_fold_01,3.212,0.002,3.38,gradient training (weights updated),7137,cuda,,1410.5,66.1
+diagnostic,B,mlp_clinical,clinical,5000,20230529,repeat_03_fold_00,3.321,0.002,3.49,gradient training (weights updated),7137,cuda,,1399.6,66.1
+prognostic,C,tabpfn_embedding_cox,embedding,0,20230529,split_00,30.009,0.011,30.44,trained from scratch per fit,323,cpu,,1459.8,64.0
+diagnostic,B,tabdpt,clinical,10000,20230529,repeat_04_fold_03,1.004,3.707,4.96,in_context: fit stores context; no weight update,12138,cuda,,4313.9,679.7
+diagnostic,B,tabicl_v2,clinical,1000,20230529,repeat_00_fold_03,0.582,0.9,1.69,in_context: fit stores context; no weight update,3138,cuda,8,2588.5,1156.8
+diagnostic,C,tabpfn_embedding_ridge,embedding,0,20230529,repeat_04_fold_00,0.094,0.001,0.97,trained from scratch per fit,2137,cpu,,1448.6,64.0
+diagnostic,B,mlp_clinical,clinical,0,20230531,repeat_00_fold_03,1.93,0.003,2.09,gradient training (weights updated),2138,cuda,,1410.5,65.4
+diagnostic,B,mlp_clinical,clinical,1000,20230531,repeat_03_fold_04,2.253,0.001,2.41,gradient training (weights updated),3138,cuda,,1410.4,65.6
+diagnostic,B,mlp_clinical,clinical,15000,20230531,repeat_01_fold_04,6.07,0.001,6.26,gradient training (weights updated),17138,cuda,,1412.2,67.6
+diagnostic,B,mlp_clinical,clinical,10000,20230530,repeat_01_fold_04,4.691,0.001,4.87,gradient training (weights updated),12138,cuda,,1411.7,66.8
+prognostic,B,mlp_clinical,clinical,0,20230529,split_04,0.483,0.002,0.64,gradient training (weights updated),323,cuda,,1441.8,65.2
+diagnostic,B,mlp_clinical,clinical,15000,20230529,repeat_02_fold_04,3.629,0.001,3.83,gradient training (weights updated),17138,cuda,,1412.1,67.5
+diagnostic,B,mlp_clinical,clinical,10000,20230529,repeat_01_fold_01,10.037,0.002,10.22,gradient training (weights updated),12137,cuda,,1406.3,66.8
+prognostic,B,cox_elastic_net,clinical,15000,20230529,split_02,1.26,0.003,1.43,trained from scratch per fit,15323,cpu,,1446.6,64.0
+diagnostic,B,tabpfn_classifier,clinical,0,20230529,repeat_01_fold_02,0.706,1.974,2.87,in_context: fit stores context; no weight update,2138,cuda,,2450.4,485.5
+diagnostic,B,tabpfn_classifier,clinical,5000,20230529,repeat_00_fold_04,0.759,4.869,5.83,in_context: fit stores context; no weight update,7138,cuda,,2293.8,741.6
+diagnostic,B,tabdpt,clinical,10000,20230529,repeat_03_fold_03,1.041,3.711,5.0,in_context: fit stores context; no weight update,12138,cuda,,4312.6,679.7
+prognostic,B,mlp_clinical,clinical,15000,20230531,split_03,0.496,0.003,0.7,gradient training (weights updated),15323,cuda,,1449.3,75.0
+diagnostic,B,mlp_clinical,clinical,1000,20230530,repeat_03_fold_04,2.795,0.002,2.95,gradient training (weights updated),3138,cuda,,1410.4,65.6
+prognostic,B,mlp_clinical,clinical,1000,20230529,split_03,0.555,0.003,0.71,gradient training (weights updated),1323,cuda,,1441.9,65.8
+diagnostic,B,tabdpt,clinical,10000,20230529,repeat_01_fold_00,1.018,3.6,4.86,in_context: fit stores context; no weight update,12137,cuda,,4312.4,679.7
+diagnostic,B,tabdpt,clinical,15000,20230529,repeat_03_fold_04,1.057,7.436,8.75,in_context: fit stores context; no weight update,17138,cuda,,4319.0,828.5
+diagnostic,B,mlp_clinical,clinical,10000,20230531,repeat_03_fold_01,3.704,0.001,3.88,gradient training (weights updated),12137,cuda,,1411.5,66.8
+diagnostic,B,regularized_logistic,clinical,5000,20230529,repeat_04_fold_00,0.114,0.0,0.26,trained from scratch per fit,7137,cpu,,1416.0,64.0
+diagnostic,B,mlp_clinical,clinical,5000,20230531,repeat_02_fold_00,4.875,0.002,5.05,gradient training (weights updated),7137,cuda,,1410.5,66.1
+diagnostic,B,tabicl_v2,clinical,0,20230529,repeat_03_fold_01,0.552,0.669,1.42,in_context: fit stores context; no weight update,2137,cuda,8,2574.5,890.5
+diagnostic,B,tabdpt,clinical,5000,20230529,repeat_02_fold_04,0.995,1.34,2.57,in_context: fit stores context; no weight update,7138,cuda,,4308.3,553.6
+diagnostic,B,tabicl_v2,clinical,1000,20230529,repeat_02_fold_02,0.579,0.902,1.68,in_context: fit stores context; no weight update,3138,cuda,8,2588.5,1156.8
+diagnostic,B,tabpfn_classifier,clinical,0,20230529,repeat_02_fold_02,0.669,1.891,2.75,in_context: fit stores context; no weight update,2138,cuda,,2450.2,485.5
+diagnostic,B,tabdpt,clinical,10000,20230529,repeat_00_fold_00,1.043,3.493,4.78,in_context: fit stores context; no weight update,12137,cuda,,4310.7,679.7
+diagnostic,B,xgboost_or_histgb,clinical,1000,20230529,repeat_03_fold_02,0.169,0.003,0.3,trained from scratch per fit,3138,cpu,,1427.4,64.0
+prognostic,B,random_survival_forest_or_fallback,clinical,1000,20230529,split_04,0.467,0.178,0.8,trained from scratch per fit,1323,cpu,,1696.1,64.0
+diagnostic,B,tabdpt,clinical,1000,20230529,repeat_01_fold_04,0.91,0.355,1.49,in_context: fit stores context; no weight update,3138,cuda,,4357.5,553.6
+diagnostic,B,mlp_clinical,clinical,10000,20230530,repeat_02_fold_03,4.017,0.001,4.2,gradient training (weights updated),12138,cuda,,1411.7,66.8
+diagnostic,B,mlp_clinical,clinical,15000,20230529,repeat_00_fold_03,11.494,0.002,11.69,gradient training (weights updated),17138,cuda,,1411.1,67.5
+diagnostic,B,tabicl_v2,clinical,10000,20230529,repeat_01_fold_00,0.784,4.662,5.67,in_context: fit stores context; no weight update,12137,cuda,8,3982.9,2544.7
+diagnostic,B,tabdpt,clinical,1000,20230529,repeat_00_fold_02,0.896,0.352,1.46,in_context: fit stores context; no weight update,3138,cuda,,4357.3,553.6
+diagnostic,B,mlp_clinical,clinical,15000,20230530,repeat_01_fold_02,8.481,0.002,8.68,gradient training (weights updated),17138,cuda,,1412.2,67.5
+diagnostic,B,mlp_clinical,clinical,0,20230529,repeat_00_fold_04,0.837,0.002,1.0,gradient training (weights updated),2138,cuda,,1392.3,65.4
+diagnostic,B,mlp_clinical,clinical,0,20230530,repeat_00_fold_03,1.56,0.002,1.71,gradient training (weights updated),2138,cuda,,1410.4,65.4
+diagnostic,B,mlp_clinical,clinical,0,20230530,repeat_04_fold_01,1.582,0.002,1.74,gradient training (weights updated),2137,cuda,,1410.4,65.4
+diagnostic,B,tabpfn_classifier,clinical,5000,20230529,repeat_03_fold_03,0.714,4.983,5.91,in_context: fit stores context; no weight update,7138,cuda,,2294.2,741.6
+diagnostic,B,mlp_clinical,clinical,10000,20230529,repeat_03_fold_04,8.375,0.002,8.57,gradient training (weights updated),12138,cuda,,1406.3,66.8
+diagnostic,B,mlp_clinical,clinical,15000,20230530,repeat_02_fold_03,5.846,0.002,6.05,gradient training (weights updated),17138,cuda,,1412.2,67.5
+diagnostic,B,tabpfn_classifier,clinical,1000,20230529,repeat_01_fold_01,0.673,2.492,3.36,in_context: fit stores context; no weight update,3137,cuda,,2454.4,538.5
+diagnostic,B,tabicl_v2,clinical,10000,20230529,repeat_01_fold_01,0.776,4.703,5.71,in_context: fit stores context; no weight update,12137,cuda,8,3982.9,2544.7
+diagnostic,B,regularized_logistic,clinical,10000,20230529,repeat_02_fold_01,0.143,0.001,0.3,trained from scratch per fit,12137,cpu,,1419.7,64.0
+prognostic,B,mlp_clinical,clinical,15000,20230530,split_00,0.587,0.002,0.79,gradient training (weights updated),15323,cuda,,1449.3,74.8
+diagnostic,B,mlp_clinical,clinical,15000,20230530,repeat_02_fold_01,13.108,0.002,13.31,gradient training (weights updated),17137,cuda,,1412.2,67.5
+diagnostic,B,tabdpt,clinical,5000,20230529,repeat_03_fold_01,1.067,1.35,2.65,in_context: fit stores context; no weight update,7137,cuda,,4308.4,553.6
+diagnostic,B,tabicl_v2,clinical,1000,20230529,repeat_02_fold_03,0.552,0.904,1.65,in_context: fit stores context; no weight update,3138,cuda,8,2590.5,1156.8
+diagnostic,B,mlp_clinical,clinical,10000,20230530,repeat_00_fold_02,8.799,0.003,8.99,gradient training (weights updated),12138,cuda,,1411.7,66.8
+diagnostic,B,mlp_clinical,clinical,0,20230530,repeat_03_fold_02,1.378,0.001,1.54,gradient training (weights updated),2138,cuda,,1410.4,65.4
+diagnostic,B,regularized_logistic,clinical,10000,20230529,repeat_01_fold_01,0.138,0.0,0.29,trained from scratch per fit,12137,cpu,,1419.7,64.0
+diagnostic,C,mlp_embedding,embedding,0,20230529,repeat_02_fold_00,0.364,0.004,1.23,gradient training (weights updated),2137,cuda,,1427.2,69.9
+diagnostic,B,mlp_clinical,clinical,0,20230531,repeat_01_fold_01,1.546,0.002,1.72,gradient training (weights updated),2137,cuda,,1410.5,65.4
+diagnostic,B,tabicl_v2,clinical,1000,20230529,repeat_00_fold_01,0.579,0.902,1.68,in_context: fit stores context; no weight update,3137,cuda,8,2588.6,1156.8
+prognostic,B,survivalpfn_native,clinical,1000,20230529,split_00,5.459,0.378,6.72,in_context: fit stores context; no weight update,1323,cuda,one call per outer-test split in test-ID order,4171.8,64.0
+diagnostic,B,tabpfn_classifier,clinical,5000,20230529,repeat_03_fold_00,0.802,4.962,5.98,in_context: fit stores context; no weight update,7137,cuda,,2294.1,742.0
+diagnostic,C,mlp_embedding,embedding,0,20230530,repeat_04_fold_00,0.319,0.003,1.19,gradient training (weights updated),2137,cuda,,1427.3,69.9
+diagnostic,B,tabicl_v2,clinical,10000,20230529,repeat_03_fold_00,0.803,4.699,5.74,in_context: fit stores context; no weight update,12137,cuda,8,3982.9,2544.7
+diagnostic,B,mlp_clinical,clinical,0,20230529,repeat_02_fold_00,1.179,0.002,1.34,gradient training (weights updated),2137,cuda,,1392.4,65.4
+diagnostic,B,mlp_clinical,clinical,1000,20230529,repeat_01_fold_03,3.584,0.001,3.75,gradient training (weights updated),3138,cuda,,1393.8,65.6
+diagnostic,C,mlp_embedding,embedding,0,20230530,repeat_04_fold_04,0.77,0.004,1.65,gradient training (weights updated),2138,cuda,,1427.3,69.9
+diagnostic,B,regularized_logistic,clinical,10000,20230529,repeat_02_fold_02,0.143,0.0,0.3,trained from scratch per fit,12138,cpu,,1419.7,64.0
+diagnostic,B,mlp_clinical,clinical,10000,20230531,repeat_01_fold_04,4.372,0.003,4.56,gradient training (weights updated),12138,cuda,,1411.5,66.8
+diagnostic,C,mlp_embedding,embedding,0,20230529,repeat_00_fold_03,0.469,0.002,1.34,gradient training (weights updated),2138,cuda,,1427.2,69.9
+diagnostic,B,regularized_logistic,clinical,0,20230529,repeat_01_fold_03,0.072,0.0,0.2,trained from scratch per fit,2138,cpu,,1412.5,64.0
+diagnostic,B,mlp_clinical,clinical,15000,20230531,repeat_03_fold_03,10.606,0.001,10.8,gradient training (weights updated),17138,cuda,,1412.2,67.6
+diagnostic,B,mlp_clinical,clinical,10000,20230530,repeat_02_fold_01,8.835,0.001,9.01,gradient training (weights updated),12137,cuda,,1411.7,66.8
+prognostic,B,mlp_clinical,clinical,0,20230529,split_02,0.578,0.002,0.74,gradient training (weights updated),323,cuda,,1441.8,65.2
+diagnostic,B,regularized_logistic,clinical,1000,20230529,repeat_03_fold_03,0.079,0.0,0.21,trained from scratch per fit,3138,cpu,,1412.5,64.0
+diagnostic,B,tabpfn_classifier,clinical,0,20230529,repeat_00_fold_02,0.644,1.998,2.86,in_context: fit stores context; no weight update,2138,cuda,,2450.3,485.5
+diagnostic,B,xgboost_or_histgb,clinical,0,20230529,repeat_01_fold_01,0.152,0.002,0.29,trained from scratch per fit,2137,cpu,,1423.3,64.0
+diagnostic,C,mlp_embedding,embedding,0,20230530,repeat_01_fold_01,0.279,0.004,1.13,gradient training (weights updated),2137,cuda,,1427.3,69.9
+diagnostic,B,mlp_clinical,clinical,0,20230530,repeat_02_fold_04,0.593,0.001,0.75,gradient training (weights updated),2138,cuda,,1410.4,65.4
+diagnostic,B,tabpfn_classifier,clinical,10000,20230529,repeat_01_fold_03,0.837,9.32,10.38,in_context: fit stores context; no weight update,12138,cuda,,2512.5,998.7
+prognostic,B,cox_elastic_net,clinical,5000,20230529,split_01,0.862,0.003,1.01,trained from scratch per fit,5323,cpu,,1438.4,64.0
+diagnostic,B,mlp_clinical,clinical,10000,20230529,repeat_03_fold_01,3.853,0.001,4.05,gradient training (weights updated),12137,cuda,,1406.3,66.8
+diagnostic,B,tabdpt,clinical,5000,20230529,repeat_02_fold_00,0.966,1.334,2.53,in_context: fit stores context; no weight update,7137,cuda,,4308.1,553.6
+diagnostic,B,mlp_clinical,clinical,15000,20230531,repeat_03_fold_01,5.188,0.001,5.38,gradient training (weights updated),17137,cuda,,1412.2,67.5
+diagnostic,B,tabpfn_classifier,clinical,10000,20230529,repeat_03_fold_03,0.829,9.357,10.41,in_context: fit stores context; no weight update,12138,cuda,,2513.6,998.7
+diagnostic,B,tabpfn_classifier,clinical,5000,20230529,repeat_01_fold_04,0.714,4.888,5.8,in_context: fit stores context; no weight update,7138,cuda,,2294.0,741.6
+diagnostic,B,mlp_clinical,clinical,1000,20230531,repeat_04_fold_01,2.384,0.001,2.54,gradient training (weights updated),3137,cuda,,1410.4,65.6
+prognostic,B,mlp_clinical,clinical,15000,20230531,split_00,0.567,0.001,0.77,gradient training (weights updated),15323,cuda,,1449.3,74.8
+diagnostic,B,tabpfn_classifier,clinical,15000,20230529,repeat_03_fold_01,0.87,15.13,16.24,in_context: fit stores context; no weight update,17137,cuda,,2321.5,1256.7
+diagnostic,B,mlp_clinical,clinical,10000,20230530,repeat_04_fold_03,5.882,0.001,6.06,gradient training (weights updated),12138,cuda,,1411.7,66.8
+diagnostic,B,xgboost_or_histgb,clinical,5000,20230529,repeat_03_fold_04,0.24,0.001,0.4,trained from scratch per fit,7138,cpu,,1430.0,64.0
+diagnostic,B,mlp_clinical,clinical,10000,20230531,repeat_02_fold_02,2.681,0.002,2.86,gradient training (weights updated),12138,cuda,,1411.5,66.8
+diagnostic,B,xgboost_or_histgb,clinical,1000,20230529,repeat_03_fold_00,0.173,0.002,0.31,trained from scratch per fit,3137,cpu,,1427.4,64.0
+diagnostic,B,xgboost_or_histgb,clinical,1000,20230529,repeat_00_fold_04,0.164,0.002,0.3,trained from scratch per fit,3138,cpu,,1425.9,64.0
+diagnostic,B,tabpfn_classifier,clinical,15000,20230529,repeat_00_fold_03,0.95,15.11,16.29,in_context: fit stores context; no weight update,17138,cuda,,2321.4,1256.7
+diagnostic,C,mlp_embedding,embedding,0,20230530,repeat_03_fold_01,0.227,0.003,1.11,gradient training (weights updated),2137,cuda,,1427.3,69.9
+diagnostic,B,mlp_clinical,clinical,10000,20230531,repeat_02_fold_04,3.886,0.002,4.06,gradient training (weights updated),12138,cuda,,1411.5,66.8
+prognostic,B,mlp_clinical,clinical,0,20230529,split_03,0.506,0.001,0.66,gradient training (weights updated),323,cuda,,1441.8,65.2
+diagnostic,B,tabpfn_classifier,clinical,10000,20230529,repeat_03_fold_01,0.884,9.393,10.5,in_context: fit stores context; no weight update,12137,cuda,,2513.6,999.0
+diagnostic,B,xgboost_or_histgb,clinical,0,20230529,repeat_03_fold_01,0.153,0.002,0.28,trained from scratch per fit,2137,cpu,,1425.0,64.0
+diagnostic,B,mlp_clinical,clinical,15000,20230529,repeat_03_fold_03,7.572,0.003,7.76,gradient training (weights updated),17138,cuda,,1412.1,67.6
+diagnostic,B,tabpfn_classifier,clinical,10000,20230529,repeat_02_fold_04,0.852,9.438,10.51,in_context: fit stores context; no weight update,12138,cuda,,2513.5,998.7
+diagnostic,B,regularized_logistic,clinical,10000,20230529,repeat_00_fold_03,0.14,0.0,0.29,trained from scratch per fit,12138,cpu,,1419.9,64.0
+diagnostic,B,tabicl_v2,clinical,10000,20230529,repeat_04_fold_04,0.768,4.702,5.7,in_context: fit stores context; no weight update,12138,cuda,8,3982.9,2544.7
+diagnostic,C,mlp_embedding,embedding,0,20230529,repeat_03_fold_04,0.287,0.004,1.15,gradient training (weights updated),2138,cuda,,1427.2,69.9
+diagnostic,B,mlp_clinical,clinical,15000,20230529,repeat_01_fold_03,13.54,0.002,13.73,gradient training (weights updated),17138,cuda,,1412.1,67.5
+diagnostic,B,xgboost_or_histgb,clinical,10000,20230529,repeat_01_fold_04,0.294,0.001,0.45,trained from scratch per fit,12138,cpu,,1432.8,64.0
+diagnostic,B,tabicl_v2,clinical,5000,20230529,repeat_01_fold_00,0.664,2.369,3.24,in_context: fit stores context; no weight update,7137,cuda,8,2509.3,2228.1
+diagnostic,B,tabicl_v2,clinical,0,20230529,repeat_04_fold_00,0.565,0.692,1.45,in_context: fit stores context; no weight update,2137,cuda,8,2580.4,890.5
+diagnostic,B,tabdpt,clinical,5000,20230529,repeat_01_fold_00,0.964,1.331,2.52,in_context: fit stores context; no weight update,7137,cuda,,4307.9,553.6
+diagnostic,B,regularized_logistic,clinical,0,20230529,repeat_02_fold_00,0.071,0.0,0.19,trained from scratch per fit,2137,cpu,,1412.5,64.0
+diagnostic,B,mlp_clinical,clinical,0,20230530,repeat_00_fold_00,0.856,0.002,1.01,gradient training (weights updated),2137,cuda,,1410.4,65.4
+diagnostic,C,tabpfn_embedding_ridge,embedding,0,20230529,repeat_03_fold_02,0.093,0.002,0.91,trained from scratch per fit,2138,cpu,,1448.6,64.0
+diagnostic,B,tabicl_v2,clinical,10000,20230529,repeat_02_fold_00,0.766,4.724,5.74,in_context: fit stores context; no weight update,12137,cuda,8,3982.9,2544.7
+diagnostic,B,xgboost_or_histgb,clinical,15000,20230529,repeat_02_fold_01,0.404,0.002,0.59,trained from scratch per fit,17137,cpu,,1437.0,64.0
+diagnostic,C,tabpfn_embedding_ridge,embedding,0,20230529,repeat_02_fold_01,0.088,0.002,0.93,trained from scratch per fit,2137,cpu,,1448.6,64.0
+diagnostic,B,tabicl_v2,clinical,5000,20230529,repeat_02_fold_00,0.676,2.398,3.28,in_context: fit stores context; no weight update,7137,cuda,8,2509.3,2228.1
+diagnostic,B,tabpfn_classifier,clinical,15000,20230529,repeat_04_fold_00,0.875,15.15,16.27,in_context: fit stores context; no weight update,17137,cuda,,2321.5,1256.7
+diagnostic,B,mlp_clinical,clinical,10000,20230529,repeat_00_fold_00,6.196,0.003,6.4,gradient training (weights updated),12137,cuda,,1405.5,66.8
+prognostic,C,tabpfn_embedding_cox,embedding,0,20230529,split_02,33.737,0.013,34.16,trained from scratch per fit,323,cpu,,1460.5,64.0
+diagnostic,C,mlp_embedding,embedding,0,20230530,repeat_04_fold_03,0.376,0.002,1.23,gradient training (weights updated),2138,cuda,,1427.3,69.9
+diagnostic,B,tabpfn_classifier,clinical,1000,20230529,repeat_04_fold_03,0.676,2.505,3.38,in_context: fit stores context; no weight update,3138,cuda,,2454.5,538.5
+diagnostic,B,mlp_clinical,clinical,1000,20230531,repeat_02_fold_04,1.036,0.002,1.19,gradient training (weights updated),3138,cuda,,1410.4,65.6
+prognostic,B,mlp_clinical,clinical,1000,20230531,split_04,0.778,0.001,0.94,gradient training (weights updated),1323,cuda,,1447.6,65.8
+diagnostic,B,mlp_clinical,clinical,10000,20230530,repeat_02_fold_04,3.211,0.002,3.39,gradient training (weights updated),12138,cuda,,1411.7,66.8
+diagnostic,B,xgboost_or_histgb,clinical,5000,20230529,repeat_00_fold_00,0.212,0.001,0.36,trained from scratch per fit,7137,cpu,,1428.9,64.0
+diagnostic,B,tabicl_v2,clinical,15000,20230529,repeat_04_fold_04,0.907,7.661,8.82,in_context: fit stores context; no weight update,17138,cuda,8,4179.0,2584.1
+diagnostic,C,mlp_embedding,embedding,0,20230529,repeat_01_fold_02,0.277,0.002,1.14,gradient training (weights updated),2138,cuda,,1427.2,69.9
+diagnostic,B,tabpfn_classifier,clinical,0,20230529,repeat_03_fold_02,0.652,1.953,2.8,in_context: fit stores context; no weight update,2138,cuda,,2450.8,485.5
+diagnostic,B,xgboost_or_histgb,clinical,1000,20230529,repeat_04_fold_03,0.164,0.002,0.3,trained from scratch per fit,3138,cpu,,1427.4,64.0
+diagnostic,B,tabpfn_classifier,clinical,0,20230529,repeat_03_fold_01,0.649,1.953,2.79,in_context: fit stores context; no weight update,2137,cuda,,2450.2,485.6
+prognostic,C,tabpfn_embedding_cox,embedding,0,20230529,split_01,29.412,0.012,29.83,trained from scratch per fit,323,cpu,,1460.2,64.0
+diagnostic,B,tabicl_v2,clinical,15000,20230529,repeat_02_fold_03,0.878,7.651,8.78,in_context: fit stores context; no weight update,17138,cuda,8,4179.0,2584.1
+diagnostic,B,xgboost_or_histgb,clinical,0,20230529,repeat_01_fold_02,0.164,0.002,0.3,trained from scratch per fit,2138,cpu,,1424.1,64.0
+diagnostic,B,xgboost_or_histgb,clinical,5000,20230529,repeat_03_fold_02,0.227,0.001,0.37,trained from scratch per fit,7138,cpu,,1430.0,64.0
+prognostic,B,mlp_clinical,clinical,1000,20230530,split_03,0.483,0.001,0.64,gradient training (weights updated),1323,cuda,,1447.6,65.8
+diagnostic,B,xgboost_or_histgb,clinical,15000,20230529,repeat_02_fold_00,0.366,0.002,0.54,trained from scratch per fit,17137,cpu,,1437.0,64.0
+diagnostic,B,mlp_clinical,clinical,5000,20230529,repeat_04_fold_01,5.135,0.002,5.3,gradient training (weights updated),7137,cuda,,1399.6,66.1
+diagnostic,B,tabpfn_classifier,clinical,10000,20230529,repeat_02_fold_00,0.816,9.371,10.41,in_context: fit stores context; no weight update,12137,cuda,,2513.5,999.0
+diagnostic,B,mlp_clinical,clinical,1000,20230530,repeat_00_fold_04,1.23,0.002,1.39,gradient training (weights updated),3138,cuda,,1410.4,65.6
+diagnostic,B,xgboost_or_histgb,clinical,15000,20230529,repeat_03_fold_01,0.376,0.002,0.55,trained from scratch per fit,17137,cpu,,1437.7,64.0
+diagnostic,B,mlp_clinical,clinical,5000,20230531,repeat_00_fold_00,4.765,0.002,4.94,gradient training (weights updated),7137,cuda,,1410.5,66.1
+diagnostic,B,mlp_clinical,clinical,1000,20230531,repeat_02_fold_02,0.749,0.001,0.9,gradient training (weights updated),3138,cuda,,1410.4,65.6
+diagnostic,B,tabdpt,clinical,0,20230529,repeat_01_fold_04,0.999,0.213,1.43,in_context: fit stores context; no weight update,2138,cuda,,4355.1,553.6
+diagnostic,B,tabdpt,clinical,5000,20230529,repeat_00_fold_01,0.992,1.327,2.54,in_context: fit stores context; no weight update,7137,cuda,,4308.0,553.6
+diagnostic,B,tabicl_v2,clinical,5000,20230529,repeat_03_fold_04,0.704,2.382,3.29,in_context: fit stores context; no weight update,7138,cuda,8,2509.3,2228.1
+diagnostic,B,mlp_clinical,clinical,1000,20230529,repeat_03_fold_03,1.559,0.001,1.73,gradient training (weights updated),3138,cuda,,1393.8,65.6
+diagnostic,C,mlp_embedding,embedding,0,20230530,repeat_00_fold_02,0.345,0.004,1.21,gradient training (weights updated),2138,cuda,,1427.3,69.9
+diagnostic,B,tabpfn_classifier,clinical,15000,20230529,repeat_01_fold_04,0.834,15.052,16.12,in_context: fit stores context; no weight update,17138,cuda,,2321.5,1256.7
+diagnostic,B,mlp_clinical,clinical,1000,20230530,repeat_03_fold_02,1.983,0.001,2.13,gradient training (weights updated),3138,cuda,,1410.4,65.6
+diagnostic,B,tabdpt,clinical,15000,20230529,repeat_02_fold_02,1.055,7.368,8.69,in_context: fit stores context; no weight update,17138,cuda,,4319.3,828.5
+prognostic,B,random_survival_forest_or_fallback,clinical,15000,20230529,split_02,3.639,0.198,4.13,trained from scratch per fit,15323,cpu,,3546.6,64.0
+diagnostic,B,xgboost_or_histgb,clinical,10000,20230529,repeat_00_fold_00,0.306,0.002,0.46,trained from scratch per fit,12137,cpu,,1432.8,64.0
+diagnostic,B,xgboost_or_histgb,clinical,10000,20230529,repeat_00_fold_04,0.296,0.001,0.45,trained from scratch per fit,12138,cpu,,1432.8,64.0
+diagnostic,B,regularized_logistic,clinical,10000,20230529,repeat_02_fold_04,0.145,0.0,0.3,trained from scratch per fit,12138,cpu,,1419.9,64.0
+diagnostic,B,xgboost_or_histgb,clinical,5000,20230529,repeat_01_fold_04,0.226,0.002,0.37,trained from scratch per fit,7138,cpu,,1430.0,64.0
+diagnostic,B,xgboost_or_histgb,clinical,0,20230529,repeat_03_fold_00,0.146,0.001,0.27,trained from scratch per fit,2137,cpu,,1425.0,64.0
+diagnostic,B,mlp_clinical,clinical,1000,20230531,repeat_03_fold_00,1.862,0.001,2.02,gradient training (weights updated),3137,cuda,,1410.4,65.6
+diagnostic,B,mlp_clinical,clinical,15000,20230530,repeat_04_fold_04,4.453,0.001,4.65,gradient training (weights updated),17138,cuda,,1412.2,67.6
+diagnostic,B,mlp_clinical,clinical,10000,20230530,repeat_04_fold_04,3.269,0.001,3.46,gradient training (weights updated),12138,cuda,,1411.7,66.8
+diagnostic,B,mlp_clinical,clinical,1000,20230529,repeat_02_fold_02,1.376,0.003,1.55,gradient training (weights updated),3138,cuda,,1393.8,65.6
+diagnostic,B,mlp_clinical,clinical,15000,20230529,repeat_01_fold_01,11.64,0.004,11.84,gradient training (weights updated),17137,cuda,,1412.1,67.5
+diagnostic,B,tabdpt,clinical,15000,20230529,repeat_02_fold_01,1.057,7.421,8.74,in_context: fit stores context; no weight update,17137,cuda,,4317.7,828.5
+diagnostic,B,mlp_clinical,clinical,5000,20230530,repeat_00_fold_03,4.802,0.001,4.97,gradient training (weights updated),7138,cuda,,1410.4,66.1
+diagnostic,B,regularized_logistic,clinical,10000,20230529,repeat_03_fold_03,0.142,0.0,0.29,trained from scratch per fit,12138,cpu,,1419.7,64.0
+diagnostic,B,mlp_clinical,clinical,15000,20230531,repeat_03_fold_02,13.995,0.001,14.18,gradient training (weights updated),17138,cuda,,1412.2,67.6
+prognostic,B,tabpfn_landmark_survival,clinical,0,20230529,split_00,1.844,3.65,5.7,in_context: fit stores context; no weight update,323,cuda,,2500.5,781.3
+diagnostic,B,regularized_logistic,clinical,0,20230529,repeat_00_fold_00,0.123,0.0,0.25,trained from scratch per fit,2137,cpu,,1412.5,64.0
+diagnostic,B,tabdpt,clinical,15000,20230529,repeat_02_fold_04,1.077,7.378,8.72,in_context: fit stores context; no weight update,17138,cuda,,4317.8,828.5
+diagnostic,B,xgboost_or_histgb,clinical,5000,20230529,repeat_00_fold_02,0.217,0.001,0.36,trained from scratch per fit,7138,cpu,,1430.0,64.0
+diagnostic,C,mlp_embedding,embedding,0,20230529,repeat_04_fold_04,0.671,0.007,1.57,gradient training (weights updated),2138,cuda,,1427.3,69.9
+diagnostic,C,tabpfn_embedding_ridge,embedding,0,20230529,repeat_01_fold_00,0.087,0.003,0.91,trained from scratch per fit,2137,cpu,,1448.6,64.0
+diagnostic,B,mlp_clinical,clinical,10000,20230531,repeat_01_fold_00,2.389,0.001,2.56,gradient training (weights updated),12137,cuda,,1411.5,66.8
+diagnostic,B,mlp_clinical,clinical,5000,20230530,repeat_03_fold_04,6.244,0.002,6.41,gradient training (weights updated),7138,cuda,,1410.4,66.1
+diagnostic,B,regularized_logistic,clinical,15000,20230529,repeat_01_fold_04,0.174,0.0,0.35,trained from scratch per fit,17138,cpu,,1423.9,64.0
+diagnostic,B,tabdpt,clinical,15000,20230529,repeat_00_fold_04,1.107,7.306,8.68,in_context: fit stores context; no weight update,17138,cuda,,4317.5,828.5
+diagnostic,B,tabicl_v2,clinical,15000,20230529,repeat_03_fold_02,0.977,7.629,8.87,in_context: fit stores context; no weight update,17138,cuda,8,4177.3,2584.1
+diagnostic,B,mlp_clinical,clinical,5000,20230530,repeat_03_fold_02,4.616,0.001,4.78,gradient training (weights updated),7138,cuda,,1410.4,66.1
+diagnostic,B,xgboost_or_histgb,clinical,1000,20230529,repeat_01_fold_01,0.162,0.001,0.3,trained from scratch per fit,3137,cpu,,1426.5,64.0
+diagnostic,B,tabicl_v2,clinical,5000,20230529,repeat_00_fold_00,0.673,2.35,3.23,in_context: fit stores context; no weight update,7137,cuda,8,2509.3,2228.1
+diagnostic,B,xgboost_or_histgb,clinical,15000,20230529,repeat_02_fold_03,0.367,0.001,0.54,trained from scratch per fit,17138,cpu,,1437.7,64.0
+diagnostic,B,tabdpt,clinical,5000,20230529,repeat_02_fold_01,0.979,1.337,2.54,in_context: fit stores context; no weight update,7137,cuda,,4308.2,553.6
+prognostic,B,mlp_clinical,clinical,0,20230529,split_00,0.468,0.002,0.63,gradient training (weights updated),323,cuda,,1441.8,65.2
+prognostic,B,survivalpfn_native,clinical,5000,20230529,split_00,5.487,0.642,7.11,in_context: fit stores context; no weight update,5323,cuda,one call per outer-test split in test-ID order,4171.8,64.0
+diagnostic,B,mlp_clinical,clinical,10000,20230530,repeat_03_fold_03,8.504,0.001,8.68,gradient training (weights updated),12138,cuda,,1411.7,66.8
+diagnostic,B,xgboost_or_histgb,clinical,5000,20230529,repeat_01_fold_01,0.239,0.002,0.38,trained from scratch per fit,7137,cpu,,1430.0,64.0
+prognostic,B,mlp_clinical,clinical,15000,20230530,split_04,0.824,0.001,1.03,gradient training (weights updated),15323,cuda,,1449.3,75.0
+prognostic,B,survivalpfn_native,clinical,15000,20230529,split_02,5.481,2.716,9.12,in_context: fit stores context; no weight update,15323,cuda,one call per outer-test split in test-ID order,4175.5,64.0
+diagnostic,B,tabpfn_classifier,clinical,15000,20230529,repeat_04_fold_03,0.93,15.121,16.29,in_context: fit stores context; no weight update,17138,cuda,,2321.6,1256.7
+diagnostic,B,mlp_clinical,clinical,0,20230530,repeat_03_fold_00,1.36,0.002,1.51,gradient training (weights updated),2137,cuda,,1410.4,65.4
+diagnostic,B,tabpfn_classifier,clinical,1000,20230529,repeat_01_fold_04,0.707,2.522,3.42,in_context: fit stores context; no weight update,3138,cuda,,2454.4,538.5
+diagnostic,B,regularized_logistic,clinical,1000,20230529,repeat_04_fold_02,0.079,0.001,0.21,trained from scratch per fit,3138,cpu,,1412.5,64.0
+diagnostic,B,mlp_clinical,clinical,5000,20230530,repeat_04_fold_03,3.303,0.001,3.48,gradient training (weights updated),7138,cuda,,1410.4,66.1
+diagnostic,B,tabdpt,clinical,1000,20230529,repeat_04_fold_04,0.928,0.353,1.49,in_context: fit stores context; no weight update,3138,cuda,,4358.1,553.6
+diagnostic,B,tabicl_v2,clinical,0,20230529,repeat_02_fold_00,0.587,0.663,1.45,in_context: fit stores context; no weight update,2137,cuda,8,2574.4,890.5
+diagnostic,B,mlp_clinical,clinical,0,20230529,repeat_04_fold_04,0.848,0.002,1.06,gradient training (weights updated),2138,cuda,,1392.5,65.4
+diagnostic,B,mlp_clinical,clinical,1000,20230530,repeat_02_fold_03,1.085,0.001,1.24,gradient training (weights updated),3138,cuda,,1410.4,65.6
+prognostic,B,mlp_clinical,clinical,5000,20230530,split_02,0.494,0.001,0.67,gradient training (weights updated),5323,cuda,,1447.6,68.0
+diagnostic,B,tabdpt,clinical,5000,20230529,repeat_00_fold_00,0.953,1.33,2.51,in_context: fit stores context; no weight update,7137,cuda,,4360.8,553.6
+diagnostic,B,tabdpt,clinical,10000,20230529,repeat_03_fold_04,1.023,3.672,4.95,in_context: fit stores context; no weight update,12138,cuda,,4312.2,679.7
+diagnostic,B,tabicl_v2,clinical,15000,20230529,repeat_00_fold_02,0.874,7.614,8.73,in_context: fit stores context; no weight update,17138,cuda,8,4179.0,2584.1
+diagnostic,B,xgboost_or_histgb,clinical,1000,20230529,repeat_04_fold_04,0.157,0.002,0.29,trained from scratch per fit,3138,cpu,,1427.4,64.0
+diagnostic,B,mlp_clinical,clinical,1000,20230529,repeat_00_fold_01,2.22,0.002,2.38,gradient training (weights updated),3137,cuda,,1393.6,65.6
+diagnostic,B,tabdpt,clinical,10000,20230529,repeat_00_fold_02,1.024,3.528,4.8,in_context: fit stores context; no weight update,12138,cuda,,4311.8,679.7
+diagnostic,B,mlp_clinical,clinical,15000,20230530,repeat_02_fold_02,4.61,0.001,4.81,gradient training (weights updated),17138,cuda,,1412.2,67.4
+diagnostic,C,mlp_embedding,embedding,0,20230529,repeat_04_fold_01,0.218,0.003,1.09,gradient training (weights updated),2137,cuda,,1427.3,69.9
+prognostic,B,random_survival_forest_or_fallback,clinical,1000,20230529,split_03,0.475,0.176,0.8,trained from scratch per fit,1323,cpu,,1700.5,64.0
+diagnostic,B,tabpfn_classifier,clinical,5000,20230529,repeat_01_fold_03,0.749,4.964,5.92,in_context: fit stores context; no weight update,7138,cuda,,2294.0,741.6
+diagnostic,C,mlp_embedding,embedding,0,20230531,repeat_03_fold_01,0.2,0.006,1.09,gradient training (weights updated),2137,cuda,,1427.3,69.9
+prognostic,B,mlp_clinical,clinical,15000,20230529,split_04,0.6,0.002,0.81,gradient training (weights updated),15323,cuda,,1449.3,75.0
+diagnostic,B,regularized_logistic,clinical,0,20230529,repeat_04_fold_02,0.071,0.0,0.2,trained from scratch per fit,2138,cpu,,1412.5,64.0
+diagnostic,B,tabdpt,clinical,0,20230529,repeat_04_fold_02,0.899,0.213,1.32,in_context: fit stores context; no weight update,2138,cuda,,4356.6,553.6
+diagnostic,B,regularized_logistic,clinical,0,20230529,repeat_04_fold_01,0.079,0.001,0.21,trained from scratch per fit,2137,cpu,,1412.5,64.0
+diagnostic,C,tabpfn_embedding_ridge,embedding,0,20230529,repeat_02_fold_00,0.106,0.002,0.92,trained from scratch per fit,2137,cpu,,1448.6,64.0
+prognostic,B,survivalpfn_native,clinical,5000,20230529,split_04,5.406,0.646,6.93,in_context: fit stores context; no weight update,5323,cuda,one call per outer-test split in test-ID order,4171.8,64.0
+diagnostic,B,xgboost_or_histgb,clinical,15000,20230529,repeat_01_fold_03,0.421,0.002,0.6,trained from scratch per fit,17138,cpu,,1437.0,64.0
+diagnostic,B,tabicl_v2,clinical,15000,20230529,repeat_01_fold_03,0.948,7.575,8.79,in_context: fit stores context; no weight update,17138,cuda,8,4179.0,2584.1
+diagnostic,B,tabdpt,clinical,15000,20230529,repeat_00_fold_00,1.072,7.182,8.52,in_context: fit stores context; no weight update,17137,cuda,,4318.3,828.5
+prognostic,C,mlp_embedding,embedding,0,20230529,split_02,0.03,0.004,0.45,gradient training (weights updated),323,cuda,,1423.1,68.0
+diagnostic,B,mlp_clinical,clinical,0,20230531,repeat_02_fold_01,1.385,0.002,1.54,gradient training (weights updated),2137,cuda,,1410.5,65.4
+diagnostic,B,mlp_clinical,clinical,0,20230529,repeat_04_fold_03,1.858,0.001,2.02,gradient training (weights updated),2138,cuda,,1392.5,65.4
+diagnostic,B,xgboost_or_histgb,clinical,10000,20230529,repeat_03_fold_04,0.292,0.001,0.45,trained from scratch per fit,12138,cpu,,1432.8,64.0
+diagnostic,B,mlp_clinical,clinical,5000,20230531,repeat_03_fold_02,5.773,0.004,5.94,gradient training (weights updated),7138,cuda,,1410.5,66.1
+diagnostic,B,mlp_clinical,clinical,15000,20230529,repeat_01_fold_04,6.19,0.001,6.38,gradient training (weights updated),17138,cuda,,1412.1,67.6
+prognostic,B,mlp_clinical,clinical,5000,20230529,split_00,0.452,0.001,0.63,gradient training (weights updated),5323,cuda,,1447.0,68.0
+diagnostic,B,tabpfn_classifier,clinical,5000,20230529,repeat_01_fold_02,0.686,4.869,5.76,in_context: fit stores context; no weight update,7138,cuda,,2293.9,741.6
+diagnostic,B,tabdpt,clinical,5000,20230529,repeat_02_fold_03,0.999,1.335,2.57,in_context: fit stores context; no weight update,7138,cuda,,4308.3,553.6
+diagnostic,B,tabdpt,clinical,1000,20230529,repeat_03_fold_01,0.887,0.353,1.45,in_context: fit stores context; no weight update,3137,cuda,,4356.8,553.6
+prognostic,B,mlp_clinical,clinical,5000,20230529,split_03,0.587,0.001,0.76,gradient training (weights updated),5323,cuda,,1447.0,68.0
+diagnostic,B,mlp_clinical,clinical,15000,20230531,repeat_00_fold_02,13.751,0.001,13.94,gradient training (weights updated),17138,cuda,,1412.2,67.4
+diagnostic,B,regularized_logistic,clinical,1000,20230529,repeat_01_fold_03,0.078,0.0,0.21,trained from scratch per fit,3138,cpu,,1412.5,64.0
+diagnostic,B,regularized_logistic,clinical,15000,20230529,repeat_02_fold_00,0.182,0.001,0.35,trained from scratch per fit,17137,cpu,,1423.6,64.0
+diagnostic,B,tabdpt,clinical,1000,20230529,repeat_00_fold_03,0.898,0.356,1.47,in_context: fit stores context; no weight update,3138,cuda,,4357.4,553.6
+prognostic,B,survivalpfn_native,clinical,5000,20230529,split_02,5.369,0.718,6.97,in_context: fit stores context; no weight update,5323,cuda,one call per outer-test split in test-ID order,4171.8,64.0
+diagnostic,B,tabicl_v2,clinical,5000,20230529,repeat_02_fold_03,0.676,2.438,3.33,in_context: fit stores context; no weight update,7138,cuda,8,2509.3,2228.1
+diagnostic,B,tabpfn_classifier,clinical,1000,20230529,repeat_02_fold_02,0.685,2.422,3.3,in_context: fit stores context; no weight update,3138,cuda,,2454.4,538.5
+prognostic,B,random_survival_forest_or_fallback,clinical,10000,20230529,split_01,2.544,0.207,3.01,trained from scratch per fit,10323,cpu,,2946.5,64.0
+diagnostic,B,mlp_clinical,clinical,1000,20230529,repeat_04_fold_03,2.748,0.008,2.92,gradient training (weights updated),3138,cuda,,1393.8,65.6
+diagnostic,C,mlp_embedding,embedding,0,20230530,repeat_01_fold_00,0.584,0.003,1.45,gradient training (weights updated),2137,cuda,,1427.3,69.9
+diagnostic,B,tabpfn_classifier,clinical,0,20230529,repeat_04_fold_00,0.703,1.945,2.84,in_context: fit stores context; no weight update,2137,cuda,,2450.9,485.6
+prognostic,B,survivalpfn_native,clinical,0,20230529,split_03,5.443,0.34,6.65,in_context: fit stores context; no weight update,323,cuda,one call per outer-test split in test-ID order,4171.8,64.0
+prognostic,B,mlp_clinical,clinical,15000,20230531,split_02,0.807,0.002,1.01,gradient training (weights updated),15323,cuda,,1449.3,75.0
+diagnostic,B,mlp_clinical,clinical,15000,20230531,repeat_00_fold_04,6.333,0.002,6.53,gradient training (weights updated),17138,cuda,,1412.2,67.6
+diagnostic,B,tabdpt,clinical,0,20230529,repeat_02_fold_02,0.926,0.212,1.36,in_context: fit stores context; no weight update,2138,cuda,,4356.7,553.6
+diagnostic,B,regularized_logistic,clinical,15000,20230529,repeat_02_fold_02,0.178,0.001,0.34,trained from scratch per fit,17138,cpu,,1423.4,64.0
+diagnostic,B,mlp_clinical,clinical,15000,20230531,repeat_04_fold_02,7.898,0.003,8.09,gradient training (weights updated),17138,cuda,,1412.2,67.5
+diagnostic,C,mlp_embedding,embedding,0,20230531,repeat_04_fold_00,0.32,0.004,1.19,gradient training (weights updated),2137,cuda,,1427.3,69.9
+diagnostic,C,mlp_embedding,embedding,0,20230530,repeat_04_fold_01,0.398,0.003,1.25,gradient training (weights updated),2137,cuda,,1427.3,69.9
+diagnostic,B,tabpfn_classifier,clinical,1000,20230529,repeat_00_fold_03,0.674,2.476,3.34,in_context: fit stores context; no weight update,3138,cuda,,2454.3,538.5
+diagnostic,B,mlp_clinical,clinical,0,20230529,repeat_03_fold_04,1.578,0.003,1.75,gradient training (weights updated),2138,cuda,,1392.4,65.4
+prognostic,C,mlp_embedding,embedding,0,20230530,split_01,0.043,0.004,0.47,gradient training (weights updated),323,cuda,,1423.1,68.0
+prognostic,B,random_survival_forest_or_fallback,clinical,0,20230529,split_01,0.425,0.154,0.72,trained from scratch per fit,323,cpu,,1495.5,64.0
+diagnostic,B,tabdpt,clinical,1000,20230529,repeat_00_fold_04,0.915,0.355,1.48,in_context: fit stores context; no weight update,3138,cuda,,4357.4,553.6
+diagnostic,C,mlp_embedding,embedding,0,20230531,repeat_03_fold_03,0.393,0.003,1.24,gradient training (weights updated),2138,cuda,,1427.3,69.9
+diagnostic,B,mlp_clinical,clinical,0,20230530,repeat_04_fold_00,1.224,0.002,1.39,gradient training (weights updated),2137,cuda,,1410.4,65.4
+diagnostic,C,tabpfn_embedding_ridge,embedding,0,20230529,repeat_00_fold_01,0.097,0.003,0.92,trained from scratch per fit,2137,cpu,,1448.3,64.0
+diagnostic,B,xgboost_or_histgb,clinical,5000,20230529,repeat_04_fold_03,0.22,0.001,0.36,trained from scratch per fit,7138,cpu,,1430.1,64.0
+prognostic,B,mlp_clinical,clinical,0,20230531,split_00,0.453,0.001,0.61,gradient training (weights updated),323,cuda,,1447.6,65.2
+prognostic,C,mlp_embedding,embedding,0,20230531,split_03,0.086,0.005,0.53,gradient training (weights updated),323,cuda,,1423.1,68.0
+diagnostic,B,regularized_logistic,clinical,10000,20230529,repeat_04_fold_04,0.138,0.0,0.29,trained from scratch per fit,12138,cpu,,1419.9,64.0
+diagnostic,B,mlp_clinical,clinical,10000,20230530,repeat_04_fold_02,3.991,0.002,4.17,gradient training (weights updated),12138,cuda,,1411.7,66.8
+diagnostic,B,tabdpt,clinical,15000,20230529,repeat_00_fold_02,1.069,7.313,8.65,in_context: fit stores context; no weight update,17138,cuda,,4318.3,828.5
+prognostic,B,cox_elastic_net,clinical,1000,20230529,split_02,0.985,0.003,1.12,trained from scratch per fit,1323,cpu,,1436.5,64.0
+diagnostic,B,mlp_clinical,clinical,15000,20230529,repeat_02_fold_02,6.159,0.001,6.35,gradient training (weights updated),17138,cuda,,1412.1,67.4
+prognostic,C,mlp_embedding,embedding,0,20230529,split_01,0.031,0.003,0.47,gradient training (weights updated),323,cuda,,1423.1,68.0
+diagnostic,B,tabicl_v2,clinical,5000,20230529,repeat_02_fold_01,0.666,2.366,3.24,in_context: fit stores context; no weight update,7137,cuda,8,2509.3,2228.1
+diagnostic,B,tabicl_v2,clinical,5000,20230529,repeat_03_fold_02,0.647,2.384,3.24,in_context: fit stores context; no weight update,7138,cuda,8,2509.3,2228.1
+prognostic,B,random_survival_forest_or_fallback,clinical,0,20230529,split_04,0.425,0.169,0.73,trained from scratch per fit,323,cpu,,1497.4,64.0
+diagnostic,B,tabpfn_classifier,clinical,5000,20230529,repeat_00_fold_03,0.805,4.803,5.81,in_context: fit stores context; no weight update,7138,cuda,,2293.8,741.6
+diagnostic,B,tabpfn_classifier,clinical,15000,20230529,repeat_01_fold_00,0.865,15.128,16.23,in_context: fit stores context; no weight update,17137,cuda,,2321.4,1256.7
+prognostic,C,mlp_embedding,embedding,0,20230531,split_00,0.129,0.004,0.57,gradient training (weights updated),323,cuda,,1423.1,68.0
+diagnostic,B,tabdpt,clinical,0,20230529,repeat_02_fold_00,0.908,0.216,1.33,in_context: fit stores context; no weight update,2137,cuda,,4356.1,553.6
+diagnostic,B,tabdpt,clinical,1000,20230529,repeat_02_fold_00,0.91,0.355,1.48,in_context: fit stores context; no weight update,3137,cuda,,4357.1,553.6
+diagnostic,C,mlp_embedding,embedding,0,20230530,repeat_02_fold_02,0.255,0.002,1.12,gradient training (weights updated),2138,cuda,,1427.3,69.9
+diagnostic,B,tabdpt,clinical,5000,20230529,repeat_03_fold_03,0.974,1.346,2.55,in_context: fit stores context; no weight update,7138,cuda,,4308.5,553.6
+prognostic,B,tabpfn_landmark_survival,clinical,5000,20230529,split_04,2.125,9.277,11.62,in_context: fit stores context; no weight update,5323,cuda,,2524.3,903.1
+diagnostic,B,xgboost_or_histgb,clinical,10000,20230529,repeat_03_fold_03,0.285,0.001,0.45,trained from scratch per fit,12138,cpu,,1432.8,64.0
+diagnostic,B,xgboost_or_histgb,clinical,1000,20230529,repeat_04_fold_01,0.169,0.002,0.31,trained from scratch per fit,3137,cpu,,1427.4,64.0
+diagnostic,B,mlp_clinical,clinical,0,20230529,repeat_01_fold_03,1.994,0.002,2.2,gradient training (weights updated),2138,cuda,,1392.4,65.4
+diagnostic,B,regularized_logistic,clinical,15000,20230529,repeat_03_fold_00,0.174,0.001,0.34,trained from scratch per fit,17137,cpu,,1423.6,64.0
+diagnostic,C,mlp_embedding,embedding,0,20230531,repeat_02_fold_03,0.286,0.003,1.13,gradient training (weights updated),2138,cuda,,1427.3,69.9
+diagnostic,B,mlp_clinical,clinical,0,20230530,repeat_00_fold_02,1.638,0.001,1.79,gradient training (weights updated),2138,cuda,,1410.4,65.4
+diagnostic,B,mlp_clinical,clinical,10000,20230531,repeat_03_fold_03,7.436,0.001,7.62,gradient training (weights updated),12138,cuda,,1411.5,66.8
+diagnostic,B,regularized_logistic,clinical,10000,20230529,repeat_00_fold_04,0.157,0.001,0.31,trained from scratch per fit,12138,cpu,,1420.1,64.0
+prognostic,B,tabpfn_landmark_survival,clinical,10000,20230529,split_00,2.245,18.81,21.3,in_context: fit stores context; no weight update,10323,cuda,,2558.0,1025.0
+prognostic,B,random_survival_forest_or_fallback,clinical,10000,20230529,split_03,2.643,0.237,3.13,trained from scratch per fit,10323,cpu,,3007.8,64.0
+diagnostic,B,tabicl_v2,clinical,5000,20230529,repeat_00_fold_03,0.645,2.34,3.2,in_context: fit stores context; no weight update,7138,cuda,8,2509.3,2228.1
+diagnostic,B,mlp_clinical,clinical,0,20230531,repeat_02_fold_00,1.526,0.002,1.68,gradient training (weights updated),2137,cuda,,1410.5,65.4
+diagnostic,B,mlp_clinical,clinical,5000,20230529,repeat_00_fold_04,2.757,0.001,2.93,gradient training (weights updated),7138,cuda,,1399.0,66.1
+diagnostic,B,mlp_clinical,clinical,10000,20230531,repeat_03_fold_04,8.362,0.002,8.54,gradient training (weights updated),12138,cuda,,1411.5,66.8
+prognostic,B,cox_elastic_net,clinical,15000,20230529,split_00,1.203,0.003,1.37,trained from scratch per fit,15323,cpu,,1446.2,64.0
+prognostic,C,mlp_embedding,embedding,0,20230529,split_00,0.054,0.004,0.48,gradient training (weights updated),323,cuda,,1423.1,68.0
+diagnostic,B,tabdpt,clinical,0,20230529,repeat_03_fold_01,1.0,0.214,1.43,in_context: fit stores context; no weight update,2137,cuda,,4356.9,553.6
+diagnostic,B,tabpfn_classifier,clinical,1000,20230529,repeat_04_fold_01,0.671,2.443,3.31,in_context: fit stores context; no weight update,3137,cuda,,2454.5,538.5
+diagnostic,B,mlp_clinical,clinical,5000,20230530,repeat_02_fold_03,2.352,0.001,2.51,gradient training (weights updated),7138,cuda,,1410.4,66.1
+diagnostic,B,regularized_logistic,clinical,15000,20230529,repeat_02_fold_04,0.179,0.001,0.35,trained from scratch per fit,17138,cpu,,1423.6,64.0
+diagnostic,B,mlp_clinical,clinical,10000,20230531,repeat_04_fold_03,6.799,0.001,6.98,gradient training (weights updated),12138,cuda,,1411.5,66.8
+prognostic,B,tabpfn_landmark_survival,clinical,1000,20230529,split_02,1.852,3.584,5.64,in_context: fit stores context; no weight update,1323,cuda,,2502.2,812.7
+diagnostic,B,tabpfn_classifier,clinical,1000,20230529,repeat_01_fold_00,0.678,2.406,3.28,in_context: fit stores context; no weight update,3137,cuda,,2454.4,538.5
+prognostic,B,tabpfn_landmark_survival,clinical,10000,20230529,split_03,2.17,19.151,21.56,in_context: fit stores context; no weight update,10323,cuda,,2560.0,1023.6
+diagnostic,B,tabdpt,clinical,10000,20230529,repeat_03_fold_00,1.037,3.68,4.96,in_context: fit stores context; no weight update,12137,cuda,,4312.0,679.7
+diagnostic,B,mlp_clinical,clinical,0,20230530,repeat_00_fold_04,0.877,0.003,1.03,gradient training (weights updated),2138,cuda,,1410.4,65.4
+diagnostic,B,tabpfn_classifier,clinical,15000,20230529,repeat_02_fold_02,0.878,15.049,16.17,in_context: fit stores context; no weight update,17138,cuda,,2321.5,1256.7
+diagnostic,B,regularized_logistic,clinical,15000,20230529,repeat_04_fold_03,0.175,0.0,0.34,trained from scratch per fit,17138,cpu,,1424.2,64.0
+diagnostic,B,mlp_clinical,clinical,1000,20230530,repeat_00_fold_01,2.082,0.001,2.24,gradient training (weights updated),3137,cuda,,1410.4,65.6
+diagnostic,B,mlp_clinical,clinical,10000,20230529,repeat_04_fold_02,6.819,0.007,7.01,gradient training (weights updated),12138,cuda,,1406.3,66.8
+diagnostic,B,mlp_clinical,clinical,10000,20230529,repeat_02_fold_04,3.348,0.005,3.56,gradient training (weights updated),12138,cuda,,1406.3,66.8
+diagnostic,B,tabicl_v2,clinical,1000,20230529,repeat_01_fold_04,0.555,0.901,1.66,in_context: fit stores context; no weight update,3138,cuda,8,2588.5,1156.8
+diagnostic,B,regularized_logistic,clinical,0,20230529,repeat_00_fold_03,0.07,0.0,0.19,trained from scratch per fit,2138,cpu,,1412.5,64.0
+diagnostic,B,regularized_logistic,clinical,0,20230529,repeat_04_fold_03,0.072,0.0,0.2,trained from scratch per fit,2138,cpu,,1412.5,64.0
+diagnostic,B,tabdpt,clinical,5000,20230529,repeat_01_fold_01,0.967,1.336,2.53,in_context: fit stores context; no weight update,7137,cuda,,4307.4,553.6
+diagnostic,B,mlp_clinical,clinical,5000,20230529,repeat_01_fold_00,2.53,0.001,2.7,gradient training (weights updated),7137,cuda,,1399.1,66.1
+diagnostic,B,tabdpt,clinical,5000,20230529,repeat_00_fold_03,0.966,1.335,2.53,in_context: fit stores context; no weight update,7138,cuda,,4307.7,553.6
+diagnostic,B,xgboost_or_histgb,clinical,15000,20230529,repeat_01_fold_02,0.41,0.003,0.6,trained from scratch per fit,17138,cpu,,1437.0,64.0
+diagnostic,B,mlp_clinical,clinical,1000,20230531,repeat_00_fold_04,1.188,0.001,1.34,gradient training (weights updated),3138,cuda,,1410.4,65.6
+diagnostic,C,tabpfn_embedding_ridge,embedding,0,20230529,repeat_04_fold_03,0.11,0.003,0.93,trained from scratch per fit,2138,cpu,,1448.6,64.0
+diagnostic,B,regularized_logistic,clinical,10000,20230529,repeat_00_fold_02,0.134,0.0,0.29,trained from scratch per fit,12138,cpu,,1419.7,64.0
+diagnostic,B,regularized_logistic,clinical,1000,20230529,repeat_02_fold_01,0.079,0.0,0.21,trained from scratch per fit,3137,cpu,,1412.5,64.0
+diagnostic,B,regularized_logistic,clinical,15000,20230529,repeat_00_fold_00,0.171,0.001,0.34,trained from scratch per fit,17137,cpu,,1423.3,64.0
+diagnostic,C,mlp_embedding,embedding,0,20230531,repeat_00_fold_02,0.331,0.002,1.18,gradient training (weights updated),2138,cuda,,1427.3,69.9
+diagnostic,B,tabicl_v2,clinical,5000,20230529,repeat_04_fold_02,0.619,2.348,3.17,in_context: fit stores context; no weight update,7138,cuda,8,2509.4,2228.1
+diagnostic,B,tabpfn_classifier,clinical,0,20230529,repeat_00_fold_04,0.695,1.883,2.77,in_context: fit stores context; no weight update,2138,cuda,,2450.3,485.5
+diagnostic,B,tabicl_v2,clinical,1000,20230529,repeat_01_fold_03,0.608,0.915,1.72,in_context: fit stores context; no weight update,3138,cuda,8,2590.5,1156.8
+prognostic,B,mlp_clinical,clinical,15000,20230529,split_03,0.643,0.003,0.84,gradient training (weights updated),15323,cuda,,1449.3,75.0
+diagnostic,B,mlp_clinical,clinical,10000,20230531,repeat_00_fold_02,9.718,0.001,9.9,gradient training (weights updated),12138,cuda,,1411.5,66.8
+diagnostic,B,tabicl_v2,clinical,5000,20230529,repeat_00_fold_01,0.647,2.365,3.23,in_context: fit stores context; no weight update,7137,cuda,8,2509.3,2228.1
+diagnostic,B,tabdpt,clinical,15000,20230529,repeat_04_fold_02,1.05,7.368,8.7,in_context: fit stores context; no weight update,17138,cuda,,4318.6,828.5
+diagnostic,B,tabpfn_classifier,clinical,5000,20230529,repeat_02_fold_04,0.854,4.932,6.02,in_context: fit stores context; no weight update,7138,cuda,,2294.1,741.6
+diagnostic,B,mlp_clinical,clinical,15000,20230530,repeat_03_fold_04,15.082,0.002,15.28,gradient training (weights updated),17138,cuda,,1412.2,67.6
+diagnostic,B,mlp_clinical,clinical,15000,20230531,repeat_02_fold_02,3.654,0.003,3.85,gradient training (weights updated),17138,cuda,,1412.2,67.4
+diagnostic,B,tabicl_v2,clinical,1000,20230529,repeat_04_fold_00,0.569,0.914,1.68,in_context: fit stores context; no weight update,3137,cuda,8,2588.5,1156.8
+diagnostic,B,tabicl_v2,clinical,5000,20230529,repeat_01_fold_01,0.688,2.37,3.27,in_context: fit stores context; no weight update,7137,cuda,8,2509.3,2228.1
+diagnostic,B,regularized_logistic,clinical,0,20230529,repeat_03_fold_00,0.071,0.0,0.2,trained from scratch per fit,2137,cpu,,1412.5,64.0
+prognostic,B,random_survival_forest_or_fallback,clinical,1000,20230529,split_02,0.469,0.176,0.8,trained from scratch per fit,1323,cpu,,1680.2,64.0
+prognostic,B,survivalpfn_native,clinical,10000,20230529,split_04,5.372,1.45,7.73,in_context: fit stores context; no weight update,10323,cuda,one call per outer-test split in test-ID order,4174.3,64.0
+diagnostic,B,regularized_logistic,clinical,10000,20230529,repeat_02_fold_03,0.14,0.0,0.3,trained from scratch per fit,12138,cpu,,1419.9,64.0
+diagnostic,B,mlp_clinical,clinical,5000,20230531,repeat_04_fold_04,2.157,0.001,2.32,gradient training (weights updated),7138,cuda,,1410.5,66.1
+diagnostic,B,tabicl_v2,clinical,10000,20230529,repeat_00_fold_00,0.847,4.861,5.94,in_context: fit stores context; no weight update,12137,cuda,8,3980.9,2544.7
+diagnostic,B,mlp_clinical,clinical,0,20230531,repeat_00_fold_00,1.584,0.002,1.73,gradient training (weights updated),2137,cuda,,1410.5,65.4
+diagnostic,B,xgboost_or_histgb,clinical,10000,20230529,repeat_04_fold_00,0.3,0.002,0.46,trained from scratch per fit,12137,cpu,,1432.8,64.0
+diagnostic,B,mlp_clinical,clinical,10000,20230531,repeat_00_fold_04,4.378,0.002,4.56,gradient training (weights updated),12138,cuda,,1411.5,66.9
+diagnostic,B,xgboost_or_histgb,clinical,0,20230529,repeat_02_fold_00,0.148,0.002,0.28,trained from scratch per fit,2137,cpu,,1425.0,64.0
+diagnostic,B,xgboost_or_histgb,clinical,0,20230529,repeat_04_fold_04,0.147,0.002,0.28,trained from scratch per fit,2138,cpu,,1425.9,64.0
+diagnostic,B,regularized_logistic,clinical,0,20230529,repeat_04_fold_04,0.072,0.0,0.2,trained from scratch per fit,2138,cpu,,1412.5,64.0
+prognostic,B,cox_elastic_net,clinical,5000,20230529,split_00,0.875,0.004,1.02,trained from scratch per fit,5323,cpu,,1438.4,64.0
+diagnostic,B,mlp_clinical,clinical,1000,20230529,repeat_04_fold_02,1.886,0.006,2.07,gradient training (weights updated),3138,cuda,,1393.8,65.6
+diagnostic,B,tabdpt,clinical,5000,20230529,repeat_03_fold_04,0.978,1.339,2.56,in_context: fit stores context; no weight update,7138,cuda,,4308.1,553.6
+diagnostic,B,regularized_logistic,clinical,10000,20230529,repeat_02_fold_00,0.144,0.0,0.29,trained from scratch per fit,12137,cpu,,1419.7,64.0
+diagnostic,B,xgboost_or_histgb,clinical,5000,20230529,repeat_04_fold_02,0.224,0.001,0.37,trained from scratch per fit,7138,cpu,,1430.0,64.0
+diagnostic,B,mlp_clinical,clinical,10000,20230531,repeat_00_fold_03,10.449,0.002,10.62,gradient training (weights updated),12138,cuda,,1411.5,66.8
+diagnostic,B,mlp_clinical,clinical,10000,20230529,repeat_00_fold_02,11.456,0.003,11.65,gradient training (weights updated),12138,cuda,,1406.2,66.8
+diagnostic,B,regularized_logistic,clinical,5000,20230529,repeat_01_fold_02,0.116,0.0,0.26,trained from scratch per fit,7138,cpu,,1416.0,64.0
+diagnostic,B,tabicl_v2,clinical,0,20230529,repeat_04_fold_02,0.547,0.671,1.42,in_context: fit stores context; no weight update,2138,cuda,8,2574.5,890.5
+diagnostic,B,xgboost_or_histgb,clinical,10000,20230529,repeat_03_fold_00,0.288,0.002,0.45,trained from scratch per fit,12137,cpu,,1432.8,64.0
+diagnostic,B,mlp_clinical,clinical,15000,20230531,repeat_00_fold_03,14.796,0.001,14.99,gradient training (weights updated),17138,cuda,,1412.2,67.5
+diagnostic,C,tabpfn_embedding_ridge,embedding,0,20230529,repeat_04_fold_02,0.086,0.002,0.92,trained from scratch per fit,2138,cpu,,1448.6,64.0
+diagnostic,B,xgboost_or_histgb,clinical,1000,20230529,repeat_01_fold_04,0.17,0.002,0.31,trained from scratch per fit,3138,cpu,,1426.5,64.0
+diagnostic,B,tabicl_v2,clinical,10000,20230529,repeat_01_fold_04,0.832,4.686,5.75,in_context: fit stores context; no weight update,12138,cuda,8,3981.1,2544.7
+prognostic,B,random_survival_forest_or_fallback,clinical,1000,20230529,split_01,0.463,0.187,0.81,trained from scratch per fit,1323,cpu,,1693.2,64.0
+diagnostic,B,xgboost_or_histgb,clinical,5000,20230529,repeat_01_fold_03,0.236,0.002,0.39,trained from scratch per fit,7138,cpu,,1430.1,64.0
+diagnostic,B,xgboost_or_histgb,clinical,1000,20230529,repeat_00_fold_00,0.165,0.002,0.3,trained from scratch per fit,3137,cpu,,1425.9,64.0
+diagnostic,B,xgboost_or_histgb,clinical,0,20230529,repeat_03_fold_02,0.155,0.001,0.29,trained from scratch per fit,2138,cpu,,1425.6,64.0
+diagnostic,B,mlp_clinical,clinical,15000,20230530,repeat_01_fold_00,4.298,0.002,4.5,gradient training (weights updated),17137,cuda,,1412.2,67.4
+diagnostic,B,tabpfn_classifier,clinical,15000,20230529,repeat_04_fold_04,0.861,15.226,16.33,in_context: fit stores context; no weight update,17138,cuda,,2321.6,1256.7
+diagnostic,B,mlp_clinical,clinical,10000,20230529,repeat_03_fold_02,8.409,0.001,8.61,gradient training (weights updated),12138,cuda,,1406.3,66.8
+diagnostic,B,tabpfn_classifier,clinical,10000,20230529,repeat_04_fold_03,0.969,9.406,10.61,in_context: fit stores context; no weight update,12138,cuda,,2513.7,998.7
+diagnostic,B,xgboost_or_histgb,clinical,1000,20230529,repeat_00_fold_02,0.162,0.002,0.3,trained from scratch per fit,3138,cpu,,1425.9,64.0
+diagnostic,B,mlp_clinical,clinical,15000,20230531,repeat_00_fold_00,11.219,0.003,11.43,gradient training (weights updated),17137,cuda,,1412.2,67.5
+diagnostic,B,tabdpt,clinical,1000,20230529,repeat_00_fold_01,0.904,0.36,1.48,in_context: fit stores context; no weight update,3137,cuda,,4357.3,553.6
+diagnostic,B,mlp_clinical,clinical,10000,20230530,repeat_01_fold_01,5.781,0.002,5.96,gradient training (weights updated),12137,cuda,,1411.7,66.8
+diagnostic,B,mlp_clinical,clinical,10000,20230529,repeat_00_fold_01,11.063,0.003,11.27,gradient training (weights updated),12137,cuda,,1406.2,66.8
+diagnostic,B,tabdpt,clinical,15000,20230529,repeat_04_fold_01,1.158,7.439,8.85,in_context: fit stores context; no weight update,17137,cuda,,4319.1,828.5
+diagnostic,B,mlp_clinical,clinical,5000,20230529,repeat_03_fold_04,5.011,0.001,5.19,gradient training (weights updated),7138,cuda,,1399.6,66.1
+diagnostic,C,mlp_embedding,embedding,0,20230531,repeat_01_fold_04,0.141,0.003,1.02,gradient training (weights updated),2138,cuda,,1427.3,69.9
+diagnostic,B,tabpfn_classifier,clinical,10000,20230529,repeat_02_fold_02,0.858,9.367,10.45,in_context: fit stores context; no weight update,12138,cuda,,2513.5,998.7
+diagnostic,B,mlp_clinical,clinical,10000,20230530,repeat_00_fold_00,4.706,0.002,4.9,gradient training (weights updated),12137,cuda,,1411.7,66.8
+diagnostic,C,mlp_embedding,embedding,0,20230531,repeat_03_fold_02,0.194,0.004,1.05,gradient training (weights updated),2138,cuda,,1427.3,69.9
+diagnostic,B,tabicl_v2,clinical,10000,20230529,repeat_02_fold_02,0.803,4.695,5.73,in_context: fit stores context; no weight update,12138,cuda,8,3982.9,2544.7
+diagnostic,B,mlp_clinical,clinical,5000,20230529,repeat_01_fold_02,3.173,0.001,3.34,gradient training (weights updated),7138,cuda,,1399.2,66.1
+diagnostic,B,mlp_clinical,clinical,1000,20230529,repeat_03_fold_04,2.229,0.004,2.41,gradient training (weights updated),3138,cuda,,1393.8,65.6
+prognostic,B,mlp_clinical,clinical,5000,20230531,split_02,0.746,0.002,0.92,gradient training (weights updated),5323,cuda,,1447.6,68.0
+diagnostic,B,mlp_clinical,clinical,5000,20230530,repeat_02_fold_04,1.763,0.002,1.92,gradient training (weights updated),7138,cuda,,1410.4,66.1
+diagnostic,B,mlp_clinical,clinical,10000,20230529,repeat_04_fold_01,8.906,0.002,9.1,gradient training (weights updated),12137,cuda,,1406.3,66.8
+diagnostic,B,tabicl_v2,clinical,10000,20230529,repeat_04_fold_00,0.799,4.672,5.71,in_context: fit stores context; no weight update,12137,cuda,8,3982.9,2544.7
+diagnostic,B,tabicl_v2,clinical,5000,20230529,repeat_00_fold_02,0.711,2.35,3.32,in_context: fit stores context; no weight update,7138,cuda,8,2509.3,2228.1
+diagnostic,B,tabicl_v2,clinical,15000,20230529,repeat_02_fold_01,0.88,7.597,8.72,in_context: fit stores context; no weight update,17137,cuda,8,4179.0,2584.1
+diagnostic,B,mlp_clinical,clinical,0,20230529,repeat_01_fold_02,1.144,0.003,1.3,gradient training (weights updated),2138,cuda,,1392.4,65.4
+diagnostic,B,xgboost_or_histgb,clinical,10000,20230529,repeat_04_fold_01,0.295,0.001,0.46,trained from scratch per fit,12137,cpu,,1432.8,64.0
+diagnostic,B,mlp_clinical,clinical,1000,20230530,repeat_04_fold_00,1.79,0.002,1.94,gradient training (weights updated),3137,cuda,,1410.4,65.6
+diagnostic,B,mlp_clinical,clinical,0,20230529,repeat_03_fold_01,0.654,0.003,0.83,gradient training (weights updated),2137,cuda,,1392.4,65.4
+diagnostic,B,tabicl_v2,clinical,0,20230529,repeat_00_fold_01,0.55,0.672,1.43,in_context: fit stores context; no weight update,2137,cuda,8,2576.4,890.5
+diagnostic,B,mlp_clinical,clinical,0,20230531,repeat_03_fold_03,1.372,0.002,1.53,gradient training (weights updated),2138,cuda,,1410.5,65.4
+diagnostic,B,regularized_logistic,clinical,0,20230529,repeat_01_fold_01,0.077,0.0,0.2,trained from scratch per fit,2137,cpu,,1412.5,64.0
+diagnostic,B,tabdpt,clinical,1000,20230529,repeat_02_fold_01,0.897,0.353,1.47,in_context: fit stores context; no weight update,3137,cuda,,4357.1,553.6
+prognostic,B,survivalpfn_native,clinical,0,20230529,split_04,5.525,0.333,6.74,in_context: fit stores context; no weight update,323,cuda,one call per outer-test split in test-ID order,4171.8,64.0
+diagnostic,B,tabpfn_classifier,clinical,10000,20230529,repeat_03_fold_02,0.842,9.432,10.5,in_context: fit stores context; no weight update,12138,cuda,,2513.6,998.7
+diagnostic,C,mlp_embedding,embedding,0,20230529,repeat_02_fold_03,0.294,0.007,1.15,gradient training (weights updated),2138,cuda,,1427.2,69.9
+diagnostic,B,mlp_clinical,clinical,1000,20230531,repeat_02_fold_03,1.073,0.002,1.22,gradient training (weights updated),3138,cuda,,1410.4,65.6
+diagnostic,C,mlp_embedding,embedding,0,20230529,repeat_01_fold_03,0.247,0.004,1.12,gradient training (weights updated),2138,cuda,,1427.2,69.9
+diagnostic,B,regularized_logistic,clinical,1000,20230529,repeat_04_fold_00,0.08,0.001,0.21,trained from scratch per fit,3137,cpu,,1412.5,64.0
+diagnostic,B,mlp_clinical,clinical,1000,20230531,repeat_04_fold_03,1.811,0.002,1.98,gradient training (weights updated),3138,cuda,,1410.4,65.6
+diagnostic,B,mlp_clinical,clinical,10000,20230531,repeat_04_fold_04,3.926,0.001,4.11,gradient training (weights updated),12138,cuda,,1411.5,66.8
+diagnostic,B,xgboost_or_histgb,clinical,15000,20230529,repeat_01_fold_01,0.379,0.002,0.56,trained from scratch per fit,17137,cpu,,1437.0,64.0
+diagnostic,B,mlp_clinical,clinical,15000,20230531,repeat_03_fold_00,9.546,0.002,9.74,gradient training (weights updated),17137,cuda,,1412.2,67.5
+diagnostic,B,mlp_clinical,clinical,5000,20230531,repeat_01_fold_02,3.494,0.001,3.66,gradient training (weights updated),7138,cuda,,1410.5,66.1
+diagnostic,B,xgboost_or_histgb,clinical,15000,20230529,repeat_02_fold_04,0.36,0.002,0.53,trained from scratch per fit,17138,cpu,,1437.7,64.0
+diagnostic,C,tabpfn_embedding_ridge,embedding,0,20230529,repeat_03_fold_01,0.087,0.0,0.91,trained from scratch per fit,2137,cpu,,1448.6,64.0
+diagnostic,B,mlp_clinical,clinical,0,20230530,repeat_01_fold_04,0.872,0.002,1.03,gradient training (weights updated),2138,cuda,,1410.4,65.4
+diagnostic,B,tabpfn_classifier,clinical,10000,20230529,repeat_03_fold_04,0.806,9.401,10.43,in_context: fit stores context; no weight update,12138,cuda,,2513.7,998.7
+diagnostic,C,mlp_embedding,embedding,0,20230530,repeat_03_fold_00,0.297,0.003,1.18,gradient training (weights updated),2137,cuda,,1427.3,69.9
+diagnostic,B,regularized_logistic,clinical,5000,20230529,repeat_04_fold_04,0.104,0.0,0.24,trained from scratch per fit,7138,cpu,,1416.0,64.0
+diagnostic,B,tabicl_v2,clinical,0,20230529,repeat_02_fold_04,0.543,0.663,1.4,in_context: fit stores context; no weight update,2138,cuda,8,2580.4,890.5
+prognostic,C,mlp_embedding,embedding,0,20230530,split_03,0.087,0.003,0.52,gradient training (weights updated),323,cuda,,1423.1,68.0
+diagnostic,B,tabdpt,clinical,10000,20230529,repeat_02_fold_03,1.012,3.692,4.94,in_context: fit stores context; no weight update,12138,cuda,,4311.9,679.7
+diagnostic,B,regularized_logistic,clinical,0,20230529,repeat_01_fold_02,0.072,0.0,0.2,trained from scratch per fit,2138,cpu,,1412.5,64.0
+diagnostic,B,tabicl_v2,clinical,0,20230529,repeat_01_fold_02,0.583,0.661,1.44,in_context: fit stores context; no weight update,2138,cuda,8,2576.4,890.5
+diagnostic,B,xgboost_or_histgb,clinical,0,20230529,repeat_04_fold_03,0.149,0.001,0.28,trained from scratch per fit,2138,cpu,,1425.9,64.0
+diagnostic,B,tabicl_v2,clinical,0,20230529,repeat_04_fold_01,0.596,0.671,1.46,in_context: fit stores context; no weight update,2137,cuda,8,2578.3,890.5
+diagnostic,B,mlp_clinical,clinical,1000,20230531,repeat_04_fold_00,1.286,0.002,1.44,gradient training (weights updated),3137,cuda,,1410.4,65.6
+diagnostic,B,mlp_clinical,clinical,5000,20230531,repeat_04_fold_03,3.929,0.002,4.09,gradient training (weights updated),7138,cuda,,1410.5,66.1
+diagnostic,B,mlp_clinical,clinical,5000,20230530,repeat_04_fold_02,2.394,0.001,2.56,gradient training (weights updated),7138,cuda,,1410.4,66.1
+diagnostic,B,mlp_clinical,clinical,1000,20230531,repeat_01_fold_02,1.507,0.003,1.67,gradient training (weights updated),3138,cuda,,1410.4,65.6
+diagnostic,B,mlp_clinical,clinical,15000,20230530,repeat_02_fold_00,10.775,0.002,10.97,gradient training (weights updated),17137,cuda,,1412.2,67.5
+diagnostic,B,xgboost_or_histgb,clinical,5000,20230529,repeat_02_fold_02,0.219,0.001,0.37,trained from scratch per fit,7138,cpu,,1430.1,64.0
+diagnostic,B,tabicl_v2,clinical,0,20230529,repeat_00_fold_03,0.545,0.658,1.4,in_context: fit stores context; no weight update,2138,cuda,8,2578.2,890.5
+diagnostic,B,mlp_clinical,clinical,1000,20230529,repeat_01_fold_02,1.828,0.003,2.0,gradient training (weights updated),3138,cuda,,1393.8,65.6
+diagnostic,B,tabpfn_classifier,clinical,0,20230529,repeat_00_fold_01,0.623,1.916,2.73,in_context: fit stores context; no weight update,2137,cuda,,2449.4,485.6
+diagnostic,B,tabdpt,clinical,10000,20230529,repeat_00_fold_03,0.993,3.563,4.81,in_context: fit stores context; no weight update,12138,cuda,,4311.9,679.7
+diagnostic,B,regularized_logistic,clinical,0,20230529,repeat_03_fold_03,0.068,0.0,0.19,trained from scratch per fit,2138,cpu,,1412.5,64.0
+diagnostic,B,mlp_clinical,clinical,5000,20230529,repeat_02_fold_02,3.388,0.002,3.56,gradient training (weights updated),7138,cuda,,1399.6,66.1
+diagnostic,C,mlp_embedding,embedding,0,20230529,repeat_01_fold_04,0.175,0.003,1.05,gradient training (weights updated),2138,cuda,,1427.2,69.9
+diagnostic,B,tabicl_v2,clinical,0,20230529,repeat_01_fold_01,0.539,0.669,1.4,in_context: fit stores context; no weight update,2137,cuda,8,2578.3,890.5
+diagnostic,B,xgboost_or_histgb,clinical,0,20230529,repeat_04_fold_00,0.146,0.002,0.28,trained from scratch per fit,2137,cpu,,1425.9,64.0
+prognostic,B,mlp_clinical,clinical,10000,20230529,split_01,0.579,0.003,0.76,gradient training (weights updated),10323,cuda,,1448.2,71.4
+prognostic,B,mlp_clinical,clinical,0,20230531,split_04,0.775,0.004,0.93,gradient training (weights updated),323,cuda,,1447.6,65.2
+prognostic,B,mlp_clinical,clinical,5000,20230530,split_00,0.466,0.002,0.64,gradient training (weights updated),5323,cuda,,1447.6,68.0
+diagnostic,B,tabpfn_classifier,clinical,15000,20230529,repeat_03_fold_02,0.884,15.078,16.24,in_context: fit stores context; no weight update,17138,cuda,,2321.5,1256.7
+diagnostic,B,regularized_logistic,clinical,0,20230529,repeat_01_fold_04,0.073,0.001,0.2,trained from scratch per fit,2138,cpu,,1412.5,64.0
+diagnostic,B,mlp_clinical,clinical,5000,20230531,repeat_00_fold_02,5.715,0.001,5.88,gradient training (weights updated),7138,cuda,,1410.5,66.1
+diagnostic,B,mlp_clinical,clinical,15000,20230529,repeat_02_fold_03,6.105,0.001,6.3,gradient training (weights updated),17138,cuda,,1412.1,67.5
+diagnostic,B,tabpfn_classifier,clinical,15000,20230529,repeat_02_fold_04,0.879,15.082,16.2,in_context: fit stores context; no weight update,17138,cuda,,2321.5,1256.7
+diagnostic,B,mlp_clinical,clinical,10000,20230531,repeat_01_fold_03,4.892,0.002,5.07,gradient training (weights updated),12138,cuda,,1411.5,66.8
+diagnostic,B,tabpfn_classifier,clinical,0,20230529,repeat_02_fold_00,0.634,1.953,2.77,in_context: fit stores context; no weight update,2137,cuda,,2450.2,485.6
+prognostic,C,mlp_embedding,embedding,0,20230531,split_01,0.04,0.003,0.48,gradient training (weights updated),323,cuda,,1423.1,68.0
+diagnostic,B,tabdpt,clinical,15000,20230529,repeat_02_fold_03,1.116,7.421,8.8,in_context: fit stores context; no weight update,17138,cuda,,4318.8,828.5
+diagnostic,B,mlp_clinical,clinical,1000,20230529,repeat_01_fold_04,1.292,0.002,1.46,gradient training (weights updated),3138,cuda,,1393.8,65.6
+diagnostic,B,mlp_clinical,clinical,5000,20230531,repeat_02_fold_03,2.548,0.002,2.71,gradient training (weights updated),7138,cuda,,1410.5,66.1
+diagnostic,B,tabpfn_classifier,clinical,10000,20230529,repeat_01_fold_02,0.824,9.368,10.41,in_context: fit stores context; no weight update,12138,cuda,,2513.4,998.7
+diagnostic,B,regularized_logistic,clinical,15000,20230529,repeat_00_fold_02,0.182,0.0,0.36,trained from scratch per fit,17138,cpu,,1423.2,64.0
+diagnostic,B,mlp_clinical,clinical,10000,20230530,repeat_03_fold_00,7.293,0.001,7.48,gradient training (weights updated),12137,cuda,,1411.7,66.8
+diagnostic,B,mlp_clinical,clinical,1000,20230529,repeat_03_fold_02,2.192,0.001,2.35,gradient training (weights updated),3138,cuda,,1393.8,65.6
+diagnostic,B,xgboost_or_histgb,clinical,10000,20230529,repeat_04_fold_03,0.302,0.002,0.47,trained from scratch per fit,12138,cpu,,1432.8,64.0
+diagnostic,B,tabicl_v2,clinical,15000,20230529,repeat_02_fold_00,0.933,7.62,8.8,in_context: fit stores context; no weight update,17137,cuda,8,4179.0,2584.1
+diagnostic,B,regularized_logistic,clinical,10000,20230529,repeat_01_fold_02,0.143,0.0,0.29,trained from scratch per fit,12138,cpu,,1419.9,64.0
+diagnostic,B,xgboost_or_histgb,clinical,1000,20230529,repeat_00_fold_01,0.165,0.001,0.3,trained from scratch per fit,3137,cpu,,1425.9,64.0
+diagnostic,C,mlp_embedding,embedding,0,20230530,repeat_00_fold_00,0.289,0.004,1.17,gradient training (weights updated),2137,cuda,,1427.3,69.9
+diagnostic,B,tabicl_v2,clinical,10000,20230529,repeat_03_fold_03,0.763,4.755,5.75,in_context: fit stores context; no weight update,12138,cuda,8,3982.9,2544.7
+diagnostic,B,tabpfn_classifier,clinical,0,20230529,repeat_01_fold_04,0.648,1.956,2.79,in_context: fit stores context; no weight update,2138,cuda,,2450.2,485.5
+diagnostic,C,tabpfn_embedding_ridge,embedding,0,20230529,repeat_00_fold_00,0.157,0.002,0.99,trained from scratch per fit,2137,cpu,,1447.6,64.0
+prognostic,B,mlp_clinical,clinical,5000,20230531,split_04,0.836,0.003,1.01,gradient training (weights updated),5323,cuda,,1447.6,68.0
+diagnostic,B,tabicl_v2,clinical,15000,20230529,repeat_02_fold_02,0.904,7.561,8.71,in_context: fit stores context; no weight update,17138,cuda,8,4179.0,2584.1
+prognostic,B,mlp_clinical,clinical,0,20230531,split_03,0.382,0.002,0.54,gradient training (weights updated),323,cuda,,1447.6,65.2
+diagnostic,B,tabicl_v2,clinical,0,20230529,repeat_00_fold_04,0.589,0.661,1.45,in_context: fit stores context; no weight update,2138,cuda,8,2576.4,890.5
+prognostic,B,mlp_clinical,clinical,0,20230530,split_00,0.389,0.004,0.55,gradient training (weights updated),323,cuda,,1447.6,65.2
+diagnostic,B,tabpfn_classifier,clinical,1000,20230529,repeat_04_fold_02,0.681,2.415,3.28,in_context: fit stores context; no weight update,3138,cuda,,2454.5,538.5
+diagnostic,B,regularized_logistic,clinical,5000,20230529,repeat_03_fold_03,0.106,0.001,0.25,trained from scratch per fit,7138,cpu,,1416.0,64.0
+diagnostic,B,mlp_clinical,clinical,10000,20230529,repeat_02_fold_02,4.789,0.002,4.97,gradient training (weights updated),12138,cuda,,1406.3,66.8
+prognostic,B,mlp_clinical,clinical,5000,20230531,split_03,0.407,0.003,0.58,gradient training (weights updated),5323,cuda,,1447.6,68.0
+diagnostic,B,xgboost_or_histgb,clinical,10000,20230529,repeat_00_fold_01,0.293,0.002,0.45,trained from scratch per fit,12137,cpu,,1432.8,64.0
+diagnostic,B,tabicl_v2,clinical,5000,20230529,repeat_01_fold_04,0.656,2.426,3.29,in_context: fit stores context; no weight update,7138,cuda,8,2509.3,2228.1
+diagnostic,C,mlp_embedding,embedding,0,20230530,repeat_01_fold_04,0.167,0.003,1.04,gradient training (weights updated),2138,cuda,,1427.3,69.9
+diagnostic,B,mlp_clinical,clinical,10000,20230530,repeat_03_fold_04,10.777,0.002,10.96,gradient training (weights updated),12138,cuda,,1411.7,66.8
+diagnostic,C,tabpfn_embedding_ridge,embedding,0,20230529,repeat_01_fold_02,0.09,0.002,0.91,trained from scratch per fit,2138,cpu,,1448.6,64.0
+diagnostic,B,mlp_clinical,clinical,10000,20230530,repeat_03_fold_01,2.464,0.003,2.65,gradient training (weights updated),12137,cuda,,1411.7,66.8
+prognostic,B,mlp_clinical,clinical,1000,20230529,split_01,0.483,0.002,0.64,gradient training (weights updated),1323,cuda,,1441.9,65.8
+prognostic,B,survivalpfn_native,clinical,1000,20230529,split_01,5.412,0.354,6.65,in_context: fit stores context; no weight update,1323,cuda,one call per outer-test split in test-ID order,4171.8,64.0
+diagnostic,B,mlp_clinical,clinical,10000,20230530,repeat_00_fold_01,7.338,0.003,7.53,gradient training (weights updated),12137,cuda,,1411.7,66.8
+diagnostic,C,mlp_embedding,embedding,0,20230531,repeat_00_fold_01,0.486,0.003,1.35,gradient training (weights updated),2137,cuda,,1427.3,69.9
+diagnostic,B,regularized_logistic,clinical,1000,20230529,repeat_02_fold_00,0.085,0.001,0.22,trained from scratch per fit,3137,cpu,,1412.5,64.0
+diagnostic,B,tabpfn_classifier,clinical,0,20230529,repeat_01_fold_03,0.62,1.895,2.7,in_context: fit stores context; no weight update,2138,cuda,,2450.1,485.5
+diagnostic,B,regularized_logistic,clinical,5000,20230529,repeat_03_fold_01,0.106,0.0,0.25,trained from scratch per fit,7137,cpu,,1416.0,64.0
+prognostic,B,tabpfn_landmark_survival,clinical,5000,20230529,split_03,2.082,9.093,11.4,in_context: fit stores context; no weight update,5323,cuda,,2524.3,903.1
+prognostic,B,mlp_clinical,clinical,5000,20230529,split_02,0.631,0.002,0.8,gradient training (weights updated),5323,cuda,,1447.0,68.0
+diagnostic,B,regularized_logistic,clinical,15000,20230529,repeat_00_fold_04,0.2,0.0,0.36,trained from scratch per fit,17138,cpu,,1423.7,64.0
+diagnostic,B,mlp_clinical,clinical,1000,20230531,repeat_01_fold_01,2.269,0.002,2.42,gradient training (weights updated),3137,cuda,,1410.4,65.6
+diagnostic,B,mlp_clinical,clinical,10000,20230530,repeat_02_fold_00,7.647,0.002,7.83,gradient training (weights updated),12137,cuda,,1411.7,66.8
+diagnostic,B,tabicl_v2,clinical,0,20230529,repeat_02_fold_03,0.545,0.679,1.42,in_context: fit stores context; no weight update,2138,cuda,8,2574.5,890.5
+diagnostic,B,tabpfn_classifier,clinical,1000,20230529,repeat_03_fold_01,0.718,2.411,3.32,in_context: fit stores context; no weight update,3137,cuda,,2454.9,538.5
+diagnostic,B,xgboost_or_histgb,clinical,5000,20230529,repeat_02_fold_04,0.238,0.001,0.38,trained from scratch per fit,7138,cpu,,1430.0,64.0
+diagnostic,B,mlp_clinical,clinical,15000,20230531,repeat_04_fold_04,5.186,0.001,5.38,gradient training (weights updated),17138,cuda,,1412.2,67.6
+diagnostic,B,mlp_clinical,clinical,5000,20230531,repeat_03_fold_03,4.593,0.001,4.76,gradient training (weights updated),7138,cuda,,1410.5,66.1
+diagnostic,B,regularized_logistic,clinical,10000,20230529,repeat_04_fold_02,0.144,0.0,0.3,trained from scratch per fit,12138,cpu,,1419.7,64.0
+diagnostic,B,tabpfn_classifier,clinical,5000,20230529,repeat_01_fold_00,0.729,4.912,5.85,in_context: fit stores context; no weight update,7137,cuda,,2293.9,742.0
+diagnostic,B,xgboost_or_histgb,clinical,1000,20230529,repeat_00_fold_03,0.183,0.002,0.31,trained from scratch per fit,3138,cpu,,1425.9,64.0
+diagnostic,C,mlp_embedding,embedding,0,20230530,repeat_02_fold_00,0.69,0.002,1.53,gradient training (weights updated),2137,cuda,,1427.3,69.9
+diagnostic,B,regularized_logistic,clinical,15000,20230529,repeat_04_fold_04,0.167,0.001,0.33,trained from scratch per fit,17138,cpu,,1424.5,64.0
+diagnostic,B,mlp_clinical,clinical,15000,20230529,repeat_00_fold_02,13.206,0.002,13.4,gradient training (weights updated),17138,cuda,,1411.1,67.4
+diagnostic,B,mlp_clinical,clinical,15000,20230530,repeat_03_fold_02,10.307,0.002,10.5,gradient training (weights updated),17138,cuda,,1412.2,67.6
+prognostic,B,cox_elastic_net,clinical,5000,20230529,split_03,0.902,0.003,1.05,trained from scratch per fit,5323,cpu,,1438.5,64.0
+diagnostic,B,xgboost_or_histgb,clinical,0,20230529,repeat_02_fold_02,0.155,0.001,0.29,trained from scratch per fit,2138,cpu,,1425.0,64.0
+diagnostic,B,mlp_clinical,clinical,5000,20230529,repeat_03_fold_01,2.144,0.001,2.31,gradient training (weights updated),7137,cuda,,1399.6,66.1
+diagnostic,B,xgboost_or_histgb,clinical,10000,20230529,repeat_04_fold_02,0.297,0.001,0.45,trained from scratch per fit,12138,cpu,,1432.8,64.0
+diagnostic,C,mlp_embedding,embedding,0,20230530,repeat_02_fold_04,0.534,0.004,1.4,gradient training (weights updated),2138,cuda,,1427.3,69.9
+diagnostic,B,xgboost_or_histgb,clinical,15000,20230529,repeat_01_fold_00,0.372,0.001,0.55,trained from scratch per fit,17137,cpu,,1437.0,64.0
+diagnostic,B,tabpfn_classifier,clinical,15000,20230529,repeat_03_fold_04,0.953,15.117,16.31,in_context: fit stores context; no weight update,17138,cuda,,2321.5,1256.7
+diagnostic,B,mlp_clinical,clinical,15000,20230529,repeat_04_fold_03,13.071,0.001,13.27,gradient training (weights updated),17138,cuda,,1412.1,67.5
+diagnostic,B,mlp_clinical,clinical,10000,20230531,repeat_04_fold_01,9.202,0.002,9.38,gradient training (weights updated),12137,cuda,,1411.5,66.8
+prognostic,B,cox_elastic_net,clinical,10000,20230529,split_04,1.072,0.003,1.23,trained from scratch per fit,10323,cpu,,1441.7,64.0
+diagnostic,C,mlp_embedding,embedding,0,20230531,repeat_01_fold_03,0.33,0.002,1.19,gradient training (weights updated),2138,cuda,,1427.3,69.9
+prognostic,B,mlp_clinical,clinical,5000,20230530,split_01,0.533,0.001,0.71,gradient training (weights updated),5323,cuda,,1447.6,68.0
+diagnostic,B,mlp_clinical,clinical,15000,20230529,repeat_02_fold_00,7.284,0.002,7.48,gradient training (weights updated),17137,cuda,,1412.1,67.5
+diagnostic,B,mlp_clinical,clinical,10000,20230531,repeat_01_fold_01,8.599,0.001,8.78,gradient training (weights updated),12137,cuda,,1411.5,66.8
+prognostic,B,random_survival_forest_or_fallback,clinical,0,20230529,split_03,0.435,0.164,0.74,trained from scratch per fit,323,cpu,,1498.1,64.0
+diagnostic,B,tabpfn_classifier,clinical,15000,20230529,repeat_01_fold_02,0.881,15.095,16.21,in_context: fit stores context; no weight update,17138,cuda,,2321.4,1256.7
+diagnostic,B,xgboost_or_histgb,clinical,15000,20230529,repeat_03_fold_04,0.361,0.002,0.53,trained from scratch per fit,17138,cpu,,1437.7,64.0
+diagnostic,B,tabicl_v2,clinical,1000,20230529,repeat_03_fold_04,0.621,0.899,1.72,in_context: fit stores context; no weight update,3138,cuda,8,2590.5,1156.8
+diagnostic,B,mlp_clinical,clinical,15000,20230529,repeat_00_fold_04,5.641,0.002,5.84,gradient training (weights updated),17138,cuda,,1411.2,67.6
+diagnostic,B,regularized_logistic,clinical,10000,20230529,repeat_04_fold_01,0.143,0.0,0.3,trained from scratch per fit,12137,cpu,,1419.7,64.0
+diagnostic,B,tabpfn_classifier,clinical,10000,20230529,repeat_01_fold_04,0.829,9.388,10.44,in_context: fit stores context; no weight update,12138,cuda,,2512.6,998.7
+diagnostic,B,mlp_clinical,clinical,5000,20230529,repeat_01_fold_04,3.256,0.008,3.44,gradient training (weights updated),7138,cuda,,1399.3,66.1
+diagnostic,B,xgboost_or_histgb,clinical,0,20230529,repeat_01_fold_03,0.161,0.001,0.29,trained from scratch per fit,2138,cpu,,1424.2,64.0
+diagnostic,B,mlp_clinical,clinical,10000,20230530,repeat_01_fold_00,3.054,0.003,3.24,gradient training (weights updated),12137,cuda,,1411.7,66.8
+diagnostic,B,mlp_clinical,clinical,15000,20230529,repeat_04_fold_04,6.083,0.004,6.29,gradient training (weights updated),17138,cuda,,1412.1,67.6
+diagnostic,B,regularized_logistic,clinical,5000,20230529,repeat_00_fold_02,0.105,0.0,0.25,trained from scratch per fit,7138,cpu,,1416.0,64.0
+diagnostic,B,regularized_logistic,clinical,0,20230529,repeat_02_fold_04,0.071,0.0,0.2,trained from scratch per fit,2138,cpu,,1412.5,64.0
+diagnostic,B,mlp_clinical,clinical,5000,20230529,repeat_01_fold_03,7.637,0.002,7.84,gradient training (weights updated),7138,cuda,,1399.3,66.1
+prognostic,B,cox_elastic_net,clinical,15000,20230529,split_01,1.312,0.004,1.49,trained from scratch per fit,15323,cpu,,1446.5,64.0
+diagnostic,B,regularized_logistic,clinical,1000,20230529,repeat_03_fold_04,0.08,0.0,0.21,trained from scratch per fit,3138,cpu,,1412.5,64.0
+diagnostic,B,regularized_logistic,clinical,5000,20230529,repeat_01_fold_04,0.108,0.0,0.24,trained from scratch per fit,7138,cpu,,1416.0,64.0
+prognostic,C,mlp_embedding,embedding,0,20230530,split_00,0.134,0.006,0.57,gradient training (weights updated),323,cuda,,1423.1,68.0
+diagnostic,B,tabdpt,clinical,0,20230529,repeat_01_fold_01,0.883,0.213,1.31,in_context: fit stores context; no weight update,2137,cuda,,4359.7,553.6
+prognostic,C,mlp_embedding,embedding,0,20230529,split_04,0.166,0.006,0.6,gradient training (weights updated),323,cuda,,1423.1,68.0
+diagnostic,B,mlp_clinical,clinical,1000,20230530,repeat_00_fold_03,2.043,0.001,2.2,gradient training (weights updated),3138,cuda,,1410.4,65.6
+diagnostic,B,mlp_clinical,clinical,10000,20230531,repeat_00_fold_01,5.761,0.002,5.95,gradient training (weights updated),12137,cuda,,1411.5,66.8
+diagnostic,B,regularized_logistic,clinical,0,20230529,repeat_00_fold_02,0.071,0.001,0.2,trained from scratch per fit,2138,cpu,,1412.5,64.0
+diagnostic,B,mlp_clinical,clinical,1000,20230530,repeat_04_fold_02,1.174,0.001,1.33,gradient training (weights updated),3138,cuda,,1410.4,65.6
+diagnostic,B,tabpfn_classifier,clinical,0,20230529,repeat_04_fold_04,0.771,2.013,2.97,in_context: fit stores context; no weight update,2138,cuda,,2451.4,485.5
+prognostic,B,random_survival_forest_or_fallback,clinical,0,20230529,split_00,0.555,0.166,0.86,trained from scratch per fit,323,cpu,,1495.4,64.0
+diagnostic,B,xgboost_or_histgb,clinical,15000,20230529,repeat_02_fold_02,0.358,0.002,0.54,trained from scratch per fit,17138,cpu,,1437.7,64.0
+diagnostic,B,tabdpt,clinical,10000,20230529,repeat_02_fold_00,1.056,3.652,4.96,in_context: fit stores context; no weight update,12137,cuda,,4312.7,679.7
+diagnostic,B,mlp_clinical,clinical,15000,20230530,repeat_01_fold_03,12.867,0.002,13.06,gradient training (weights updated),17138,cuda,,1412.2,67.5
+diagnostic,B,regularized_logistic,clinical,1000,20230529,repeat_01_fold_00,0.082,0.0,0.22,trained from scratch per fit,3137,cpu,,1412.5,64.0
+diagnostic,B,xgboost_or_histgb,clinical,15000,20230529,repeat_03_fold_03,0.354,0.001,0.53,trained from scratch per fit,17138,cpu,,1437.7,64.0
+diagnostic,C,mlp_embedding,embedding,0,20230531,repeat_02_fold_04,0.249,0.004,1.11,gradient training (weights updated),2138,cuda,,1427.3,69.9
+diagnostic,B,mlp_clinical,clinical,5000,20230529,repeat_00_fold_01,5.138,0.002,5.3,gradient training (weights updated),7137,cuda,,1399.0,66.1
+diagnostic,B,tabicl_v2,clinical,5000,20230529,repeat_03_fold_03,0.683,2.36,3.25,in_context: fit stores context; no weight update,7138,cuda,8,2509.3,2228.1
+diagnostic,B,xgboost_or_histgb,clinical,5000,20230529,repeat_03_fold_01,0.239,0.001,0.38,trained from scratch per fit,7137,cpu,,1430.0,64.0
+diagnostic,B,tabicl_v2,clinical,5000,20230529,repeat_04_fold_00,0.666,2.399,3.28,in_context: fit stores context; no weight update,7137,cuda,8,2509.4,2228.1
+prognostic,B,mlp_clinical,clinical,10000,20230531,split_02,0.757,0.002,0.95,gradient training (weights updated),10323,cuda,,1448.7,71.4
+diagnostic,B,regularized_logistic,clinical,10000,20230529,repeat_00_fold_00,0.137,0.0,0.29,trained from scratch per fit,12137,cpu,,1419.9,64.0
+diagnostic,B,mlp_clinical,clinical,0,20230531,repeat_03_fold_00,1.387,0.002,1.54,gradient training (weights updated),2137,cuda,,1410.5,65.4
+diagnostic,B,mlp_clinical,clinical,1000,20230531,repeat_04_fold_02,1.545,0.001,1.7,gradient training (weights updated),3138,cuda,,1410.4,65.6
+diagnostic,B,tabpfn_classifier,clinical,5000,20230529,repeat_00_fold_00,0.79,4.736,5.74,in_context: fit stores context; no weight update,7137,cuda,,2288.1,742.0
+prognostic,B,cox_elastic_net,clinical,0,20230529,split_01,0.451,0.005,0.58,trained from scratch per fit,323,cpu,,1436.4,64.0
+diagnostic,B,regularized_logistic,clinical,15000,20230529,repeat_04_fold_00,0.172,0.001,0.34,trained from scratch per fit,17137,cpu,,1424.2,64.0
+diagnostic,B,tabpfn_classifier,clinical,5000,20230529,repeat_01_fold_01,0.772,4.956,5.94,in_context: fit stores context; no weight update,7137,cuda,,2293.9,742.0
+prognostic,B,mlp_clinical,clinical,5000,20230531,split_00,0.51,0.003,0.68,gradient training (weights updated),5323,cuda,,1447.6,68.0
+diagnostic,B,xgboost_or_histgb,clinical,5000,20230529,repeat_03_fold_00,0.227,0.001,0.38,trained from scratch per fit,7137,cpu,,1430.0,64.0
+prognostic,B,mlp_clinical,clinical,5000,20230530,split_04,0.77,0.002,0.94,gradient training (weights updated),5323,cuda,,1447.6,68.0
+diagnostic,B,tabicl_v2,clinical,1000,20230529,repeat_03_fold_01,0.597,0.902,1.7,in_context: fit stores context; no weight update,3137,cuda,8,2588.5,1156.8
+prognostic,B,mlp_clinical,clinical,5000,20230529,split_01,0.53,0.001,0.7,gradient training (weights updated),5323,cuda,,1447.0,68.0
+diagnostic,B,tabpfn_classifier,clinical,10000,20230529,repeat_01_fold_01,0.821,9.331,10.37,in_context: fit stores context; no weight update,12137,cuda,,2513.4,999.0
+diagnostic,B,mlp_clinical,clinical,15000,20230531,repeat_02_fold_03,5.81,0.002,6.0,gradient training (weights updated),17138,cuda,,1412.2,67.5
+diagnostic,B,tabpfn_classifier,clinical,0,20230529,repeat_02_fold_04,0.686,2.066,2.94,in_context: fit stores context; no weight update,2138,cuda,,2450.2,485.5
+diagnostic,B,xgboost_or_histgb,clinical,5000,20230529,repeat_04_fold_04,0.214,0.002,0.36,trained from scratch per fit,7138,cpu,,1430.0,64.0
+diagnostic,B,mlp_clinical,clinical,0,20230531,repeat_03_fold_02,1.757,0.001,1.91,gradient training (weights updated),2138,cuda,,1410.5,65.4
+diagnostic,B,regularized_logistic,clinical,5000,20230529,repeat_00_fold_03,0.109,0.001,0.26,trained from scratch per fit,7138,cpu,,1416.0,64.0
+prognostic,B,mlp_clinical,clinical,10000,20230529,split_03,0.587,0.002,0.78,gradient training (weights updated),10323,cuda,,1448.2,71.4
+prognostic,B,survivalpfn_native,clinical,10000,20230529,split_03,5.396,1.434,7.74,in_context: fit stores context; no weight update,10323,cuda,one call per outer-test split in test-ID order,4174.3,64.0
+diagnostic,B,mlp_clinical,clinical,5000,20230531,repeat_04_fold_02,3.492,0.002,3.66,gradient training (weights updated),7138,cuda,,1410.5,66.1
+diagnostic,B,xgboost_or_histgb,clinical,10000,20230529,repeat_00_fold_03,0.292,0.001,0.46,trained from scratch per fit,12138,cpu,,1432.8,64.0
+diagnostic,B,xgboost_or_histgb,clinical,1000,20230529,repeat_02_fold_04,0.188,0.002,0.34,trained from scratch per fit,3138,cpu,,1427.4,64.0
+diagnostic,B,tabpfn_classifier,clinical,0,20230529,repeat_04_fold_03,0.687,1.944,2.82,in_context: fit stores context; no weight update,2138,cuda,,2451.4,485.5
+prognostic,B,cox_elastic_net,clinical,15000,20230529,split_04,1.236,0.004,1.41,trained from scratch per fit,15323,cpu,,1446.6,64.0
+prognostic,B,random_survival_forest_or_fallback,clinical,10000,20230529,split_04,2.607,0.197,3.05,trained from scratch per fit,10323,cpu,,3039.6,64.0
+diagnostic,B,tabicl_v2,clinical,10000,20230529,repeat_00_fold_04,0.795,4.693,5.72,in_context: fit stores context; no weight update,12138,cuda,8,3982.9,2544.7
+diagnostic,B,tabpfn_classifier,clinical,1000,20230529,repeat_03_fold_03,0.688,2.536,3.42,in_context: fit stores context; no weight update,3138,cuda,,2454.5,538.5
+diagnostic,B,tabpfn_classifier,clinical,1000,20230529,repeat_03_fold_00,0.752,2.437,3.38,in_context: fit stores context; no weight update,3137,cuda,,2454.4,538.5
+diagnostic,B,xgboost_or_histgb,clinical,15000,20230529,repeat_04_fold_00,0.365,0.001,0.54,trained from scratch per fit,17137,cpu,,1437.7,64.0
+diagnostic,C,mlp_embedding,embedding,0,20230529,repeat_02_fold_02,0.188,0.003,1.06,gradient training (weights updated),2138,cuda,,1427.2,69.9
+diagnostic,B,mlp_clinical,clinical,0,20230529,repeat_01_fold_00,0.757,0.002,0.92,gradient training (weights updated),2137,cuda,,1392.3,65.4
+diagnostic,B,xgboost_or_histgb,clinical,0,20230529,repeat_00_fold_01,0.14,0.002,0.27,trained from scratch per fit,2137,cpu,,1420.5,64.0
+diagnostic,B,tabpfn_classifier,clinical,1000,20230529,repeat_04_fold_04,0.691,2.434,3.31,in_context: fit stores context; no weight update,3138,cuda,,2454.5,538.5
+diagnostic,B,mlp_clinical,clinical,0,20230531,repeat_04_fold_02,1.162,0.002,1.31,gradient training (weights updated),2138,cuda,,1410.5,65.4
+diagnostic,B,mlp_clinical,clinical,1000,20230531,repeat_03_fold_03,2.054,0.002,2.21,gradient training (weights updated),3138,cuda,,1410.4,65.6
+diagnostic,C,mlp_embedding,embedding,0,20230531,repeat_02_fold_00,0.494,0.003,1.34,gradient training (weights updated),2137,cuda,,1427.3,69.9
+diagnostic,B,mlp_clinical,clinical,15000,20230529,repeat_01_fold_02,6.687,0.003,6.88,gradient training (weights updated),17138,cuda,,1412.1,67.5
+diagnostic,B,tabicl_v2,clinical,10000,20230529,repeat_02_fold_01,0.763,4.711,5.7,in_context: fit stores context; no weight update,12137,cuda,8,3982.9,2544.7
+diagnostic,B,tabdpt,clinical,1000,20230529,repeat_02_fold_04,0.929,0.354,1.5,in_context: fit stores context; no weight update,3138,cuda,,4356.8,553.6
+diagnostic,B,regularized_logistic,clinical,1000,20230529,repeat_02_fold_03,0.08,0.0,0.21,trained from scratch per fit,3138,cpu,,1412.5,64.0
+diagnostic,B,tabicl_v2,clinical,15000,20230529,repeat_04_fold_02,0.951,7.646,8.84,in_context: fit stores context; no weight update,17138,cuda,8,4177.3,2584.1
+diagnostic,B,mlp_clinical,clinical,0,20230531,repeat_00_fold_04,0.825,0.002,0.98,gradient training (weights updated),2138,cuda,,1410.5,65.4
+diagnostic,B,mlp_clinical,clinical,0,20230531,repeat_00_fold_01,1.015,0.001,1.17,gradient training (weights updated),2137,cuda,,1410.5,65.4
+diagnostic,B,mlp_clinical,clinical,15000,20230529,repeat_04_fold_00,6.422,0.002,6.62,gradient training (weights updated),17137,cuda,,1412.1,67.5
+diagnostic,B,mlp_clinical,clinical,10000,20230531,repeat_01_fold_02,5.717,0.001,5.89,gradient training (weights updated),12138,cuda,,1411.5,66.8
+diagnostic,B,xgboost_or_histgb,clinical,5000,20230529,repeat_00_fold_01,0.209,0.001,0.36,trained from scratch per fit,7137,cpu,,1429.3,64.0
+diagnostic,B,tabicl_v2,clinical,5000,20230529,repeat_01_fold_03,0.694,2.366,3.27,in_context: fit stores context; no weight update,7138,cuda,8,2509.3,2228.1
+prognostic,B,mlp_clinical,clinical,0,20230530,split_03,0.495,0.003,0.65,gradient training (weights updated),323,cuda,,1447.6,65.2
+diagnostic,B,tabdpt,clinical,1000,20230529,repeat_03_fold_00,0.913,0.355,1.5,in_context: fit stores context; no weight update,3137,cuda,,4357.3,553.6
+diagnostic,B,mlp_clinical,clinical,1000,20230530,repeat_01_fold_03,2.408,0.001,2.56,gradient training (weights updated),3138,cuda,,1410.4,65.6
+diagnostic,B,tabpfn_classifier,clinical,5000,20230529,repeat_02_fold_03,0.732,4.979,5.93,in_context: fit stores context; no weight update,7138,cuda,,2294.1,741.6
+diagnostic,B,mlp_clinical,clinical,10000,20230529,repeat_01_fold_04,4.781,0.002,4.97,gradient training (weights updated),12138,cuda,,1406.3,66.8
+diagnostic,B,mlp_clinical,clinical,10000,20230530,repeat_04_fold_00,6.759,0.002,6.94,gradient training (weights updated),12137,cuda,,1411.7,66.8
+diagnostic,B,mlp_clinical,clinical,1000,20230530,repeat_01_fold_00,0.829,0.002,0.98,gradient training (weights updated),3137,cuda,,1410.4,65.6
+diagnostic,B,tabdpt,clinical,5000,20230529,repeat_01_fold_03,1.058,1.332,2.62,in_context: fit stores context; no weight update,7138,cuda,,4307.5,553.6
+diagnostic,B,mlp_clinical,clinical,15000,20230530,repeat_00_fold_04,6.656,0.001,6.85,gradient training (weights updated),17138,cuda,,1412.2,67.6
+diagnostic,B,mlp_clinical,clinical,0,20230529,repeat_03_fold_02,1.628,0.002,1.79,gradient training (weights updated),2138,cuda,,1392.4,65.4
+diagnostic,B,tabpfn_classifier,clinical,1000,20230529,repeat_03_fold_02,0.717,2.459,3.37,in_context: fit stores context; no weight update,3138,cuda,,2454.5,538.5
+diagnostic,B,regularized_logistic,clinical,10000,20230529,repeat_03_fold_04,0.146,0.0,0.29,trained from scratch per fit,12138,cpu,,1419.7,64.0
+diagnostic,B,tabdpt,clinical,5000,20230529,repeat_01_fold_04,0.988,1.338,2.56,in_context: fit stores context; no weight update,7138,cuda,,4308.1,553.6
+diagnostic,B,tabpfn_classifier,clinical,0,20230529,repeat_03_fold_03,0.662,2.026,2.87,in_context: fit stores context; no weight update,2138,cuda,,2450.8,485.5
+diagnostic,B,tabpfn_classifier,clinical,5000,20230529,repeat_04_fold_00,0.804,4.961,5.97,in_context: fit stores context; no weight update,7137,cuda,,2294.2,742.0
+diagnostic,B,mlp_clinical,clinical,10000,20230531,repeat_02_fold_00,8.698,0.002,8.89,gradient training (weights updated),12137,cuda,,1411.5,66.8
+diagnostic,B,tabicl_v2,clinical,10000,20230529,repeat_01_fold_02,0.781,4.708,5.72,in_context: fit stores context; no weight update,12138,cuda,8,3982.9,2544.7
+prognostic,B,tabpfn_landmark_survival,clinical,1000,20230529,split_00,1.842,3.702,5.76,in_context: fit stores context; no weight update,1323,cuda,,2502.2,808.6
+diagnostic,B,mlp_clinical,clinical,15000,20230529,repeat_00_fold_00,8.486,0.008,8.69,gradient training (weights updated),17137,cuda,,1410.1,67.5
+diagnostic,B,tabdpt,clinical,0,20230529,repeat_00_fold_00,1.25,0.216,1.68,in_context: fit stores context; no weight update,2137,cuda,,4303.8,553.6
+diagnostic,B,xgboost_or_histgb,clinical,15000,20230529,repeat_01_fold_04,0.366,0.002,0.54,trained from scratch per fit,17138,cpu,,1437.0,64.0
+diagnostic,B,mlp_clinical,clinical,15000,20230530,repeat_04_fold_00,9.498,0.002,9.7,gradient training (weights updated),17137,cuda,,1412.2,67.5
+diagnostic,B,tabicl_v2,clinical,0,20230529,repeat_03_fold_04,0.557,0.662,1.41,in_context: fit stores context; no weight update,2138,cuda,8,2574.5,890.5
+prognostic,B,mlp_clinical,clinical,15000,20230531,split_04,0.912,0.003,1.12,gradient training (weights updated),15323,cuda,,1449.3,75.0
+diagnostic,B,mlp_clinical,clinical,0,20230531,repeat_03_fold_04,1.527,0.001,1.69,gradient training (weights updated),2138,cuda,,1410.5,65.4
+diagnostic,B,regularized_logistic,clinical,0,20230529,repeat_00_fold_04,0.073,0.0,0.2,trained from scratch per fit,2138,cpu,,1412.5,64.0
+diagnostic,B,tabdpt,clinical,0,20230529,repeat_01_fold_03,0.894,0.212,1.33,in_context: fit stores context; no weight update,2138,cuda,,4359.7,553.6
+diagnostic,B,tabpfn_classifier,clinical,15000,20230529,repeat_02_fold_03,0.892,15.117,16.25,in_context: fit stores context; no weight update,17138,cuda,,2321.5,1256.7
+diagnostic,C,mlp_embedding,embedding,0,20230529,repeat_04_fold_00,0.317,0.002,1.17,gradient training (weights updated),2137,cuda,,1427.2,69.9
+diagnostic,B,mlp_clinical,clinical,15000,20230530,repeat_04_fold_01,12.471,0.003,12.68,gradient training (weights updated),17137,cuda,,1412.2,67.5
+diagnostic,B,mlp_clinical,clinical,1000,20230531,repeat_00_fold_01,1.489,0.002,1.65,gradient training (weights updated),3137,cuda,,1410.4,65.6
+prognostic,B,survivalpfn_native,clinical,0,20230529,split_01,5.785,0.342,7.01,in_context: fit stores context; no weight update,323,cuda,one call per outer-test split in test-ID order,4171.8,64.0
+diagnostic,B,tabdpt,clinical,1000,20230529,repeat_01_fold_03,0.942,0.356,1.51,in_context: fit stores context; no weight update,3138,cuda,,4357.0,553.6
+diagnostic,C,mlp_embedding,embedding,0,20230531,repeat_02_fold_01,0.848,0.002,1.7,gradient training (weights updated),2137,cuda,,1427.3,69.9
+diagnostic,B,mlp_clinical,clinical,10000,20230529,repeat_01_fold_02,5.304,0.001,5.49,gradient training (weights updated),12138,cuda,,1406.3,66.8
+prognostic,B,survivalpfn_native,clinical,5000,20230529,split_01,5.393,0.652,6.94,in_context: fit stores context; no weight update,5323,cuda,one call per outer-test split in test-ID order,4171.8,64.0
+diagnostic,B,tabdpt,clinical,0,20230529,repeat_00_fold_04,0.895,0.218,1.32,in_context: fit stores context; no weight update,2138,cuda,,4358.6,553.6
+diagnostic,B,tabdpt,clinical,5000,20230529,repeat_04_fold_02,0.98,1.341,2.54,in_context: fit stores context; no weight update,7138,cuda,,4309.3,553.6
+diagnostic,B,xgboost_or_histgb,clinical,15000,20230529,repeat_03_fold_00,0.358,0.001,0.53,trained from scratch per fit,17137,cpu,,1437.7,64.0
+diagnostic,B,tabpfn_classifier,clinical,5000,20230529,repeat_04_fold_04,0.762,4.962,5.93,in_context: fit stores context; no weight update,7138,cuda,,2295.3,741.6
+diagnostic,B,tabdpt,clinical,15000,20230529,repeat_02_fold_00,1.076,7.346,8.69,in_context: fit stores context; no weight update,17137,cuda,,4318.6,828.5
+diagnostic,B,tabicl_v2,clinical,10000,20230529,repeat_03_fold_04,0.759,4.76,5.75,in_context: fit stores context; no weight update,12138,cuda,8,3982.9,2544.7
+diagnostic,B,xgboost_or_histgb,clinical,1000,20230529,repeat_03_fold_03,0.16,0.002,0.29,trained from scratch per fit,3138,cpu,,1427.3,64.0
+diagnostic,B,tabpfn_classifier,clinical,1000,20230529,repeat_02_fold_01,0.714,2.385,3.29,in_context: fit stores context; no weight update,3137,cuda,,2454.4,538.5
+prognostic,B,mlp_clinical,clinical,10000,20230531,split_00,0.548,0.003,0.74,gradient training (weights updated),10323,cuda,,1448.7,71.3
+diagnostic,B,xgboost_or_histgb,clinical,5000,20230529,repeat_01_fold_02,0.226,0.002,0.37,trained from scratch per fit,7138,cpu,,1430.1,64.0
+diagnostic,B,tabicl_v2,clinical,10000,20230529,repeat_04_fold_03,0.797,4.711,5.74,in_context: fit stores context; no weight update,12138,cuda,8,3982.9,2544.7
+diagnostic,B,tabpfn_classifier,clinical,0,20230529,repeat_00_fold_00,3.73,2.419,6.34,in_context: fit stores context; no weight update,2137,cuda,,2252.1,485.6
+diagnostic,B,regularized_logistic,clinical,1000,20230529,repeat_00_fold_00,0.084,0.0,0.22,trained from scratch per fit,3137,cpu,,1412.5,64.0
+diagnostic,B,mlp_clinical,clinical,15000,20230530,repeat_03_fold_00,10.442,0.001,10.64,gradient training (weights updated),17137,cuda,,1412.2,67.5
+diagnostic,B,mlp_clinical,clinical,1000,20230529,repeat_03_fold_00,1.563,0.003,1.72,gradient training (weights updated),3137,cuda,,1393.8,65.6
+diagnostic,B,tabicl_v2,clinical,0,20230529,repeat_04_fold_03,0.566,0.671,1.43,in_context: fit stores context; no weight update,2138,cuda,8,2580.3,890.5
+diagnostic,B,regularized_logistic,clinical,1000,20230529,repeat_00_fold_04,0.081,0.001,0.21,trained from scratch per fit,3138,cpu,,1412.5,64.0
+prognostic,B,mlp_clinical,clinical,10000,20230529,split_04,0.574,0.002,0.76,gradient training (weights updated),10323,cuda,,1448.2,71.4
+diagnostic,C,mlp_embedding,embedding,0,20230531,repeat_01_fold_00,0.353,0.005,1.21,gradient training (weights updated),2137,cuda,,1427.3,69.9
+diagnostic,B,mlp_clinical,clinical,1000,20230529,repeat_02_fold_01,2.49,0.001,2.65,gradient training (weights updated),3137,cuda,,1393.8,65.6
+diagnostic,B,mlp_clinical,clinical,0,20230530,repeat_02_fold_02,0.62,0.002,0.77,gradient training (weights updated),2138,cuda,,1410.4,65.4
+diagnostic,B,mlp_clinical,clinical,1000,20230529,repeat_02_fold_03,1.29,0.002,1.44,gradient training (weights updated),3138,cuda,,1393.8,65.6
+diagnostic,B,mlp_clinical,clinical,10000,20230531,repeat_00_fold_00,8.101,0.003,8.28,gradient training (weights updated),12137,cuda,,1411.5,66.8
+diagnostic,B,tabpfn_classifier,clinical,10000,20230529,repeat_00_fold_04,0.824,9.36,10.4,in_context: fit stores context; no weight update,12138,cuda,,2512.5,998.7
+diagnostic,B,tabdpt,clinical,0,20230529,repeat_00_fold_02,0.902,0.214,1.33,in_context: fit stores context; no weight update,2138,cuda,,4356.4,553.6
+diagnostic,B,regularized_logistic,clinical,5000,20230529,repeat_02_fold_00,0.109,0.001,0.25,trained from scratch per fit,7137,cpu,,1416.0,64.0
+diagnostic,B,tabdpt,clinical,10000,20230529,repeat_01_fold_03,1.044,3.652,4.94,in_context: fit stores context; no weight update,12138,cuda,,4312.6,679.7
+diagnostic,B,mlp_clinical,clinical,1000,20230530,repeat_02_fold_01,2.491,0.001,2.64,gradient training (weights updated),3137,cuda,,1410.4,65.6
+prognostic,B,cox_elastic_net,clinical,10000,20230529,split_01,1.094,0.004,1.26,trained from scratch per fit,10323,cpu,,1441.7,64.0
+diagnostic,B,tabicl_v2,clinical,15000,20230529,repeat_00_fold_03,0.949,7.578,8.78,in_context: fit stores context; no weight update,17138,cuda,8,4179.0,2584.1
+prognostic,B,mlp_clinical,clinical,1000,20230530,split_04,0.699,0.002,0.86,gradient training (weights updated),1323,cuda,,1447.6,65.8
+diagnostic,B,mlp_clinical,clinical,0,20230531,repeat_01_fold_00,0.466,0.001,0.62,gradient training (weights updated),2137,cuda,,1410.5,65.4
+diagnostic,B,mlp_clinical,clinical,0,20230529,repeat_04_fold_00,1.068,0.001,1.24,gradient training (weights updated),2137,cuda,,1392.4,65.4
+diagnostic,B,tabdpt,clinical,1000,20230529,repeat_04_fold_02,0.928,0.353,1.5,in_context: fit stores context; no weight update,3138,cuda,,4356.2,553.6
+diagnostic,B,mlp_clinical,clinical,0,20230530,repeat_01_fold_00,0.561,0.002,0.71,gradient training (weights updated),2137,cuda,,1410.4,65.4
+diagnostic,B,tabpfn_classifier,clinical,15000,20230529,repeat_00_fold_00,0.898,15.089,16.23,in_context: fit stores context; no weight update,17137,cuda,,2322.3,1256.7
+diagnostic,B,tabicl_v2,clinical,15000,20230529,repeat_00_fold_01,0.923,7.628,8.8,in_context: fit stores context; no weight update,17137,cuda,8,4179.0,2584.1
+diagnostic,B,mlp_clinical,clinical,1000,20230529,repeat_04_fold_00,1.403,0.002,1.56,gradient training (weights updated),3137,cuda,,1393.8,65.6
+prognostic,B,cox_elastic_net,clinical,10000,20230529,split_03,1.073,0.003,1.23,trained from scratch per fit,10323,cpu,,1441.7,64.0
+diagnostic,B,tabpfn_classifier,clinical,5000,20230529,repeat_03_fold_02,0.777,4.963,5.95,in_context: fit stores context; no weight update,7138,cuda,,2294.2,741.6
+diagnostic,B,regularized_logistic,clinical,5000,20230529,repeat_03_fold_02,0.1,0.001,0.24,trained from scratch per fit,7138,cpu,,1416.0,64.0
+diagnostic,B,mlp_clinical,clinical,1000,20230529,repeat_02_fold_04,0.791,0.002,0.95,gradient training (weights updated),3138,cuda,,1393.8,65.6
+diagnostic,B,xgboost_or_histgb,clinical,10000,20230529,repeat_01_fold_00,0.289,0.001,0.45,trained from scratch per fit,12137,cpu,,1432.8,64.0
+diagnostic,B,mlp_clinical,clinical,15000,20230529,repeat_03_fold_00,7.742,0.001,7.94,gradient training (weights updated),17137,cuda,,1412.1,67.5
+diagnostic,B,tabicl_v2,clinical,1000,20230529,repeat_04_fold_03,0.607,0.908,1.71,in_context: fit stores context; no weight update,3138,cuda,8,2588.5,1156.8
+prognostic,B,random_survival_forest_or_fallback,clinical,5000,20230529,split_04,1.351,0.197,1.74,trained from scratch per fit,5323,cpu,,2297.9,64.0
+diagnostic,C,mlp_embedding,embedding,0,20230529,repeat_04_fold_03,0.526,0.002,1.41,gradient training (weights updated),2138,cuda,,1427.3,69.9
+diagnostic,C,mlp_embedding,embedding,0,20230530,repeat_00_fold_04,0.193,0.003,1.06,gradient training (weights updated),2138,cuda,,1427.3,69.9
+diagnostic,B,tabpfn_classifier,clinical,5000,20230529,repeat_04_fold_03,0.737,5.005,5.94,in_context: fit stores context; no weight update,7138,cuda,,2294.3,741.6
+prognostic,B,mlp_clinical,clinical,10000,20230530,split_00,0.469,0.002,0.67,gradient training (weights updated),10323,cuda,,1448.7,71.3
+diagnostic,B,regularized_logistic,clinical,1000,20230529,repeat_03_fold_00,0.082,0.0,0.21,trained from scratch per fit,3137,cpu,,1412.5,64.0
+diagnostic,C,tabpfn_embedding_ridge,embedding,0,20230529,repeat_04_fold_04,0.098,0.002,0.92,trained from scratch per fit,2138,cpu,,1448.6,64.0
+diagnostic,B,tabicl_v2,clinical,1000,20230529,repeat_02_fold_01,0.586,0.912,1.69,in_context: fit stores context; no weight update,3137,cuda,8,2588.5,1156.8
+diagnostic,B,tabdpt,clinical,10000,20230529,repeat_01_fold_01,1.037,3.626,4.91,in_context: fit stores context; no weight update,12137,cuda,,4312.5,679.7
+diagnostic,B,regularized_logistic,clinical,15000,20230529,repeat_01_fold_00,0.205,0.0,0.38,trained from scratch per fit,17137,cpu,,1423.4,64.0
+prognostic,B,mlp_clinical,clinical,1000,20230529,split_00,0.4,0.002,0.56,gradient training (weights updated),1323,cuda,,1441.9,65.8
+diagnostic,B,tabdpt,clinical,0,20230529,repeat_04_fold_01,0.876,0.216,1.31,in_context: fit stores context; no weight update,2137,cuda,,4360.2,553.6
+diagnostic,B,mlp_clinical,clinical,15000,20230531,repeat_04_fold_01,13.123,0.001,13.32,gradient training (weights updated),17137,cuda,,1412.2,67.5
+diagnostic,B,mlp_clinical,clinical,15000,20230531,repeat_02_fold_01,11.186,0.002,11.38,gradient training (weights updated),17137,cuda,,1412.2,67.5
+diagnostic,B,mlp_clinical,clinical,1000,20230530,repeat_03_fold_00,1.993,0.002,2.15,gradient training (weights updated),3137,cuda,,1410.4,65.6
+diagnostic,B,xgboost_or_histgb,clinical,15000,20230529,repeat_00_fold_00,0.356,0.002,0.54,trained from scratch per fit,17137,cpu,,1436.1,64.0
+diagnostic,B,regularized_logistic,clinical,1000,20230529,repeat_04_fold_03,0.081,0.0,0.21,trained from scratch per fit,3138,cpu,,1412.5,64.0
+diagnostic,B,tabicl_v2,clinical,5000,20230529,repeat_04_fold_01,0.669,2.364,3.24,in_context: fit stores context; no weight update,7137,cuda,8,2509.4,2228.1
+diagnostic,B,regularized_logistic,clinical,5000,20230529,repeat_01_fold_03,0.103,0.0,0.24,trained from scratch per fit,7138,cpu,,1416.0,64.0
+diagnostic,B,mlp_clinical,clinical,0,20230529,repeat_00_fold_03,1.788,0.001,1.96,gradient training (weights updated),2138,cuda,,1392.3,65.4
+diagnostic,B,mlp_clinical,clinical,5000,20230531,repeat_01_fold_00,1.43,0.002,1.59,gradient training (weights updated),7137,cuda,,1410.5,66.1
+diagnostic,B,tabpfn_classifier,clinical,5000,20230529,repeat_03_fold_01,0.747,5.014,5.98,in_context: fit stores context; no weight update,7137,cuda,,2294.2,742.0
+diagnostic,B,tabpfn_classifier,clinical,0,20230529,repeat_02_fold_01,0.709,2.02,2.92,in_context: fit stores context; no weight update,2137,cuda,,2450.2,485.6
+diagnostic,B,tabdpt,clinical,0,20230529,repeat_03_fold_04,0.895,0.212,1.32,in_context: fit stores context; no weight update,2138,cuda,,4359.2,553.6
+diagnostic,B,xgboost_or_histgb,clinical,5000,20230529,repeat_04_fold_01,0.228,0.002,0.37,trained from scratch per fit,7137,cpu,,1430.0,64.0
+diagnostic,B,tabpfn_classifier,clinical,1000,20230529,repeat_00_fold_02,0.679,2.366,3.25,in_context: fit stores context; no weight update,3138,cuda,,2454.0,538.5
+prognostic,B,random_survival_forest_or_fallback,clinical,5000,20230529,split_01,1.333,0.197,1.72,trained from scratch per fit,5323,cpu,,2270.8,64.0
+diagnostic,B,xgboost_or_histgb,clinical,15000,20230529,repeat_04_fold_03,0.374,0.001,0.54,trained from scratch per fit,17138,cpu,,1437.7,64.0
+diagnostic,B,tabdpt,clinical,0,20230529,repeat_03_fold_03,0.903,0.214,1.33,in_context: fit stores context; no weight update,2138,cuda,,4356.9,553.6
+diagnostic,B,regularized_logistic,clinical,15000,20230529,repeat_02_fold_03,0.165,0.001,0.34,trained from scratch per fit,17138,cpu,,1423.6,64.0
+prognostic,B,tabpfn_landmark_survival,clinical,1000,20230529,split_01,1.784,3.501,5.49,in_context: fit stores context; no weight update,1323,cuda,,2501.4,812.7
+diagnostic,B,xgboost_or_histgb,clinical,10000,20230529,repeat_02_fold_00,0.292,0.002,0.45,trained from scratch per fit,12137,cpu,,1432.8,64.0
+diagnostic,C,mlp_embedding,embedding,0,20230530,repeat_00_fold_01,0.288,0.002,1.14,gradient training (weights updated),2137,cuda,,1427.3,69.9
+diagnostic,B,tabpfn_classifier,clinical,1000,20230529,repeat_01_fold_02,0.708,2.386,3.29,in_context: fit stores context; no weight update,3138,cuda,,2454.7,538.5
+diagnostic,B,xgboost_or_histgb,clinical,10000,20230529,repeat_04_fold_04,0.278,0.002,0.44,trained from scratch per fit,12138,cpu,,1432.8,64.0
+diagnostic,B,xgboost_or_histgb,clinical,10000,20230529,repeat_02_fold_02,0.306,0.001,0.48,trained from scratch per fit,12138,cpu,,1432.8,64.0
+diagnostic,B,mlp_clinical,clinical,15000,20230530,repeat_03_fold_01,3.392,0.003,3.58,gradient training (weights updated),17137,cuda,,1412.2,67.5
+diagnostic,B,tabpfn_classifier,clinical,1000,20230529,repeat_02_fold_00,0.735,2.415,3.34,in_context: fit stores context; no weight update,3137,cuda,,2454.8,538.5
+diagnostic,B,mlp_clinical,clinical,15000,20230530,repeat_00_fold_01,10.455,0.002,10.65,gradient training (weights updated),17137,cuda,,1412.2,67.5
+diagnostic,B,regularized_logistic,clinical,1000,20230529,repeat_03_fold_01,0.077,0.0,0.21,trained from scratch per fit,3137,cpu,,1412.5,64.0
+diagnostic,B,tabdpt,clinical,15000,20230529,repeat_03_fold_00,1.078,7.403,8.74,in_context: fit stores context; no weight update,17137,cuda,,4318.3,828.5
+prognostic,B,tabpfn_landmark_survival,clinical,1000,20230529,split_04,1.909,3.532,5.65,in_context: fit stores context; no weight update,1323,cuda,,2502.2,812.2
+diagnostic,B,regularized_logistic,clinical,10000,20230529,repeat_03_fold_01,0.159,0.001,0.31,trained from scratch per fit,12137,cpu,,1419.7,64.0
+diagnostic,B,tabdpt,clinical,5000,20230529,repeat_04_fold_04,1.019,1.339,2.59,in_context: fit stores context; no weight update,7138,cuda,,4309.4,553.6
+diagnostic,B,tabicl_v2,clinical,1000,20230529,repeat_01_fold_02,0.588,0.931,1.71,in_context: fit stores context; no weight update,3138,cuda,8,2588.5,1156.8
+diagnostic,C,tabpfn_embedding_ridge,embedding,0,20230529,repeat_00_fold_04,0.094,0.002,0.91,trained from scratch per fit,2138,cpu,,1448.6,64.0
+diagnostic,B,mlp_clinical,clinical,10000,20230529,repeat_04_fold_04,5.009,0.002,5.2,gradient training (weights updated),12138,cuda,,1406.3,66.8
+diagnostic,B,regularized_logistic,clinical,15000,20230529,repeat_01_fold_01,0.162,0.0,0.34,trained from scratch per fit,17137,cpu,,1423.6,64.0
+prognostic,C,mlp_embedding,embedding,0,20230530,split_02,0.033,0.005,0.49,gradient training (weights updated),323,cuda,,1423.1,68.0
+diagnostic,B,mlp_clinical,clinical,1000,20230529,repeat_02_fold_00,1.587,0.001,1.74,gradient training (weights updated),3137,cuda,,1393.8,65.6
+diagnostic,B,tabicl_v2,clinical,5000,20230529,repeat_02_fold_02,0.67,2.356,3.25,in_context: fit stores context; no weight update,7138,cuda,8,2509.3,2228.1
+diagnostic,B,tabpfn_classifier,clinical,15000,20230529,repeat_00_fold_01,0.869,15.11,16.22,in_context: fit stores context; no weight update,17137,cuda,,2321.3,1256.7
+prognostic,B,survivalpfn_native,clinical,10000,20230529,split_00,5.408,1.425,7.78,in_context: fit stores context; no weight update,10323,cuda,one call per outer-test split in test-ID order,4174.3,64.0
+diagnostic,B,mlp_clinical,clinical,0,20230530,repeat_01_fold_02,1.077,0.001,1.23,gradient training (weights updated),2138,cuda,,1410.4,65.4
+diagnostic,B,tabdpt,clinical,0,20230529,repeat_02_fold_01,0.982,0.215,1.41,in_context: fit stores context; no weight update,2137,cuda,,4356.7,553.6
+diagnostic,B,mlp_clinical,clinical,5000,20230530,repeat_03_fold_01,1.429,0.001,1.6,gradient training (weights updated),7137,cuda,,1410.4,66.1
+diagnostic,B,tabdpt,clinical,10000,20230529,repeat_00_fold_01,1.064,3.501,4.81,in_context: fit stores context; no weight update,12137,cuda,,4310.3,679.7
+diagnostic,B,tabicl_v2,clinical,10000,20230529,repeat_01_fold_03,0.796,4.715,5.74,in_context: fit stores context; no weight update,12138,cuda,8,3982.9,2544.7
+diagnostic,B,xgboost_or_histgb,clinical,0,20230529,repeat_03_fold_04,0.151,0.002,0.29,trained from scratch per fit,2138,cpu,,1425.9,64.0
+diagnostic,B,tabicl_v2,clinical,0,20230529,repeat_01_fold_03,0.552,0.676,1.44,in_context: fit stores context; no weight update,2138,cuda,8,2578.3,890.5
+diagnostic,B,tabdpt,clinical,0,20230529,repeat_03_fold_02,0.894,0.211,1.32,in_context: fit stores context; no weight update,2138,cuda,,4360.1,553.6
+diagnostic,B,regularized_logistic,clinical,0,20230529,repeat_02_fold_02,0.073,0.0,0.2,trained from scratch per fit,2138,cpu,,1412.5,64.0
+diagnostic,C,mlp_embedding,embedding,0,20230531,repeat_01_fold_01,0.296,0.003,1.17,gradient training (weights updated),2137,cuda,,1427.3,69.9
+diagnostic,B,mlp_clinical,clinical,10000,20230530,repeat_02_fold_02,3.332,0.002,3.52,gradient training (weights updated),12138,cuda,,1411.7,66.8
+diagnostic,B,mlp_clinical,clinical,15000,20230530,repeat_00_fold_02,12.264,0.002,12.45,gradient training (weights updated),17138,cuda,,1412.2,67.4
+diagnostic,B,mlp_clinical,clinical,1000,20230531,repeat_01_fold_04,1.159,0.002,1.32,gradient training (weights updated),3138,cuda,,1410.4,65.6
+diagnostic,B,tabdpt,clinical,1000,20230529,repeat_04_fold_00,0.903,0.353,1.47,in_context: fit stores context; no weight update,3137,cuda,,4358.0,553.6
+diagnostic,B,mlp_clinical,clinical,1000,20230529,repeat_03_fold_01,0.999,0.001,1.16,gradient training (weights updated),3137,cuda,,1393.8,65.6
+diagnostic,B,mlp_clinical,clinical,0,20230529,repeat_02_fold_04,0.708,0.002,0.89,gradient training (weights updated),2138,cuda,,1392.4,65.4
+diagnostic,B,tabdpt,clinical,1000,20230529,repeat_03_fold_02,0.894,0.35,1.46,in_context: fit stores context; no weight update,3138,cuda,,4357.9,553.6
+diagnostic,B,tabdpt,clinical,1000,20230529,repeat_03_fold_04,0.986,0.358,1.56,in_context: fit stores context; no weight update,3138,cuda,,4357.9,553.6
+prognostic,B,survivalpfn_native,clinical,1000,20230529,split_04,5.46,0.356,6.68,in_context: fit stores context; no weight update,1323,cuda,one call per outer-test split in test-ID order,4171.8,64.0
+diagnostic,B,mlp_clinical,clinical,10000,20230529,repeat_04_fold_00,5.184,0.002,5.37,gradient training (weights updated),12137,cuda,,1406.3,66.8
+diagnostic,B,tabpfn_classifier,clinical,1000,20230529,repeat_04_fold_00,0.672,2.429,3.3,in_context: fit stores context; no weight update,3137,cuda,,2454.9,538.5
+prognostic,B,tabpfn_landmark_survival,clinical,15000,20230529,split_03,2.313,32.923,35.5,in_context: fit stores context; no weight update,15323,cuda,,2380.6,1143.0
+diagnostic,B,regularized_logistic,clinical,5000,20230529,repeat_00_fold_00,0.107,0.0,0.24,trained from scratch per fit,7137,cpu,,1416.1,64.0
+diagnostic,B,mlp_clinical,clinical,15000,20230531,repeat_01_fold_01,12.069,0.002,12.27,gradient training (weights updated),17137,cuda,,1412.2,67.5
+diagnostic,B,mlp_clinical,clinical,5000,20230529,repeat_03_fold_02,5.045,0.002,5.22,gradient training (weights updated),7138,cuda,,1399.6,66.1
+diagnostic,B,mlp_clinical,clinical,5000,20230529,repeat_00_fold_00,3.644,0.002,3.82,gradient training (weights updated),7137,cuda,,1399.0,66.1
+diagnostic,B,mlp_clinical,clinical,1000,20230531,repeat_01_fold_00,0.652,0.001,0.81,gradient training (weights updated),3137,cuda,,1410.4,65.6
+diagnostic,B,tabdpt,clinical,1000,20230529,repeat_02_fold_02,1.016,0.352,1.59,in_context: fit stores context; no weight update,3138,cuda,,4357.7,553.6
+diagnostic,B,tabicl_v2,clinical,0,20230529,repeat_00_fold_02,0.616,0.681,1.49,in_context: fit stores context; no weight update,2138,cuda,8,2578.2,890.5
+diagnostic,B,mlp_clinical,clinical,15000,20230530,repeat_00_fold_00,6.753,0.003,6.95,gradient training (weights updated),17137,cuda,,1412.2,67.5
+diagnostic,B,xgboost_or_histgb,clinical,10000,20230529,repeat_02_fold_03,0.287,0.002,0.44,trained from scratch per fit,12138,cpu,,1432.8,64.0
+diagnostic,B,mlp_clinical,clinical,5000,20230530,repeat_00_fold_04,2.733,0.002,2.9,gradient training (weights updated),7138,cuda,,1410.4,66.1
+diagnostic,B,tabdpt,clinical,10000,20230529,repeat_02_fold_04,1.041,3.688,4.97,in_context: fit stores context; no weight update,12138,cuda,,4311.9,679.7
+diagnostic,C,tabpfn_embedding_ridge,embedding,0,20230529,repeat_03_fold_00,0.101,0.001,0.94,trained from scratch per fit,2137,cpu,,1448.6,64.0
+diagnostic,B,tabdpt,clinical,10000,20230529,repeat_02_fold_02,1.012,3.673,4.93,in_context: fit stores context; no weight update,12138,cuda,,4312.8,679.7
+prognostic,B,survivalpfn_native,clinical,10000,20230529,split_01,5.461,1.418,7.81,in_context: fit stores context; no weight update,10323,cuda,one call per outer-test split in test-ID order,4174.3,64.0
+diagnostic,B,mlp_clinical,clinical,5000,20230531,repeat_02_fold_01,4.575,0.001,4.75,gradient training (weights updated),7137,cuda,,1410.5,66.1
+diagnostic,B,tabpfn_classifier,clinical,15000,20230529,repeat_01_fold_03,0.842,15.088,16.19,in_context: fit stores context; no weight update,17138,cuda,,2321.4,1256.7
+diagnostic,B,mlp_clinical,clinical,10000,20230529,repeat_03_fold_03,7.034,0.002,7.26,gradient training (weights updated),12138,cuda,,1406.3,66.8
+diagnostic,B,tabdpt,clinical,5000,20230529,repeat_04_fold_01,1.015,1.343,2.58,in_context: fit stores context; no weight update,7137,cuda,,4306.9,553.6
+diagnostic,B,tabicl_v2,clinical,15000,20230529,repeat_00_fold_04,0.918,7.577,8.75,in_context: fit stores context; no weight update,17138,cuda,8,4179.0,2584.1
+diagnostic,C,tabpfn_embedding_ridge,embedding,0,20230529,repeat_03_fold_03,0.094,0.002,0.91,trained from scratch per fit,2138,cpu,,1448.6,64.0
+diagnostic,B,tabdpt,clinical,0,20230529,repeat_04_fold_03,0.917,0.213,1.35,in_context: fit stores context; no weight update,2138,cuda,,4357.2,553.6
+diagnostic,C,tabpfn_embedding_ridge,embedding,0,20230529,repeat_00_fold_02,0.088,0.003,0.91,trained from scratch per fit,2138,cpu,,1448.6,64.0
+diagnostic,B,mlp_clinical,clinical,0,20230529,repeat_01_fold_04,0.822,0.002,1.0,gradient training (weights updated),2138,cuda,,1392.4,65.4
+prognostic,B,random_survival_forest_or_fallback,clinical,0,20230529,split_02,0.404,0.156,0.7,trained from scratch per fit,323,cpu,,1494.0,64.0
+prognostic,B,mlp_clinical,clinical,1000,20230531,split_01,0.464,0.002,0.62,gradient training (weights updated),1323,cuda,,1447.6,65.8
+diagnostic,B,tabicl_v2,clinical,1000,20230529,repeat_02_fold_00,0.599,0.906,1.71,in_context: fit stores context; no weight update,3137,cuda,8,2590.5,1156.8
+diagnostic,C,mlp_embedding,embedding,0,20230531,repeat_00_fold_04,0.349,0.003,1.19,gradient training (weights updated),2138,cuda,,1427.3,69.9
+diagnostic,B,regularized_logistic,clinical,15000,20230529,repeat_02_fold_01,0.183,0.0,0.35,trained from scratch per fit,17137,cpu,,1423.6,64.0
+prognostic,B,mlp_clinical,clinical,0,20230531,split_01,0.436,0.001,0.6,gradient training (weights updated),323,cuda,,1447.6,65.2
+diagnostic,C,tabpfn_embedding_ridge,embedding,0,20230529,repeat_03_fold_04,0.09,0.002,0.91,trained from scratch per fit,2138,cpu,,1448.6,64.0
+diagnostic,B,tabicl_v2,clinical,5000,20230529,repeat_02_fold_04,0.644,2.37,3.22,in_context: fit stores context; no weight update,7138,cuda,8,2509.3,2228.1
+diagnostic,B,mlp_clinical,clinical,0,20230529,repeat_00_fold_00,1.166,0.005,1.35,gradient training (weights updated),2137,cuda,,1392.2,65.4
+diagnostic,C,mlp_embedding,embedding,0,20230530,repeat_04_fold_02,0.551,0.002,1.41,gradient training (weights updated),2138,cuda,,1427.3,69.9
+diagnostic,B,tabdpt,clinical,15000,20230529,repeat_01_fold_03,1.071,7.374,8.71,in_context: fit stores context; no weight update,17138,cuda,,4317.6,828.5
+diagnostic,B,tabdpt,clinical,1000,20230529,repeat_04_fold_01,0.894,0.353,1.47,in_context: fit stores context; no weight update,3137,cuda,,4358.0,553.6
+diagnostic,B,regularized_logistic,clinical,1000,20230529,repeat_00_fold_01,0.09,0.0,0.23,trained from scratch per fit,3137,cpu,,1412.5,64.0
+diagnostic,B,regularized_logistic,clinical,5000,20230529,repeat_04_fold_02,0.107,0.001,0.26,trained from scratch per fit,7138,cpu,,1416.0,64.0
+diagnostic,B,xgboost_or_histgb,clinical,0,20230529,repeat_04_fold_02,0.147,0.002,0.28,trained from scratch per fit,2138,cpu,,1425.9,64.0
+diagnostic,B,tabicl_v2,clinical,0,20230529,repeat_03_fold_02,0.553,0.664,1.41,in_context: fit stores context; no weight update,2138,cuda,8,2578.4,890.5
+diagnostic,C,mlp_embedding,embedding,0,20230531,repeat_04_fold_03,0.364,0.002,1.22,gradient training (weights updated),2138,cuda,,1427.3,69.9
+diagnostic,B,mlp_clinical,clinical,10000,20230530,repeat_03_fold_02,7.28,0.004,7.47,gradient training (weights updated),12138,cuda,,1411.7,66.8
+diagnostic,B,mlp_clinical,clinical,15000,20230529,repeat_04_fold_01,10.968,0.001,11.16,gradient training (weights updated),17137,cuda,,1412.1,67.5
+diagnostic,B,mlp_clinical,clinical,0,20230530,repeat_03_fold_04,1.957,0.002,2.11,gradient training (weights updated),2138,cuda,,1410.4,65.4
+diagnostic,B,tabicl_v2,clinical,15000,20230529,repeat_01_fold_01,0.899,7.645,8.79,in_context: fit stores context; no weight update,17137,cuda,8,4179.0,2584.1
+diagnostic,B,xgboost_or_histgb,clinical,5000,20230529,repeat_02_fold_01,0.222,0.001,0.37,trained from scratch per fit,7137,cpu,,1430.0,64.0
+diagnostic,B,mlp_clinical,clinical,0,20230529,repeat_04_fold_02,1.153,0.002,1.31,gradient training (weights updated),2138,cuda,,1392.4,65.4
+diagnostic,B,mlp_clinical,clinical,15000,20230531,repeat_04_fold_00,6.166,0.002,6.36,gradient training (weights updated),17137,cuda,,1412.2,67.5
+prognostic,B,tabpfn_landmark_survival,clinical,15000,20230529,split_02,2.351,32.949,35.56,in_context: fit stores context; no weight update,15323,cuda,,2380.6,1143.2
+prognostic,B,survivalpfn_native,clinical,1000,20230529,split_03,5.538,0.362,6.78,in_context: fit stores context; no weight update,1323,cuda,one call per outer-test split in test-ID order,4171.8,64.0
+diagnostic,B,tabpfn_classifier,clinical,15000,20230529,repeat_02_fold_01,0.914,15.142,16.3,in_context: fit stores context; no weight update,17137,cuda,,2321.5,1256.7
+diagnostic,B,xgboost_or_histgb,clinical,1000,20230529,repeat_03_fold_01,0.177,0.001,0.31,trained from scratch per fit,3137,cpu,,1427.4,64.0
+diagnostic,B,tabpfn_classifier,clinical,5000,20230529,repeat_00_fold_02,0.745,4.817,5.76,in_context: fit stores context; no weight update,7138,cuda,,2293.8,741.6
+diagnostic,B,regularized_logistic,clinical,0,20230529,repeat_04_fold_00,0.072,0.0,0.19,trained from scratch per fit,2137,cpu,,1412.5,64.0
+prognostic,B,mlp_clinical,clinical,1000,20230531,split_03,0.372,0.001,0.53,gradient training (weights updated),1323,cuda,,1447.6,65.8
+diagnostic,B,tabicl_v2,clinical,1000,20230529,repeat_04_fold_04,0.62,0.901,1.72,in_context: fit stores context; no weight update,3138,cuda,8,2590.5,1156.8
+diagnostic,B,mlp_clinical,clinical,5000,20230531,repeat_00_fold_03,6.236,0.002,6.4,gradient training (weights updated),7138,cuda,,1410.5,66.1
+diagnostic,B,mlp_clinical,clinical,0,20230530,repeat_02_fold_03,0.751,0.001,0.9,gradient training (weights updated),2138,cuda,,1410.4,65.4
+diagnostic,B,mlp_clinical,clinical,5000,20230529,repeat_00_fold_03,5.484,0.002,5.65,gradient training (weights updated),7138,cuda,,1399.0,66.1
+diagnostic,B,regularized_logistic,clinical,10000,20230529,repeat_01_fold_03,0.143,0.001,0.3,trained from scratch per fit,12138,cpu,,1419.7,64.0
+diagnostic,B,mlp_clinical,clinical,1000,20230531,repeat_04_fold_04,0.958,0.002,1.11,gradient training (weights updated),3138,cuda,,1410.4,65.6
+diagnostic,B,tabicl_v2,clinical,10000,20230529,repeat_00_fold_01,0.819,4.66,5.71,in_context: fit stores context; no weight update,12137,cuda,8,3982.9,2544.7
+diagnostic,B,xgboost_or_histgb,clinical,0,20230529,repeat_00_fold_04,0.161,0.001,0.29,trained from scratch per fit,2138,cpu,,1422.6,64.0
+diagnostic,B,tabpfn_classifier,clinical,1000,20230529,repeat_02_fold_03,0.693,2.409,3.3,in_context: fit stores context; no weight update,3138,cuda,,2454.4,538.5
+diagnostic,B,tabdpt,clinical,15000,20230529,repeat_01_fold_00,1.173,7.389,8.82,in_context: fit stores context; no weight update,17137,cuda,,4319.0,828.5
+prognostic,B,mlp_clinical,clinical,15000,20230531,split_01,0.609,0.001,0.81,gradient training (weights updated),15323,cuda,,1449.3,75.0
+diagnostic,B,tabpfn_classifier,clinical,1000,20230529,repeat_00_fold_00,0.739,2.405,3.33,in_context: fit stores context; no weight update,3137,cuda,,2453.6,538.5
+diagnostic,B,mlp_clinical,clinical,0,20230530,repeat_03_fold_03,1.556,0.002,1.71,gradient training (weights updated),2138,cuda,,1410.4,65.4
+diagnostic,B,mlp_clinical,clinical,1000,20230530,repeat_04_fold_03,1.505,0.002,1.66,gradient training (weights updated),3138,cuda,,1410.4,65.6
+prognostic,B,tabpfn_landmark_survival,clinical,15000,20230529,split_00,2.423,32.982,35.66,in_context: fit stores context; no weight update,15323,cuda,,2377.7,1144.5
+diagnostic,B,mlp_clinical,clinical,1000,20230530,repeat_02_fold_00,2.017,0.002,2.18,gradient training (weights updated),3137,cuda,,1410.4,65.6
+diagnostic,C,mlp_embedding,embedding,0,20230531,repeat_03_fold_04,0.24,0.003,1.1,gradient training (weights updated),2138,cuda,,1427.3,69.9
+diagnostic,B,tabdpt,clinical,5000,20230529,repeat_04_fold_00,1.039,1.345,2.63,in_context: fit stores context; no weight update,7137,cuda,,4308.2,553.6
+diagnostic,B,tabdpt,clinical,15000,20230529,repeat_03_fold_01,1.06,7.437,8.76,in_context: fit stores context; no weight update,17137,cuda,,4318.9,828.5
+diagnostic,B,mlp_clinical,clinical,1000,20230531,repeat_03_fold_02,2.546,0.001,2.7,gradient training (weights updated),3138,cuda,,1410.4,65.6
+diagnostic,B,tabicl_v2,clinical,10000,20230529,repeat_03_fold_01,0.824,4.67,5.72,in_context: fit stores context; no weight update,12137,cuda,8,3982.9,2544.7
+diagnostic,B,mlp_clinical,clinical,1000,20230530,repeat_04_fold_01,2.378,0.001,2.54,gradient training (weights updated),3137,cuda,,1410.4,65.6
+diagnostic,B,xgboost_or_histgb,clinical,5000,20230529,repeat_02_fold_00,0.212,0.002,0.36,trained from scratch per fit,7137,cpu,,1430.1,64.0
+diagnostic,B,tabicl_v2,clinical,1000,20230529,repeat_04_fold_01,0.561,0.903,1.68,in_context: fit stores context; no weight update,3137,cuda,8,2590.5,1156.8
+diagnostic,B,mlp_clinical,clinical,10000,20230531,repeat_04_fold_02,5.613,0.002,5.79,gradient training (weights updated),12138,cuda,,1411.5,66.8
+diagnostic,B,mlp_clinical,clinical,5000,20230530,repeat_01_fold_04,2.846,0.002,3.02,gradient training (weights updated),7138,cuda,,1410.4,66.1
+diagnostic,B,tabicl_v2,clinical,15000,20230529,repeat_00_fold_00,0.889,7.557,8.7,in_context: fit stores context; no weight update,17137,cuda,8,4179.0,2584.1
+prognostic,B,mlp_clinical,clinical,15000,20230530,split_01,0.664,0.002,0.89,gradient training (weights updated),15323,cuda,,1449.3,75.0
+prognostic,B,mlp_clinical,clinical,15000,20230530,split_03,0.647,0.003,0.85,gradient training (weights updated),15323,cuda,,1449.3,75.0
+diagnostic,B,tabdpt,clinical,0,20230529,repeat_02_fold_03,0.881,0.211,1.3,in_context: fit stores context; no weight update,2138,cuda,,4359.9,553.6
+diagnostic,B,mlp_clinical,clinical,1000,20230531,repeat_02_fold_00,2.181,0.002,2.34,gradient training (weights updated),3137,cuda,,1410.4,65.6
+diagnostic,C,tabpfn_embedding_ridge,embedding,0,20230529,repeat_02_fold_03,0.095,0.002,0.91,trained from scratch per fit,2138,cpu,,1448.6,64.0
+diagnostic,B,tabicl_v2,clinical,1000,20230529,repeat_03_fold_02,0.602,0.898,1.7,in_context: fit stores context; no weight update,3138,cuda,8,2588.5,1156.8
+diagnostic,B,tabpfn_classifier,clinical,15000,20230529,repeat_03_fold_00,0.859,15.142,16.24,in_context: fit stores context; no weight update,17137,cuda,,2321.5,1256.7
+prognostic,B,survivalpfn_native,clinical,15000,20230529,split_00,5.427,2.664,9.04,in_context: fit stores context; no weight update,15323,cuda,one call per outer-test split in test-ID order,4175.5,64.0
+prognostic,B,cox_elastic_net,clinical,5000,20230529,split_02,0.875,0.003,1.02,trained from scratch per fit,5323,cpu,,1438.5,64.0
+diagnostic,B,tabpfn_classifier,clinical,1000,20230529,repeat_00_fold_01,0.681,2.371,3.24,in_context: fit stores context; no weight update,3137,cuda,,2453.9,538.5
+diagnostic,B,mlp_clinical,clinical,15000,20230530,repeat_00_fold_03,10.864,0.002,11.05,gradient training (weights updated),17138,cuda,,1412.2,67.5
+diagnostic,B,tabicl_v2,clinical,15000,20230529,repeat_04_fold_01,0.911,7.656,8.81,in_context: fit stores context; no weight update,17137,cuda,8,4179.0,2584.1
+diagnostic,B,xgboost_or_histgb,clinical,5000,20230529,repeat_00_fold_03,0.225,0.002,0.37,trained from scratch per fit,7138,cpu,,1430.0,64.0
+diagnostic,B,regularized_logistic,clinical,0,20230529,repeat_01_fold_00,0.072,0.0,0.2,trained from scratch per fit,2137,cpu,,1412.5,64.0
+diagnostic,B,regularized_logistic,clinical,5000,20230529,repeat_04_fold_03,0.125,0.001,0.27,trained from scratch per fit,7138,cpu,,1416.0,64.0
+prognostic,B,cox_elastic_net,clinical,10000,20230529,split_02,1.103,0.003,1.27,trained from scratch per fit,10323,cpu,,1441.7,64.0
+diagnostic,C,mlp_embedding,embedding,0,20230531,repeat_02_fold_02,0.2,0.002,1.05,gradient training (weights updated),2138,cuda,,1427.3,69.9
+diagnostic,B,tabpfn_classifier,clinical,1000,20230529,repeat_01_fold_03,0.688,2.419,3.3,in_context: fit stores context; no weight update,3138,cuda,,2454.4,538.5
+diagnostic,B,tabpfn_classifier,clinical,1000,20230529,repeat_00_fold_04,0.704,2.429,3.32,in_context: fit stores context; no weight update,3138,cuda,,2454.4,538.5
+diagnostic,B,tabicl_v2,clinical,15000,20230529,repeat_03_fold_03,0.912,7.639,8.8,in_context: fit stores context; no weight update,17138,cuda,8,4179.0,2584.1
+diagnostic,B,mlp_clinical,clinical,5000,20230529,repeat_02_fold_00,3.496,0.001,3.66,gradient training (weights updated),7137,cuda,,1399.6,66.1
+diagnostic,B,tabicl_v2,clinical,0,20230529,repeat_02_fold_01,0.556,0.665,1.41,in_context: fit stores context; no weight update,2137,cuda,8,2578.3,890.5
+diagnostic,B,regularized_logistic,clinical,1000,20230529,repeat_03_fold_02,0.08,0.0,0.21,trained from scratch per fit,3138,cpu,,1412.5,64.0
+diagnostic,B,mlp_clinical,clinical,0,20230531,repeat_02_fold_02,0.5,0.002,0.65,gradient training (weights updated),2138,cuda,,1410.5,65.4
+diagnostic,B,mlp_clinical,clinical,15000,20230530,repeat_04_fold_03,8.195,0.001,8.4,gradient training (weights updated),17138,cuda,,1412.2,67.5
+diagnostic,B,mlp_clinical,clinical,15000,20230530,repeat_01_fold_04,6.521,0.001,6.72,gradient training (weights updated),17138,cuda,,1412.2,67.6
+prognostic,B,tabpfn_landmark_survival,clinical,10000,20230529,split_02,2.169,19.162,21.57,in_context: fit stores context; no weight update,10323,cuda,,2560.0,1024.5
+diagnostic,B,mlp_clinical,clinical,10000,20230529,repeat_03_fold_00,6.573,0.002,6.76,gradient training (weights updated),12137,cuda,,1406.3,66.8
+diagnostic,B,tabdpt,clinical,10000,20230529,repeat_04_fold_01,1.065,3.696,5.0,in_context: fit stores context; no weight update,12137,cuda,,4312.8,679.7
+diagnostic,B,mlp_clinical,clinical,1000,20230530,repeat_04_fold_04,0.87,0.001,1.02,gradient training (weights updated),3138,cuda,,1410.4,65.6
+prognostic,B,tabpfn_landmark_survival,clinical,5000,20230529,split_00,1.898,8.951,11.07,in_context: fit stores context; no weight update,5323,cuda,,2518.1,903.4
+diagnostic,B,mlp_clinical,clinical,15000,20230531,repeat_02_fold_00,11.596,0.002,11.79,gradient training (weights updated),17137,cuda,,1412.2,67.5
+diagnostic,B,regularized_logistic,clinical,10000,20230529,repeat_03_fold_00,0.136,0.001,0.29,trained from scratch per fit,12137,cpu,,1419.7,64.0
+diagnostic,B,tabicl_v2,clinical,10000,20230529,repeat_03_fold_02,0.797,4.699,5.74,in_context: fit stores context; no weight update,12138,cuda,8,3982.9,2544.7
+diagnostic,C,mlp_embedding,embedding,0,20230529,repeat_01_fold_00,0.277,0.004,1.12,gradient training (weights updated),2137,cuda,,1427.2,69.9
+diagnostic,B,regularized_logistic,clinical,15000,20230529,repeat_00_fold_01,0.178,0.001,0.35,trained from scratch per fit,17137,cpu,,1423.3,64.0
+diagnostic,B,mlp_clinical,clinical,0,20230530,repeat_03_fold_01,0.5,0.002,0.66,gradient training (weights updated),2137,cuda,,1410.4,65.4
+diagnostic,B,tabpfn_classifier,clinical,0,20230529,repeat_04_fold_02,0.721,2.009,2.93,in_context: fit stores context; no weight update,2138,cuda,,2451.1,485.5
+diagnostic,B,tabicl_v2,clinical,0,20230529,repeat_01_fold_00,0.531,0.681,1.41,in_context: fit stores context; no weight update,2137,cuda,8,2578.2,890.5
+diagnostic,B,tabpfn_classifier,clinical,0,20230529,repeat_00_fold_03,0.619,1.917,2.73,in_context: fit stores context; no weight update,2138,cuda,,2450.3,485.5
+diagnostic,C,tabpfn_embedding_ridge,embedding,0,20230529,repeat_01_fold_03,0.093,0.002,0.93,trained from scratch per fit,2138,cpu,,1448.6,64.0
+diagnostic,B,regularized_logistic,clinical,5000,20230529,repeat_01_fold_01,0.109,0.001,0.25,trained from scratch per fit,7137,cpu,,1416.0,64.0
+diagnostic,B,xgboost_or_histgb,clinical,10000,20230529,repeat_00_fold_02,0.287,0.002,0.44,trained from scratch per fit,12138,cpu,,1432.8,64.0
+diagnostic,B,tabicl_v2,clinical,0,20230529,repeat_01_fold_04,0.566,0.664,1.42,in_context: fit stores context; no weight update,2138,cuda,8,2578.3,890.5
+diagnostic,B,regularized_logistic,clinical,15000,20230529,repeat_00_fold_03,0.185,0.0,0.36,trained from scratch per fit,17138,cpu,,1423.5,64.0
+diagnostic,B,xgboost_or_histgb,clinical,10000,20230529,repeat_03_fold_01,0.315,0.002,0.48,trained from scratch per fit,12137,cpu,,1432.8,64.0
+prognostic,B,mlp_clinical,clinical,10000,20230531,split_04,0.906,0.003,1.09,gradient training (weights updated),10323,cuda,,1448.7,71.4
+prognostic,B,random_survival_forest_or_fallback,clinical,5000,20230529,split_03,1.343,0.298,1.85,trained from scratch per fit,5323,cpu,,2300.7,64.0
+diagnostic,C,tabpfn_embedding_ridge,embedding,0,20230529,repeat_00_fold_03,0.102,0.002,0.92,trained from scratch per fit,2138,cpu,,1448.6,64.0
+diagnostic,B,mlp_clinical,clinical,5000,20230530,repeat_01_fold_01,3.316,0.002,3.48,gradient training (weights updated),7137,cuda,,1410.4,66.1
+diagnostic,B,tabdpt,clinical,15000,20230529,repeat_01_fold_01,1.043,7.377,8.68,in_context: fit stores context; no weight update,17137,cuda,,4319.0,828.5
+diagnostic,B,tabpfn_classifier,clinical,10000,20230529,repeat_00_fold_03,0.83,9.333,10.39,in_context: fit stores context; no weight update,12138,cuda,,2513.4,998.7
+prognostic,B,mlp_clinical,clinical,10000,20230531,split_03,0.48,0.001,0.67,gradient training (weights updated),10323,cuda,,1448.7,71.4
+diagnostic,B,tabicl_v2,clinical,5000,20230529,repeat_04_fold_03,0.652,2.358,3.22,in_context: fit stores context; no weight update,7138,cuda,8,2509.4,2228.1
+diagnostic,B,tabdpt,clinical,15000,20230529,repeat_04_fold_03,1.071,7.437,8.77,in_context: fit stores context; no weight update,17138,cuda,,4318.7,828.5
+prognostic,B,cox_elastic_net,clinical,10000,20230529,split_00,1.035,0.003,1.2,trained from scratch per fit,10323,cpu,,1441.6,64.0
+diagnostic,B,mlp_clinical,clinical,0,20230530,repeat_02_fold_01,1.761,0.002,1.91,gradient training (weights updated),2137,cuda,,1410.4,65.4
+diagnostic,B,xgboost_or_histgb,clinical,10000,20230529,repeat_02_fold_01,0.293,0.001,0.46,trained from scratch per fit,12137,cpu,,1432.8,64.0
+diagnostic,C,mlp_embedding,embedding,0,20230529,repeat_00_fold_04,0.714,0.003,1.59,gradient training (weights updated),2138,cuda,,1427.2,69.9
+diagnostic,B,tabicl_v2,clinical,1000,20230529,repeat_00_fold_04,0.655,0.909,1.76,in_context: fit stores context; no weight update,3138,cuda,8,2590.5,1156.8
+diagnostic,B,regularized_logistic,clinical,5000,20230529,repeat_03_fold_04,0.117,0.0,0.27,trained from scratch per fit,7138,cpu,,1416.0,64.0
+diagnostic,B,tabpfn_classifier,clinical,10000,20230529,repeat_02_fold_03,0.831,9.441,10.5,in_context: fit stores context; no weight update,12138,cuda,,2513.6,998.7
+diagnostic,B,mlp_clinical,clinical,5000,20230530,repeat_02_fold_02,1.864,0.003,2.03,gradient training (weights updated),7138,cuda,,1410.4,66.1
+diagnostic,B,tabdpt,clinical,0,20230529,repeat_02_fold_04,0.935,0.212,1.37,in_context: fit stores context; no weight update,2138,cuda,,4354.9,553.6
+diagnostic,B,mlp_clinical,clinical,15000,20230530,repeat_04_fold_02,5.681,0.001,5.87,gradient training (weights updated),17138,cuda,,1412.2,67.5
+diagnostic,B,tabdpt,clinical,1000,20230529,repeat_00_fold_00,0.926,0.354,1.5,in_context: fit stores context; no weight update,3137,cuda,,4357.2,553.6
+diagnostic,B,xgboost_or_histgb,clinical,15000,20230529,repeat_03_fold_02,0.368,0.002,0.54,trained from scratch per fit,17138,cpu,,1437.7,64.0
+diagnostic,B,regularized_logistic,clinical,10000,20230529,repeat_04_fold_00,0.146,0.001,0.3,trained from scratch per fit,12137,cpu,,1419.7,64.0
+diagnostic,B,tabdpt,clinical,0,20230529,repeat_04_fold_04,0.92,0.218,1.35,in_context: fit stores context; no weight update,2138,cuda,,4356.7,553.6
+diagnostic,B,mlp_clinical,clinical,10000,20230529,repeat_02_fold_00,5.77,0.002,5.95,gradient training (weights updated),12137,cuda,,1406.3,66.8
+prognostic,B,tabpfn_landmark_survival,clinical,10000,20230529,split_04,2.134,19.222,21.6,in_context: fit stores context; no weight update,10323,cuda,,2560.1,1024.5
+diagnostic,B,mlp_clinical,clinical,0,20230531,repeat_01_fold_02,1.249,0.002,1.4,gradient training (weights updated),2138,cuda,,1410.5,65.4
+diagnostic,B,mlp_clinical,clinical,0,20230531,repeat_00_fold_02,1.787,0.002,1.94,gradient training (weights updated),2138,cuda,,1410.5,65.4
+diagnostic,B,mlp_clinical,clinical,5000,20230531,repeat_03_fold_00,4.034,0.003,4.21,gradient training (weights updated),7137,cuda,,1410.5,66.1
+diagnostic,B,mlp_clinical,clinical,0,20230529,repeat_02_fold_01,2.372,0.002,2.56,gradient training (weights updated),2137,cuda,,1392.4,65.4
+diagnostic,B,tabpfn_classifier,clinical,10000,20230529,repeat_02_fold_01,0.867,9.374,10.47,in_context: fit stores context; no weight update,12137,cuda,,2513.5,999.0
+diagnostic,B,mlp_clinical,clinical,15000,20230529,repeat_03_fold_02,9.983,0.002,10.17,gradient training (weights updated),17138,cuda,,1412.1,67.6
+diagnostic,B,tabicl_v2,clinical,1000,20230529,repeat_00_fold_00,0.585,0.905,1.69,in_context: fit stores context; no weight update,3137,cuda,8,2584.6,1156.8
+diagnostic,C,mlp_embedding,embedding,0,20230530,repeat_01_fold_03,0.337,0.005,1.23,gradient training (weights updated),2138,cuda,,1427.3,69.9
+diagnostic,B,regularized_logistic,clinical,5000,20230529,repeat_02_fold_04,0.105,0.001,0.24,trained from scratch per fit,7138,cpu,,1416.0,64.0
+diagnostic,B,mlp_clinical,clinical,0,20230530,repeat_01_fold_01,1.055,0.002,1.21,gradient training (weights updated),2137,cuda,,1410.4,65.4
+diagnostic,B,tabdpt,clinical,0,20230529,repeat_03_fold_00,0.923,0.215,1.36,in_context: fit stores context; no weight update,2137,cuda,,4356.9,553.6
+diagnostic,B,regularized_logistic,clinical,15000,20230529,repeat_03_fold_03,0.171,0.001,0.34,trained from scratch per fit,17138,cpu,,1424.5,64.0
+diagnostic,C,tabpfn_embedding_ridge,embedding,0,20230529,repeat_04_fold_01,0.09,0.001,0.92,trained from scratch per fit,2137,cpu,,1448.6,64.0
+diagnostic,B,tabdpt,clinical,10000,20230529,repeat_00_fold_04,1.02,3.582,4.85,in_context: fit stores context; no weight update,12138,cuda,,4311.9,679.7
+diagnostic,B,xgboost_or_histgb,clinical,1000,20230529,repeat_01_fold_00,0.164,0.001,0.3,trained from scratch per fit,3137,cpu,,1426.5,64.0
+diagnostic,B,tabpfn_classifier,clinical,5000,20230529,repeat_03_fold_04,0.77,4.916,5.91,in_context: fit stores context; no weight update,7138,cuda,,2294.2,741.6
+diagnostic,B,mlp_clinical,clinical,0,20230530,repeat_00_fold_01,1.376,0.0,1.53,gradient training (weights updated),2137,cuda,,1410.4,65.4
+diagnostic,B,mlp_clinical,clinical,5000,20230530,repeat_02_fold_00,4.428,0.001,4.59,gradient training (weights updated),7137,cuda,,1410.4,66.1
+diagnostic,B,mlp_clinical,clinical,1000,20230531,repeat_01_fold_03,1.426,0.003,1.58,gradient training (weights updated),3138,cuda,,1410.4,65.6
+diagnostic,B,mlp_clinical,clinical,5000,20230530,repeat_01_fold_00,1.812,0.002,1.97,gradient training (weights updated),7137,cuda,,1410.4,66.1
+prognostic,B,random_survival_forest_or_fallback,clinical,15000,20230529,split_03,3.776,0.254,4.35,trained from scratch per fit,15323,cpu,,3679.9,64.0
+diagnostic,B,mlp_clinical,clinical,5000,20230530,repeat_01_fold_03,5.258,0.002,5.42,gradient training (weights updated),7138,cuda,,1410.4,66.1
+diagnostic,C,mlp_embedding,embedding,0,20230529,repeat_03_fold_03,0.425,0.003,1.27,gradient training (weights updated),2138,cuda,,1427.2,69.9
+prognostic,B,mlp_clinical,clinical,0,20230529,split_01,0.472,0.002,0.63,gradient training (weights updated),323,cuda,,1441.8,65.2
+diagnostic,B,tabdpt,clinical,0,20230529,repeat_04_fold_00,0.886,0.212,1.31,in_context: fit stores context; no weight update,2137,cuda,,4357.1,553.6
+diagnostic,B,mlp_clinical,clinical,1000,20230529,repeat_04_fold_04,1.301,0.001,1.46,gradient training (weights updated),3138,cuda,,1393.8,65.6
+diagnostic,B,mlp_clinical,clinical,1000,20230531,repeat_02_fold_01,2.033,0.001,2.19,gradient training (weights updated),3137,cuda,,1410.4,65.6
+diagnostic,C,mlp_embedding,embedding,0,20230529,repeat_02_fold_04,0.291,0.003,1.15,gradient training (weights updated),2138,cuda,,1427.2,69.9
+diagnostic,B,tabpfn_classifier,clinical,0,20230529,repeat_03_fold_00,0.665,1.972,2.82,in_context: fit stores context; no weight update,2137,cuda,,2450.2,485.6
+diagnostic,B,mlp_clinical,clinical,5000,20230531,repeat_01_fold_01,5.041,0.001,5.21,gradient training (weights updated),7137,cuda,,1410.5,66.1
+diagnostic,B,tabpfn_classifier,clinical,10000,20230529,repeat_04_fold_01,0.825,9.412,10.46,in_context: fit stores context; no weight update,12137,cuda,,2512.8,999.0
+diagnostic,B,mlp_clinical,clinical,0,20230531,repeat_03_fold_01,0.698,0.001,0.85,gradient training (weights updated),2137,cuda,,1410.5,65.4
+diagnostic,B,tabdpt,clinical,5000,20230529,repeat_01_fold_02,0.981,1.335,2.54,in_context: fit stores context; no weight update,7138,cuda,,4307.9,553.6
+diagnostic,B,mlp_clinical,clinical,10000,20230531,repeat_02_fold_01,7.597,0.002,7.78,gradient training (weights updated),12137,cuda,,1411.5,66.8
+diagnostic,C,mlp_embedding,embedding,0,20230531,repeat_00_fold_00,0.173,0.003,1.02,gradient training (weights updated),2137,cuda,,1427.3,69.9
+prognostic,B,tabpfn_landmark_survival,clinical,15000,20230529,split_01,2.375,32.844,35.52,in_context: fit stores context; no weight update,15323,cuda,,2380.7,1143.2
+diagnostic,B,xgboost_or_histgb,clinical,5000,20230529,repeat_04_fold_00,0.232,0.001,0.37,trained from scratch per fit,7137,cpu,,1430.0,64.0
+diagnostic,B,regularized_logistic,clinical,5000,20230529,repeat_03_fold_00,0.113,0.0,0.25,trained from scratch per fit,7137,cpu,,1416.0,64.0
+diagnostic,B,tabdpt,clinical,5000,20230529,repeat_00_fold_02,0.967,1.334,2.53,in_context: fit stores context; no weight update,7138,cuda,,4307.7,553.6
+prognostic,B,mlp_clinical,clinical,5000,20230529,split_04,0.538,0.002,0.72,gradient training (weights updated),5323,cuda,,1447.0,68.0
+diagnostic,B,tabicl_v2,clinical,0,20230529,repeat_04_fold_04,0.565,0.657,1.41,in_context: fit stores context; no weight update,2138,cuda,8,2578.3,890.5
+prognostic,B,mlp_clinical,clinical,1000,20230530,split_02,0.462,0.002,0.63,gradient training (weights updated),1323,cuda,,1447.6,65.8
+diagnostic,B,mlp_clinical,clinical,1000,20230529,repeat_01_fold_01,2.719,0.002,2.89,gradient training (weights updated),3137,cuda,,1393.8,65.6
+diagnostic,B,mlp_clinical,clinical,1000,20230530,repeat_02_fold_02,0.88,0.002,1.03,gradient training (weights updated),3138,cuda,,1410.4,65.6
+diagnostic,B,mlp_clinical,clinical,5000,20230530,repeat_01_fold_02,3.617,0.001,3.78,gradient training (weights updated),7138,cuda,,1410.4,66.1
+prognostic,B,tabpfn_landmark_survival,clinical,0,20230529,split_02,1.959,3.633,5.81,in_context: fit stores context; no weight update,323,cuda,,2502.0,781.2
+diagnostic,B,mlp_clinical,clinical,10000,20230529,repeat_01_fold_00,5.472,0.002,5.69,gradient training (weights updated),12137,cuda,,1406.3,66.8
+prognostic,B,random_survival_forest_or_fallback,clinical,15000,20230529,split_04,4.142,0.22,4.69,trained from scratch per fit,15323,cpu,,3728.6,64.0
+diagnostic,B,mlp_clinical,clinical,10000,20230530,repeat_00_fold_03,7.72,0.002,7.9,gradient training (weights updated),12138,cuda,,1411.7,66.8
+diagnostic,B,mlp_clinical,clinical,0,20230530,repeat_04_fold_03,1.062,0.001,1.22,gradient training (weights updated),2138,cuda,,1410.4,65.4
+diagnostic,B,mlp_clinical,clinical,5000,20230531,repeat_04_fold_00,2.749,0.001,2.91,gradient training (weights updated),7137,cuda,,1410.5,66.1
+diagnostic,B,tabdpt,clinical,15000,20230529,repeat_00_fold_01,1.052,7.271,8.59,in_context: fit stores context; no weight update,17137,cuda,,4318.3,828.5
+diagnostic,B,tabicl_v2,clinical,1000,20230529,repeat_03_fold_00,0.58,0.92,1.71,in_context: fit stores context; no weight update,3137,cuda,8,2588.5,1156.8
+prognostic,B,cox_elastic_net,clinical,0,20230529,split_00,0.682,0.003,0.81,trained from scratch per fit,323,cpu,,1436.3,64.0
+diagnostic,B,mlp_clinical,clinical,5000,20230529,repeat_04_fold_04,2.921,0.003,3.1,gradient training (weights updated),7138,cuda,,1399.6,66.1
+diagnostic,B,tabdpt,clinical,1000,20230529,repeat_01_fold_00,0.907,0.355,1.49,in_context: fit stores context; no weight update,3137,cuda,,4357.4,553.6
+diagnostic,B,regularized_logistic,clinical,10000,20230529,repeat_03_fold_02,0.152,0.001,0.3,trained from scratch per fit,12138,cpu,,1419.7,64.0
+prognostic,B,random_survival_forest_or_fallback,clinical,5000,20230529,split_02,1.306,0.196,1.69,trained from scratch per fit,5323,cpu,,2249.1,64.0
+diagnostic,B,xgboost_or_histgb,clinical,0,20230529,repeat_02_fold_01,0.147,0.002,0.28,trained from scratch per fit,2137,cpu,,1425.0,64.0
+diagnostic,C,tabpfn_embedding_ridge,embedding,0,20230529,repeat_01_fold_01,0.094,0.002,0.9,trained from scratch per fit,2137,cpu,,1448.6,64.0
+diagnostic,B,mlp_clinical,clinical,0,20230531,repeat_04_fold_03,1.247,0.003,1.4,gradient training (weights updated),2138,cuda,,1410.5,65.4
+diagnostic,B,mlp_clinical,clinical,15000,20230530,repeat_02_fold_04,4.223,0.003,4.41,gradient training (weights updated),17138,cuda,,1412.2,67.5
+diagnostic,B,xgboost_or_histgb,clinical,1000,20230529,repeat_03_fold_04,0.165,0.001,0.3,trained from scratch per fit,3138,cpu,,1427.4,64.0
+diagnostic,B,tabdpt,clinical,15000,20230529,repeat_03_fold_02,1.102,7.403,8.77,in_context: fit stores context; no weight update,17138,cuda,,4318.4,828.5
+diagnostic,B,tabpfn_classifier,clinical,15000,20230529,repeat_00_fold_04,0.869,15.205,16.32,in_context: fit stores context; no weight update,17138,cuda,,2321.4,1256.7
+diagnostic,B,mlp_clinical,clinical,5000,20230529,repeat_02_fold_01,5.829,0.001,6.0,gradient training (weights updated),7137,cuda,,1399.6,66.1
+diagnostic,B,mlp_clinical,clinical,5000,20230531,repeat_02_fold_04,2.329,0.003,2.5,gradient training (weights updated),7138,cuda,,1410.5,66.1
+diagnostic,B,xgboost_or_histgb,clinical,0,20230529,repeat_04_fold_01,0.175,0.002,0.31,trained from scratch per fit,2137,cpu,,1425.9,64.0
+diagnostic,B,tabicl_v2,clinical,1000,20230529,repeat_02_fold_04,0.558,0.921,1.67,in_context: fit stores context; no weight update,3138,cuda,8,2588.5,1156.8
+diagnostic,B,tabicl_v2,clinical,0,20230529,repeat_03_fold_00,0.548,0.663,1.42,in_context: fit stores context; no weight update,2137,cuda,8,2578.4,890.5
+diagnostic,B,tabdpt,clinical,5000,20230529,repeat_04_fold_03,1.005,1.343,2.57,in_context: fit stores context; no weight update,7138,cuda,,4309.3,553.6
+diagnostic,B,xgboost_or_histgb,clinical,15000,20230529,repeat_04_fold_04,0.379,0.001,0.55,trained from scratch per fit,17138,cpu,,1437.7,64.0
+diagnostic,B,mlp_clinical,clinical,15000,20230531,repeat_03_fold_04,12.035,0.001,12.23,gradient training (weights updated),17138,cuda,,1412.2,67.6
+diagnostic,B,tabdpt,clinical,1000,20230529,repeat_04_fold_03,0.906,0.351,1.48,in_context: fit stores context; no weight update,3138,cuda,,4358.1,553.6
+diagnostic,B,regularized_logistic,clinical,0,20230529,repeat_03_fold_01,0.081,0.0,0.21,trained from scratch per fit,2137,cpu,,1412.5,64.0
+diagnostic,B,mlp_clinical,clinical,0,20230529,repeat_00_fold_02,1.983,0.002,2.15,gradient training (weights updated),2138,cuda,,1392.3,65.4
+diagnostic,C,tabpfn_embedding_ridge,embedding,0,20230529,repeat_02_fold_02,0.095,0.002,0.91,trained from scratch per fit,2138,cpu,,1448.6,64.0
+prognostic,B,mlp_clinical,clinical,1000,20230529,split_04,0.511,0.002,0.67,gradient training (weights updated),1323,cuda,,1441.9,65.8
+diagnostic,B,xgboost_or_histgb,clinical,15000,20230529,repeat_00_fold_02,0.365,0.002,0.54,trained from scratch per fit,17138,cpu,,1437.0,64.0
+diagnostic,B,tabdpt,clinical,0,20230529,repeat_01_fold_00,0.903,0.212,1.32,in_context: fit stores context; no weight update,2137,cuda,,4355.9,553.6
+diagnostic,B,tabdpt,clinical,15000,20230529,repeat_00_fold_03,1.054,7.368,8.68,in_context: fit stores context; no weight update,17138,cuda,,4318.4,828.5
+diagnostic,B,mlp_clinical,clinical,1000,20230530,repeat_01_fold_01,1.568,0.003,1.82,gradient training (weights updated),3137,cuda,,1410.4,65.6
+diagnostic,B,mlp_clinical,clinical,10000,20230530,repeat_01_fold_02,5.879,0.003,6.06,gradient training (weights updated),12138,cuda,,1411.7,66.8
+prognostic,B,cox_elastic_net,clinical,0,20230529,split_03,0.445,0.004,0.58,trained from scratch per fit,323,cpu,,1436.4,64.0
+diagnostic,B,tabdpt,clinical,15000,20230529,repeat_01_fold_02,1.141,7.31,8.72,in_context: fit stores context; no weight update,17138,cuda,,4318.0,828.5
+diagnostic,B,mlp_clinical,clinical,15000,20230530,repeat_03_fold_03,11.755,0.002,11.95,gradient training (weights updated),17138,cuda,,1412.2,67.6
+diagnostic,B,tabdpt,clinical,10000,20230529,repeat_02_fold_01,1.039,3.68,4.97,in_context: fit stores context; no weight update,12137,cuda,,4311.8,679.7
+prognostic,B,cox_elastic_net,clinical,0,20230529,split_02,0.45,0.004,0.58,trained from scratch per fit,323,cpu,,1436.4,64.0
+prognostic,B,mlp_clinical,clinical,15000,20230529,split_01,0.643,0.003,0.85,gradient training (weights updated),15323,cuda,,1449.3,75.0
+diagnostic,B,mlp_clinical,clinical,0,20230529,repeat_01_fold_01,1.743,0.002,1.92,gradient training (weights updated),2137,cuda,,1392.4,65.4
+diagnostic,C,mlp_embedding,embedding,0,20230530,repeat_02_fold_01,0.913,0.002,1.79,gradient training (weights updated),2137,cuda,,1427.3,69.9
+prognostic,B,tabpfn_landmark_survival,clinical,10000,20230529,split_01,2.189,19.038,21.48,in_context: fit stores context; no weight update,10323,cuda,,2560.0,1024.5
+diagnostic,B,mlp_clinical,clinical,5000,20230529,repeat_02_fold_03,2.955,0.004,3.13,gradient training (weights updated),7138,cuda,,1399.6,66.1
+diagnostic,B,tabicl_v2,clinical,15000,20230529,repeat_04_fold_03,0.903,7.642,8.8,in_context: fit stores context; no weight update,17138,cuda,8,4179.0,2584.1
+diagnostic,B,mlp_clinical,clinical,5000,20230531,repeat_03_fold_01,2.245,0.002,2.41,gradient training (weights updated),7137,cuda,,1410.5,66.1
+diagnostic,C,tabpfn_embedding_ridge,embedding,0,20230529,repeat_01_fold_04,0.117,0.002,0.95,trained from scratch per fit,2138,cpu,,1448.6,64.0
+diagnostic,B,mlp_clinical,clinical,1000,20230529,repeat_04_fold_01,2.502,0.001,2.68,gradient training (weights updated),3137,cuda,,1393.8,65.6
+diagnostic,B,xgboost_or_histgb,clinical,5000,20230529,repeat_01_fold_00,0.241,0.003,0.4,trained from scratch per fit,7137,cpu,,1430.0,64.0
+diagnostic,B,mlp_clinical,clinical,5000,20230530,repeat_04_fold_00,3.941,0.002,4.11,gradient training (weights updated),7137,cuda,,1410.4,66.1
+diagnostic,B,mlp_clinical,clinical,1000,20230531,repeat_00_fold_03,2.899,0.002,3.06,gradient training (weights updated),3138,cuda,,1410.4,65.6
+diagnostic,B,xgboost_or_histgb,clinical,10000,20230529,repeat_01_fold_02,0.292,0.001,0.45,trained from scratch per fit,12138,cpu,,1432.8,64.0
+diagnostic,B,mlp_clinical,clinical,1000,20230529,repeat_00_fold_00,1.624,0.002,1.78,gradient training (weights updated),3137,cuda,,1393.5,65.6
+prognostic,C,mlp_embedding,embedding,0,20230531,split_02,0.104,0.005,0.53,gradient training (weights updated),323,cuda,,1423.1,68.0
+diagnostic,B,tabicl_v2,clinical,10000,20230529,repeat_04_fold_02,0.771,4.67,5.67,in_context: fit stores context; no weight update,12138,cuda,8,3982.9,2544.7
+prognostic,B,mlp_clinical,clinical,5000,20230531,split_01,0.552,0.002,0.73,gradient training (weights updated),5323,cuda,,1447.6,68.0
+prognostic,B,mlp_clinical,clinical,10000,20230530,split_02,0.54,0.003,0.73,gradient training (weights updated),10323,cuda,,1448.7,71.4
+diagnostic,B,tabpfn_classifier,clinical,10000,20230529,repeat_01_fold_00,0.829,9.33,10.38,in_context: fit stores context; no weight update,12137,cuda,,2513.4,999.0
+diagnostic,B,tabdpt,clinical,10000,20230529,repeat_04_fold_00,1.04,3.715,5.0,in_context: fit stores context; no weight update,12137,cuda,,4312.7,679.7
+prognostic,C,mlp_embedding,embedding,0,20230531,split_04,0.125,0.007,0.56,gradient training (weights updated),323,cuda,,1423.1,68.0
+diagnostic,B,mlp_clinical,clinical,1000,20230530,repeat_00_fold_00,1.27,0.002,1.42,gradient training (weights updated),3137,cuda,,1410.4,65.6
+diagnostic,B,mlp_clinical,clinical,5000,20230529,repeat_02_fold_04,1.705,0.002,1.88,gradient training (weights updated),7138,cuda,,1399.6,66.1
+prognostic,B,random_survival_forest_or_fallback,clinical,15000,20230529,split_00,3.785,0.196,4.26,trained from scratch per fit,15323,cpu,,3540.4,64.0
+diagnostic,B,tabpfn_classifier,clinical,1000,20230529,repeat_02_fold_04,0.671,2.389,3.25,in_context: fit stores context; no weight update,3138,cuda,,2454.8,538.5
+prognostic,B,tabpfn_landmark_survival,clinical,0,20230529,split_01,2.0,3.655,5.86,in_context: fit stores context; no weight update,323,cuda,,2501.1,781.2
+diagnostic,B,regularized_logistic,clinical,0,20230529,repeat_02_fold_03,0.071,0.0,0.21,trained from scratch per fit,2138,cpu,,1412.5,64.0
+diagnostic,B,mlp_clinical,clinical,5000,20230529,repeat_04_fold_02,3.604,0.001,3.77,gradient training (weights updated),7138,cuda,,1399.6,66.1
+diagnostic,B,mlp_clinical,clinical,0,20230531,repeat_04_fold_01,1.644,0.001,1.8,gradient training (weights updated),2137,cuda,,1410.5,65.4
+diagnostic,B,regularized_logistic,clinical,5000,20230529,repeat_00_fold_01,0.106,0.0,0.24,trained from scratch per fit,7137,cpu,,1416.0,64.0
+diagnostic,B,regularized_logistic,clinical,1000,20230529,repeat_02_fold_02,0.076,0.0,0.21,trained from scratch per fit,3138,cpu,,1412.5,64.0
+diagnostic,B,tabicl_v2,clinical,1000,20230529,repeat_03_fold_03,0.566,0.907,1.68,in_context: fit stores context; no weight update,3138,cuda,8,2590.5,1156.8
+diagnostic,B,xgboost_or_histgb,clinical,1000,20230529,repeat_02_fold_01,0.162,0.002,0.3,trained from scratch per fit,3137,cpu,,1426.5,64.0
+diagnostic,B,tabicl_v2,clinical,1000,20230529,repeat_01_fold_01,0.579,0.906,1.68,in_context: fit stores context; no weight update,3137,cuda,8,2588.5,1156.8
+diagnostic,B,xgboost_or_histgb,clinical,10000,20230529,repeat_02_fold_04,0.288,0.002,0.45,trained from scratch per fit,12138,cpu,,1432.8,64.0
+prognostic,B,mlp_clinical,clinical,10000,20230529,split_00,0.466,0.002,0.65,gradient training (weights updated),10323,cuda,,1448.2,71.3
+prognostic,B,random_survival_forest_or_fallback,clinical,10000,20230529,split_02,2.562,0.208,3.01,trained from scratch per fit,10323,cpu,,2906.1,64.0
+diagnostic,B,tabdpt,clinical,15000,20230529,repeat_03_fold_03,1.058,7.427,8.75,in_context: fit stores context; no weight update,17138,cuda,,4318.5,828.5
+diagnostic,B,regularized_logistic,clinical,1000,20230529,repeat_01_fold_04,0.079,0.001,0.22,trained from scratch per fit,3138,cpu,,1412.5,64.0
+diagnostic,B,tabpfn_classifier,clinical,5000,20230529,repeat_02_fold_01,0.71,4.924,5.84,in_context: fit stores context; no weight update,7137,cuda,,2294.0,742.0
+diagnostic,B,xgboost_or_histgb,clinical,1000,20230529,repeat_01_fold_02,0.157,0.001,0.29,trained from scratch per fit,3138,cpu,,1426.5,64.0
+prognostic,B,mlp_clinical,clinical,1000,20230531,split_02,0.662,0.002,0.82,gradient training (weights updated),1323,cuda,,1447.6,65.8
+diagnostic,B,tabdpt,clinical,10000,20230529,repeat_04_fold_04,1.064,3.735,5.04,in_context: fit stores context; no weight update,12138,cuda,,4313.4,679.7
+prognostic,B,tabpfn_landmark_survival,clinical,5000,20230529,split_01,1.957,9.02,11.2,in_context: fit stores context; no weight update,5323,cuda,,2520.7,903.1
+diagnostic,B,mlp_clinical,clinical,10000,20230530,repeat_00_fold_04,4.821,0.003,5.0,gradient training (weights updated),12138,cuda,,1411.7,66.9
+diagnostic,B,mlp_clinical,clinical,1000,20230531,repeat_00_fold_00,2.172,0.002,2.33,gradient training (weights updated),3137,cuda,,1410.4,65.6
+diagnostic,B,tabpfn_classifier,clinical,15000,20230529,repeat_04_fold_02,0.943,15.094,16.28,in_context: fit stores context; no weight update,17138,cuda,,2321.5,1256.7
+prognostic,B,tabpfn_landmark_survival,clinical,15000,20230529,split_04,2.355,32.974,35.59,in_context: fit stores context; no weight update,15323,cuda,,2380.6,1143.1
+diagnostic,B,mlp_clinical,clinical,1000,20230531,repeat_03_fold_01,0.975,0.002,1.13,gradient training (weights updated),3137,cuda,,1410.4,65.6
+diagnostic,B,regularized_logistic,clinical,0,20230529,repeat_03_fold_04,0.074,0.0,0.2,trained from scratch per fit,2138,cpu,,1412.5,64.0
+diagnostic,C,mlp_embedding,embedding,0,20230530,repeat_03_fold_03,0.434,0.006,1.29,gradient training (weights updated),2138,cuda,,1427.3,69.9
+prognostic,B,mlp_clinical,clinical,1000,20230531,split_00,0.441,0.002,0.6,gradient training (weights updated),1323,cuda,,1447.6,65.8
+diagnostic,B,mlp_clinical,clinical,15000,20230531,repeat_02_fold_04,5.259,0.002,5.45,gradient training (weights updated),17138,cuda,,1412.2,67.5
+prognostic,B,random_survival_forest_or_fallback,clinical,1000,20230529,split_00,0.494,0.187,0.84,trained from scratch per fit,1323,cpu,,1689.6,64.0
+diagnostic,C,mlp_embedding,embedding,0,20230530,repeat_03_fold_04,0.198,0.003,1.05,gradient training (weights updated),2138,cuda,,1427.3,69.9
+diagnostic,B,xgboost_or_histgb,clinical,15000,20230529,repeat_00_fold_01,0.353,0.002,0.53,trained from scratch per fit,17137,cpu,,1437.0,64.0
+diagnostic,B,mlp_clinical,clinical,5000,20230529,repeat_04_fold_03,6.021,0.002,6.19,gradient training (weights updated),7138,cuda,,1399.6,66.1
+diagnostic,B,tabpfn_classifier,clinical,0,20230529,repeat_04_fold_01,0.664,1.997,2.86,in_context: fit stores context; no weight update,2137,cuda,,2451.2,485.6
+diagnostic,B,tabicl_v2,clinical,15000,20230529,repeat_01_fold_04,0.929,7.604,8.78,in_context: fit stores context; no weight update,17138,cuda,8,4179.0,2584.1
+prognostic,C,mlp_embedding,embedding,0,20230529,split_03,0.164,0.004,0.6,gradient training (weights updated),323,cuda,,1423.1,68.0
+prognostic,B,mlp_clinical,clinical,1000,20230529,split_02,0.595,0.002,0.76,gradient training (weights updated),1323,cuda,,1441.9,65.8
+diagnostic,B,tabdpt,clinical,10000,20230529,repeat_03_fold_01,1.021,3.708,4.97,in_context: fit stores context; no weight update,12137,cuda,,4313.0,679.7
+diagnostic,B,mlp_clinical,clinical,0,20230531,repeat_01_fold_04,0.805,0.001,0.96,gradient training (weights updated),2138,cuda,,1410.5,65.4
+diagnostic,B,regularized_logistic,clinical,15000,20230529,repeat_04_fold_02,0.186,0.001,0.35,trained from scratch per fit,17138,cpu,,1424.2,64.0
+prognostic,B,mlp_clinical,clinical,10000,20230531,split_01,0.56,0.001,0.74,gradient training (weights updated),10323,cuda,,1448.7,71.4
+diagnostic,B,xgboost_or_histgb,clinical,15000,20230529,repeat_04_fold_02,0.379,0.001,0.55,trained from scratch per fit,17138,cpu,,1437.7,64.0
+diagnostic,B,tabicl_v2,clinical,1000,20230529,repeat_04_fold_02,0.577,0.909,1.69,in_context: fit stores context; no weight update,3138,cuda,8,2588.5,1156.8
+diagnostic,B,mlp_clinical,clinical,0,20230531,repeat_04_fold_00,0.819,0.002,0.97,gradient training (weights updated),2137,cuda,,1410.5,65.4
+diagnostic,B,regularized_logistic,clinical,1000,20230529,repeat_02_fold_04,0.08,0.0,0.21,trained from scratch per fit,3138,cpu,,1412.5,64.0
+diagnostic,C,mlp_embedding,embedding,0,20230529,repeat_01_fold_01,0.327,0.003,1.17,gradient training (weights updated),2137,cuda,,1427.2,69.9
+prognostic,B,mlp_clinical,clinical,5000,20230530,split_03,0.55,0.003,0.72,gradient training (weights updated),5323,cuda,,1447.6,68.0
+diagnostic,B,mlp_clinical,clinical,10000,20230529,repeat_02_fold_01,9.503,0.001,9.68,gradient training (weights updated),12137,cuda,,1406.3,66.8
+diagnostic,B,tabicl_v2,clinical,1000,20230529,repeat_01_fold_00,0.552,0.896,1.65,in_context: fit stores context; no weight update,3137,cuda,8,2590.5,1156.8
+diagnostic,B,regularized_logistic,clinical,1000,20230529,repeat_01_fold_01,0.086,0.001,0.21,trained from scratch per fit,3137,cpu,,1412.5,64.0
+diagnostic,B,mlp_clinical,clinical,0,20230529,repeat_02_fold_03,1.266,0.001,1.46,gradient training (weights updated),2138,cuda,,1392.4,65.4
+diagnostic,B,regularized_logistic,clinical,15000,20230529,repeat_03_fold_01,0.182,0.0,0.35,trained from scratch per fit,17137,cpu,,1423.6,64.0
+prognostic,B,tabpfn_landmark_survival,clinical,5000,20230529,split_02,2.245,9.07,11.54,in_context: fit stores context; no weight update,5323,cuda,,2524.3,903.2
+diagnostic,B,mlp_clinical,clinical,5000,20230530,repeat_04_fold_01,5.315,0.002,5.49,gradient training (weights updated),7137,cuda,,1410.4,66.1
+diagnostic,B,regularized_logistic,clinical,1000,20230529,repeat_01_fold_02,0.084,0.001,0.21,trained from scratch per fit,3138,cpu,,1412.5,64.0
+diagnostic,B,mlp_clinical,clinical,15000,20230529,repeat_01_fold_00,5.457,0.003,5.65,gradient training (weights updated),17137,cuda,,1411.3,67.4
+prognostic,B,tabpfn_landmark_survival,clinical,1000,20230529,split_03,1.792,3.566,5.57,in_context: fit stores context; no weight update,1323,cuda,,2502.2,812.7
+diagnostic,B,tabpfn_classifier,clinical,10000,20230529,repeat_04_fold_00,0.849,9.448,10.52,in_context: fit stores context; no weight update,12137,cuda,,2513.7,999.0
+prognostic,B,mlp_clinical,clinical,1000,20230530,split_01,0.514,0.002,0.67,gradient training (weights updated),1323,cuda,,1447.6,65.8
+diagnostic,B,regularized_logistic,clinical,0,20230529,repeat_02_fold_01,0.075,0.0,0.2,trained from scratch per fit,2137,cpu,,1412.5,64.0
+diagnostic,B,xgboost_or_histgb,clinical,0,20230529,repeat_00_fold_03,0.147,0.002,0.28,trained from scratch per fit,2138,cpu,,1422.0,64.0
+diagnostic,B,regularized_logistic,clinical,15000,20230529,repeat_01_fold_02,0.173,0.001,0.34,trained from scratch per fit,17138,cpu,,1423.6,64.0
+diagnostic,B,regularized_logistic,clinical,1000,20230529,repeat_00_fold_02,0.084,0.0,0.22,trained from scratch per fit,3138,cpu,,1412.5,64.0
+diagnostic,B,tabicl_v2,clinical,5000,20230529,repeat_04_fold_04,0.704,2.376,3.29,in_context: fit stores context; no weight update,7138,cuda,8,2509.4,2228.1
+diagnostic,B,regularized_logistic,clinical,10000,20230529,repeat_01_fold_04,0.138,0.0,0.29,trained from scratch per fit,12138,cpu,,1419.9,64.0
+diagnostic,B,mlp_clinical,clinical,5000,20230530,repeat_04_fold_04,1.882,0.002,2.05,gradient training (weights updated),7138,cuda,,1410.4,66.1
+diagnostic,B,mlp_clinical,clinical,1000,20230530,repeat_02_fold_04,0.814,0.002,0.98,gradient training (weights updated),3138,cuda,,1410.4,65.6
+diagnostic,B,mlp_clinical,clinical,15000,20230529,repeat_03_fold_01,4.368,0.002,4.57,gradient training (weights updated),17137,cuda,,1412.1,67.5
+diagnostic,B,mlp_clinical,clinical,0,20230530,repeat_01_fold_03,1.666,0.001,1.82,gradient training (weights updated),2138,cuda,,1410.4,65.4
+diagnostic,C,mlp_embedding,embedding,0,20230529,repeat_00_fold_00,0.217,0.002,1.1,gradient training (weights updated),2137,cuda,,1421.4,69.9
+diagnostic,B,xgboost_or_histgb,clinical,0,20230529,repeat_03_fold_03,0.147,0.002,0.28,trained from scratch per fit,2138,cpu,,1425.9,64.0
+prognostic,B,mlp_clinical,clinical,10000,20230530,split_01,0.587,0.001,0.77,gradient training (weights updated),10323,cuda,,1448.7,71.4
+diagnostic,B,tabicl_v2,clinical,15000,20230529,repeat_01_fold_02,0.92,7.61,8.8,in_context: fit stores context; no weight update,17138,cuda,8,4177.3,2584.1
+diagnostic,B,mlp_clinical,clinical,0,20230531,repeat_04_fold_04,0.672,0.002,0.84,gradient training (weights updated),2138,cuda,,1410.5,65.4
+diagnostic,B,tabicl_v2,clinical,5000,20230529,repeat_03_fold_01,0.747,2.345,3.3,in_context: fit stores context; no weight update,7137,cuda,8,2509.3,2228.1
+diagnostic,C,mlp_embedding,embedding,0,20230531,repeat_04_fold_02,0.409,0.002,1.29,gradient training (weights updated),2138,cuda,,1427.3,69.9
+diagnostic,B,xgboost_or_histgb,clinical,5000,20230529,repeat_03_fold_03,0.25,0.001,0.4,trained from scratch per fit,7138,cpu,,1430.0,64.0
+diagnostic,B,mlp_clinical,clinical,10000,20230531,repeat_02_fold_03,4.003,0.002,4.18,gradient training (weights updated),12138,cuda,,1411.5,66.8
+diagnostic,B,tabicl_v2,clinical,10000,20230529,repeat_02_fold_03,0.801,4.698,5.72,in_context: fit stores context; no weight update,12138,cuda,8,3982.9,2544.7
+diagnostic,B,mlp_clinical,clinical,15000,20230531,repeat_01_fold_00,3.384,0.001,3.58,gradient training (weights updated),17137,cuda,,1412.2,67.4
+diagnostic,B,tabicl_v2,clinical,15000,20230529,repeat_02_fold_04,0.898,7.617,8.77,in_context: fit stores context; no weight update,17138,cuda,8,4179.0,2584.1
+diagnostic,B,xgboost_or_histgb,clinical,1000,20230529,repeat_01_fold_03,0.159,0.001,0.29,trained from scratch per fit,3138,cpu,,1426.5,64.0
+diagnostic,B,regularized_logistic,clinical,1000,20230529,repeat_04_fold_01,0.079,0.001,0.21,trained from scratch per fit,3137,cpu,,1412.5,64.0
+diagnostic,C,mlp_embedding,embedding,0,20230529,repeat_03_fold_00,0.235,0.002,1.12,gradient training (weights updated),2137,cuda,,1427.2,69.9
+diagnostic,B,xgboost_or_histgb,clinical,15000,20230529,repeat_04_fold_01,0.367,0.001,0.54,trained from scratch per fit,17137,cpu,,1437.7,64.0
+diagnostic,B,mlp_clinical,clinical,0,20230530,repeat_02_fold_00,1.39,0.001,1.54,gradient training (weights updated),2137,cuda,,1410.4,65.4
+prognostic,B,survivalpfn_native,clinical,5000,20230529,split_03,5.424,0.637,6.97,in_context: fit stores context; no weight update,5323,cuda,one call per outer-test split in test-ID order,4171.8,64.0
+diagnostic,B,xgboost_or_histgb,clinical,1000,20230529,repeat_02_fold_02,0.159,0.001,0.29,trained from scratch per fit,3138,cpu,,1427.1,64.0
+diagnostic,B,mlp_clinical,clinical,0,20230529,repeat_02_fold_02,1.258,0.003,1.48,gradient training (weights updated),2138,cuda,,1392.4,65.4
+diagnostic,B,mlp_clinical,clinical,15000,20230529,repeat_00_fold_01,11.266,0.001,11.46,gradient training (weights updated),17137,cuda,,1410.3,67.5
+prognostic,C,tabpfn_embedding_cox,embedding,0,20230529,split_04,30.032,0.01,30.45,trained from scratch per fit,323,cpu,,1460.8,64.0
+diagnostic,B,regularized_logistic,clinical,10000,20230529,repeat_01_fold_00,0.148,0.001,0.3,trained from scratch per fit,12137,cpu,,1419.7,64.0
+diagnostic,B,mlp_clinical,clinical,15000,20230531,repeat_00_fold_01,7.652,0.001,7.85,gradient training (weights updated),17137,cuda,,1412.2,67.5
+diagnostic,B,mlp_clinical,clinical,1000,20230530,repeat_01_fold_04,1.234,0.001,1.39,gradient training (weights updated),3138,cuda,,1410.4,65.6
+diagnostic,B,tabpfn_classifier,clinical,10000,20230529,repeat_00_fold_00,0.889,9.35,10.47,in_context: fit stores context; no weight update,12137,cuda,,2507.1,999.0
+diagnostic,B,tabdpt,clinical,0,20230529,repeat_01_fold_02,0.861,0.218,1.29,in_context: fit stores context; no weight update,2138,cuda,,4356.6,553.6
+diagnostic,B,tabpfn_classifier,clinical,5000,20230529,repeat_04_fold_01,0.703,4.96,5.87,in_context: fit stores context; no weight update,7137,cuda,,2294.3,742.0
+diagnostic,B,mlp_clinical,clinical,5000,20230529,repeat_04_fold_00,2.979,0.002,3.15,gradient training (weights updated),7137,cuda,,1399.6,66.1
+diagnostic,B,tabdpt,clinical,10000,20230529,repeat_04_fold_02,1.035,3.73,5.01,in_context: fit stores context; no weight update,12138,cuda,,4311.4,679.7
+diagnostic,B,tabicl_v2,clinical,0,20230529,repeat_02_fold_02,0.56,0.669,1.42,in_context: fit stores context; no weight update,2138,cuda,8,2578.3,890.5
+prognostic,B,mlp_clinical,clinical,15000,20230530,split_02,0.58,0.002,0.79,gradient training (weights updated),15323,cuda,,1449.3,75.0
+diagnostic,B,mlp_clinical,clinical,1000,20230529,repeat_01_fold_00,1.087,0.002,1.25,gradient training (weights updated),3137,cuda,,1393.7,65.6
+diagnostic,B,tabpfn_classifier,clinical,10000,20230529,repeat_03_fold_00,0.838,9.398,10.46,in_context: fit stores context; no weight update,12137,cuda,,2513.6,999.0
+diagnostic,B,mlp_clinical,clinical,10000,20230531,repeat_04_fold_00,4.533,0.001,4.71,gradient training (weights updated),12137,cuda,,1411.5,66.8
+diagnostic,B,xgboost_or_histgb,clinical,15000,20230529,repeat_00_fold_03,0.38,0.002,0.55,trained from scratch per fit,17138,cpu,,1437.0,64.0
+diagnostic,B,tabicl_v2,clinical,5000,20230529,repeat_03_fold_00,0.689,2.413,3.32,in_context: fit stores context; no weight update,7137,cuda,8,2509.3,2228.1
+diagnostic,B,mlp_clinical,clinical,0,20230530,repeat_04_fold_02,0.776,0.002,0.93,gradient training (weights updated),2138,cuda,,1410.4,65.4
+diagnostic,B,mlp_clinical,clinical,5000,20230531,repeat_04_fold_01,5.255,0.002,5.42,gradient training (weights updated),7137,cuda,,1410.5,66.1
+diagnostic,C,mlp_embedding,embedding,0,20230530,repeat_01_fold_02,0.284,0.003,1.14,gradient training (weights updated),2138,cuda,,1427.3,69.9
+diagnostic,C,mlp_embedding,embedding,0,20230531,repeat_04_fold_04,0.671,0.003,1.55,gradient training (weights updated),2138,cuda,,1427.3,69.9
+diagnostic,B,tabpfn_classifier,clinical,5000,20230529,repeat_02_fold_02,0.73,4.917,5.85,in_context: fit stores context; no weight update,7138,cuda,,2294.0,741.6
+diagnostic,B,mlp_clinical,clinical,5000,20230529,repeat_01_fold_01,5.454,0.005,5.65,gradient training (weights updated),7137,cuda,,1399.2,66.1
+diagnostic,B,tabpfn_classifier,clinical,0,20230529,repeat_01_fold_00,0.613,1.902,2.7,in_context: fit stores context; no weight update,2137,cuda,,2450.1,485.6
+prognostic,B,mlp_clinical,clinical,15000,20230529,split_02,0.722,0.001,0.92,gradient training (weights updated),15323,cuda,,1449.3,75.0
+diagnostic,B,tabpfn_classifier,clinical,10000,20230529,repeat_00_fold_02,0.817,9.344,10.38,in_context: fit stores context; no weight update,12138,cuda,,2513.3,998.7
+diagnostic,B,mlp_clinical,clinical,5000,20230530,repeat_00_fold_01,4.701,0.002,4.87,gradient training (weights updated),7137,cuda,,1410.4,66.1
+diagnostic,B,tabpfn_classifier,clinical,0,20230529,repeat_01_fold_01,0.648,1.948,2.79,in_context: fit stores context; no weight update,2137,cuda,,2450.1,485.6
+diagnostic,B,regularized_logistic,clinical,10000,20230529,repeat_04_fold_03,0.143,0.0,0.29,trained from scratch per fit,12138,cpu,,1419.9,64.0
+diagnostic,B,tabdpt,clinical,5000,20230529,repeat_00_fold_04,1.012,1.336,2.57,in_context: fit stores context; no weight update,7138,cuda,,4306.8,553.6
+diagnostic,B,tabicl_v2,clinical,10000,20230529,repeat_00_fold_03,0.786,4.668,5.7,in_context: fit stores context; no weight update,12138,cuda,8,3982.9,2544.7
+diagnostic,B,tabdpt,clinical,1000,20230529,repeat_01_fold_01,0.888,0.352,1.45,in_context: fit stores context; no weight update,3137,cuda,,4356.9,553.6
+diagnostic,C,mlp_embedding,embedding,0,20230529,repeat_00_fold_02,0.286,0.003,1.16,gradient training (weights updated),2138,cuda,,1425.9,69.9
+diagnostic,B,xgboost_or_histgb,clinical,10000,20230529,repeat_03_fold_02,0.307,0.001,0.47,trained from scratch per fit,12138,cpu,,1432.8,64.0
+diagnostic,C,mlp_embedding,embedding,0,20230530,repeat_00_fold_03,0.382,0.002,1.23,gradient training (weights updated),2138,cuda,,1427.3,69.9
+diagnostic,B,regularized_logistic,clinical,5000,20230529,repeat_00_fold_04,0.119,0.001,0.26,trained from scratch per fit,7138,cpu,,1416.1,64.0
+diagnostic,B,regularized_logistic,clinical,10000,20230529,repeat_00_fold_01,0.141,0.0,0.29,trained from scratch per fit,12137,cpu,,1419.9,64.0
+diagnostic,B,regularized_logistic,clinical,1000,20230529,repeat_04_fold_04,0.085,0.001,0.22,trained from scratch per fit,3138,cpu,,1412.5,64.0
+diagnostic,B,tabicl_v2,clinical,10000,20230529,repeat_02_fold_04,0.768,4.734,5.73,in_context: fit stores context; no weight update,12138,cuda,8,3982.9,2544.7
+diagnostic,B,xgboost_or_histgb,clinical,1000,20230529,repeat_02_fold_03,0.169,0.001,0.3,trained from scratch per fit,3138,cpu,,1427.4,64.0
+diagnostic,B,tabdpt,clinical,1000,20230529,repeat_03_fold_03,0.9,0.356,1.48,in_context: fit stores context; no weight update,3138,cuda,,4357.9,553.6
+diagnostic,B,mlp_clinical,clinical,15000,20230529,repeat_03_fold_04,10.47,0.002,10.67,gradient training (weights updated),17138,cuda,,1412.1,67.6
+diagnostic,B,mlp_clinical,clinical,1000,20230530,repeat_00_fold_02,2.3,0.001,2.45,gradient training (weights updated),3138,cuda,,1410.4,65.6
+prognostic,B,mlp_clinical,clinical,15000,20230529,split_00,0.523,0.004,0.72,gradient training (weights updated),15323,cuda,,1449.2,74.8
+diagnostic,B,xgboost_or_histgb,clinical,1000,20230529,repeat_04_fold_02,0.168,0.002,0.3,trained from scratch per fit,3138,cpu,,1427.4,64.0
+prognostic,B,mlp_clinical,clinical,0,20230530,split_01,0.498,0.002,0.65,gradient training (weights updated),323,cuda,,1447.6,65.2
+diagnostic,B,mlp_clinical,clinical,1000,20230529,repeat_00_fold_04,1.228,0.002,1.39,gradient training (weights updated),3138,cuda,,1393.7,65.6
+prognostic,B,mlp_clinical,clinical,0,20230531,split_02,0.63,0.002,0.79,gradient training (weights updated),323,cuda,,1447.6,65.2
+diagnostic,B,tabpfn_classifier,clinical,15000,20230529,repeat_01_fold_01,0.906,15.142,16.29,in_context: fit stores context; no weight update,17137,cuda,,2321.4,1256.7
+diagnostic,C,mlp_embedding,embedding,0,20230531,repeat_01_fold_02,0.335,0.007,1.2,gradient training (weights updated),2138,cuda,,1427.3,69.9
+diagnostic,B,regularized_logistic,clinical,5000,20230529,repeat_01_fold_00,0.103,0.001,0.24,trained from scratch per fit,7137,cpu,,1416.0,64.0
+diagnostic,B,mlp_clinical,clinical,10000,20230530,repeat_04_fold_01,8.667,0.002,8.86,gradient training (weights updated),12137,cuda,,1411.7,66.8
+diagnostic,C,mlp_embedding,embedding,0,20230530,repeat_03_fold_02,0.308,0.003,1.17,gradient training (weights updated),2138,cuda,,1427.3,69.9
+diagnostic,B,xgboost_or_histgb,clinical,0,20230529,repeat_00_fold_00,0.183,0.002,0.32,trained from scratch per fit,2137,cpu,,1420.2,64.0
+diagnostic,C,mlp_embedding,embedding,0,20230531,repeat_03_fold_00,0.174,0.002,1.05,gradient training (weights updated),2137,cuda,,1427.3,69.9
+diagnostic,B,regularized_logistic,clinical,5000,20230529,repeat_02_fold_01,0.109,0.001,0.25,trained from scratch per fit,7137,cpu,,1416.0,64.0
+diagnostic,B,tabpfn_classifier,clinical,0,20230529,repeat_03_fold_04,0.667,1.967,2.82,in_context: fit stores context; no weight update,2138,cuda,,2450.8,485.5
+diagnostic,B,mlp_clinical,clinical,1000,20230530,repeat_01_fold_02,1.635,0.001,1.8,gradient training (weights updated),3138,cuda,,1410.4,65.6
+diagnostic,B,tabicl_v2,clinical,10000,20230529,repeat_00_fold_02,0.758,4.695,5.68,in_context: fit stores context; no weight update,12138,cuda,8,3982.9,2544.7
+diagnostic,B,xgboost_or_histgb,clinical,5000,20230529,repeat_00_fold_04,0.234,0.002,0.38,trained from scratch per fit,7138,cpu,,1430.0,64.0
+diagnostic,B,mlp_clinical,clinical,0,20230529,repeat_03_fold_00,1.271,0.002,1.44,gradient training (weights updated),2137,cuda,,1392.4,65.4
+diagnostic,B,xgboost_or_histgb,clinical,15000,20230529,repeat_00_fold_04,0.382,0.001,0.57,trained from scratch per fit,17138,cpu,,1437.0,64.0
+diagnostic,B,tabpfn_classifier,clinical,15000,20230529,repeat_00_fold_02,0.884,15.123,16.25,in_context: fit stores context; no weight update,17138,cuda,,2321.4,1256.7
+diagnostic,C,mlp_embedding,embedding,0,20230529,repeat_04_fold_02,0.433,0.002,1.29,gradient training (weights updated),2138,cuda,,1427.3,69.9
+diagnostic,B,xgboost_or_histgb,clinical,5000,20230529,repeat_02_fold_03,0.218,0.001,0.37,trained from scratch per fit,7138,cpu,,1430.0,64.0
+diagnostic,B,tabicl_v2,clinical,15000,20230529,repeat_04_fold_00,0.893,7.622,8.76,in_context: fit stores context; no weight update,17137,cuda,8,4179.0,2584.1
+diagnostic,B,regularized_logistic,clinical,15000,20230529,repeat_03_fold_02,0.184,0.001,0.35,trained from scratch per fit,17138,cpu,,1423.9,64.0
+diagnostic,B,tabicl_v2,clinical,15000,20230529,repeat_03_fold_00,0.875,7.654,8.77,in_context: fit stores context; no weight update,17137,cuda,8,4179.0,2584.1
+prognostic,B,cox_elastic_net,clinical,1000,20230529,split_03,0.982,0.003,1.12,trained from scratch per fit,1323,cpu,,1436.5,64.0
+diagnostic,B,tabpfn_classifier,clinical,10000,20230529,repeat_04_fold_02,0.911,9.424,10.57,in_context: fit stores context; no weight update,12138,cuda,,2513.7,998.7
+prognostic,B,survivalpfn_native,clinical,10000,20230529,split_02,5.479,1.414,7.8,in_context: fit stores context; no weight update,10323,cuda,one call per outer-test split in test-ID order,4174.3,64.0
+diagnostic,B,tabicl_v2,clinical,15000,20230529,repeat_03_fold_01,0.892,7.673,8.81,in_context: fit stores context; no weight update,17137,cuda,8,4177.3,2584.1
+prognostic,B,mlp_clinical,clinical,0,20230530,split_04,0.711,0.002,0.87,gradient training (weights updated),323,cuda,,1447.6,65.2
+diagnostic,B,regularized_logistic,clinical,0,20230529,repeat_03_fold_02,0.069,0.001,0.2,trained from scratch per fit,2138,cpu,,1412.5,64.0
+diagnostic,B,mlp_clinical,clinical,5000,20230531,repeat_03_fold_04,4.985,0.002,5.15,gradient training (weights updated),7138,cuda,,1410.5,66.1
+diagnostic,C,mlp_embedding,embedding,0,20230529,repeat_03_fold_01,0.21,0.005,1.1,gradient training (weights updated),2137,cuda,,1427.2,69.9
+diagnostic,B,tabicl_v2,clinical,5000,20230529,repeat_00_fold_04,0.715,2.364,3.29,in_context: fit stores context; no weight update,7138,cuda,8,2509.3,2228.1
+diagnostic,B,mlp_clinical,clinical,10000,20230530,repeat_01_fold_03,9.167,0.002,9.36,gradient training (weights updated),12138,cuda,,1411.7,66.8
+diagnostic,B,mlp_clinical,clinical,1000,20230529,repeat_00_fold_03,2.549,0.001,2.7,gradient training (weights updated),3138,cuda,,1393.7,65.6
+diagnostic,B,mlp_clinical,clinical,5000,20230530,repeat_03_fold_03,5.021,0.002,5.19,gradient training (weights updated),7138,cuda,,1410.4,66.1
+diagnostic,B,mlp_clinical,clinical,1000,20230531,repeat_00_fold_02,2.703,0.002,2.86,gradient training (weights updated),3138,cuda,,1410.4,65.6
+diagnostic,B,tabdpt,clinical,15000,20230529,repeat_04_fold_00,1.064,7.375,8.71,in_context: fit stores context; no weight update,17137,cuda,,4319.1,828.5
+diagnostic,B,xgboost_or_histgb,clinical,1000,20230529,repeat_04_fold_00,0.165,0.002,0.3,trained from scratch per fit,3137,cpu,,1427.4,64.0
+diagnostic,B,xgboost_or_histgb,clinical,0,20230529,repeat_01_fold_04,0.15,0.002,0.28,trained from scratch per fit,2138,cpu,,1424.8,64.0
+diagnostic,B,tabpfn_classifier,clinical,1000,20230529,repeat_03_fold_04,0.728,2.414,3.34,in_context: fit stores context; no weight update,3138,cuda,,2454.5,538.5
+diagnostic,B,mlp_clinical,clinical,15000,20230531,repeat_04_fold_03,9.616,0.001,9.81,gradient training (weights updated),17138,cuda,,1412.2,67.5
+prognostic,B,random_survival_forest_or_fallback,clinical,5000,20230529,split_00,1.42,0.208,1.83,trained from scratch per fit,5323,cpu,,2256.4,64.0
+diagnostic,B,mlp_clinical,clinical,0,20230529,repeat_00_fold_01,1.512,0.002,1.68,gradient training (weights updated),2137,cuda,,1392.2,65.4
+prognostic,B,cox_elastic_net,clinical,1000,20230529,split_04,1.01,0.003,1.14,trained from scratch per fit,1323,cpu,,1436.5,64.0
+diagnostic,B,xgboost_or_histgb,clinical,0,20230529,repeat_02_fold_03,0.149,0.002,0.28,trained from scratch per fit,2138,cpu,,1425.0,64.0
+diagnostic,B,mlp_clinical,clinical,10000,20230529,repeat_02_fold_03,4.919,0.003,5.11,gradient training (weights updated),12138,cuda,,1406.3,66.8
+diagnostic,B,tabicl_v2,clinical,15000,20230529,repeat_01_fold_00,0.884,7.593,8.72,in_context: fit stores context; no weight update,17137,cuda,8,4179.0,2584.1
+prognostic,B,survivalpfn_native,clinical,0,20230529,split_00,5.878,0.387,7.29,in_context: fit stores context; no weight update,323,cuda,one call per outer-test split in test-ID order,4171.8,64.0
+prognostic,B,random_survival_forest_or_fallback,clinical,15000,20230529,split_01,3.63,0.196,4.11,trained from scratch per fit,15323,cpu,,3580.5,64.0
+prognostic,B,survivalpfn_native,clinical,15000,20230529,split_04,5.488,2.708,9.13,in_context: fit stores context; no weight update,15323,cuda,one call per outer-test split in test-ID order,4175.5,64.0
+prognostic,C,mlp_embedding,embedding,0,20230530,split_04,0.045,0.004,0.48,gradient training (weights updated),323,cuda,,1423.1,68.0
+diagnostic,B,mlp_clinical,clinical,5000,20230529,repeat_03_fold_03,3.55,0.002,3.72,gradient training (weights updated),7138,cuda,,1399.6,66.1
+prognostic,B,mlp_clinical,clinical,10000,20230530,split_04,0.856,0.003,1.05,gradient training (weights updated),10323,cuda,,1448.7,71.4
+diagnostic,B,tabdpt,clinical,1000,20230529,repeat_01_fold_02,0.913,0.352,1.48,in_context: fit stores context; no weight update,3138,cuda,,4356.0,553.6
+prognostic,B,cox_elastic_net,clinical,1000,20230529,split_01,1.007,0.005,1.14,trained from scratch per fit,1323,cpu,,1436.5,64.0
+diagnostic,C,tabpfn_embedding_ridge,embedding,0,20230529,repeat_02_fold_04,0.086,0.002,0.91,trained from scratch per fit,2138,cpu,,1448.6,64.0
+prognostic,B,mlp_clinical,clinical,10000,20230530,split_03,0.578,0.005,0.76,gradient training (weights updated),10323,cuda,,1448.7,71.4
+diagnostic,B,mlp_clinical,clinical,5000,20230530,repeat_00_fold_00,2.802,0.002,2.97,gradient training (weights updated),7137,cuda,,1410.4,66.1
+diagnostic,B,mlp_clinical,clinical,0,20230530,repeat_04_fold_04,0.616,0.002,0.76,gradient training (weights updated),2138,cuda,,1410.4,65.4
+diagnostic,B,regularized_logistic,clinical,5000,20230529,repeat_04_fold_01,0.104,0.0,0.24,trained from scratch per fit,7137,cpu,,1416.0,64.0
+diagnostic,B,mlp_clinical,clinical,10000,20230529,repeat_01_fold_03,10.937,0.002,11.13,gradient training (weights updated),12138,cuda,,1406.3,66.8
+diagnostic,B,mlp_clinical,clinical,10000,20230531,repeat_03_fold_02,9.64,0.002,9.81,gradient training (weights updated),12138,cuda,,1411.5,66.8
+diagnostic,B,mlp_clinical,clinical,5000,20230530,repeat_00_fold_02,5.284,0.001,5.45,gradient training (weights updated),7138,cuda,,1410.4,66.1
+diagnostic,B,mlp_clinical,clinical,15000,20230531,repeat_01_fold_02,8.051,0.001,8.24,gradient training (weights updated),17138,cuda,,1412.2,67.5
+diagnostic,B,tabicl_v2,clinical,1000,20230529,repeat_00_fold_02,0.569,0.898,1.67,in_context: fit stores context; no weight update,3138,cuda,8,2590.6,1156.8
+prognostic,B,cox_elastic_net,clinical,15000,20230529,split_03,1.274,0.003,1.44,trained from scratch per fit,15323,cpu,,1446.6,64.0
+prognostic,B,mlp_clinical,clinical,0,20230530,split_02,0.437,0.002,0.59,gradient training (weights updated),323,cuda,,1447.6,65.2
+prognostic,B,survivalpfn_native,clinical,0,20230529,split_02,5.536,0.374,6.8,in_context: fit stores context; no weight update,323,cuda,one call per outer-test split in test-ID order,4171.8,64.0
+diagnostic,C,mlp_embedding,embedding,0,20230530,repeat_02_fold_03,0.417,0.003,1.28,gradient training (weights updated),2138,cuda,,1427.3,69.9
+diagnostic,B,tabdpt,clinical,10000,20230529,repeat_03_fold_02,1.025,3.678,4.95,in_context: fit stores context; no weight update,12138,cuda,,4313.1,679.7
+diagnostic,B,tabpfn_classifier,clinical,15000,20230529,repeat_04_fold_01,0.853,15.175,16.27,in_context: fit stores context; no weight update,17137,cuda,,2321.5,1256.7
+diagnostic,B,mlp_clinical,clinical,1000,20230529,repeat_00_fold_02,2.83,0.002,3.0,gradient training (weights updated),3138,cuda,,1393.6,65.6
+prognostic,B,mlp_clinical,clinical,10000,20230529,split_02,0.665,0.002,0.85,gradient training (weights updated),10323,cuda,,1448.2,71.4
+diagnostic,B,tabdpt,clinical,1000,20230529,repeat_02_fold_03,0.985,0.357,1.56,in_context: fit stores context; no weight update,3138,cuda,,4357.7,553.6
+diagnostic,B,regularized_logistic,clinical,0,20230529,repeat_00_fold_01,0.081,0.0,0.21,trained from scratch per fit,2137,cpu,,1412.5,64.0
+diagnostic,B,mlp_clinical,clinical,5000,20230531,repeat_01_fold_04,2.526,0.001,2.69,gradient training (weights updated),7138,cuda,,1410.5,66.1
+diagnostic,B,regularized_logistic,clinical,1000,20230529,repeat_00_fold_03,0.076,0.001,0.21,trained from scratch per fit,3138,cpu,,1412.5,64.0
+diagnostic,B,xgboost_or_histgb,clinical,0,20230529,repeat_00_fold_02,0.167,0.002,0.3,trained from scratch per fit,2138,cpu,,1421.8,64.0
+diagnostic,B,tabicl_v2,clinical,15000,20230529,repeat_03_fold_04,0.902,7.621,8.77,in_context: fit stores context; no weight update,17138,cuda,8,4179.0,2584.1
+diagnostic,B,xgboost_or_histgb,clinical,0,20230529,repeat_01_fold_00,0.152,0.002,0.29,trained from scratch per fit,2137,cpu,,1422.7,64.0
+diagnostic,B,mlp_clinical,clinical,5000,20230529,repeat_00_fold_02,6.369,0.002,6.54,gradient training (weights updated),7138,cuda,,1399.0,66.1
+diagnostic,B,tabicl_v2,clinical,5000,20230529,repeat_01_fold_02,0.649,2.374,3.23,in_context: fit stores context; no weight update,7138,cuda,8,2509.3,2228.1
+diagnostic,B,mlp_clinical,clinical,0,20230531,repeat_01_fold_03,0.934,0.001,1.08,gradient training (weights updated),2138,cuda,,1410.5,65.4
+diagnostic,B,mlp_clinical,clinical,1000,20230530,repeat_03_fold_01,0.64,0.002,0.8,gradient training (weights updated),3137,cuda,,1410.4,65.6
+diagnostic,B,mlp_clinical,clinical,10000,20230529,repeat_04_fold_03,10.377,0.001,10.57,gradient training (weights updated),12138,cuda,,1406.3,66.8
+diagnostic,B,mlp_clinical,clinical,1000,20230530,repeat_03_fold_03,2.344,0.003,2.5,gradient training (weights updated),3138,cuda,,1410.4,65.6
+diagnostic,B,mlp_clinical,clinical,10000,20230531,repeat_03_fold_00,6.623,0.002,6.81,gradient training (weights updated),12137,cuda,,1411.5,66.8
+diagnostic,B,mlp_clinical,clinical,15000,20230531,repeat_01_fold_03,6.924,0.004,7.12,gradient training (weights updated),17138,cuda,,1412.2,67.5
+prognostic,B,survivalpfn_native,clinical,15000,20230529,split_03,5.561,2.712,9.18,in_context: fit stores context; no weight update,15323,cuda,one call per outer-test split in test-ID order,4175.5,64.0
+diagnostic,B,tabpfn_classifier,clinical,5000,20230529,repeat_00_fold_01,0.741,4.847,5.79,in_context: fit stores context; no weight update,7137,cuda,,2292.7,742.0
+diagnostic,B,mlp_clinical,clinical,15000,20230529,repeat_02_fold_01,11.602,0.001,11.79,gradient training (weights updated),17137,cuda,,1412.1,67.5
+diagnostic,B,mlp_clinical,clinical,15000,20230530,repeat_01_fold_01,8.026,0.002,8.22,gradient training (weights updated),17137,cuda,,1412.2,67.5
+diagnostic,B,mlp_clinical,clinical,0,20230531,repeat_02_fold_04,0.711,0.003,0.87,gradient training (weights updated),2138,cuda,,1410.5,65.4
+diagnostic,B,tabpfn_classifier,clinical,15000,20230529,repeat_03_fold_03,0.891,15.12,16.26,in_context: fit stores context; no weight update,17138,cuda,,2321.5,1256.7
+diagnostic,B,tabicl_v2,clinical,10000,20230529,repeat_04_fold_01,0.828,4.717,5.77,in_context: fit stores context; no weight update,12137,cuda,8,3981.1,2544.7
+diagnostic,B,regularized_logistic,clinical,15000,20230529,repeat_04_fold_01,0.184,0.0,0.35,trained from scratch per fit,17137,cpu,,1424.2,64.0
+diagnostic,B,mlp_clinical,clinical,5000,20230530,repeat_02_fold_01,5.441,0.001,5.61,gradient training (weights updated),7137,cuda,,1410.4,66.1
+diagnostic,C,mlp_embedding,embedding,0,20230529,repeat_02_fold_01,0.611,0.003,1.47,gradient training (weights updated),2137,cuda,,1427.2,69.9
+prognostic,B,survivalpfn_native,clinical,1000,20230529,split_02,5.485,0.352,6.72,in_context: fit stores context; no weight update,1323,cuda,one call per outer-test split in test-ID order,4171.8,64.0
+diagnostic,B,tabicl_v2,clinical,0,20230529,repeat_03_fold_03,0.557,0.665,1.42,in_context: fit stores context; no weight update,2138,cuda,8,2578.4,890.5
+diagnostic,C,mlp_embedding,embedding,0,20230531,repeat_04_fold_01,0.517,0.003,1.36,gradient training (weights updated),2137,cuda,,1427.3,69.9
+diagnostic,B,tabdpt,clinical,10000,20230529,repeat_01_fold_04,1.022,3.623,4.89,in_context: fit stores context; no weight update,12138,cuda,,4312.7,679.7
+diagnostic,B,regularized_logistic,clinical,15000,20230529,repeat_01_fold_03,0.179,0.0,0.34,trained from scratch per fit,17138,cpu,,1423.6,64.0
+diagnostic,B,mlp_clinical,clinical,5000,20230530,repeat_03_fold_00,4.489,0.002,4.65,gradient training (weights updated),7137,cuda,,1410.4,66.1
+prognostic,C,tabpfn_embedding_cox,embedding,0,20230529,split_03,29.077,0.013,29.49,trained from scratch per fit,323,cpu,,1460.8,64.0
+diagnostic,B,regularized_logistic,clinical,5000,20230529,repeat_02_fold_02,0.102,0.001,0.24,trained from scratch per fit,7138,cpu,,1416.0,64.0
+diagnostic,B,tabicl_v2,clinical,0,20230529,repeat_00_fold_00,1.054,0.689,1.93,in_context: fit stores context; no weight update,2137,cuda,8,2575.1,890.5
+diagnostic,B,mlp_clinical,clinical,5000,20230531,repeat_00_fold_04,2.774,0.002,2.94,gradient training (weights updated),7138,cuda,,1410.5,66.1
+diagnostic,B,tabdpt,clinical,5000,20230529,repeat_02_fold_02,1.054,1.343,2.63,in_context: fit stores context; no weight update,7138,cuda,,4307.2,553.6
+diagnostic,B,tabdpt,clinical,0,20230529,repeat_00_fold_01,0.938,0.219,1.37,in_context: fit stores context; no weight update,2137,cuda,,4354.5,553.6
+diagnostic,B,tabdpt,clinical,10000,20230529,repeat_01_fold_02,1.084,3.631,4.96,in_context: fit stores context; no weight update,12138,cuda,,4311.6,679.7
+diagnostic,B,xgboost_or_histgb,clinical,10000,20230529,repeat_01_fold_03,0.298,0.003,0.46,trained from scratch per fit,12138,cpu,,1432.8,64.0
+diagnostic,B,tabdpt,clinical,5000,20230529,repeat_03_fold_00,1.002,1.334,2.57,in_context: fit stores context; no weight update,7137,cuda,,4307.4,553.6
+prognostic,B,cox_elastic_net,clinical,5000,20230529,split_04,0.863,0.003,1.0,trained from scratch per fit,5323,cpu,,1438.5,64.0
+diagnostic,B,regularized_logistic,clinical,5000,20230529,repeat_02_fold_03,0.103,0.001,0.24,trained from scratch per fit,7138,cpu,,1416.1,64.0
+prognostic,B,cox_elastic_net,clinical,1000,20230529,split_00,0.991,0.003,1.13,trained from scratch per fit,1323,cpu,,1436.5,64.0
+diagnostic,B,mlp_clinical,clinical,5000,20230531,repeat_01_fold_03,2.893,0.001,3.06,gradient training (weights updated),7138,cuda,,1410.5,66.1
+prognostic,B,tabpfn_landmark_survival,clinical,0,20230529,split_04,1.857,3.746,5.81,in_context: fit stores context; no weight update,323,cuda,,2502.0,781.2
+diagnostic,B,mlp_clinical,clinical,5000,20230531,repeat_02_fold_02,1.838,0.002,2.0,gradient training (weights updated),7138,cuda,,1410.5,66.1
+diagnostic,B,tabpfn_classifier,clinical,10000,20230529,repeat_04_fold_04,0.923,9.392,10.54,in_context: fit stores context; no weight update,12138,cuda,,2513.8,998.7
+diagnostic,C,mlp_embedding,embedding,0,20230529,repeat_00_fold_01,0.35,0.004,1.23,gradient training (weights updated),2137,cuda,,1422.6,69.9
+diagnostic,C,mlp_embedding,embedding,0,20230529,repeat_03_fold_02,0.258,0.004,1.13,gradient training (weights updated),2138,cuda,,1427.2,69.9
+diagnostic,B,mlp_clinical,clinical,0,20230529,repeat_04_fold_01,1.651,0.001,1.82,gradient training (weights updated),2137,cuda,,1392.4,65.4
+prognostic,B,mlp_clinical,clinical,1000,20230530,split_00,0.389,0.005,0.55,gradient training (weights updated),1323,cuda,,1447.6,65.8
+diagnostic,B,tabpfn_classifier,clinical,10000,20230529,repeat_00_fold_01,0.875,9.286,10.4,in_context: fit stores context; no weight update,12137,cuda,,2512.4,999.0
+diagnostic,B,tabpfn_classifier,clinical,15000,20230529,repeat_02_fold_00,0.872,15.149,16.26,in_context: fit stores context; no weight update,17137,cuda,,2321.5,1256.7
+prognostic,B,cox_elastic_net,clinical,0,20230529,split_04,0.506,0.002,0.64,trained from scratch per fit,323,cpu,,1436.4,64.0

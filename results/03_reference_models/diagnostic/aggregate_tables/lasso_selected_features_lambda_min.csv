@@ -1,0 +1,27 @@
+term,coefficient,lambda_used,lambda_value,original_variable
+"histology_paperSomatostatinoma, malignant",-3.224799806288274,lambda.min,0.0034072115511398805,histology_paper
+surgery_primaryYes,-1.8985710714971284,lambda.min,0.0034072115511398805,surgery_primary
+mets_boneYes,1.6430147211811807,lambda.min,0.0034072115511398805,mets_bone
+mets_brainYes,-1.4793592479841433,lambda.min,0.0034072115511398805,mets_brain
+chemotherapyYes,1.3785698696925055,lambda.min,0.0034072115511398805,chemotherapy
+histology_paperGoblet cell carcinoid,-1.3138854476258637,lambda.min,0.0034072115511398805,histology_paper
+"histology_paperGastrinoma, malignant",1.1799142352342578,lambda.min,0.0034072115511398805,histology_paper
+ajcc_tT1,-0.9124489763082807,lambda.min,0.0034072115511398805,ajcc_t
+n_stage_positiveN1,0.7231816494998196,lambda.min,0.0034072115511398805,n_stage_positive
+tumor_size_group>36 mm,0.6908862547972187,lambda.min,0.0034072115511398805,tumor_size_group
+primary_site_groupTail of pancreas,0.5849639239513043,lambda.min,0.0034072115511398805,primary_site_group
+grade3,0.5478442231210165,lambda.min,0.0034072115511398805,grade
+histology_paperAtypical carcinoid tumor,0.47418474610417277,lambda.min,0.0034072115511398805,histology_paper
+ajcc_tT3,0.4215354741449964,lambda.min,0.0034072115511398805,ajcc_t
+"histology_paperNeuroendocrine carcinoma, NOS",0.39099792572211994,lambda.min,0.0034072115511398805,histology_paper
+"histology_paperGlucagonoma, malignant",0.32155877189760523,lambda.min,0.0034072115511398805,histology_paper
+tumor_size_group26-36 mm,0.311046671885323,lambda.min,0.0034072115511398805,tumor_size_group
+grade2,0.22376963146526144,lambda.min,0.0034072115511398805,grade
+radiotherapyYes,-0.2019643898196812,lambda.min,0.0034072115511398805,radiotherapy
+surgery_lymph_nodeYes,-0.18094531425752872,lambda.min,0.0034072115511398805,surgery_lymph_node
+sex_maleMale,-0.17770762301690526,lambda.min,0.0034072115511398805,sex_male
+raceBlack,-0.12239743276641686,lambda.min,0.0034072115511398805,race
+primary_site_groupBody of pancreas,-0.11783116597511234,lambda.min,0.0034072115511398805,primary_site_group
+ajcc_tT4,-0.10216254424868301,lambda.min,0.0034072115511398805,ajcc_t
+age_at_diagnosis,-0.009751078695581063,lambda.min,0.0034072115511398805,age_at_diagnosis
+"histology_paperPancreatic endocrine tumor, malignant",0.005489387645198264,lambda.min,0.0034072115511398805,histology_paper

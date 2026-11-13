@@ -1,0 +1,2 @@
+method,cutpoint,n_training,note
+Median training linear predictor,-0.075368,323,Risk groups were defined by the median training-cohort linear predictor because the paper did not specify the cutoff rule. The median (-0.0754) was computed from N=323 training patients and applied to all cohorts.

@@ -1,0 +1,214 @@
+{
+  "random_seed": 20230529,
+  "time_horizons_months": [
+    12,
+    24,
+    36
+  ],
+  "diagnostic_outcome": "mets_liver",
+  "prognostic_time": "os_months",
+  "prognostic_event": "os_event",
+  "bootstrap_n": 200,
+  "fast_mode_bootstrap_n": 50,
+  "subgroup_variables": [
+    "age_group",
+    "sex_male",
+    "grade",
+    "ajcc_t",
+    "n_stage_positive",
+    "tumor_size_group",
+    "surgery_primary",
+    "chemotherapy"
+  ],
+  "survival_subgroup_variables": [
+    "grade",
+    "ajcc_t",
+    "n_stage_positive",
+    "tumor_size_group",
+    "surgery_primary",
+    "chemotherapy",
+    "mets_bone",
+    "mets_lung",
+    "histology_prognostic_group"
+  ],
+  "interaction_pairs": [
+    [
+      "tumor_size_group",
+      "ajcc_t"
+    ],
+    [
+      "grade",
+      "ajcc_t"
+    ],
+    [
+      "grade",
+      "surgery_primary"
+    ],
+    [
+      "age_at_diagnosis",
+      "grade"
+    ],
+    [
+      "n_stage_positive",
+      "tumor_size_group"
+    ],
+    [
+      "mets_bone",
+      "mets_lung"
+    ],
+    [
+      "histology_paper",
+      "grade"
+    ],
+    [
+      "histology_prognostic_group",
+      "grade"
+    ]
+  ],
+  "conditional_dependence_adjustment_sets": {
+    "stage_core": [
+      "age_at_diagnosis",
+      "sex_male",
+      "race",
+      "grade",
+      "ajcc_t",
+      "n_stage_positive",
+      "tumor_size_group"
+    ],
+    "metastatic_burden": [
+      "age_at_diagnosis",
+      "grade",
+      "ajcc_t",
+      "n_stage_positive",
+      "tumor_size_group",
+      "mets_bone",
+      "mets_brain",
+      "mets_lung"
+    ],
+    "treatment_core": [
+      "age_at_diagnosis",
+      "grade",
+      "ajcc_t",
+      "n_stage_positive",
+      "tumor_size_group",
+      "surgery_primary",
+      "chemotherapy",
+      "radiotherapy"
+    ]
+  },
+  "conditional_dependence_features": [
+    "grade",
+    "ajcc_t",
+    "n_stage_positive",
+    "tumor_size_group",
+    "surgery_primary",
+    "surgery_lymph_node",
+    "chemotherapy",
+    "radiotherapy",
+    "mets_bone",
+    "mets_lung",
+    "age_at_diagnosis",
+    "sex_male"
+  ],
+  "diagnostic_model_feature_sets": {
+    "nomogram_figure": [
+      "grade",
+      "n_stage_positive",
+      "surgery_primary",
+      "tumor_size_group",
+      "mets_bone"
+    ],
+    "paper_text": [
+      "grade",
+      "n_stage_positive",
+      "surgery_primary",
+      "chemotherapy",
+      "tumor_size_group",
+      "mets_bone"
+    ]
+  },
+  "prognostic_model_feature_sets": {
+    "text_screened": [
+      "grade",
+      "n_stage_positive",
+      "surgery_primary",
+      "chemotherapy",
+      "tumor_size_group",
+      "mets_bone"
+    ],
+    "tn_baseline": [
+      "ajcc_t",
+      "n_stage_positive"
+    ]
+  },
+  "categorical_features": [
+    "race",
+    "histology_paper",
+    "histology_prognostic_group",
+    "grade",
+    "primary_site_group",
+    "ajcc_t",
+    "tumor_size_group"
+  ],
+  "continuous_features": [
+    "age_at_diagnosis"
+  ],
+  "binary_features": [
+    "sex_male",
+    "married",
+    "n_stage_positive",
+    "surgery_primary",
+    "surgery_lymph_node",
+    "radiotherapy",
+    "chemotherapy",
+    "mets_bone",
+    "mets_brain",
+    "mets_lung"
+  ],
+  "diagnostic_histology_var": "histology_paper",
+  "prognostic_histology_var": "histology_prognostic_group",
+  "min_subgroup_n": 20,
+  "min_interaction_cell_count": 5,
+  "min_marginal_signal_for_attenuation": {
+    "_note": "attenuation = 1 - adjusted/marginal is a ratio that explodes when the marginal effect is near zero, turning noise into an apparent 'distortion'. Attenuation is only scored when the REAL marginal effect clears these thresholds; below them the comparison is reported but marked not_estimable.",
+    "continuous_or_binary_abs_coef": 0.15,
+    "categorical_sum_z_squared": 4.0
+  },
+  "min_category_count_modeling": 15,
+  "severity_thresholds": {
+    "_note": "Applied to the normalized distortion score in [0,1]; >=high means the structure should not be trusted from synthetic data.",
+    "moderate": 0.2,
+    "high": 0.4
+  },
+  "survival_thresholds": {
+    "_note": "Absolute difference in survival probability at a horizon.",
+    "moderate": 0.05,
+    "high": 0.1,
+    "rmst_moderate_months": 3.0,
+    "rmst_high_months": 6.0
+  },
+  "prevalence_thresholds": {
+    "_note": "Absolute difference in outcome prevalence / event rate within a subgroup.",
+    "moderate": 0.05,
+    "high": 0.1
+  },
+  "category_thresholds": {
+    "_note": "Relative change in a category's share of the cohort.",
+    "moderate": 0.25,
+    "high": 0.5
+  },
+  "strategies": {
+    "jointxy": {
+      "label": "vanilla joint (x, y)",
+      "diagnostic": "data/restricted/tabpfn_synthetic_joint/seer_diagnostic_synthetic_jointxy_tabpfn.csv",
+      "prognostic": "data/restricted/tabpfn_synthetic_joint/seer_prognostic_synthetic_jointxy_tabpfn.csv"
+    }
+  },
+  "real_inputs": {
+    "diagnostic": "data/restricted/seer_processed/seer_diagnostic_input.csv",
+    "prognostic": "data/restricted/seer_processed/seer_prognostic_input.csv"
+  },
+  "upstream_artifacts": {
+    "existing_similarity_summary": "results/07_similarity_and_fidelity/similarity_metrics/aggregate_outputs/similarity_metrics_summary.md"
+  }
+}

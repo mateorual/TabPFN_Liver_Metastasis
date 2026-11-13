@@ -1,0 +1,39 @@
+column,dtype,description,raw_source_column,paper_variable,notes
+patient_id,object,Deterministic sequential ID after final filtering,—,No,PNET_SEER_000001 format
+year_diagnosis,int32,Year of diagnosis (2010-2016),Year of diagnosis,No,
+age_at_diagnosis,int32,Age at diagnosis in years (integer),Age recode with single ages and 90+,Yes (Age),90+ mapped to 90
+age_raw,object,Raw SEER age-recode label (audit only),Age recode with single ages and 90+,No,
+sex,object,Sex (Female/Male),Sex,Yes (Sex),
+sex_male,int32,"Binary sex (1=Male, 0=Female)",Sex,Yes (Sex),
+race,object,Race category,"Race recode (W, B, AI, API)",Yes (Race),Unknown -> missing (excluded)
+marital_status_binary,object,Marital status label (Married/Not married),Marital status at diagnosis,Yes (Marital status),
+married,int32,"Binary marital status (1=Married, 0=Not married)",Marital status at diagnosis,Yes (Marital status),Unknown -> missing (excluded)
+histology_code,object,ICD-O-3 histology/behavior code,"ICD-O-3 Hist/behav, malignant",No,
+histology_label,object,ICD-O-3 histology text label,"ICD-O-3 Hist/behav, malignant",No,
+histology_paper,object,Histology label as in Li et al. 2023,"ICD-O-3 Hist/behav, malignant",Yes (Histology type),Used in diagnostic model
+histology_prognostic_group,object,Carcinoid tumor vs Others grouping,"ICD-O-3 Hist/behav, malignant",Yes (Histology type),Used in prognostic model; 8240/3+8249/3=Carcinoid tumor
+grade,int32,Tumor differentiation grade (1-4),Grade Recode (thru 2017),Yes (Grade),Unknown -> missing (excluded)
+grade_label,object,Tumor grade text label,Grade Recode (thru 2017),No,
+primary_site_code,object,ICD-O topography code (C25.0-C25.9),Primary Site - labeled,No,
+primary_site_group,object,Pancreatic anatomic location (Head/Body/Tail/Others),Primary Site - labeled,Yes (Primary site),
+ajcc_t,object,Harmonized AJCC T stage (T0-T4),"Derived AJCC T, 7th ed (2010-2015) + Derived SEER Combined T (2016-2017)",Yes (T stage),Merged: 2010-2015 uses 7th ed; 2016 uses SEER Combined
+ajcc_n,object,Harmonized AJCC N stage (N0/N1),"Derived AJCC N, 7th ed (2010-2015) + Derived SEER Combined N (2016-2017)",Yes (N stage),Merged: 2010-2015 uses 7th ed; 2016 uses SEER Combined
+n_stage_positive,int32,"Binary N-stage positive (1=N1, 0=N0)",Derived from ajcc_n,Yes (N stage),
+ajcc_m,object,Harmonized AJCC M stage (M0/M1),"Derived AJCC M, 7th ed (2010-2015) + Derived SEER Combined M (2016-2017)",No (audit only),EXCLUDED from diagnostic dataset to prevent metastasis leakage
+m_stage_positive,float64,"Binary M-stage positive (1=M1, 0=M0)",Derived from ajcc_m,No (audit only),EXCLUDED from diagnostic dataset to prevent metastasis leakage
+surgery_primary,int32,"Primary site surgery (1=Yes, 0=No)",RX Summ--Surg Prim Site (1998+),Yes (Surgery),Code 99=unknown -> missing (excluded); 0=No; all others=Yes
+surgery_primary_label,object,Primary site surgery label (Yes/No),RX Summ--Surg Prim Site (1998+),No,
+surgery_lymph_node,int32,"Regional lymph-node surgery (1=Yes, 0=No)",RX Summ--Scope Reg LN Sur (2003+),Yes (LN surgery),None=No; biopsy/removal/sentinel categories=Yes; Unknown or not applicable=missing. Follows NAACCR item #1292 directly; no inference from primary-site surgery is applied.
+surgery_lymph_node_label,object,LN surgery label (Yes/No),RX Summ--Scope Reg LN Sur (2003+),No,
+chemotherapy,int32,"Chemotherapy (1=Yes, 0=No/Unknown)","Chemotherapy recode (yes, no/unk)",Yes (Chemotherapy),No/Unknown treated as No for paper-style binary coding
+chemotherapy_label,object,Chemotherapy label (Yes/No),"Chemotherapy recode (yes, no/unk)",No,
+radiotherapy,int32,"Radiation therapy (1=Active radiation, 0=None/Unknown/Refused)",Radiation recode,Yes (Radiotherapy),"Active radiation modalities=Yes; None/Unknown and Refused=No; Recommended, unknown if administered=missing and excluded under strict unknown-feature filtering."
+radiotherapy_label,object,Radiotherapy label (Yes/No),Radiation recode,No,
+tumor_size_mm,float64,Tumor size in mm (0=no evidence of primary tumor),Tumor Size Over Time Recode (1988+),Yes (Tumor size),000 retained as 0 mm and binned into 0-26 mm; unknown/unreasonable -> missing
+tumor_size_group,object,Tumor size group (0-26 mm / 26-36 mm / >36 mm),Tumor Size Over Time Recode (1988+),Yes (Tumor size),
+mets_bone,int32,"Bone metastasis at diagnosis (1=Yes, 0=No)",SEER Combined Mets at DX-bone (2010+),Yes (Bone mets),Unknown -> missing (excluded)
+mets_brain,int32,"Brain metastasis at diagnosis (1=Yes, 0=No)",SEER Combined Mets at DX-brain (2010+),Yes (Brain mets),Unknown -> missing (excluded)
+mets_liver,int32,"Liver metastasis at diagnosis (1=Yes, 0=No) — diagnostic TARGET",SEER Combined Mets at DX-liver (2010+),Yes (Liver mets) — TARGET,Diagnostic model target; prognostic model population filter
+mets_lung,int32,"Lung metastasis at diagnosis (1=Yes, 0=No)",SEER Combined Mets at DX-lung (2010+),Yes (Lung mets),Unknown -> missing (excluded)
+os_months,float64,Overall survival in months from diagnosis,Survival months,Yes (OS time),Prognostic model outcome (with os_event)
+os_event,int32,"OS event indicator (1=Dead, 0=Alive/censored)",Vital status recode (study cutoff used),Yes (OS event),Prognostic model outcome (with os_months)

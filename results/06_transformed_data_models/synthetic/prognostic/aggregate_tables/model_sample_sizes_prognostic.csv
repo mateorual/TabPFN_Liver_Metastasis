@@ -1,0 +1,11 @@
+"script","model_name","n_total","n_used","n_dropped"
+"02_uni_cox","all_predictors",462,323,139
+"03_cox_aic","cox_aic_selected",462,323,139
+"04_rf_rfe","rf_full",462,323,139
+"05_cox","nomogram_figure",462,323,139
+"05_cox","text_screened",462,323,139
+"05_cox","cox_aic_selected",462,323,139
+"05_cox","rf_rfe_selected",462,323,139
+"05_cox","pipeline_selected",462,323,139
+"05_cox","tn_baseline",462,323,139
+"06_nomogram","nomogram_figure",462,323,139

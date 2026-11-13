@@ -1,0 +1,10 @@
+variable
+age_at_diagnosis
+sex_male
+married
+histology_prognostic_group
+grade
+ajcc_t
+n_stage_positive
+surgery_primary
+mets_bone

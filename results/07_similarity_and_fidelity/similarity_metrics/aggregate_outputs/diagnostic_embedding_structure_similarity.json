@@ -1,0 +1,25 @@
+{
+  "block_label": "diagnostic_emb",
+  "dataset_type": "diagnostic",
+  "n_patients_matched": 2672,
+  "n_patients_used": 2672,
+  "subsampled": false,
+  "embedding_dim": 512,
+  "trustworthiness_continuity": {
+    "k=10": {
+      "trustworthiness": 0.9532961462732356,
+      "continuity": 0.9520792970805988
+    },
+    "k=30": {
+      "trustworthiness": 0.9291053482222685,
+      "continuity": 0.9245239294873037
+    }
+  },
+  "mantel_test": {
+    "spearman_r": 0.557953833831611,
+    "p_value": 0.002,
+    "n_permutations": 499,
+    "n_objects": 2672,
+    "interpretation": "r near 1 = pairwise distances strongly preserved between spaces; p_value tests H0: no association"
+  }
+}

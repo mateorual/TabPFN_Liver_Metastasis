@@ -1,0 +1,6 @@
+# Versions verified on the development host (2026-10-09). No training framework beyond PyTorch.
+pandas>=2.3.0
+numpy>=1.26.0
+torch>=2.5.0          # verified 2.6.0+cu124; bundles load with torch.load(weights_only=True)
+scikit-learn>=1.6.0   # inner stratified split only
+pytest>=8.0           # tests only

@@ -1,0 +1,167 @@
+{
+  "seed": 20230529,
+  "device": "auto",
+  "tabpfn_checkpoint_pin": {
+    "_why": "The availability check and fitting path resolve this same pinned checkpoint. A missing or mismatched checkpoint raises instead of falling back to a package default.",
+    "_resolves_to_the_same_weights": "On this host the pin resolves to the identical file the historical runs used (verified by sha256 against the upstream model repository), so pinning changes no number. It changes what is recorded and what happens when the environment changes.",
+    "search_dirs": [],
+    "_search_dirs_note": "Additional directories to look in, before the installed release's own cache directory. Absolute, ~-relative or repo-relative. Left empty on purpose: the default resolution order (TABPFN_PINNED_CHECKPOINT env var -> TABPFN_MODEL_CACHE_DIR env var -> tabpfn.model_loading.get_cache_dir()) already works on this host and on any other machine with a normal TabPFN cache. No user-specific absolute path is hard-coded.",
+    "upstream_model_repo": "Prior-Labs/tabpfn_3",
+    "upstream_revision": "24a16a89d245878b846555110985634aa2e656d7",
+    "classifier": {
+      "requested_generation": "v3",
+      "checkpoint_filename": "tabpfn-v3-classifier-v3_default.ckpt",
+      "checkpoint_sha256": "d0d865d54dfbc524f5703104be90620182dca7e5fb2c16de72e9959ea18f3988",
+      "checkpoint_size_bytes": 212804803,
+      "_generation_note": "v3 is the generation Prof. Kainz's example names (TabPFN-3). The pinned sha256 is the checksum the Prior-Labs/tabpfn_3 model repository publishes for this filename; it is verified against the local bytes, and the loaded architecture is checked independently, so a renamed file cannot pass."
+    }
+  },
+  "quick_mode_overrides": {
+    "diagnostic": {
+      "n_folds": 3,
+      "n_repeats": 1
+    },
+    "prognostic": {
+      "n_splits": 2
+    }
+  },
+  "diagnostic": {
+    "input_file": "data/restricted/seer_processed/seer_diagnostic_input.csv",
+    "embedding_file": "data/restricted/tabpfn_embeddings/seer_diagnostic_tabpfn_embeddings.csv",
+    "id_col": "patient_id",
+    "outcome": "mets_liver",
+    "n_folds": 5,
+    "n_repeats": 5,
+    "features": [
+      "age_at_diagnosis",
+      "race",
+      "sex_male",
+      "married",
+      "histology_paper",
+      "grade",
+      "primary_site_group",
+      "ajcc_t",
+      "n_stage_positive",
+      "surgery_primary",
+      "surgery_lymph_node",
+      "radiotherapy",
+      "chemotherapy",
+      "tumor_size_group",
+      "mets_bone",
+      "mets_brain",
+      "mets_lung"
+    ],
+    "categorical_features": [
+      "race",
+      "histology_paper",
+      "grade",
+      "primary_site_group",
+      "ajcc_t",
+      "tumor_size_group"
+    ],
+    "binary_features": [
+      "sex_male",
+      "married",
+      "n_stage_positive",
+      "surgery_primary",
+      "surgery_lymph_node",
+      "radiotherapy",
+      "chemotherapy",
+      "mets_bone",
+      "mets_brain",
+      "mets_lung"
+    ],
+    "continuous_features": [
+      "age_at_diagnosis"
+    ],
+    "dca_thresholds": [
+      0.05,
+      0.1,
+      0.15,
+      0.2,
+      0.3,
+      0.4
+    ]
+  },
+  "prognostic": {
+    "input_file": "data/restricted/seer_processed/seer_prognostic_input.csv",
+    "embedding_file": "data/restricted/tabpfn_embeddings/seer_prognostic_tabpfn_embeddings.csv",
+    "id_col": "patient_id",
+    "time_var": "os_months",
+    "event_var": "os_event",
+    "test_size": 0.3,
+    "n_splits": 5,
+    "time_horizons_months": [
+      12,
+      24,
+      36
+    ],
+    "features": [
+      "age_at_diagnosis",
+      "race",
+      "sex_male",
+      "married",
+      "histology_prognostic_group",
+      "grade",
+      "primary_site_group",
+      "ajcc_t",
+      "n_stage_positive",
+      "surgery_primary",
+      "surgery_lymph_node",
+      "radiotherapy",
+      "chemotherapy",
+      "tumor_size_group",
+      "mets_bone",
+      "mets_brain",
+      "mets_lung"
+    ],
+    "categorical_features": [
+      "race",
+      "histology_prognostic_group",
+      "grade",
+      "primary_site_group",
+      "ajcc_t",
+      "tumor_size_group"
+    ],
+    "binary_features": [
+      "sex_male",
+      "married",
+      "n_stage_positive",
+      "surgery_primary",
+      "surgery_lymph_node",
+      "radiotherapy",
+      "chemotherapy",
+      "mets_bone",
+      "mets_brain",
+      "mets_lung"
+    ],
+    "continuous_features": [
+      "age_at_diagnosis"
+    ],
+    "survival_calibration": {
+      "n_risk_groups": 3,
+      "grouping_variable": "model_risk_score",
+      "group_order": "ascending model risk score -> low / mid / high risk",
+      "min_at_risk_at_horizon_for_estimate": 5,
+      "min_group_n_warning": 30,
+      "min_events_by_horizon_warning": 5,
+      "min_at_risk_at_horizon_warning": 10,
+      "_thresholds_note": "Identical support bars to 06_Bootstrap_Stability so the two components' cells mean the same thing. The GROUPING still differs on purpose (risk-score tertiles here, horizon-specific predicted survival probability there) and is recorded per row in grouping_method/grouping_variable."
+    }
+  },
+  "min_category_count": 15,
+  "permutation_importance": {
+    "n_repeats": 5,
+    "n_repeats_expensive_models": 2,
+    "max_rows_expensive_models": 300
+  },
+  "distillation": {
+    "lightweight_model_ids": [
+      "regularized_logistic",
+      "xgboost_or_histgb",
+      "cox_elastic_net"
+    ],
+    "signal_agreement_min_models": 3,
+    "top_k_features": 8
+  }
+}

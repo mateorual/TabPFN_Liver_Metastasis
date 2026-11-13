@@ -1,0 +1,135 @@
+{
+  "input_path": "data/restricted/seer_processed/seer_prognostic_input.csv",
+  "output_path": "data/restricted/tabpfn_synthetic_joint/seer_prognostic_synthetic_jointxy_tabpfn.csv",
+  "generation_strategy": "vanilla joint (x, y) generation: single TabPFNUnsupervisedModel fit on the full cohort with os_event and log1p(os_months) included as generated columns, sampled unconditioned in one pass (no event-conditional stratification)",
+  "reference": "Hollmann et al., Nature 2025, Eq. 5 / 'Synthetic data generation'; docs.priorlabs.ai/capabilities/data-generation",
+  "input_shape": [
+    462,
+    23
+  ],
+  "output_shape": [
+    462,
+    23
+  ],
+  "generation_feature_columns": [
+    "race",
+    "histology_prognostic_group",
+    "primary_site_group",
+    "ajcc_t",
+    "ajcc_n",
+    "tumor_size_group",
+    "sex_male",
+    "married",
+    "n_stage_positive",
+    "surgery_primary",
+    "surgery_lymph_node",
+    "chemotherapy",
+    "radiotherapy",
+    "mets_bone",
+    "mets_brain",
+    "mets_lung",
+    "os_event",
+    "grade",
+    "age_at_diagnosis",
+    "tumor_size_mm",
+    "log_os_months"
+  ],
+  "categorical_columns": [
+    "race",
+    "histology_prognostic_group",
+    "primary_site_group",
+    "ajcc_t",
+    "ajcc_n",
+    "tumor_size_group"
+  ],
+  "binary_columns": [
+    "sex_male",
+    "married",
+    "n_stage_positive",
+    "surgery_primary",
+    "surgery_lymph_node",
+    "chemotherapy",
+    "radiotherapy",
+    "mets_bone",
+    "mets_brain",
+    "mets_lung",
+    "os_event"
+  ],
+  "ordinal_columns": [
+    "grade"
+  ],
+  "continuous_columns": [
+    "age_at_diagnosis",
+    "tumor_size_mm",
+    "log_os_months"
+  ],
+  "n_samples_requested": 462,
+  "n_samples_actual": 462,
+  "os_event_distribution": {
+    "original_counts": {
+      "1": 311,
+      "0": 151
+    },
+    "original_proportions": {
+      "1": 0.6731601731601732,
+      "0": 0.3268398268398268
+    },
+    "synthetic_counts": {
+      "1": 311,
+      "0": 151
+    },
+    "synthetic_proportions": {
+      "1": 0.6731601731601732,
+      "0": 0.3268398268398268
+    }
+  },
+  "random_state": 42,
+  "device": "cuda",
+  "temperature": 1.0,
+  "n_permutations": 24,
+  "n_estimators": 4,
+  "package_versions": {
+    "pandas": "2.3.3",
+    "numpy": "1.26.4",
+    "torch": "2.5.1+cu121",
+    "sklearn": "1.7.2",
+    "tabpfn": "8.0.8",
+    "tabpfn_extensions": "0.4.2"
+  },
+  "timestamp_utc": "2026-07-11T17:47:01.117494+00:00",
+  "input_sha256": "238fe3f128c66df0d20d08cffffaa18911c366e43da60a1784a7942eca3293b6",
+  "output_sha256": "69cde1a33a827dacb49a9a6a392eca8e48d686cdd4cecdfc97ab97f209fe32d0",
+  "mapping_file_path": "data/restricted/tabpfn_synthetic_joint/prognostic_jointxy_column_mappings.json",
+  "quality_checks": {
+    "original_shape": [
+      462,
+      23
+    ],
+    "synthetic_shape": [
+      462,
+      23
+    ],
+    "column_order_match": true,
+    "missing_value_counts": 0,
+    "duplicate_synthetic_rows": 0,
+    "exact_row_overlap_count": 0,
+    "os_event_distribution": {
+      "original_counts": {
+        "1": 311,
+        "0": 151
+      },
+      "original_proportions": {
+        "1": 0.6731601731601732,
+        "0": 0.3268398268398268
+      },
+      "synthetic_counts": {
+        "1": 311,
+        "0": 151
+      },
+      "synthetic_proportions": {
+        "1": 0.6731601731601732,
+        "0": 0.3268398268398268
+      }
+    }
+  }
+}

@@ -1,0 +1,46 @@
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage[margin=26mm,headheight=15pt]{geometry}
+\usepackage{setspace}
+\setstretch{1.12}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage[table]{xcolor}
+\definecolor{ReportInk}{HTML}{183D40}
+\definecolor{ReportMuted}{HTML}{545454}
+\usepackage{booktabs,longtable,tabularx,array}
+\usepackage{ragged2e}
+\newcolumntype{Y}{>{\RaggedRight\arraybackslash}X}
+\usepackage{caption,subcaption}
+\usepackage{float}
+\usepackage{placeins}
+\captionsetup{font=small,labelfont=bf}
+\captionsetup[figure]{position=bottom}
+\captionsetup[subfigure]{position=bottom}
+\captionsetup[table]{position=top}
+\usepackage{enumitem}
+\setlist{itemsep=0.35em,topsep=0.45em,leftmargin=*}
+\usepackage[authoryear,round]{natbib}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\color{ReportMuted}Tabular Foundation Models and Synthetic Data}
+\fancyfoot[L]{\small\color{ReportMuted}IDEA Lab - FAU}
+\fancyfoot[R]{\small\thepage}
+\renewcommand{\headrulewidth}{0.3pt}
+\usepackage[colorlinks=true,linkcolor=ReportInk,citecolor=ReportInk,
+  urlcolor=ReportInk,bookmarksnumbered=true]{hyperref}
+\urlstyle{same}
+\hypersetup{pdfauthor={Mateo Ruiz Alvarez},
+  pdftitle={Tabular Foundation Models and Synthetic Data for Clinical Prediction in a SEER pNET Cohort},
+  pdfsubject={M.Sc. Artificial Intelligence research project at the Image, Data, Exploration, and Analysis Lab (IDEA), FAU}}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.55em}
+\setlength{\emergencystretch}{1.5em}
+\newcommand{\pNET}{pNET}
+\newcommand{\FM}{foundation model}
+\newcommand{\jointxy}{joint \((X,Y)\)}
+\graphicspath{{img/}}

@@ -1,0 +1,10 @@
+step,n,note
+source_rows_read,30,data rows in Tabelle1
+unique_source_codes,30,blank or duplicate codes are blockers
+rows_mapped_without_invalid_values,30,invalid values are blockers
+diagnostic_cohort,30,all eligible workbook rows
+diagnostic_positive_mets_liver,11,observed liver metastasis
+diagnostic_negative_mets_liver,19,
+prognostic_cohort,11,subset with observed mets_liver == 1
+prognostic_deaths,7,
+prognostic_censored,4,

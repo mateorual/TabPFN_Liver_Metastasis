@@ -1,0 +1,113 @@
+{
+  "config_version": "1.0.0",
+  "schema_version": "augmentation_unit_manifest/1",
+  "output_namespace": "v1",
+  "_output_namespace_note": "Patient-level outputs live under <output_root>/<output_namespace>/. A unit that already holds validated outputs is NEVER overwritten by a run whose generation identity (config subset, input hashes, split hash, generation code hash) differs: the run refuses and names the mismatch. Bump this namespace to generate under a new configuration.",
+
+  "accepted_prior_generation_code_sha256": [
+    "f47bc7a7de6bda1a8f81cf4c8cfae64a097c7ab14b022f1a123e2fe130bdb58f"
+  ],
+  "_accepted_prior_generation_code_note": "Generation-code revisions whose validated units a resume may keep. f47bc7a7... is the code before the float32-overflow clamp (added 2026-10-11 after prognostic/split_04 failed with 'Input X contains infinity'). The clamp only acts on a sample that is not finite in float32: it returns the tensor untouched otherwise and draws no extra random number, so a unit that completed under f47bc7a7... decodes to exactly what the new code produces for it: an overflow in any column but the last would have crashed it, and one in the last column (stored as inf) is clipped by the decoder to the same training bound the clamp uses. Units keep their recorded identity; nothing is relabelled. Every identity field other than the code hash must still match exactly.",
+
+  "base_seed": 20230529,
+  "generator_seeds": [20230529],
+  "_generator_seeds_note": "One frozen primary generator seed for the required dataset set. The list is a hook for later seed-sensitivity work; extra seeds are NOT run here and are not a substitute for an uncertainty design.",
+  "seed_derivation": "int(sha256('augmentation|<base_seed>|<task>|<unit_id>|seed_index=<i>|seed=<generator_seed>').hexdigest()[:8], 16) % 2147483647; per chunk: same scheme with '|chunk=<k>' appended to the unit key. Python's process-randomised hash() is never used.",
+
+  "augmentation_sizes": [1000, 5000, 10000, 15000],
+  "pool_size": 15000,
+  "nesting_policy": "one ordered pool of pool_size rows per task/unit/seed; the +K condition is the complete real outer-training set followed by the first K pool rows, so every smaller condition is an exact prefix of every larger one",
+  "materialize_real_only": true,
+
+  "inputs": {
+    "diagnostic_input": "data/restricted/seer_processed/seer_diagnostic_input.csv",
+    "prognostic_input": "data/restricted/seer_processed/seer_prognostic_input.csv",
+    "data_dictionary": "data/restricted/seer_processed/preprocessing_data_dictionary.csv",
+    "diagnostic_split_source": "data/restricted/evaluation_splits/diagnostic_cv_splits.csv",
+    "prognostic_split_source": "data/restricted/evaluation_splits/prognostic_split_assignments.csv",
+    "active_joint_generator_diagnostic": "analysis/05_tabpfn_transformations/synthetic_joint_generation/create_tabpfn_synthetic_diagnostic_joint.py",
+    "active_joint_generator_prognostic": "analysis/05_tabpfn_transformations/synthetic_joint_generation/create_tabpfn_synthetic_prognostic_joint.py"
+  },
+  "expected_split_design": {
+    "diagnostic": {"n_repeats": 5, "n_folds": 5, "n_units": 25, "n_patients": 2672,
+                   "_note": "The saved file lists ONLY role=test rows (05/src/preprocessing.make_diagnostic_splits). The outer-training set of a unit is therefore the processed cohort minus that unit's test rows. This is enforced strictly: within every repeat the five test folds must partition the cohort exactly, every split patient must exist in the cohort, and no other role value may appear."},
+    "prognostic": {"n_splits": 5, "n_units": 5, "n_patients": 462,
+                   "train_cohort_label": "Training", "test_cohort_label": "Internal validation"}
+  },
+  "forbidden_pool_sources": [
+    "data/restricted/tabpfn_synthetic_joint"
+  ],
+  "_forbidden_pool_sources_note": "Saved synthetic cohorts generated from the FULL real cohorts. They saw future outer-test patients and are refused as augmentation pools by a programmatic guard.",
+
+  "output_root": "data/restricted/augmentation_split_safe",
+
+  "generator": {
+    "method": "vanilla_joint_xy_tabpfn_unsupervised",
+    "n_estimators": 4,
+    "n_permutations": 24,
+    "temperature": 1.0,
+    "_parameters_note": "n_estimators, n_permutations and temperature are the values the active joint (x, y) generator used for the saved full-cohort cohorts (their manifests record 4 / 24 / 1.0).",
+    "chunk_size": 5000,
+    "_chunk_note": "Chunked for MEMORY: for every regressor column TabPFNUnsupervisedModel keeps all n_permutations full bar-distribution outputs in host RAM (24 x n_rows x 5000 bins x 4 B = 7.2 GB for one 15,000-row call, before averaging), against ~14.5 GB free on the generation host. 5,000-row chunks cap that at ~2.4 GB. Each chunk is seeded independently from the unit seed and its chunk index and checkpointed to disk, so an interrupted unit resumes at chunk granularity. Determinism under this scheme was probed on the generation GPU (identical seeds -> bit-identical raw output, see the preflight/README). The chunk size is part of the generation identity: changing it changes the pool and requires a new namespace.",
+    "prognostic_time_transform": "log1p(os_months) generated; decoded as expm1, clipped to the unit's training os_months range, rounded to integer months (identical to the active prognostic generator)",
+    "binary_decoding": "round, clip to [0, 1], then snap to the unit's training-observed support (a binary column constant in training stays constant)",
+    "_nonfinite_sample_policy_note": "A regressor draw that is not finite in float32 (TabPFN's Yeo-Johnson inverse clips tail samples to the float64 maximum, which overflows the generator's float32 matrix) is set to that column's training max (positive) or min (negative) before the next column conditions on it - the bound the decoder clips the column to anyway. NaN raises. Counts per chunk and column are recorded as nonfinite_samples_clamped in each chunk record.",
+    "device": "cuda",
+    "allow_cpu_fallback": false,
+    "inference_precision": "autocast",
+    "allow_tf32": false,
+    "_precision_note": "Explicit, not device-derived. The active joint (x, y) generator - whose semantics these pools must reproduce - ran with TabPFN's 'auto' precision on CUDA, which resolves to fp16 autocast; 'autocast' pins that same verified behaviour by name so it can no longer flip with the device. float32 was measured and rejected for cost, not quality: one TabPFN fit+predict on 2,137 training rows x 15,000 query rows took 56.7 s (float32) vs 12.2 s (autocast) on the RTX 3060 Laptop GPU, i.e. roughly 7-14 vs 1.6-2 GPU-hours per diagnostic unit and ~200-340 vs ~55 GPU-hours for the 30 required units. To regenerate under float32, set 'float32' and bump output_namespace; the identity check refuses to mix the two.",
+    "_cost_benchmark_seconds_per_call": {"autocast": {"500": 2.18, "3000": 3.51, "15000": 12.23},
+                                         "float32": {"500": 10.49, "3000": 18.44, "15000": 56.71},
+                                         "context": "TabPFNRegressor fit+predict(output_type='full'), 2137x10 train, n_estimators=4, RTX 3060 Laptop GPU, torch 2.6.0+cu124, tabpfn 8.0.8; ~481 such calls per diagnostic chunk (20 conditioned columns x 24 permutations)"}
+  },
+
+  "checkpoint_identity": {
+    "required": true,
+    "upstream_model_repo": "Prior-Labs/tabpfn_3",
+    "upstream_revision": "24a16a89d245878b846555110985634aa2e656d7",
+    "requested_generation": "v3",
+    "classifier": {
+      "checkpoint_filename": "tabpfn-v3-classifier-v3_default.ckpt",
+      "checkpoint_sha256": "d0d865d54dfbc524f5703104be90620182dca7e5fb2c16de72e9959ea18f3988",
+      "checkpoint_size_bytes": 212804803,
+      "sha256_source": "component 05 pin (benchmark_config.json -> tabpfn_checkpoint_pin), retrieved from the upstream Hugging Face file listing"
+    },
+    "regressor": {
+      "checkpoint_filename": "tabpfn-v3-regressor-v3_default.ckpt",
+      "checkpoint_sha256": "311ce18d97e9533d8585eaadafe040fbdd8070533209ed8696641dadc97a7301",
+      "checkpoint_size_bytes": 233289807,
+      "sha256_source": "LFS etag recorded by huggingface_hub at download time (<tabpfn cache>/.cache/huggingface/download/tabpfn-v3-regressor-v3_default.ckpt.metadata, revision 24a16a89). The same mechanism records the classifier etag d0d865..., which equals the independently pinned upstream checksum. Component 05 left this value unrecorded because it did not use the regressor."
+    },
+    "verify_loaded_architecture": true
+  },
+
+  "resources": {
+    "min_free_disk_gb": 2.0,
+    "estimated_bytes_per_unit": 12000000
+  },
+
+  "atomic_writes": "every file is written to '<name>.tmp-<pid>' and moved into place with os.replace",
+  "resume_policy": "a unit whose unit_manifest.json says completed_validated, whose generation identity equals the current one, and whose every recorded output hash re-verifies is skipped. Individual pool chunks are reused only when their recorded chunk identity and hash re-verify.",
+
+  "validation": {
+    "hard_failures": [
+      "outer-test patient in generator input or augmented output",
+      "real outer-training row missing, duplicated or altered",
+      "synthetic count differs from the requested size",
+      "duplicate patient_id or synthetic/real ID collision",
+      "column order or dtype differs from the processed task dataset",
+      "missing or infinite value",
+      "value outside the unit's training-only support (categorical, binary, ordinal) or decoding bounds (continuous, os_months)",
+      "exact synthetic-to-real row match against the unit's real training rows (patient_id excluded)",
+      "nesting identity broken",
+      "any recorded input/config/code/output hash fails to re-verify"
+    ],
+    "recorded_warnings_not_repaired": [
+      "training category absent from the synthetic pool (e.g. grade 4)",
+      "category absent from the unit's training rows and therefore unavailable to the generator",
+      "duplicate synthetic rows",
+      "synthetic target/event proportion differing from the real training proportion"
+    ]
+  }
+}

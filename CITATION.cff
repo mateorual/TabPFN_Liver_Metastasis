@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "If you use this repository, please cite the final project report."
+title: "Tabular Foundation Models and Synthetic Data for Clinical Prediction"
+type: report
+authors:
+  - family-names: "Ruiz Alvarez"
+    given-names: "Mateo"
+date-released: 2026-11-13
+version: "1.0"
+repository-code: "https://github.com/mateorual/TabPFN_Liver_Metastasis"

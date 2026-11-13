@@ -1,0 +1,5 @@
+model,label,auc,ci_lower_95,ci_upper_95,n,eval_set
+paper_text,Paper Text (6 vars: Grade + N stage + Surgery + Chemotherapy + Tumor size + Bone mets),0.8947,0.8803,0.9103,2672,common_all_models
+nomogram_figure,Nomogram Figure (5 vars: Grade + N stage + Surgery + Tumor size + Bone mets),0.8795,0.8626,0.8945,2672,common_all_models
+pipeline_selected,Pipeline-selected (8 vars: Surgery + Chemotherapy + Bone mets + T stage + N stage + Tumor size + Primary site + Histology),0.9028,0.8882,0.9174,2672,common_all_models
+tnm_baseline,AJCC T/N baseline (2 vars: T stage + N stage),0.7628,0.7416,0.7828,2672,common_all_models

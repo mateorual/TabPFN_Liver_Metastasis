@@ -1,0 +1,6 @@
+pandas>=2.3.0
+numpy>=1.26.0
+torch>=2.5.0
+scikit-learn>=1.7.0
+tabpfn>=8.0.0
+tabpfn-extensions[all] @ git+https://github.com/PriorLabs/tabpfn-extensions.git

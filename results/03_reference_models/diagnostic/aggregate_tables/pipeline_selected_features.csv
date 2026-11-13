@@ -1,0 +1,9 @@
+variable
+surgery_primary
+chemotherapy
+mets_bone
+ajcc_t
+n_stage_positive
+tumor_size_group
+primary_site_group
+histology_paper

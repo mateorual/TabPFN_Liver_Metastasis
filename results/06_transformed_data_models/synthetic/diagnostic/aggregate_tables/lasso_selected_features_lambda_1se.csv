@@ -1,0 +1,7 @@
+term,coefficient,lambda_used,lambda_value,original_variable
+chemotherapyYes,1.922336408473738,lambda.1se,0.027052429526309596,chemotherapy
+surgery_primaryYes,-1.5345124952323754,lambda.1se,0.027052429526309596,surgery_primary
+n_stage_positiveN1,0.5411854311226103,lambda.1se,0.027052429526309596,n_stage_positive
+ajcc_tT1,-0.3901478452863062,lambda.1se,0.027052429526309596,ajcc_t
+tumor_size_group>36 mm,0.38680240675128397,lambda.1se,0.027052429526309596,tumor_size_group
+ajcc_tT3,0.07630081325694647,lambda.1se,0.027052429526309596,ajcc_t

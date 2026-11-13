@@ -1,0 +1,525 @@
+{
+  "label": "prognostic_synthetic_jointxy",
+  "dataset_type": "prognostic",
+  "real_shape": [
+    462,
+    23
+  ],
+  "synthetic_shape": [
+    462,
+    23
+  ],
+  "columns_compared": [
+    "race",
+    "histology_prognostic_group",
+    "primary_site_group",
+    "ajcc_t",
+    "ajcc_n",
+    "tumor_size_group",
+    "sex_male",
+    "married",
+    "n_stage_positive",
+    "surgery_primary",
+    "surgery_lymph_node",
+    "chemotherapy",
+    "radiotherapy",
+    "mets_bone",
+    "mets_brain",
+    "mets_lung",
+    "mets_liver",
+    "os_event",
+    "grade",
+    "age_at_diagnosis",
+    "tumor_size_mm",
+    "os_months"
+  ],
+  "marginal_similarity": {
+    "categorical": {
+      "race": {
+        "total_variation_distance": 0.05411255411255414,
+        "jensen_shannon_divergence": 0.004762956033754057,
+        "real_proportions": {
+          "White": 0.8138528138528138,
+          "Black": 0.09307359307359307,
+          "Asian or Pacific Islander": 0.08658008658008658,
+          "American Indian/Alaska Native": 0.006493506493506494
+        },
+        "synthetic_proportions": {
+          "White": 0.8614718614718615,
+          "Black": 0.06493506493506493,
+          "Asian or Pacific Islander": 0.06060606060606061,
+          "American Indian/Alaska Native": 0.012987012987012988
+        },
+        "chi_square": {
+          "statistic": 6.0580385493902345,
+          "p_value": 0.10882041388975866,
+          "dof": 3,
+          "expected_cells_below_5_fraction": 0.25,
+          "reliable": false
+        }
+      },
+      "histology_prognostic_group": {
+        "total_variation_distance": 0.038961038961038974,
+        "jensen_shannon_divergence": 0.0012534222364620103,
+        "real_proportions": {
+          "Others": 0.658008658008658,
+          "Carcinoid tumor": 0.341991341991342
+        },
+        "synthetic_proportions": {
+          "Others": 0.696969696969697,
+          "Carcinoid tumor": 0.30303030303030304
+        },
+        "chi_square": {
+          "statistic": 1.4314599995711559,
+          "p_value": 0.23152631352474862,
+          "dof": 1,
+          "expected_cells_below_5_fraction": 0.0,
+          "reliable": true
+        }
+      },
+      "primary_site_group": {
+        "total_variation_distance": 0.019480519480519487,
+        "jensen_shannon_divergence": 0.0003454387223639386,
+        "real_proportions": {
+          "Tail of pancreas": 0.38095238095238093,
+          "Head of pancreas": 0.3354978354978355,
+          "Others": 0.19696969696969696,
+          "Body of pancreas": 0.08658008658008658
+        },
+        "synthetic_proportions": {
+          "Tail of pancreas": 0.3917748917748918,
+          "Head of pancreas": 0.34415584415584416,
+          "Others": 0.18398268398268397,
+          "Body of pancreas": 0.08008658008658008
+        },
+        "chi_square": {
+          "statistic": 0.4424119966457921,
+          "p_value": 0.9313483145005418,
+          "dof": 3,
+          "expected_cells_below_5_fraction": 0.0,
+          "reliable": true
+        }
+      },
+      "ajcc_t": {
+        "total_variation_distance": 0.03030303030303031,
+        "jensen_shannon_divergence": 0.0034666099137834238,
+        "real_proportions": {
+          "T3": 0.45670995670995673,
+          "T2": 0.35714285714285715,
+          "T4": 0.13203463203463203,
+          "T1": 0.047619047619047616,
+          "T0": 0.006493506493506494
+        },
+        "synthetic_proportions": {
+          "T3": 0.48484848484848486,
+          "T2": 0.3528138528138528,
+          "T4": 0.1341991341991342,
+          "T1": 0.025974025974025976,
+          "T0": 0.0021645021645021645
+        },
+        "chi_square": {
+          "statistic": 4.350007420966705,
+          "p_value": 0.3607049710535643,
+          "dof": 4,
+          "expected_cells_below_5_fraction": 0.2,
+          "reliable": true
+        }
+      },
+      "ajcc_n": {
+        "total_variation_distance": 0.03246753246753245,
+        "jensen_shannon_divergence": 0.0007624266705439052,
+        "real_proportions": {
+          "N1": 0.5086580086580087,
+          "N0": 0.49134199134199136
+        },
+        "synthetic_proportions": {
+          "N1": 0.5411255411255411,
+          "N0": 0.4588744588744589
+        },
+        "chi_square": {
+          "statistic": 0.8505929596317778,
+          "p_value": 0.35638464648694645,
+          "dof": 1,
+          "expected_cells_below_5_fraction": 0.0,
+          "reliable": true
+        }
+      },
+      "tumor_size_group": {
+        "total_variation_distance": 0.0670995670995671,
+        "jensen_shannon_divergence": 0.00401906713291398,
+        "real_proportions": {
+          ">36 mm": 0.6623376623376623,
+          "26-36 mm": 0.2012987012987013,
+          "0-26 mm": 0.13636363636363635
+        },
+        "synthetic_proportions": {
+          ">36 mm": 0.7294372294372294,
+          "26-36 mm": 0.16883116883116883,
+          "0-26 mm": 0.10173160173160173
+        },
+        "chi_square": {
+          "statistic": 5.137618966120235,
+          "p_value": 0.07662671654685665,
+          "dof": 2,
+          "expected_cells_below_5_fraction": 0.0,
+          "reliable": true
+        }
+      },
+      "sex_male": {
+        "total_variation_distance": 0.004329004329004377,
+        "jensen_shannon_divergence": 1.3734766873627806e-05,
+        "real_proportions": {
+          "1": 0.564935064935065,
+          "0": 0.43506493506493504
+        },
+        "synthetic_proportions": {
+          "1": 0.5606060606060606,
+          "0": 0.4393939393939394
+        },
+        "chi_square": {
+          "statistic": 0.004398324447829399,
+          "p_value": 0.9471231683324771,
+          "dof": 1,
+          "expected_cells_below_5_fraction": 0.0,
+          "reliable": true
+        }
+      },
+      "married": {
+        "total_variation_distance": 0.004329004329004377,
+        "jensen_shannon_divergence": 1.4299741398191056e-05,
+        "real_proportions": {
+          "1": 0.6147186147186147,
+          "0": 0.3852813852813853
+        },
+        "synthetic_proportions": {
+          "1": 0.6190476190476191,
+          "0": 0.38095238095238093
+        },
+        "chi_square": {
+          "statistic": 0.004579244721974428,
+          "p_value": 0.946048238019277,
+          "dof": 1,
+          "expected_cells_below_5_fraction": 0.0,
+          "reliable": true
+        }
+      },
+      "n_stage_positive": {
+        "total_variation_distance": 0.03246753246753245,
+        "jensen_shannon_divergence": 0.0007624266705439052,
+        "real_proportions": {
+          "1": 0.5086580086580087,
+          "0": 0.49134199134199136
+        },
+        "synthetic_proportions": {
+          "1": 0.5411255411255411,
+          "0": 0.4588744588744589
+        },
+        "chi_square": {
+          "statistic": 0.8505929596317778,
+          "p_value": 0.35638464648694645,
+          "dof": 1,
+          "expected_cells_below_5_fraction": 0.0,
+          "reliable": true
+        }
+      },
+      "surgery_primary": {
+        "total_variation_distance": 0.0021645021645021467,
+        "jensen_shannon_divergence": 3.4761254175554425e-06,
+        "real_proportions": {
+          "0": 0.5844155844155844,
+          "1": 0.4155844155844156
+        },
+        "synthetic_proportions": {
+          "0": 0.5822510822510822,
+          "1": 0.41774891774891776
+        },
+        "chi_square": {
+          "statistic": 0.0,
+          "p_value": 1.0,
+          "dof": 1,
+          "expected_cells_below_5_fraction": 0.0,
+          "reliable": true
+        }
+      },
+      "surgery_lymph_node": {
+        "total_variation_distance": 0.0,
+        "jensen_shannon_divergence": 0.0,
+        "real_proportions": {
+          "0": 0.6038961038961039,
+          "1": 0.3961038961038961
+        },
+        "synthetic_proportions": {
+          "0": 0.6038961038961039,
+          "1": 0.3961038961038961
+        },
+        "chi_square": {
+          "statistic": 0.0,
+          "p_value": 1.0,
+          "dof": 1,
+          "expected_cells_below_5_fraction": 0.0,
+          "reliable": true
+        }
+      },
+      "chemotherapy": {
+        "total_variation_distance": 0.010822510822510789,
+        "jensen_shannon_divergence": 8.455769059330332e-05,
+        "real_proportions": {
+          "1": 0.5086580086580087,
+          "0": 0.49134199134199136
+        },
+        "synthetic_proportions": {
+          "1": 0.5194805194805194,
+          "0": 0.4805194805194805
+        },
+        "chi_square": {
+          "statistic": 0.06931895440159419,
+          "p_value": 0.7923309741221755,
+          "dof": 1,
+          "expected_cells_below_5_fraction": 0.0,
+          "reliable": true
+        }
+      },
+      "radiotherapy": {
+        "total_variation_distance": 0.0,
+        "jensen_shannon_divergence": 0.0,
+        "real_proportions": {
+          "0": 0.9134199134199135,
+          "1": 0.08658008658008658
+        },
+        "synthetic_proportions": {
+          "0": 0.9134199134199135,
+          "1": 0.08658008658008658
+        },
+        "chi_square": {
+          "statistic": 0.0,
+          "p_value": 1.0,
+          "dof": 1,
+          "expected_cells_below_5_fraction": 0.0,
+          "reliable": true
+        }
+      },
+      "mets_bone": {
+        "total_variation_distance": 0.0,
+        "jensen_shannon_divergence": 0.0,
+        "real_proportions": {
+          "0": 0.935064935064935,
+          "1": 0.06493506493506493
+        },
+        "synthetic_proportions": {
+          "0": 0.935064935064935,
+          "1": 0.06493506493506493
+        },
+        "chi_square": {
+          "statistic": 0.0,
+          "p_value": 1.0,
+          "dof": 1,
+          "expected_cells_below_5_fraction": 0.0,
+          "reliable": true
+        }
+      },
+      "mets_brain": {
+        "total_variation_distance": 0.004329004329004366,
+        "jensen_shannon_divergence": 0.00039791987908578187,
+        "real_proportions": {
+          "0": 0.9935064935064936,
+          "1": 0.006493506493506494
+        },
+        "synthetic_proportions": {
+          "0": 0.9891774891774892,
+          "1": 0.010822510822510822
+        },
+        "chi_square": {
+          "statistic": 0.12609170305676856,
+          "p_value": 0.7225192197385841,
+          "dof": 1,
+          "expected_cells_below_5_fraction": 0.5,
+          "reliable": false
+        }
+      },
+      "mets_lung": {
+        "total_variation_distance": 0.0,
+        "jensen_shannon_divergence": 0.0,
+        "real_proportions": {
+          "0": 0.9458874458874459,
+          "1": 0.05411255411255411
+        },
+        "synthetic_proportions": {
+          "0": 0.9458874458874459,
+          "1": 0.05411255411255411
+        },
+        "chi_square": {
+          "statistic": 0.0,
+          "p_value": 1.0,
+          "dof": 1,
+          "expected_cells_below_5_fraction": 0.0,
+          "reliable": true
+        }
+      },
+      "mets_liver": {
+        "total_variation_distance": 0.0,
+        "jensen_shannon_divergence": 0.0,
+        "real_proportions": {
+          "1": 1.0
+        },
+        "synthetic_proportions": {
+          "1": 1.0
+        },
+        "chi_square": {
+          "statistic": 0.0,
+          "p_value": 1.0,
+          "dof": 0,
+          "expected_cells_below_5_fraction": 0.0,
+          "reliable": true
+        }
+      },
+      "os_event": {
+        "total_variation_distance": 0.0,
+        "jensen_shannon_divergence": 0.0,
+        "real_proportions": {
+          "1": 0.6731601731601732,
+          "0": 0.3268398268398268
+        },
+        "synthetic_proportions": {
+          "1": 0.6731601731601732,
+          "0": 0.3268398268398268
+        },
+        "chi_square": {
+          "statistic": 0.0,
+          "p_value": 1.0,
+          "dof": 1,
+          "expected_cells_below_5_fraction": 0.0,
+          "reliable": true
+        }
+      },
+      "grade": {
+        "total_variation_distance": 0.277056277056277,
+        "jensen_shannon_divergence": 0.08837841251587741,
+        "real_proportions": {
+          "1": 0.44372294372294374,
+          "2": 0.27705627705627706,
+          "3": 0.2077922077922078,
+          "4": 0.07142857142857142
+        },
+        "synthetic_proportions": {
+          "1": 0.7207792207792207,
+          "2": 0.2077922077922078,
+          "3": 0.07142857142857142
+        },
+        "chi_square": {
+          "statistic": 98.79240203040669,
+          "p_value": 2.825761202454868e-21,
+          "dof": 3,
+          "expected_cells_below_5_fraction": 0.0,
+          "reliable": true
+        }
+      }
+    },
+    "continuous": {
+      "age_at_diagnosis": {
+        "ks_statistic": 0.05844155844155844,
+        "ks_p_value": 0.40954032974601084,
+        "wasserstein_distance": 0.9242424242424242,
+        "wasserstein_distance_normalized_by_real_iqr": 0.04864433811802232,
+        "real_summary": {
+          "mean": 58.616883116883116,
+          "std": 14.134112454405626,
+          "min": 4.0,
+          "max": 90.0
+        },
+        "synthetic_summary": {
+          "mean": 58.7965367965368,
+          "std": 14.452704959519322,
+          "min": 13.0,
+          "max": 90.0
+        }
+      },
+      "tumor_size_mm": {
+        "ks_statistic": 0.08658008658008658,
+        "ks_p_value": 0.06262030171849903,
+        "wasserstein_distance": 2.7676079870129895,
+        "wasserstein_distance_normalized_by_real_iqr": 0.08386690869736332,
+        "real_summary": {
+          "mean": 52.30952380952381,
+          "std": 28.003584267158995,
+          "min": 0.0,
+          "max": 169.0
+        },
+        "synthetic_summary": {
+          "mean": 54.77454904761905,
+          "std": 27.64483451165737,
+          "min": 0.0,
+          "max": 169.0
+        }
+      },
+      "os_months": {
+        "ks_statistic": 0.07142857142857142,
+        "ks_p_value": 0.18932714131212736,
+        "wasserstein_distance": 4.599567099567099,
+        "wasserstein_distance_normalized_by_real_iqr": 0.07076257076257075,
+        "real_summary": {
+          "mean": 48.701298701298704,
+          "std": 38.65310198012146,
+          "min": 0.0,
+          "max": 143.0
+        },
+        "synthetic_summary": {
+          "mean": 53.28787878787879,
+          "std": 38.68271178108581,
+          "min": 0.0,
+          "max": 143.0
+        }
+      }
+    }
+  },
+  "joint_similarity": {
+    "propensity_pmse": {
+      "pmse": 0.03855409021046834,
+      "expected_pmse_under_null": 0.004058441558441558,
+      "pmse_ratio": 9.4997278278594,
+      "design_matrix_df": 31,
+      "n_combined": 924,
+      "proportion_synthetic": 0.5,
+      "interpretation": "ratio near 1 = real/synthetic indistinguishable by this model; higher = more distinguishable"
+    },
+    "classifier_two_sample_test": {
+      "cv_auc": 0.6643194467869793,
+      "n_splits": 5,
+      "interpretation": "AUC near 0.5 = real/synthetic indistinguishable; near 1.0 = easily distinguishable"
+    }
+  },
+  "correlation_similarity": {
+    "columns_used": [
+      "sex_male",
+      "married",
+      "n_stage_positive",
+      "surgery_primary",
+      "surgery_lymph_node",
+      "chemotherapy",
+      "radiotherapy",
+      "mets_bone",
+      "mets_brain",
+      "mets_lung",
+      "os_event",
+      "grade",
+      "age_at_diagnosis",
+      "tumor_size_mm",
+      "os_months"
+    ],
+    "columns_excluded_zero_variance": [
+      "mets_liver"
+    ],
+    "mean_abs_correlation_difference": 0.044795656252438074,
+    "max_abs_correlation_difference": 0.15420883511357722
+  },
+  "nearest_neighbor_fidelity": {
+    "distance_to_closest_real_record": {
+      "min": 0.08723527664801578,
+      "p1": 0.11524941717882428,
+      "p5": 0.25875972425805754,
+      "median": 0.7056028810470889,
+      "mean": 0.7541231679034899
+    },
+    "exact_duplicate_row_count": 0,
+    "note": "Distances in min-max-scaled, ordinal-encoded feature space (real cohort's range)."
+  }
+}

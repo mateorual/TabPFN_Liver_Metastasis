@@ -1,0 +1,4 @@
+metric,value,interpretation
+brier_score,0.084,Lower is better (0 = perfect); ~prevalence^2 for null
+calibration_intercept,0,0 = perfect intercept; >0 = underestimation
+calibration_slope,1,1 = perfect slope; <1 = overconfident

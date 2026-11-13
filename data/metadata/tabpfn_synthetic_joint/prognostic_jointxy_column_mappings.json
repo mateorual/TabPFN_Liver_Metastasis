@@ -1,0 +1,185 @@
+{
+  "categorical": {
+    "race": {
+      "categories": [
+        "American Indian/Alaska Native",
+        "Asian or Pacific Islander",
+        "Black",
+        "White"
+      ],
+      "category_to_code": {
+        "American Indian/Alaska Native": 0,
+        "Asian or Pacific Islander": 1,
+        "Black": 2,
+        "White": 3
+      },
+      "code_to_category": {
+        "0": "American Indian/Alaska Native",
+        "1": "Asian or Pacific Islander",
+        "2": "Black",
+        "3": "White"
+      }
+    },
+    "histology_prognostic_group": {
+      "categories": [
+        "Carcinoid tumor",
+        "Others"
+      ],
+      "category_to_code": {
+        "Carcinoid tumor": 0,
+        "Others": 1
+      },
+      "code_to_category": {
+        "0": "Carcinoid tumor",
+        "1": "Others"
+      }
+    },
+    "primary_site_group": {
+      "categories": [
+        "Body of pancreas",
+        "Head of pancreas",
+        "Others",
+        "Tail of pancreas"
+      ],
+      "category_to_code": {
+        "Body of pancreas": 0,
+        "Head of pancreas": 1,
+        "Others": 2,
+        "Tail of pancreas": 3
+      },
+      "code_to_category": {
+        "0": "Body of pancreas",
+        "1": "Head of pancreas",
+        "2": "Others",
+        "3": "Tail of pancreas"
+      }
+    },
+    "ajcc_t": {
+      "categories": [
+        "T0",
+        "T1",
+        "T2",
+        "T3",
+        "T4"
+      ],
+      "category_to_code": {
+        "T0": 0,
+        "T1": 1,
+        "T2": 2,
+        "T3": 3,
+        "T4": 4
+      },
+      "code_to_category": {
+        "0": "T0",
+        "1": "T1",
+        "2": "T2",
+        "3": "T3",
+        "4": "T4"
+      }
+    },
+    "ajcc_n": {
+      "categories": [
+        "N0",
+        "N1"
+      ],
+      "category_to_code": {
+        "N0": 0,
+        "N1": 1
+      },
+      "code_to_category": {
+        "0": "N0",
+        "1": "N1"
+      }
+    },
+    "tumor_size_group": {
+      "categories": [
+        "0-26 mm",
+        "26-36 mm",
+        ">36 mm"
+      ],
+      "category_to_code": {
+        "0-26 mm": 0,
+        "26-36 mm": 1,
+        ">36 mm": 2
+      },
+      "code_to_category": {
+        "0": "0-26 mm",
+        "1": "26-36 mm",
+        "2": ">36 mm"
+      }
+    }
+  },
+  "binary": [
+    "sex_male",
+    "married",
+    "n_stage_positive",
+    "surgery_primary",
+    "surgery_lymph_node",
+    "chemotherapy",
+    "radiotherapy",
+    "mets_bone",
+    "mets_brain",
+    "mets_lung",
+    "os_event"
+  ],
+  "ordinal": {
+    "grade": {
+      "observed_values": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "min": 1,
+      "max": 4
+    }
+  },
+  "continuous": {
+    "age_at_diagnosis": {
+      "min": 4.0,
+      "max": 90.0,
+      "is_integer": true
+    },
+    "tumor_size_mm": {
+      "min": 0.0,
+      "max": 169.0,
+      "is_integer": false
+    },
+    "log_os_months": {
+      "min": 0.0,
+      "max": 4.969813299576001,
+      "is_integer": false
+    }
+  },
+  "generation_column_order": [
+    "race",
+    "histology_prognostic_group",
+    "primary_site_group",
+    "ajcc_t",
+    "ajcc_n",
+    "tumor_size_group",
+    "sex_male",
+    "married",
+    "n_stage_positive",
+    "surgery_primary",
+    "surgery_lymph_node",
+    "chemotherapy",
+    "radiotherapy",
+    "mets_bone",
+    "mets_brain",
+    "mets_lung",
+    "os_event",
+    "grade",
+    "age_at_diagnosis",
+    "tumor_size_mm",
+    "log_os_months"
+  ],
+  "categorical_indices": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+  ]
+}

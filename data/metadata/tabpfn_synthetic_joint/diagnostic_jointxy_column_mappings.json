@@ -1,0 +1,203 @@
+{
+  "categorical": {
+    "race": {
+      "categories": [
+        "American Indian/Alaska Native",
+        "Asian or Pacific Islander",
+        "Black",
+        "White"
+      ],
+      "category_to_code": {
+        "American Indian/Alaska Native": 0,
+        "Asian or Pacific Islander": 1,
+        "Black": 2,
+        "White": 3
+      },
+      "code_to_category": {
+        "0": "American Indian/Alaska Native",
+        "1": "Asian or Pacific Islander",
+        "2": "Black",
+        "3": "White"
+      }
+    },
+    "histology_paper": {
+      "categories": [
+        "Atypical carcinoid tumor",
+        "Carcinoid tumor, NOS",
+        "Gastrinoma, malignant",
+        "Glucagonoma, malignant",
+        "Goblet cell carcinoid",
+        "Insulinoma, malignant",
+        "Neuroendocrine carcinoma, NOS",
+        "Pancreatic endocrine tumor, malignant",
+        "Somatostatinoma, malignant",
+        "Vipoma, malignant"
+      ],
+      "category_to_code": {
+        "Atypical carcinoid tumor": 0,
+        "Carcinoid tumor, NOS": 1,
+        "Gastrinoma, malignant": 2,
+        "Glucagonoma, malignant": 3,
+        "Goblet cell carcinoid": 4,
+        "Insulinoma, malignant": 5,
+        "Neuroendocrine carcinoma, NOS": 6,
+        "Pancreatic endocrine tumor, malignant": 7,
+        "Somatostatinoma, malignant": 8,
+        "Vipoma, malignant": 9
+      },
+      "code_to_category": {
+        "0": "Atypical carcinoid tumor",
+        "1": "Carcinoid tumor, NOS",
+        "2": "Gastrinoma, malignant",
+        "3": "Glucagonoma, malignant",
+        "4": "Goblet cell carcinoid",
+        "5": "Insulinoma, malignant",
+        "6": "Neuroendocrine carcinoma, NOS",
+        "7": "Pancreatic endocrine tumor, malignant",
+        "8": "Somatostatinoma, malignant",
+        "9": "Vipoma, malignant"
+      }
+    },
+    "primary_site_group": {
+      "categories": [
+        "Body of pancreas",
+        "Head of pancreas",
+        "Others",
+        "Tail of pancreas"
+      ],
+      "category_to_code": {
+        "Body of pancreas": 0,
+        "Head of pancreas": 1,
+        "Others": 2,
+        "Tail of pancreas": 3
+      },
+      "code_to_category": {
+        "0": "Body of pancreas",
+        "1": "Head of pancreas",
+        "2": "Others",
+        "3": "Tail of pancreas"
+      }
+    },
+    "ajcc_t": {
+      "categories": [
+        "T0",
+        "T1",
+        "T2",
+        "T3",
+        "T4"
+      ],
+      "category_to_code": {
+        "T0": 0,
+        "T1": 1,
+        "T2": 2,
+        "T3": 3,
+        "T4": 4
+      },
+      "code_to_category": {
+        "0": "T0",
+        "1": "T1",
+        "2": "T2",
+        "3": "T3",
+        "4": "T4"
+      }
+    },
+    "ajcc_n": {
+      "categories": [
+        "N0",
+        "N1"
+      ],
+      "category_to_code": {
+        "N0": 0,
+        "N1": 1
+      },
+      "code_to_category": {
+        "0": "N0",
+        "1": "N1"
+      }
+    },
+    "tumor_size_group": {
+      "categories": [
+        "0-26 mm",
+        "26-36 mm",
+        ">36 mm"
+      ],
+      "category_to_code": {
+        "0-26 mm": 0,
+        "26-36 mm": 1,
+        ">36 mm": 2
+      },
+      "code_to_category": {
+        "0": "0-26 mm",
+        "1": "26-36 mm",
+        "2": ">36 mm"
+      }
+    }
+  },
+  "binary": [
+    "sex_male",
+    "married",
+    "n_stage_positive",
+    "surgery_primary",
+    "surgery_lymph_node",
+    "chemotherapy",
+    "radiotherapy",
+    "mets_bone",
+    "mets_brain",
+    "mets_lung",
+    "mets_liver"
+  ],
+  "ordinal": {
+    "grade": {
+      "observed_values": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "min": 1,
+      "max": 4
+    }
+  },
+  "continuous": {
+    "age_at_diagnosis": {
+      "min": 4.0,
+      "max": 90.0,
+      "is_integer": true
+    },
+    "tumor_size_mm": {
+      "min": 0.0,
+      "max": 170.0,
+      "is_integer": false
+    }
+  },
+  "generation_column_order": [
+    "race",
+    "histology_paper",
+    "primary_site_group",
+    "ajcc_t",
+    "ajcc_n",
+    "tumor_size_group",
+    "sex_male",
+    "married",
+    "n_stage_positive",
+    "surgery_primary",
+    "surgery_lymph_node",
+    "chemotherapy",
+    "radiotherapy",
+    "mets_bone",
+    "mets_brain",
+    "mets_lung",
+    "mets_liver",
+    "grade",
+    "age_at_diagnosis",
+    "tumor_size_mm"
+  ],
+  "categorical_indices": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+  ]
+}

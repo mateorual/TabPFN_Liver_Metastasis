@@ -1,0 +1,5 @@
+task,representation,n_selections,epoch_min,epoch_median,epoch_max,metric_a,metric_a_seed_min,metric_a_seed_max,metric_b,metric_b_seed_min,metric_b_seed_max,primary_seed_median_wall_seconds
+diagnostic,clinical,75,11,27.0,50,roc_auc,0.8951656186950305,0.8967871344341931,brier,0.0878185854133753,0.0880112126183118,1.44
+diagnostic,embedding,75,3,7.0,21,roc_auc,0.8957452351569998,0.8973073984838692,brier,0.087925705567702,0.0882608662399509,1.15
+prognostic,clinical,15,69,92.0,154,c_index_uno,0.7025899227259885,0.7092442962184793,ibs_ipcw_12_36,0.1620536565792744,0.1656201702629776,0.64
+prognostic,embedding,15,2,13.0,29,c_index_uno,0.7048860006181229,0.7114642145129891,ibs_ipcw_12_36,0.1587898196863597,0.1661340957498235,0.48

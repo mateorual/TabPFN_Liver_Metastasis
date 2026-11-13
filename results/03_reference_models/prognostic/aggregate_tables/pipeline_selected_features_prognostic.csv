@@ -1,0 +1,6 @@
+variable
+age_at_diagnosis
+histology_prognostic_group
+grade
+n_stage_positive
+surgery_primary

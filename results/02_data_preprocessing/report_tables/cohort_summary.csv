@@ -1,0 +1,10 @@
+characteristic,diagnostic,prognostic
+Patients,"2,672",462
+"Age, median [Q1--Q3], years",60 [50--68],59 [50--69]
+Male sex,"1,442 (54.0\%)",261 (56.5\%)
+Legacy grade 4,60 (2.2\%),33 (7.1\%)
+Brain metastasis at diagnosis,6 (0.2\%),3 (0.6\%)
+Liver metastasis at diagnosis,462 (17.3\%),462 (100.0\%)
+Deaths (all causes),Not a diagnostic outcome,311 (67.3\%)
+Alive / right-censored,Not a diagnostic outcome,151 (32.7\%)
+Recorded survival of zero months,Not a diagnostic outcome,12 (2.6\%)

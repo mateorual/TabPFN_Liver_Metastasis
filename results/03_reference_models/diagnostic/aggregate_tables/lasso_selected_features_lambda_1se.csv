@@ -1,0 +1,12 @@
+term,coefficient,lambda_used,lambda_value,original_variable
+surgery_primaryYes,-1.524712223915893,lambda.1se,0.018183263265525457,surgery_primary
+chemotherapyYes,1.3704810616244067,lambda.1se,0.018183263265525457,chemotherapy
+mets_boneYes,0.8345930376444871,lambda.1se,0.018183263265525457,mets_bone
+ajcc_tT1,-0.6933012564532618,lambda.1se,0.018183263265525457,ajcc_t
+n_stage_positiveN1,0.5252375705632705,lambda.1se,0.018183263265525457,n_stage_positive
+tumor_size_group>36 mm,0.44009038180155474,lambda.1se,0.018183263265525457,tumor_size_group
+grade3,0.28447527806103773,lambda.1se,0.018183263265525457,grade
+ajcc_tT3,0.22332349702074625,lambda.1se,0.018183263265525457,ajcc_t
+primary_site_groupTail of pancreas,0.12965450371032408,lambda.1se,0.018183263265525457,primary_site_group
+"histology_paperNeuroendocrine carcinoma, NOS",0.08453582813350481,lambda.1se,0.018183263265525457,histology_paper
+grade2,0.008426123019874249,lambda.1se,0.018183263265525457,grade

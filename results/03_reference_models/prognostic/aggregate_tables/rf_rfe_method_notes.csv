@@ -1,0 +1,2 @@
+section,method_used,note
+Figure 4 analogue (RF/RFE RMSE = CV 1-C-index),kfold_cv_1_minus_cindex_5fold,"The 'RMSE (Cross-Validation)' metric in Li et al. (2023) Figure 4 is reproduced here as 5-fold CV error = 1 - Harrell's C-index. For each k-variable model: fit RSF on training folds, extract risk scores (ensemble mortality for rfsrc; negative integrated survival for ranger), compute concordance on the held-out fold, then average 1 - C-index across folds. RF/RFE candidate mode: all_estimable."

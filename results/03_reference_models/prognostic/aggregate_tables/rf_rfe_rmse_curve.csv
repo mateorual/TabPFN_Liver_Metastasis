@@ -1,0 +1,18 @@
+k,rmse_cv_mean,rmse_cv_sd,n_obs_mean,top_vars,selected
+1,0.38113266231341786,0.07044447462337655,323,grade,FALSE
+2,0.28901094392660437,0.024929461493630053,323,grade; surgery_primary,FALSE
+3,0.2852284699399958,0.03670407616191802,323,grade; surgery_primary; age_at_diagnosis,FALSE
+4,0.28469850641133115,0.0385014201851398,323,grade; surgery_primary; age_at_diagnosis; surgery_lymph_node,FALSE
+5,0.2803457283522829,0.02812125701317445,323,grade; surgery_primary; age_at_diagnosis; surgery_lymph_node; histology_prognostic_group,FALSE
+6,0.28333892393560084,0.02007577336368483,323,grade; surgery_primary; age_at_diagnosis; surgery_lymph_node; histology_prognostic_group; chemotherapy,FALSE
+7,0.2701881933884879,0.016316125043363532,323,grade; surgery_primary; age_at_diagnosis; surgery_lymph_node; histology_prognostic_group; chemotherapy; n_stage_positive,FALSE
+8,0.27381874071935974,0.03091244290660499,323,grade; surgery_primary; age_at_diagnosis; surgery_lymph_node; histology_prognostic_group; chemotherapy; n_stage_positive; primary_site_group,FALSE
+9,0.27622094487694254,0.028033162117996665,323,grade; surgery_primary; age_at_diagnosis; surgery_lymph_node; histology_prognostic_group; chemotherapy; n_stage_positive; primary_site_group; mets_lung,FALSE
+10,0.273252968536302,0.024581054433033458,323,grade; surgery_primary; age_at_diagnosis; surgery_lymph_node; histology_prognostic_group; chemotherapy; n_stage_positive; primary_site_group; mets_lung; race,FALSE
+11,0.26872779875098274,0.023535152399571973,323,grade; surgery_primary; age_at_diagnosis; surgery_lymph_node; histology_prognostic_group; chemotherapy; n_stage_positive; primary_site_group; mets_lung; race; sex_male,FALSE
+12,0.26496735571763275,0.017238666579671026,323,grade; surgery_primary; age_at_diagnosis; surgery_lymph_node; histology_prognostic_group; chemotherapy; n_stage_positive; primary_site_group; mets_lung; race; sex_male; mets_bone,FALSE
+13,0.2631103583834117,0.016589723371261453,323,grade; surgery_primary; age_at_diagnosis; surgery_lymph_node; histology_prognostic_group; chemotherapy; n_stage_positive; primary_site_group; mets_lung; race; sex_male; mets_bone; mets_brain,FALSE
+14,0.26813013266614805,0.018239906842421223,323,grade; surgery_primary; age_at_diagnosis; surgery_lymph_node; histology_prognostic_group; chemotherapy; n_stage_positive; primary_site_group; mets_lung; race; sex_male; mets_bone; mets_brain; radiotherapy,FALSE
+15,0.2666898706641494,0.024702778493927675,323,grade; surgery_primary; age_at_diagnosis; surgery_lymph_node; histology_prognostic_group; chemotherapy; n_stage_positive; primary_site_group; mets_lung; race; sex_male; mets_bone; mets_brain; radiotherapy; ajcc_t,FALSE
+16,0.26294946094792604,0.02354191855879853,323,grade; surgery_primary; age_at_diagnosis; surgery_lymph_node; histology_prognostic_group; chemotherapy; n_stage_positive; primary_site_group; mets_lung; race; sex_male; mets_bone; mets_brain; radiotherapy; ajcc_t; married,TRUE
+17,0.2643578866156748,0.01617919645849545,323,grade; surgery_primary; age_at_diagnosis; surgery_lymph_node; histology_prognostic_group; chemotherapy; n_stage_positive; primary_site_group; mets_lung; race; sex_male; mets_bone; mets_brain; radiotherapy; ajcc_t; married; tumor_size_group,FALSE

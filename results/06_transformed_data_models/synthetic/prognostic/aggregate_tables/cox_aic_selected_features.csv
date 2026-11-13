@@ -1,0 +1,12 @@
+variable
+age_at_diagnosis
+tumor_size_group
+sex_male
+married
+grade
+primary_site_group
+surgery_primary
+surgery_lymph_node
+radiotherapy
+mets_bone
+mets_brain

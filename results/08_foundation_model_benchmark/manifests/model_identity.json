@@ -1,0 +1,55 @@
+{
+  "generated_utc": "2026-10-12T12:55:23.491978+00:00",
+  "identities": {
+    "tabpfn_classifier": {
+      "filename": "tabpfn-v3-classifier-v3_default.ckpt",
+      "sha256": "d0d865d54dfbc524f5703104be90620182dca7e5fb2c16de72e9959ea18f3988",
+      "requested_generation": "v3",
+      "verified": true
+    },
+    "tabpfn_landmark_survival": {
+      "filename": "tabpfn-v3-classifier-v3_default.ckpt",
+      "sha256": "d0d865d54dfbc524f5703104be90620182dca7e5fb2c16de72e9959ea18f3988",
+      "requested_generation": "v3",
+      "verified": true
+    },
+    "tabicl_v2": {
+      "filename": "tabicl-classifier-v2-20260212.ckpt",
+      "sha256": "bdc7dbd5e4ff21f8f0456fcf90c6b7cdf72dbea960f2d05b19bec19f9b3d4ed0",
+      "hf_repo": "jingang/TabICL",
+      "snapshot": "4dcd344ece2c00be9e831fdd35bed57b5ad83e19"
+    },
+    "tabdpt": {
+      "filename": "tabdpt1_2.safetensors",
+      "sha256": "06680220fd66c4524051706b98c1c659a674d19d3a766cd0bb276505e99faccd",
+      "hf_repo": "Layer6/TabDPT",
+      "snapshot": "a5ca6e01c0fa09ec68c73e958e5199d1932abb3a"
+    },
+    "survivalpfn_native": {
+      "checkpoint_sha256": "a7b844809ad2dc5a675384704f7b6d85dfb88e96b82031c4542ce90a4fd439bb",
+      "source_tree_sha256": "fdcac51ca1ee97769544736e9a0ef8bffb6cfc15928df70e4f3d2331bfa5ded4",
+      "code_revision": "c8a47d84724274e7d42d49bad2cb62721c3c90be",
+      "verified": true
+    },
+    "package_versions": {
+      "torch": "2.6.0+cu124",
+      "tabpfn": "8.0.8",
+      "tabicl": "2.1.1",
+      "tabdpt": "1.2.0",
+      "scikit-learn": "1.6.1",
+      "scikit-survival": "0.24.1",
+      "lifelines": "0.30.3",
+      "xgboost": "3.1.3",
+      "statsmodels": "0.14.6",
+      "numpy": "1.26.4",
+      "pandas": "2.3.3"
+    }
+  },
+  "survivalpfn_rebatching": {
+    "risk_max_abs_diff": 0.0003452301025390625,
+    "survival_max_abs_diff": 9.238719940185547e-07,
+    "bitwise_invariant": false,
+    "frozen_policy": "one predict call per outer-test split, rows in test-ID order"
+  },
+  "tabdpt_note": "two snapshots are cached; refs/main resolves a5ca6e01c0fa09ec68c73e958e5199d1932abb3a and only that file is loaded"
+}

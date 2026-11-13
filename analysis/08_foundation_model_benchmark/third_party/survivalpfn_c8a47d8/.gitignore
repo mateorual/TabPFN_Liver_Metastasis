@@ -1,0 +1,33 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.ipynb_checkpoints
+.pytest_cache/
+.ruff_cache/
+
+# Environments
+venv/
+.env
+.cache
+
+# Runs and outputs
+output/
+outputs/
+logs/
+wandb/
+!conf/wandb/
+notebook_output*
+**/temp/**
+**/.temp**
+tmp/
+.tmp*
+.coverage*
+
+# Model checkpoints
+*.pt
+
+# Editor / local config
+.vscode/
+.claude/
+**/CLAUDE.local.md

@@ -1,0 +1,5 @@
+cohort,event,Freq,cohort_total
+Training,0,104,323
+Internal validation,0,47,139
+Training,1,219,323
+Internal validation,1,92,139

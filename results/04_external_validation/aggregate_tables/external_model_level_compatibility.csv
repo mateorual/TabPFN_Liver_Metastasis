@@ -1,0 +1,11 @@
+task,model,n_cohort,n_ok,n_missing_predictor,n_incompatible_level,incompatibilities_json
+diagnostic,nomogram_figure,30,29,1,0,[]
+diagnostic,paper_text,30,29,1,0,[]
+diagnostic,pipeline_selected,30,29,1,0,[]
+diagnostic,tnm_baseline,30,29,1,0,[]
+prognostic,nomogram_figure,11,11,0,0,[]
+prognostic,tn_baseline,11,10,1,0,[]
+prognostic,text_screened,11,10,1,0,[]
+prognostic,cox_aic_selected,11,8,3,0,[]
+prognostic,rf_rfe_selected,11,8,3,0,[]
+prognostic,pipeline_selected,11,10,1,0,[]

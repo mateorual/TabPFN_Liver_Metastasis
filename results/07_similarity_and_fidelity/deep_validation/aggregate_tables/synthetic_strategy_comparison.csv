@@ -1,0 +1,8 @@
+validation_domain,synthetic_strategy,mean_distortion_score,n_high,n_items,n_active_strategies,comparison_note
+category_preservation,jointxy,0.2532212257962368,10,52,1,single active synthetic strategy - no cross-strategy comparison is made; mean_distortion_score is the absolute distortion of the active strategy
+conditional_dependence,jointxy,0.1880908443287912,10,51,1,single active synthetic strategy - no cross-strategy comparison is made; mean_distortion_score is the absolute distortion of the active strategy
+interaction,jointxy,0.0826801359695564,2,11,1,single active synthetic strategy - no cross-strategy comparison is made; mean_distortion_score is the absolute distortion of the active strategy
+model_behavior,jointxy,0.12012651029121936,3,8,1,single active synthetic strategy - no cross-strategy comparison is made; mean_distortion_score is the absolute distortion of the active strategy
+subgroup_outcome,jointxy,0.19509335028465452,5,42,1,single active synthetic strategy - no cross-strategy comparison is made; mean_distortion_score is the absolute distortion of the active strategy
+subgroup_size,jointxy,0.183689732371411,7,44,1,single active synthetic strategy - no cross-strategy comparison is made; mean_distortion_score is the absolute distortion of the active strategy
+survival_curve,jointxy,0.4601737410506006,9,28,1,single active synthetic strategy - no cross-strategy comparison is made; mean_distortion_score is the absolute distortion of the active strategy

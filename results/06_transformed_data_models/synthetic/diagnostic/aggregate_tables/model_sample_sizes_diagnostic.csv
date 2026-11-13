@@ -1,0 +1,17 @@
+"script","model_name","n_total","n_used","n_dropped"
+"02_lasso","lasso_cv",3000,3000,0
+"03_rf","random_forest",3000,3000,0
+"04_logistic","univariate_all",3000,3000,0
+"04_logistic","paper_text",3000,3000,0
+"04_logistic","nomogram_figure",3000,3000,0
+"04_logistic","pipeline_mv",3000,3000,0
+"04_logistic","pipeline_selected",3000,3000,0
+"05_nomogram","lrm_nomogram_figure",3000,3000,0
+"06_roc","paper_text",3000,3000,0
+"06_roc","nomogram_figure",3000,3000,0
+"06_roc","pipeline_selected",3000,3000,0
+"06_roc","tnm_baseline",3000,3000,0
+"08_dca","paper_text",3000,3000,0
+"08_dca","nomogram_figure",3000,3000,0
+"08_dca","pipeline_selected",3000,3000,0
+"08_dca","tnm_baseline",3000,3000,0

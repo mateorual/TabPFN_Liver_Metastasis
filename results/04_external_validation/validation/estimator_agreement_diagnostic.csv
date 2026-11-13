@@ -1,0 +1,9 @@
+model,evaluation_set,max_abs_diff_fast_vs_package
+nomogram_figure,model_specific,0
+paper_text,model_specific,1.1102230246251565e-16
+pipeline_selected,model_specific,0
+tnm_baseline,model_specific,0
+nomogram_figure,common_all_diagnostic_models,0
+paper_text,common_all_diagnostic_models,1.1102230246251565e-16
+pipeline_selected,common_all_diagnostic_models,0
+tnm_baseline,common_all_diagnostic_models,0

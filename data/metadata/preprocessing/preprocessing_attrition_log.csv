@@ -1,0 +1,12 @@
+step_number,step_name,rows_before,rows_removed,rows_after,removal_reason
+0,Raw input,5761,0,5761,Initial dataset
+1,Diagnosis year 2010-2016,5761,0,5761,Excluded cases outside 2010-2016 diagnosis year range
+2,Primary cancer filter (first_malignant_indicator),5761,1150,4611,Excluded non-first or non-primary-malignant records
+3,Accepted pancreatic primary sites (C25.0-C25.9),4611,0,4611,Excluded records with site codes outside accepted PNET sites
+4,Accepted ICD-O-3 histology codes,4611,0,4611,Excluded records with histology codes outside accepted PNET codes
+5,Exclude unclear cause of death,4611,26,4585,Removed records with missing/unknown COD classification
+6,Exclude incomplete follow-up,4585,10,4575,Removed records with missing/non-numeric survival months or invalid vital status
+7,Exclude records with unknown required features,4575,1903,2672,Removed records missing any of 20 required analytic fields
+8,Final full analytic dataset,2672,0,2672,seer_modeling_input_full.csv
+9,Diagnostic dataset (all patients),2672,0,2672,seer_diagnostic_input.csv
+10,Prognostic dataset (liver mets only),462,0,462,seer_prognostic_input.csv

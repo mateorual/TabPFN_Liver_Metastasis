@@ -1,0 +1,44 @@
+# Python and test caches
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# R session files
+.Rhistory
+.RData
+.Rproj.user/
+
+# Local environments and editor files
+.venv/
+venv/
+.env
+.env.*
+.idea/
+.vscode/
+
+# Restricted patient-level and derived data
+data/restricted/
+
+# Runtime outputs. Curated aggregate outputs belong under results/.
+analysis/**/outputs/
+analysis/**/checkpoints/
+analysis/**/logs/
+analysis/**/*.tmp-*
+
+# Report build products; the final PDF is stored at report/final_report.pdf
+report/source/build/
+report/source/*.aux
+report/source/*.bbl
+report/source/*.bcf
+report/source/*.blg
+report/source/*.log
+report/source/*.out
+report/source/*.run.xml
+report/source/*.toc
+report/source/unified_report.pdf
+
+# Operating-system files
+Thumbs.db
+.DS_Store

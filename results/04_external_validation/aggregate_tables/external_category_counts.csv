@@ -1,0 +1,98 @@
+stage,variable,category,count,percent
+source_normalized,race,White,30,100.0
+source_normalized,sex,Female,15,50.0
+source_normalized,sex,Male,15,50.0
+source_normalized,marital,Domestic partner,2,6.7
+source_normalized,marital,Married,17,56.7
+source_normalized,marital,Unkown,11,36.7
+source_normalized,histology,8151/3,1,3.3
+source_normalized,histology,8152/3,1,3.3
+source_normalized,histology,8153/3,1,3.3
+source_normalized,histology,8240/3,24,80.0
+source_normalized,histology,8246/3,2,6.7
+source_normalized,histology,8249/3,1,3.3
+source_normalized,grade,I,11,36.7
+source_normalized,grade,II,15,50.0
+source_normalized,grade,III,2,6.7
+source_normalized,grade,IV,2,6.7
+source_normalized,primary_site,C25.0,11,36.7
+source_normalized,primary_site,C25.1,7,23.3
+source_normalized,primary_site,C25.2,11,36.7
+source_normalized,primary_site,C25.4,1,3.3
+source_normalized,ajcc_t,T1,8,26.7
+source_normalized,ajcc_t,T2,9,30.0
+source_normalized,ajcc_t,T3,8,26.7
+source_normalized,ajcc_t,T4,5,16.7
+source_normalized,ajcc_n,Missing,1,3.3
+source_normalized,ajcc_n,N0,18,60.0
+source_normalized,ajcc_n,N1,11,36.7
+source_normalized,surgery_primary,No,10,33.3
+source_normalized,surgery_primary,Yes,20,66.7
+source_normalized,surgery_lymph_node,No,12,40.0
+source_normalized,surgery_lymph_node,Yes,18,60.0
+source_normalized,radiotherapy,No,23,76.7
+source_normalized,radiotherapy,Yes,7,23.3
+source_normalized,chemotherapy,No,17,56.7
+source_normalized,chemotherapy,Yes,13,43.3
+source_normalized,tumor_size,<20,1,3.3
+source_normalized,tumor_size,>40,3,10.0
+source_normalized,tumor_size,exact_numeric_mm,26,86.7
+source_normalized,mets_bone,No,29,96.7
+source_normalized,mets_bone,Yes,1,3.3
+source_normalized,mets_brain,No,30,100.0
+source_normalized,mets_lung,No,30,100.0
+source_normalized,mets_liver,No,19,63.3
+source_normalized,mets_liver,Yes,11,36.7
+source_normalized,vital_status,Alive,22,73.3
+source_normalized,vital_status,Dead,8,26.7
+prepared,sex_male,0,15,50.0
+prepared,sex_male,1,15,50.0
+prepared,race,White,30,100.0
+prepared,married,0,2,6.7
+prepared,married,1,17,56.7
+prepared,married,<missing>,11,36.7
+prepared,histology_paper,Atypical carcinoid tumor,1,3.3
+prepared,histology_paper,"Carcinoid tumor, NOS",24,80.0
+prepared,histology_paper,"Gastrinoma, malignant",1,3.3
+prepared,histology_paper,"Glucagonoma, malignant",1,3.3
+prepared,histology_paper,"Insulinoma, malignant",1,3.3
+prepared,histology_paper,"Neuroendocrine carcinoma, NOS",2,6.7
+prepared,histology_prognostic_group,Carcinoid tumor,25,83.3
+prepared,histology_prognostic_group,Others,5,16.7
+prepared,grade,1,11,36.7
+prepared,grade,2,15,50.0
+prepared,grade,3,2,6.7
+prepared,grade,4,2,6.7
+prepared,primary_site_group,Body of pancreas,7,23.3
+prepared,primary_site_group,Head of pancreas,11,36.7
+prepared,primary_site_group,Others,1,3.3
+prepared,primary_site_group,Tail of pancreas,11,36.7
+prepared,ajcc_t,T1,8,26.7
+prepared,ajcc_t,T2,9,30.0
+prepared,ajcc_t,T3,8,26.7
+prepared,ajcc_t,T4,5,16.7
+prepared,ajcc_n,<missing>,1,3.3
+prepared,ajcc_n,N0,18,60.0
+prepared,ajcc_n,N1,11,36.7
+prepared,n_stage_positive,0,18,60.0
+prepared,n_stage_positive,1,11,36.7
+prepared,n_stage_positive,<missing>,1,3.3
+prepared,surgery_primary,0,10,33.3
+prepared,surgery_primary,1,20,66.7
+prepared,surgery_lymph_node,0,12,40.0
+prepared,surgery_lymph_node,1,18,60.0
+prepared,chemotherapy,0,17,56.7
+prepared,chemotherapy,1,13,43.3
+prepared,radiotherapy,0,23,76.7
+prepared,radiotherapy,1,7,23.3
+prepared,tumor_size_group,0-26 mm,10,33.3
+prepared,tumor_size_group,26-36 mm,5,16.7
+prepared,tumor_size_group,>36 mm,15,50.0
+prepared,mets_bone,0,29,96.7
+prepared,mets_bone,1,1,3.3
+prepared,mets_brain,0,30,100.0
+prepared,mets_lung,0,30,100.0
+prepared,mets_liver,0,19,63.3
+prepared,mets_liver,1,11,36.7
+prepared,os_event,0,22,73.3
+prepared,os_event,1,8,26.7

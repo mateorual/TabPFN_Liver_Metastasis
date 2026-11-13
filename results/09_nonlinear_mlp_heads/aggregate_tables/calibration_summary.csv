@@ -1,0 +1,84 @@
+task,block,model_id,representation,augmentation_size,model_seed,summary,n_unit_horizon_cells,n_complete_three_group_cells,primary_mean_abs_gap_complete_cells,n_partial_cells,partial_mean_abs_gap_separately_labelled,support_note,n_repeats,calibration_slope_mean,calibration_intercept_mean,calibration_in_the_large_diff_mean
+prognostic,B,cox_elastic_net,clinical,0,20230529,km_mean_abs_gap,15.0,15.0,0.06878358577970586,0.0,,primary uses complete three-group cells only; comparisons use common complete cells,,,,
+prognostic,B,cox_elastic_net,clinical,1000,20230529,km_mean_abs_gap,15.0,15.0,0.08396829304281507,0.0,,primary uses complete three-group cells only; comparisons use common complete cells,,,,
+prognostic,B,cox_elastic_net,clinical,5000,20230529,km_mean_abs_gap,15.0,15.0,0.09307062261936119,0.0,,primary uses complete three-group cells only; comparisons use common complete cells,,,,
+prognostic,B,cox_elastic_net,clinical,10000,20230529,km_mean_abs_gap,15.0,15.0,0.08841357179951716,0.0,,primary uses complete three-group cells only; comparisons use common complete cells,,,,
+prognostic,B,cox_elastic_net,clinical,15000,20230529,km_mean_abs_gap,15.0,15.0,0.08636687935385,0.0,,primary uses complete three-group cells only; comparisons use common complete cells,,,,
+prognostic,B,mlp_clinical,clinical,0,20230529,km_mean_abs_gap,15.0,15.0,0.064953650305523,0.0,,primary uses complete three-group cells only; comparisons use common complete cells,,,,
+prognostic,B,mlp_clinical,clinical,0,20230530,km_mean_abs_gap,15.0,15.0,0.04684352635751842,0.0,,primary uses complete three-group cells only; comparisons use common complete cells,,,,
+prognostic,B,mlp_clinical,clinical,0,20230531,km_mean_abs_gap,15.0,15.0,0.05446767247305826,0.0,,primary uses complete three-group cells only; comparisons use common complete cells,,,,
+prognostic,B,mlp_clinical,clinical,1000,20230529,km_mean_abs_gap,15.0,15.0,0.07639818375325366,0.0,,primary uses complete three-group cells only; comparisons use common complete cells,,,,
+prognostic,B,mlp_clinical,clinical,1000,20230530,km_mean_abs_gap,15.0,15.0,0.07174882024839621,0.0,,primary uses complete three-group cells only; comparisons use common complete cells,,,,
+prognostic,B,mlp_clinical,clinical,1000,20230531,km_mean_abs_gap,15.0,15.0,0.06925368529252464,0.0,,primary uses complete three-group cells only; comparisons use common complete cells,,,,
+prognostic,B,mlp_clinical,clinical,5000,20230529,km_mean_abs_gap,15.0,15.0,0.08446061473273328,0.0,,primary uses complete three-group cells only; comparisons use common complete cells,,,,
+prognostic,B,mlp_clinical,clinical,5000,20230530,km_mean_abs_gap,15.0,15.0,0.08052517543422226,0.0,,primary uses complete three-group cells only; comparisons use common complete cells,,,,
+prognostic,B,mlp_clinical,clinical,5000,20230531,km_mean_abs_gap,15.0,15.0,0.08049108734572401,0.0,,primary uses complete three-group cells only; comparisons use common complete cells,,,,
+prognostic,B,mlp_clinical,clinical,10000,20230529,km_mean_abs_gap,15.0,15.0,0.09016166312534338,0.0,,primary uses complete three-group cells only; comparisons use common complete cells,,,,
+prognostic,B,mlp_clinical,clinical,10000,20230530,km_mean_abs_gap,15.0,15.0,0.0750629707376881,0.0,,primary uses complete three-group cells only; comparisons use common complete cells,,,,
+prognostic,B,mlp_clinical,clinical,10000,20230531,km_mean_abs_gap,15.0,15.0,0.08058812198548411,0.0,,primary uses complete three-group cells only; comparisons use common complete cells,,,,
+prognostic,B,mlp_clinical,clinical,15000,20230529,km_mean_abs_gap,15.0,15.0,0.08618221373548338,0.0,,primary uses complete three-group cells only; comparisons use common complete cells,,,,
+prognostic,B,mlp_clinical,clinical,15000,20230530,km_mean_abs_gap,15.0,15.0,0.07789646879071728,0.0,,primary uses complete three-group cells only; comparisons use common complete cells,,,,
+prognostic,B,mlp_clinical,clinical,15000,20230531,km_mean_abs_gap,15.0,15.0,0.08568760820668124,0.0,,primary uses complete three-group cells only; comparisons use common complete cells,,,,
+prognostic,B,random_survival_forest_or_fallback,clinical,0,20230529,km_mean_abs_gap,15.0,15.0,0.04432193114783918,0.0,,primary uses complete three-group cells only; comparisons use common complete cells,,,,
+prognostic,B,random_survival_forest_or_fallback,clinical,1000,20230529,km_mean_abs_gap,15.0,15.0,0.04401822119143668,0.0,,primary uses complete three-group cells only; comparisons use common complete cells,,,,
+prognostic,B,random_survival_forest_or_fallback,clinical,5000,20230529,km_mean_abs_gap,15.0,15.0,0.03801763780084333,0.0,,primary uses complete three-group cells only; comparisons use common complete cells,,,,
+prognostic,B,random_survival_forest_or_fallback,clinical,10000,20230529,km_mean_abs_gap,15.0,15.0,0.037657424397951375,0.0,,primary uses complete three-group cells only; comparisons use common complete cells,,,,
+prognostic,B,random_survival_forest_or_fallback,clinical,15000,20230529,km_mean_abs_gap,15.0,15.0,0.044012346830174,0.0,,primary uses complete three-group cells only; comparisons use common complete cells,,,,
+prognostic,B,survivalpfn_native,clinical,0,20230529,km_mean_abs_gap,15.0,15.0,0.05218742262270289,0.0,,primary uses complete three-group cells only; comparisons use common complete cells,,,,
+prognostic,B,survivalpfn_native,clinical,1000,20230529,km_mean_abs_gap,15.0,15.0,0.04995714221745957,0.0,,primary uses complete three-group cells only; comparisons use common complete cells,,,,
+prognostic,B,survivalpfn_native,clinical,5000,20230529,km_mean_abs_gap,15.0,15.0,0.05348762250558769,0.0,,primary uses complete three-group cells only; comparisons use common complete cells,,,,
+prognostic,B,survivalpfn_native,clinical,10000,20230529,km_mean_abs_gap,15.0,15.0,0.05483072505519974,0.0,,primary uses complete three-group cells only; comparisons use common complete cells,,,,
+prognostic,B,survivalpfn_native,clinical,15000,20230529,km_mean_abs_gap,15.0,15.0,0.05433671616978985,0.0,,primary uses complete three-group cells only; comparisons use common complete cells,,,,
+prognostic,B,tabpfn_landmark_survival,clinical,0,20230529,km_mean_abs_gap,15.0,15.0,0.054039100281411255,0.0,,primary uses complete three-group cells only; comparisons use common complete cells,,,,
+prognostic,B,tabpfn_landmark_survival,clinical,1000,20230529,km_mean_abs_gap,15.0,15.0,0.05531949296073741,0.0,,primary uses complete three-group cells only; comparisons use common complete cells,,,,
+prognostic,B,tabpfn_landmark_survival,clinical,5000,20230529,km_mean_abs_gap,15.0,15.0,0.05364710260445722,0.0,,primary uses complete three-group cells only; comparisons use common complete cells,,,,
+prognostic,B,tabpfn_landmark_survival,clinical,10000,20230529,km_mean_abs_gap,15.0,15.0,0.05269967005509833,0.0,,primary uses complete three-group cells only; comparisons use common complete cells,,,,
+prognostic,B,tabpfn_landmark_survival,clinical,15000,20230529,km_mean_abs_gap,15.0,15.0,0.049231766724544324,0.0,,primary uses complete three-group cells only; comparisons use common complete cells,,,,
+prognostic,C,mlp_embedding,embedding,0,20230529,km_mean_abs_gap,15.0,15.0,0.07976064660736447,0.0,,primary uses complete three-group cells only; comparisons use common complete cells,,,,
+prognostic,C,mlp_embedding,embedding,0,20230530,km_mean_abs_gap,15.0,15.0,0.0961909714885222,0.0,,primary uses complete three-group cells only; comparisons use common complete cells,,,,
+prognostic,C,mlp_embedding,embedding,0,20230531,km_mean_abs_gap,15.0,15.0,0.057087656747702296,0.0,,primary uses complete three-group cells only; comparisons use common complete cells,,,,
+prognostic,C,tabpfn_embedding_cox,embedding,0,20230529,km_mean_abs_gap,15.0,14.0,0.04565025501650823,1.0,0.04552598970460908,primary uses complete three-group cells only; comparisons use common complete cells,,,,
+diagnostic,B,mlp_clinical,clinical,0,20230529,pooled_oof_per_repeat_calibration,,,,,,,5.0,0.8933250984843527,0.0627025349217151,-0.005018213883319578
+diagnostic,B,mlp_clinical,clinical,0,20230530,pooled_oof_per_repeat_calibration,,,,,,,5.0,0.8910817499769635,0.0422312989570955,-0.0034200544010264677
+diagnostic,B,mlp_clinical,clinical,0,20230531,pooled_oof_per_repeat_calibration,,,,,,,5.0,0.8866666125914687,0.058685783552741455,-0.004693614190633366
+diagnostic,B,mlp_clinical,clinical,1000,20230529,pooled_oof_per_repeat_calibration,,,,,,,5.0,0.8663651709033857,0.04812356906935751,-0.003769769177737925
+diagnostic,B,mlp_clinical,clinical,1000,20230530,pooled_oof_per_repeat_calibration,,,,,,,5.0,0.8578276235200747,0.03327325668674082,-0.0026169523966214246
+diagnostic,B,mlp_clinical,clinical,1000,20230531,pooled_oof_per_repeat_calibration,,,,,,,5.0,0.8537370988856061,0.05654252198825473,-0.004363155862814455
+diagnostic,B,mlp_clinical,clinical,5000,20230529,pooled_oof_per_repeat_calibration,,,,,,,5.0,0.8541798008307824,0.043200199537450065,-0.0032391851805542936
+diagnostic,B,mlp_clinical,clinical,5000,20230530,pooled_oof_per_repeat_calibration,,,,,,,5.0,0.8565746788182285,0.023038533914649436,-0.0017581576149542256
+diagnostic,B,mlp_clinical,clinical,5000,20230531,pooled_oof_per_repeat_calibration,,,,,,,5.0,0.8629978687599398,-0.006063254187678229,0.0004613657514611957
+diagnostic,B,mlp_clinical,clinical,10000,20230529,pooled_oof_per_repeat_calibration,,,,,,,5.0,0.8629717949630138,0.010264797013888863,-0.0008113164321802257
+diagnostic,B,mlp_clinical,clinical,10000,20230530,pooled_oof_per_repeat_calibration,,,,,,,5.0,0.8667597304119437,0.0015373041262065235,-3.040500009311442e-05
+diagnostic,B,mlp_clinical,clinical,10000,20230531,pooled_oof_per_repeat_calibration,,,,,,,5.0,0.8703041075114332,-0.029961976723343654,0.0024079444707670373
+diagnostic,B,mlp_clinical,clinical,15000,20230529,pooled_oof_per_repeat_calibration,,,,,,,5.0,0.8718083327594528,-0.0330469642978886,0.002703005421018939
+diagnostic,B,mlp_clinical,clinical,15000,20230530,pooled_oof_per_repeat_calibration,,,,,,,5.0,0.8668282789720086,-0.016866060119480802,0.0014549965560396838
+diagnostic,B,mlp_clinical,clinical,15000,20230531,pooled_oof_per_repeat_calibration,,,,,,,5.0,0.860615902634984,-0.029512917241031184,0.002386476053151021
+diagnostic,B,regularized_logistic,clinical,0,20230529,pooled_oof_per_repeat_calibration,,,,,,,5.0,0.9601069834006699,0.004133667309730253,-0.00035581715885637524
+diagnostic,B,regularized_logistic,clinical,1000,20230529,pooled_oof_per_repeat_calibration,,,,,,,5.0,0.9369762501197666,0.00353170573439638,-0.00030065494932789984
+diagnostic,B,regularized_logistic,clinical,5000,20230529,pooled_oof_per_repeat_calibration,,,,,,,5.0,0.9246942344426156,0.004665870993142725,-0.0003911563099276205
+diagnostic,B,regularized_logistic,clinical,10000,20230529,pooled_oof_per_repeat_calibration,,,,,,,5.0,0.9242998660073128,0.0037488616464505936,-0.0003132942307731201
+diagnostic,B,regularized_logistic,clinical,15000,20230529,pooled_oof_per_repeat_calibration,,,,,,,5.0,0.9232356799279604,0.0033620723137644227,-0.00028283623953174184
+diagnostic,B,tabdpt,clinical,0,20230529,pooled_oof_per_repeat_calibration,,,,,,,5.0,1.0012380207328815,0.008099659156092325,-0.0007049010861739813
+diagnostic,B,tabdpt,clinical,1000,20230529,pooled_oof_per_repeat_calibration,,,,,,,5.0,0.9746099129527886,-0.0020147043418471166,0.00017143299940467483
+diagnostic,B,tabdpt,clinical,5000,20230529,pooled_oof_per_repeat_calibration,,,,,,,5.0,0.9600161652405493,-0.023372998120726483,0.002006848410038925
+diagnostic,B,tabdpt,clinical,10000,20230529,pooled_oof_per_repeat_calibration,,,,,,,5.0,0.9655075769471859,-0.05085041711808087,0.004382053698188443
+diagnostic,B,tabdpt,clinical,15000,20230529,pooled_oof_per_repeat_calibration,,,,,,,5.0,0.9657423814737097,-0.06619064864240137,0.00572485176444335
+diagnostic,B,tabicl_v2,clinical,0,20230529,pooled_oof_per_repeat_calibration,,,,,,,5.0,0.9102591203252322,0.08420938640906758,-0.006673483366976563
+diagnostic,B,tabicl_v2,clinical,1000,20230529,pooled_oof_per_repeat_calibration,,,,,,,5.0,0.878903403065749,0.09784410224013056,-0.007613073757369149
+diagnostic,B,tabicl_v2,clinical,5000,20230529,pooled_oof_per_repeat_calibration,,,,,,,5.0,0.8668845327647858,0.07004723420654815,-0.005471498725633128
+diagnostic,B,tabicl_v2,clinical,10000,20230529,pooled_oof_per_repeat_calibration,,,,,,,5.0,0.8670700021428983,0.03380343486679125,-0.0026556509693434873
+diagnostic,B,tabicl_v2,clinical,15000,20230529,pooled_oof_per_repeat_calibration,,,,,,,5.0,0.8678231300719919,0.012812246049984845,-0.0010134960470429444
+diagnostic,B,tabpfn_classifier,clinical,0,20230529,pooled_oof_per_repeat_calibration,,,,,,,5.0,0.8986908785935965,0.09065257695934271,-0.007138366613387276
+diagnostic,B,tabpfn_classifier,clinical,1000,20230529,pooled_oof_per_repeat_calibration,,,,,,,5.0,0.8689392119466369,0.08188308760448772,-0.006353258304813763
+diagnostic,B,tabpfn_classifier,clinical,5000,20230529,pooled_oof_per_repeat_calibration,,,,,,,5.0,0.8524083802452237,0.05432448996046648,-0.004199904764306284
+diagnostic,B,tabpfn_classifier,clinical,10000,20230529,pooled_oof_per_repeat_calibration,,,,,,,5.0,0.8500706766138599,0.023075408106244262,-0.0017861775915052115
+diagnostic,B,tabpfn_classifier,clinical,15000,20230529,pooled_oof_per_repeat_calibration,,,,,,,5.0,0.8511698329689021,0.0038309460660601578,-0.0002965127790435007
+diagnostic,B,xgboost_or_histgb,clinical,0,20230529,pooled_oof_per_repeat_calibration,,,,,,,5.0,0.7305460681733631,0.03916975376991201,-0.0028789952787917185
+diagnostic,B,xgboost_or_histgb,clinical,1000,20230529,pooled_oof_per_repeat_calibration,,,,,,,5.0,0.7631394248091319,0.020882709873931912,-0.001568047197197614
+diagnostic,B,xgboost_or_histgb,clinical,5000,20230529,pooled_oof_per_repeat_calibration,,,,,,,5.0,0.8239899968311495,-0.009651269601397824,0.0007677062096143772
+diagnostic,B,xgboost_or_histgb,clinical,10000,20230529,pooled_oof_per_repeat_calibration,,,,,,,5.0,0.8619148567386139,-0.04013555385989524,0.0032428536590383694
+diagnostic,B,xgboost_or_histgb,clinical,15000,20230529,pooled_oof_per_repeat_calibration,,,,,,,5.0,0.8784382630794454,-0.041851329499604815,0.003420487415542367
+diagnostic,C,mlp_embedding,embedding,0,20230529,pooled_oof_per_repeat_calibration,,,,,,,5.0,0.876638395386831,0.016550112420946415,-0.0013499253429688496
+diagnostic,C,mlp_embedding,embedding,0,20230530,pooled_oof_per_repeat_calibration,,,,,,,5.0,0.8590219850441254,-0.010401023489537631,0.0008666272411808118
+diagnostic,C,mlp_embedding,embedding,0,20230531,pooled_oof_per_repeat_calibration,,,,,,,5.0,0.8596287600273556,0.02877384644269182,-0.0022745524334063295
+diagnostic,C,tabpfn_embedding_ridge,embedding,0,20230529,pooled_oof_per_repeat_calibration,,,,,,,5.0,0.8111432729965132,0.0033540612843964484,-0.00025256700652522837

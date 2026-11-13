@@ -1,0 +1,18 @@
+variable,in_17_candidate_set,selected_by_lasso_lambda_min,selected_by_lasso_lambda_1se,rf_mda,rf_gini,rf_rank_mda,rf_rank_gini,rf_supported_lasso,univariate_global_p,included_in_pipeline_multivariable,multivariable_global_p,selected_in_pipeline_final,selection_notes
+age_at_diagnosis,TRUE,TRUE,FALSE,-5.9602,94.6329,16,2,FALSE,0.64208,FALSE,NA,FALSE,Not in LASSO 1se shortlist — excluded before multivariable step
+race,TRUE,TRUE,FALSE,-6.5916,20.7757,17,11,FALSE,0.27212,FALSE,NA,FALSE,Not in LASSO 1se shortlist — excluded before multivariable step
+sex_male,TRUE,TRUE,FALSE,0.9727,18.2849,14,12,FALSE,0.23034,FALSE,NA,FALSE,Not in LASSO 1se shortlist — excluded before multivariable step
+married,TRUE,FALSE,FALSE,-0.8396,16.3835,15,13,FALSE,0.05133,FALSE,NA,FALSE,Not in LASSO 1se shortlist — excluded before multivariable step
+histology_paper,TRUE,TRUE,TRUE,7.9604,36.5013,10,8,TRUE,0,TRUE,0.00434,TRUE,In LASSO 1se; multivariable global p=0.0043 < 0.05 — SELECTED
+grade,TRUE,TRUE,TRUE,35.2353,53.5306,3,4,TRUE,0,TRUE,0.07306,FALSE,In LASSO 1se; multivariable global p=0.0731 >= 0.05 — not retained
+primary_site_group,TRUE,TRUE,TRUE,6.0101,43.3993,11,7,TRUE,0,TRUE,0,TRUE,In LASSO 1se; multivariable global p=0 < 0.05 — SELECTED
+ajcc_t,TRUE,TRUE,TRUE,16.5212,50.2759,7,5,TRUE,0,TRUE,1e-5,TRUE,In LASSO 1se; multivariable global p=0 < 0.05 — SELECTED
+n_stage_positive,TRUE,TRUE,TRUE,19.8782,27.5112,6,9,TRUE,0,TRUE,0,TRUE,In LASSO 1se; multivariable global p=0 < 0.05 — SELECTED
+surgery_primary,TRUE,TRUE,TRUE,56.5539,74.727,2,3,TRUE,0,TRUE,0,TRUE,In LASSO 1se; multivariable global p=0 < 0.05 — SELECTED
+surgery_lymph_node,TRUE,TRUE,FALSE,34.8889,24.3434,4,10,FALSE,0,FALSE,NA,FALSE,Not in LASSO 1se shortlist — excluded before multivariable step
+radiotherapy,TRUE,TRUE,FALSE,10.3675,11.9612,9,14,FALSE,0,FALSE,NA,FALSE,Not in LASSO 1se shortlist — excluded before multivariable step
+chemotherapy,TRUE,TRUE,TRUE,75.5407,103.7983,1,1,TRUE,0,TRUE,0,TRUE,In LASSO 1se; multivariable global p=0 < 0.05 — SELECTED
+tumor_size_group,TRUE,TRUE,TRUE,13.2011,46.448,8,6,TRUE,0,TRUE,1e-4,TRUE,In LASSO 1se; multivariable global p=1e-04 < 0.05 — SELECTED
+mets_bone,TRUE,TRUE,TRUE,25.2008,10.1123,5,15,TRUE,0,TRUE,3.7e-4,TRUE,In LASSO 1se; multivariable global p=4e-04 < 0.05 — SELECTED
+mets_brain,TRUE,TRUE,FALSE,4.2366,1.397,12,17,FALSE,0.06674,FALSE,NA,FALSE,Not in LASSO 1se shortlist — excluded before multivariable step
+mets_lung,TRUE,FALSE,FALSE,1.5242,4.524,13,16,FALSE,0,FALSE,NA,FALSE,Not in LASSO 1se shortlist — excluded before multivariable step

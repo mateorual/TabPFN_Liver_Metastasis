@@ -1,0 +1,7 @@
+model,n_vars,variables,role
+nomogram_figure,5,"mets_brain, age_at_diagnosis, grade, histology_prognostic_group, surgery_primary",Primary (paper Figure 5)
+paper_text_screened_audit,6,"grade, n_stage_positive, surgery_primary, chemotherapy, tumor_size_group, mets_bone",Audit (paper text screened; NOT primary — paper internally inconsistent)
+cox_aic_selected,9,"age_at_diagnosis, sex_male, married, histology_prognostic_group, grade, ajcc_t, n_stage_positive, surgery_primary, mets_bone",Audit (Cox/AIC selection)
+rf_rfe_selected,16,"grade, surgery_primary, age_at_diagnosis, surgery_lymph_node, histology_prognostic_group, chemotherapy, n_stage_positive, primary_site_group, mets_lung, race, sex_male, mets_bone, mets_brain, radiotherapy, ajcc_t, married",Audit (RF/RFE selection)
+pipeline_selected,5,"age_at_diagnosis, histology_prognostic_group, grade, n_stage_positive, surgery_primary",Data-driven (union + p<0.05)
+tn_baseline,2,"ajcc_t, n_stage_positive",Comparator (AJCC T/N baseline)

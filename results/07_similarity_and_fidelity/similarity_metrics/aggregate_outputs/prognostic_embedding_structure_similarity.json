@@ -1,0 +1,77 @@
+{
+  "prognostic_event_emb": {
+    "block_label": "prognostic_event_emb",
+    "dataset_type": "prognostic",
+    "n_patients_matched": 462,
+    "n_patients_used": 462,
+    "subsampled": false,
+    "embedding_dim": 512,
+    "trustworthiness_continuity": {
+      "k=10": {
+        "trustworthiness": 0.8725081562707543,
+        "continuity": 0.8552003800604024
+      },
+      "k=30": {
+        "trustworthiness": 0.8283789706358734,
+        "continuity": 0.8170109602282472
+      }
+    },
+    "mantel_test": {
+      "spearman_r": 0.40013597654101635,
+      "p_value": 0.002,
+      "n_permutations": 499,
+      "n_objects": 462,
+      "interpretation": "r near 1 = pairwise distances strongly preserved between spaces; p_value tests H0: no association"
+    }
+  },
+  "prognostic_time_emb": {
+    "block_label": "prognostic_time_emb",
+    "dataset_type": "prognostic",
+    "n_patients_matched": 462,
+    "n_patients_used": 462,
+    "subsampled": false,
+    "embedding_dim": 512,
+    "trustworthiness_continuity": {
+      "k=10": {
+        "trustworthiness": 0.8423549201824678,
+        "continuity": 0.8381175375576272
+      },
+      "k=30": {
+        "trustworthiness": 0.8050972770060405,
+        "continuity": 0.8090988776462966
+      }
+    },
+    "mantel_test": {
+      "spearman_r": 0.4011606157297858,
+      "p_value": 0.002,
+      "n_permutations": 499,
+      "n_objects": 462,
+      "interpretation": "r near 1 = pairwise distances strongly preserved between spaces; p_value tests H0: no association"
+    }
+  },
+  "prognostic_combined_emb": {
+    "block_label": "prognostic_combined_emb",
+    "dataset_type": "prognostic",
+    "n_patients_matched": 462,
+    "n_patients_used": 462,
+    "subsampled": false,
+    "embedding_dim": 1024,
+    "trustworthiness_continuity": {
+      "k=10": {
+        "trustworthiness": 0.8733744419074766,
+        "continuity": 0.8842279780689635
+      },
+      "k=30": {
+        "trustworthiness": 0.8452165281697095,
+        "continuity": 0.856342363785341
+      }
+    },
+    "mantel_test": {
+      "spearman_r": 0.4949649107107803,
+      "p_value": 0.002,
+      "n_permutations": 499,
+      "n_objects": 462,
+      "interpretation": "r near 1 = pairwise distances strongly preserved between spaces; p_value tests H0: no association"
+    }
+  }
+}

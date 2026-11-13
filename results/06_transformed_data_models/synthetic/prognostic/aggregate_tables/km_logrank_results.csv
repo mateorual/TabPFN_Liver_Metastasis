@@ -1,0 +1,3 @@
+cohort,cohort_key,n,logrank_p
+Training,training,323,0
+Internal validation,internal_validation,139,0

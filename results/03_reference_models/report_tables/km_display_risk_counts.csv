@@ -1,0 +1,29 @@
+"cohort","risk_group","time","n_risk"
+"Training","Low-risk",0,162
+"Training","Low-risk",25,136
+"Training","Low-risk",50,102
+"Training","Low-risk",75,59
+"Training","Low-risk",100,30
+"Training","Low-risk",125,10
+"Training","Low-risk",150,0
+"Training","High-risk",0,161
+"Training","High-risk",25,70
+"Training","High-risk",50,37
+"Training","High-risk",75,25
+"Training","High-risk",100,5
+"Training","High-risk",125,1
+"Training","High-risk",150,0
+"Internal validation","Low-risk",0,70
+"Internal validation","Low-risk",25,63
+"Internal validation","Low-risk",50,52
+"Internal validation","Low-risk",75,36
+"Internal validation","Low-risk",100,16
+"Internal validation","Low-risk",125,4
+"Internal validation","Low-risk",150,0
+"Internal validation","High-risk",0,69
+"Internal validation","High-risk",25,26
+"Internal validation","High-risk",50,18
+"Internal validation","High-risk",75,8
+"Internal validation","High-risk",100,5
+"Internal validation","High-risk",125,2
+"Internal validation","High-risk",150,0

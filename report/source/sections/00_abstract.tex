@@ -1,0 +1,61 @@
+\section*{Abstract}
+\phantomsection
+\addcontentsline{toc}{section}{Abstract}
+
+\textbf{Background.}
+Pancreatic neuroendocrine tumours are rare, and liver metastasis is associated
+with more complex diagnosis-time risk assessment and prognosis. This study
+examined whether published diagnostic and prognostic workflows could be
+reconstructed using an available Surveillance, Epidemiology, and End Results
+(SEER) cohort. It also evaluated whether tabular foundation models,
+Tabular Prior-Data Fitted Network (TabPFN) representations, multilayer
+perceptrons (MLPs) or synthetic-data augmentation improved prediction.
+
+\textbf{Methods.}
+The November 2023 SEER release yielded 2,672 eligible diagnostic records,
+including 462 patients with liver metastasis at diagnosis; those 462 patients
+formed the prognostic cohort. The reference workflows were reconstructed using
+the available variables, and the resulting models were applied without
+modification to an independent University Hospital Erlangen cohort of 30
+patients, including 11 with liver metastasis. Supervised TabPFN embeddings and
+complete synthetic cohorts containing predictors and outcomes were evaluated
+for predictive information, structural similarity, category support and
+preservation of clinical relationships. Conventional models, tabular
+foundation models and prespecified MLPs were compared using the same repeated
+SEER training and test partitions. Synthetic augmentation added 1,000, 5,000,
+10,000 or 15,000 generated records to each real training partition, while
+performance was measured only in held-out real patients.
+
+\textbf{Results.}
+The reference workflows recovered strong diagnostic discrimination and
+meaningful prognostic risk ordering, although the unavailable original SEER
+release prevented exact replication. In the independent Erlangen cohort, the
+primary diagnostic nomogram achieved an area under the receiver operating
+characteristic curve (ROC AUC) of 0.934 (95\% confidence interval
+0.809--1.000; $n=29$), and the primary prognostic nomogram achieved a Harrell
+concordance index of 0.833 (0.625--1.000; $n=11$). Both estimates were
+imprecise because of the small sample. In the repeated SEER evaluation,
+TabPFN-3, TabICLv2 and TabDPT achieved diagnostic ROC AUCs of 0.902--0.903,
+with improvements of 0.0074--0.0088 over logistic regression on the same
+patients. The clinical MLP showed no general advantage. No foundation model or
+MLP showed a reliable prognostic concordance gain. Random survival forest had
+the lowest integrated Brier score (0.153), improving on Cox elastic net by
+0.0071. At the largest augmentation size, diagnostic XGBoost improved ROC AUC
+by 0.0126 and reduced Brier score by 0.0060; other diagnostic models did not
+improve consistently, and prognostic augmentation provided no benefit.
+Embeddings retained predictive information and local-neighbourhood structure,
+whereas the synthetic cohorts lost grade-4 support and shifted survival and
+several relationships between variables.
+
+\textbf{Conclusions.}
+The benefits of foundation models and synthetic data were specific to the
+task, model and evaluation design. The strongest evidence supports small
+internal diagnostic gains and a selective augmentation benefit for XGBoost,
+not a general prognostic or clinical advantage. The external results are
+encouraging for the reproduced reference models but remain too small to
+establish subgroup safety or clinical usefulness. Larger independent
+validation is required before any model can support clinical decisions.
+
+\vfill
+\noindent\textbf{Keywords:} pancreatic neuroendocrine tumour; SEER; tabular
+foundation models; TabPFN; synthetic data; survival analysis; clinical prediction

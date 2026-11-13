@@ -1,0 +1,18 @@
+variable,level_order
+race,White | American Indian/Alaska Native | Asian or Pacific Islander | Black
+histology_paper,"Carcinoid tumor, NOS | Atypical carcinoid tumor | Gastrinoma, malignant | Glucagonoma, malignant | Goblet cell carcinoid | Insulinoma, malignant | Neuroendocrine carcinoma, NOS | Pancreatic endocrine tumor, malignant | Somatostatinoma, malignant | Vipoma, malignant"
+grade,1 | 2 | 3 | 4
+primary_site_group,Head of pancreas | Body of pancreas | Tail of pancreas | Others
+ajcc_t,T0 | T1 | T2 | T3 | T4
+ajcc_n,N0 | N1
+tumor_size_group,0-26 mm | 26-36 mm | >36 mm
+sex_male,Female | Male
+married,Not married | Married
+n_stage_positive,N0 | N1
+surgery_primary,No | Yes
+surgery_lymph_node,No | Yes
+radiotherapy,No | Yes
+chemotherapy,No | Yes
+mets_bone,No | Yes
+mets_brain,No | Yes
+mets_lung,No | Yes

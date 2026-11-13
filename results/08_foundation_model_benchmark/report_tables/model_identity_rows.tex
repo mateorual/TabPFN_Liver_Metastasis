@@ -1,0 +1,10 @@
+% Generated from saved aggregate results; do not edit manually.
+Diagnosis & Logistic regression & Linear classifier & One-hot & L2 penalty; regularisation strength C=1 \\
+Diagnosis & XGBoost & Tree ensemble & Ordinal & 400 trees; depth 4; learning rate 0.05 \\
+Diagnosis & TabPFN-3 & Classification TFM & Ordinal & Eight-estimator ensemble; in-context prediction \\
+Diagnosis & TabICLv2 & Classification TFM & Ordinal & Eight-estimator ensemble; in-context prediction \\
+Diagnosis & TabDPT & Classification TFM & Ordinal & Complete training context; in-context prediction \\
+Prognosis & Cox elastic net & Proportional-hazards model & One-hot & Penalty 0.1; L1 ratio 0.5 \\
+Prognosis & Random survival forest & Survival-tree ensemble & Ordinal & 500 trees; minimum leaf size 5 \\
+Prognosis & TabPFN landmark & Classification TFM adapted to survival & Ordinal & Separate classifiers at 12, 24 and 36 months \\
+Prognosis & SurvivalPFN & Survival-pretrained TFM & Ordinal & In-context right-censored survival distribution \\

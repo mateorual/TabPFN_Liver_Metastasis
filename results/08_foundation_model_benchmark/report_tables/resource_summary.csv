@@ -1,0 +1,10 @@
+task,model_id,n_units,median_wall_seconds,total_wall_seconds,device,fit_semantics,median_context_or_training_rows
+diagnosis,regularized_logistic,25,0.2,5.05,cpu,trained from scratch per fit,2138.0
+diagnosis,xgboost_or_histgb,25,0.28,7.170000000000001,cpu,trained from scratch per fit,2138.0
+diagnosis,tabpfn_classifier,25,2.82,74.03,cuda,in_context: fit stores context; no weight update,2138.0
+diagnosis,tabicl_v2,25,1.42,36.160000000000004,cuda,in_context: fit stores context; no weight update,2138.0
+diagnosis,tabdpt,25,1.33,33.910000000000004,cuda,in_context: fit stores context; no weight update,2138.0
+prognosis,cox_elastic_net,5,0.58,3.1900000000000004,cpu,trained from scratch per fit,323.0
+prognosis,random_survival_forest_or_fallback,5,0.73,3.75,cpu,trained from scratch per fit,323.0
+prognosis,tabpfn_landmark_survival,5,5.81,29.109999999999996,cuda,in_context: fit stores context; no weight update,323.0
+prognosis,survivalpfn_native,5,6.8,34.489999999999995,cuda,in_context: fit stores context; no weight update,323.0

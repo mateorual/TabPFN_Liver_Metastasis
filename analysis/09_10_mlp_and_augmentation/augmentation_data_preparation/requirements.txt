@@ -1,0 +1,8 @@
+# Versions verified on the generation host (2026-10-09). Nothing is installed by this component.
+pandas>=2.3.0
+numpy>=1.26.0
+torch>=2.5.0          # verified 2.6.0+cu124 (CUDA 12.4)
+scikit-learn>=1.6.0   # verified 1.6.1
+tabpfn==8.0.8         # TabPFN-3 checkpoints pinned by sha256 in config/augmentation_config.json
+tabpfn-extensions==0.4.2  # TabPFNUnsupervisedModel; tabpfn-extensions[all] @ git+https://github.com/PriorLabs/tabpfn-extensions.git
+pytest>=8.0           # tests only

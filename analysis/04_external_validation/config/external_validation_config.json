@@ -1,0 +1,736 @@
+{
+  "config_version": 2,
+  "run_id": "ukerl_ext_v2",
+  "frozen_on": "2026-11-03",
+  "notes": "All analysis choices for the UK-Erlangen external validation. Paths are relative to the repository root (GithubRepo/). v2 (2026-11-03, user follow-up): diagnostic AJCC T/N comparator is now the object saved by the reference training code (01_RefPaper_DiagnosticModel/scripts/04); figures use the reference-implementation format. v1 outputs are archived in outputs/local_only/superseded_ukerl_ext_v1/.",
+  "source": {
+    "workbook_path": "data/restricted/external_hospital/external_validation_cohort.xlsx",
+    "expected_sheet": "Tabelle1",
+    "expected_sheet_names": [
+      "Tabelle1"
+    ],
+    "expected_workbook_sha256": "b2a36bf63e76e159ec2bf5ba0b680e17f5fa2721cc2fb256e4a6f28608993672",
+    "expected_cell_values_sha256": "b34c85ca89f213f2bfa622a4797d3a8afac37c87c63c2e6306aef33fdf74886a",
+    "expected_n_rows": 30,
+    "expected_n_columns": 21,
+    "expected_prognostic_n_rows": 11,
+    "header_normalization": "Unicode NFKC; CR/LF -> space; whitespace runs collapsed to one space; stripped. Used only to match the header contract.",
+    "fields": [
+      {
+        "key": "code",
+        "header": "Code"
+      },
+      {
+        "key": "age",
+        "header": "Age at diagnosis: completed years"
+      },
+      {
+        "key": "race",
+        "header": "Race: White, Black, Asian or Pacific Islander, or American Indian/Alaska Native"
+      },
+      {
+        "key": "sex",
+        "header": "Sex: female or male"
+      },
+      {
+        "key": "marital",
+        "header": "Marital status at diagnosis: married or not married (married, single, divorced, widowed, separated, domestic partner, or unknown)"
+      },
+      {
+        "key": "histology",
+        "header": "Histological diagnosis: one of the ICD-O-3 morphology codes listed in Table 7 of the attached document"
+      },
+      {
+        "key": "grade",
+        "header": "Histological grade: Grade I, II, III, or IV, according to the historical SEER categories in Table 9"
+      },
+      {
+        "key": "primary_site",
+        "header": "Primary pancreatic site: head, body, tail, or other pancreatic site, as defined in Table 8"
+      },
+      {
+        "key": "ajcc_t",
+        "header": "Primary tumor extent: AJCC 7th-edition-equivalent T0, T1, T2, T3, or T4, according to Table 4"
+      },
+      {
+        "key": "ajcc_n",
+        "header": "Regional lymph-node status: N0 or N1, according to Table 5"
+      },
+      {
+        "key": "surgery_primary",
+        "header": "Primary tumor surgery: yes or no"
+      },
+      {
+        "key": "surgery_lymph_node",
+        "header": "Regional lymph-node procedure: yes or no. “Yes” includes biopsy, aspiration, sentinel-node procedures, or lymph-node removal, as specified in Table 11"
+      },
+      {
+        "key": "radiotherapy",
+        "header": "Radiotherapy: yes or no, according to the categories in Table 12"
+      },
+      {
+        "key": "chemotherapy",
+        "header": "Chemotherapy: yes or no/unknown, following the combined SEER category"
+      },
+      {
+        "key": "tumor_size",
+        "header": "Primary tumor size: preferably the exact largest dimension in millimetres, or one of the model categories: 0–26 mm, >26–36 mm, or >36 mm, as defined in Table 10"
+      },
+      {
+        "key": "mets_bone",
+        "header": "Bone metastasis at initial diagnosis: yes or no"
+      },
+      {
+        "key": "mets_brain",
+        "header": "Brain metastasis at initial diagnosis: yes or no"
+      },
+      {
+        "key": "mets_lung",
+        "header": "Lung metastasis at initial diagnosis: yes or no"
+      },
+      {
+        "key": "mets_liver",
+        "header": "Liver metastasis at initial diagnosis: yes or no. This is the outcome for the diagnostic model and identifies the patient group used by the prognostic model."
+      },
+      {
+        "key": "os_months",
+        "header": "Overall survival or follow-up time: months from diagnosis to death or last follow-up"
+      },
+      {
+        "key": "vital_status",
+        "header": "Vital status at the end of follow-up: alive or dead"
+      }
+    ]
+  },
+  "reference_preprocessing": {
+    "script_path": "analysis/02_data_preprocessing/scripts/01_preprocess_seer.py",
+    "data_dictionary_path": "data/restricted/seer_processed/preprocessing_data_dictionary.csv",
+    "seer_diagnostic_input_path": "data/restricted/seer_processed/seer_diagnostic_input.csv",
+    "seer_prognostic_input_path": "data/restricted/seer_processed/seer_prognostic_input.csv"
+  },
+  "mapping": {
+    "unknown_aliases": [
+      "Unknown",
+      "Unkown",
+      "Missing",
+      "Not known",
+      "NA",
+      "N/A"
+    ],
+    "yes_values": [
+      "Yes"
+    ],
+    "no_values": [
+      "No"
+    ],
+    "chemotherapy_no_aliases": [
+      "No/Unknown"
+    ],
+    "age_range_years": [
+      0,
+      120
+    ],
+    "os_months_max": 600,
+    "tumor_size_mm_max": 500,
+    "tumor_size_bins_mm": {
+      "upper_0_26": 26,
+      "upper_26_36": 36
+    },
+    "tumor_size_group_labels": [
+      "0-26 mm",
+      "26-36 mm",
+      ">36 mm"
+    ],
+    "tumor_size_category_label_aliases": {
+      "0-26 mm": "0-26 mm",
+      "0-26mm": "0-26 mm",
+      "26-36 mm": "26-36 mm",
+      ">26-36 mm": "26-36 mm",
+      ">26-36mm": "26-36 mm",
+      "26-36mm": "26-36 mm",
+      ">36 mm": ">36 mm",
+      ">36mm": ">36 mm"
+    },
+    "grade_roman_to_int": {
+      "I": 1,
+      "II": 2,
+      "III": 3,
+      "IV": 4
+    },
+    "marital_to_married": {
+      "Married": 1,
+      "Not married": 0,
+      "Single": 0,
+      "Divorced": 0,
+      "Widowed": 0,
+      "Separated": 0,
+      "Domestic partner": 0
+    },
+    "marital_note": "SEER 'Unmarried or Domestic Partner' is coded married=0 in 01_preprocess_seer.py; 'Domestic partner' follows that rule. Unknown (incl. the supplied typo 'Unkown') -> married=NA.",
+    "ajcc_t_allowed": [
+      "T0",
+      "T1",
+      "T2",
+      "T3",
+      "T4"
+    ],
+    "ajcc_n_allowed": [
+      "N0",
+      "N1"
+    ],
+    "zero_survival_time_replacement": 0.5
+  },
+  "privacy": {
+    "local_only_root": "analysis/04_external_validation/outputs/local_only",
+    "pseudonym_prefix": "UKERL_EXT_",
+    "pseudonym_hex_length": 16,
+    "hmac_algorithm": "HMAC-SHA256",
+    "secret_relpath": "secrets/pseudonym_hmac_key.hex",
+    "registry_relpath": "privacy/pseudonym_registry.json",
+    "code_map_relpath": "privacy/code_to_pseudonym_map.csv",
+    "code_shape_regex": "^[A-Za-z]{4}-[0-9]{1,3}$",
+    "descriptive_rules": {
+      "continuous_summary": "median_q1_q3_no_extremes",
+      "cross_tabulations": "none_beyond_cohort_membership",
+      "roc_threshold_values_public": false
+    }
+  },
+  "outputs": {
+    "module_root": "analysis/04_external_validation",
+    "prepared_diagnostic": "outputs/local_only/prepared/uk_erlangen_diagnostic_input.csv",
+    "prepared_prognostic": "outputs/local_only/prepared/uk_erlangen_prognostic_input.csv",
+    "tumor_size_audit": "outputs/local_only/audit/tumor_size_audit.csv",
+    "survival_time_audit": "outputs/local_only/audit/survival_time_audit.csv",
+    "preparation_manifest": "outputs/validation/external_preparation_manifest.json",
+    "preparation_validation": "outputs/validation/external_preparation_validation.json",
+    "run_manifest": "outputs/run_manifest.json",
+    "pre_task_snapshot": "outputs/manifests/pre_task_filesystem_snapshot.txt",
+    "pre_task_git_status": "outputs/manifests/pre_task_git_status.txt",
+    "gitignore_block_begin": "# >>> Component 13: UK-Erlangen external validation (patient-level local-only outputs)",
+    "gitignore_block_end": "# <<< Component 13",
+    "authorized_preexisting_changes": {
+      "reason": "User follow-up 2026-11-03: save the diagnostic AJCC T/N baseline in the reference training code and re-run the reference diagnostic pipeline.",
+      "path_prefixes": [
+        "analysis/03_reference_models/diagnostic/"
+      ]
+    },
+    "superseded_runs": {
+      "ukerl_ext_v1": "outputs/local_only/superseded_ukerl_ext_v1"
+    }
+  },
+  "models": {
+    "diagnostic": [
+      {
+        "key": "nomogram_figure",
+        "path": "analysis/03_reference_models/diagnostic/outputs/models/logistic_model_nomogram_figure.rds",
+        "role": "primary_paper_figure_reproduction",
+        "origin": "frozen_saved_rds",
+        "expected_sha256": "e15fd533dc0f1bcabb910a9cf6c4cc090f30f3d749ba2577ce9ef9e73b3bbafc",
+        "short_label": "Nomogram Figure",
+        "label": "Nomogram Figure (5 vars: Grade + N stage + Surgery + Tumor size + Bone mets)",
+        "declared_predictors": [
+          "n_stage_positive",
+          "surgery_primary",
+          "mets_bone",
+          "grade",
+          "tumor_size_group"
+        ]
+      },
+      {
+        "key": "paper_text",
+        "path": "analysis/03_reference_models/diagnostic/outputs/models/logistic_model_paper_text.rds",
+        "role": "paper_text_sensitivity",
+        "origin": "frozen_saved_rds",
+        "expected_sha256": "ee4259824ab5ad8f2531927ba0b77fe69f6d378cba9037c976897976d555e9a5",
+        "short_label": "Paper Text",
+        "label": "Paper Text (6 vars: Grade + N stage + Surgery + Chemotherapy + Tumor size + Bone mets)",
+        "declared_predictors": [
+          "n_stage_positive",
+          "surgery_primary",
+          "chemotherapy",
+          "mets_bone",
+          "grade",
+          "tumor_size_group"
+        ]
+      },
+      {
+        "key": "pipeline_selected",
+        "path": "analysis/03_reference_models/diagnostic/outputs/models/logistic_model_pipeline_selected.rds",
+        "role": "data_driven_reproduction",
+        "origin": "frozen_saved_rds",
+        "expected_sha256": "f92bc9f8dbcd527dbbf20d0a331315faa849c2daf174747463761af870adb854",
+        "short_label": "Pipeline-selected",
+        "label": "Pipeline-selected (8 vars: Surgery + Chemotherapy + Bone mets + T stage + N stage + Tumor size + Primary site + Histology)",
+        "declared_predictors": [
+          "surgery_primary",
+          "chemotherapy",
+          "mets_bone",
+          "n_stage_positive",
+          "ajcc_t",
+          "tumor_size_group",
+          "primary_site_group",
+          "histology_paper"
+        ]
+      },
+      {
+        "key": "tnm_baseline",
+        "path": "analysis/03_reference_models/diagnostic/outputs/models/logistic_model_tnm_baseline.rds",
+        "role": "comparator",
+        "origin": "frozen_saved_rds",
+        "saved_by": "analysis/03_reference_models/diagnostic/scripts/04_logistic_regression_models.R",
+        "expected_sha256": null,
+        "short_label": "AJCC T/N baseline",
+        "label": "AJCC T/N baseline (2 vars: T stage + N stage)",
+        "declared_predictors": [
+          "ajcc_t",
+          "n_stage_positive"
+        ]
+      }
+    ],
+    "prognostic": [
+      {
+        "key": "nomogram_figure",
+        "path": "analysis/03_reference_models/prognostic/outputs/models/cox_model_nomogram_figure.rds",
+        "role": "primary",
+        "origin": "frozen_saved_rds",
+        "figure_level": true,
+        "absolute_risk_object": "analysis/03_reference_models/prognostic/outputs/models/prognostic_nomogram_cph_model.rds",
+        "absolute_risk_method": "rms::survest on the frozen cph (stored baseline survival, surv=TRUE)",
+        "absolute_risk_expected_sha256": "dc43652f692a59d328cd856ccc542363904f62f0190a01c2f3db0beade168f4d",
+        "expected_sha256": "d9979feb34d1dfef1c2738e2a4457642651624eb028fa0fbeb7f7c50fb308d19",
+        "short_label": "Nomogram",
+        "label": "Nomogram (5 vars: Brain metastasis + Age + Grade + Histological subtype + Surgery)",
+        "declared_predictors": [
+          "mets_brain",
+          "age_at_diagnosis",
+          "grade",
+          "histology_prognostic_group",
+          "surgery_primary"
+        ]
+      },
+      {
+        "key": "tn_baseline",
+        "path": "analysis/03_reference_models/prognostic/outputs/models/cox_model_tn_baseline.rds",
+        "role": "comparator",
+        "origin": "frozen_saved_rds",
+        "figure_level": true,
+        "absolute_risk_object": "analysis/03_reference_models/prognostic/outputs/models/cox_model_tn_baseline.rds",
+        "absolute_risk_method": "survival::survfit on the frozen coxph (Breslow baseline from the stored SEER training x/y), step function at the horizon as in 09_survival_dca.R",
+        "expected_sha256": "2a10294ac375ee327e4edd80c25f3171d97e448ffd3dcf0f7e9ad54302b1755e",
+        "short_label": "AJCC T/N baseline",
+        "label": "AJCC T/N baseline (2 vars: AJCC T stage + AJCC N stage)",
+        "declared_predictors": [
+          "ajcc_t",
+          "n_stage_positive"
+        ]
+      },
+      {
+        "key": "text_screened",
+        "path": "analysis/03_reference_models/prognostic/outputs/models/cox_model_text_screened.rds",
+        "role": "supplementary_audit",
+        "origin": "frozen_saved_rds",
+        "figure_level": false,
+        "expected_sha256": "c87f6b2cb7112ec463f996f1d59bead4a22e109b08704c3220ab8dea0c3609cf",
+        "short_label": "Text-screened",
+        "label": "Text-screened (6 vars: Grade + AJCC N stage + Surgery + Chemotherapy + Tumor size + Bone metastasis)",
+        "declared_predictors": [
+          "grade",
+          "n_stage_positive",
+          "surgery_primary",
+          "chemotherapy",
+          "tumor_size_group",
+          "mets_bone"
+        ]
+      },
+      {
+        "key": "cox_aic_selected",
+        "path": "analysis/03_reference_models/prognostic/outputs/models/cox_model_cox_aic_selected.rds",
+        "role": "supplementary_audit",
+        "origin": "frozen_saved_rds",
+        "figure_level": false,
+        "expected_sha256": null,
+        "short_label": "Cox/AIC-selected",
+        "label": "Cox/AIC-selected (9 vars)",
+        "declared_predictors": [
+          "age_at_diagnosis",
+          "sex_male",
+          "married",
+          "histology_prognostic_group",
+          "grade",
+          "ajcc_t",
+          "n_stage_positive",
+          "surgery_primary",
+          "mets_bone"
+        ]
+      },
+      {
+        "key": "rf_rfe_selected",
+        "path": "analysis/03_reference_models/prognostic/outputs/models/cox_model_rf_rfe_selected.rds",
+        "role": "supplementary_audit",
+        "origin": "frozen_saved_rds",
+        "figure_level": false,
+        "expected_sha256": null,
+        "short_label": "RF/RFE-selected",
+        "label": "RF/RFE-selected (16 vars)",
+        "declared_predictors": [
+          "grade",
+          "surgery_primary",
+          "age_at_diagnosis",
+          "surgery_lymph_node",
+          "histology_prognostic_group",
+          "chemotherapy",
+          "n_stage_positive",
+          "primary_site_group",
+          "mets_lung",
+          "race",
+          "sex_male",
+          "mets_bone",
+          "mets_brain",
+          "radiotherapy",
+          "ajcc_t",
+          "married"
+        ]
+      },
+      {
+        "key": "pipeline_selected",
+        "path": "analysis/03_reference_models/prognostic/outputs/models/cox_model_pipeline_selected.rds",
+        "role": "supplementary_data_driven",
+        "origin": "frozen_saved_rds",
+        "figure_level": false,
+        "expected_sha256": "1e5e0b701b96814d96fb09ef817c5832e7026730093c89d0bdd83bb1a5504b41",
+        "short_label": "Pipeline-selected",
+        "label": "Pipeline-selected (5 vars: Age + Histological subtype + Grade + AJCC N stage + Surgery)",
+        "declared_predictors": [
+          "age_at_diagnosis",
+          "histology_prognostic_group",
+          "grade",
+          "n_stage_positive",
+          "surgery_primary"
+        ]
+      }
+    ],
+    "provenance_files": [
+      "analysis/02_data_preprocessing/scripts/01_preprocess_seer.py",
+      "analysis/03_reference_models/diagnostic/config/config.R",
+      "analysis/03_reference_models/diagnostic/scripts/00_setup_diagnostic.R",
+      "analysis/03_reference_models/diagnostic/scripts/04_logistic_regression_models.R",
+      "analysis/03_reference_models/diagnostic/scripts/06_roc_analysis.R",
+      "analysis/03_reference_models/diagnostic/scripts/07_calibration_analysis.R",
+      "analysis/03_reference_models/diagnostic/scripts/08_dca_analysis.R",
+      "analysis/03_reference_models/diagnostic/scripts/10_combined_diagnostic_figures.R",
+      "analysis/03_reference_models/diagnostic/outputs/models/diagnostic_data_clean.rds",
+      "analysis/03_reference_models/prognostic/config/config.R",
+      "analysis/03_reference_models/prognostic/scripts/00_setup_prognostic.R",
+      "analysis/03_reference_models/prognostic/scripts/05_multivariable_cox_models.R",
+      "analysis/03_reference_models/prognostic/scripts/06_prognostic_nomogram.R",
+      "analysis/03_reference_models/prognostic/scripts/07_time_dependent_roc.R",
+      "analysis/03_reference_models/prognostic/scripts/08_survival_calibration.R",
+      "analysis/03_reference_models/prognostic/scripts/09_survival_dca.R",
+      "analysis/03_reference_models/prognostic/scripts/10_kaplan_meier_risk_groups.R",
+      "analysis/03_reference_models/prognostic/outputs/models/prognostic_data_clean.rds",
+      "analysis/03_reference_models/prognostic/outputs/tables/risk_cutpoint_summary.csv"
+    ]
+  },
+  "predictor_encoding": {
+    "source": "Factor coding of the original setup scripts (00_setup_diagnostic.R, 00_setup_prognostic.R). Levels and reference levels always come from each model's stored xlevels; this table only translates prepared 0/1/integer codes into the label vocabulary those scripts used.",
+    "binary_labels": {
+      "sex_male": [
+        "Female",
+        "Male"
+      ],
+      "married": [
+        "Not married",
+        "Married"
+      ],
+      "n_stage_positive": [
+        "N0",
+        "N1"
+      ],
+      "surgery_primary": [
+        "No",
+        "Yes"
+      ],
+      "surgery_lymph_node": [
+        "No",
+        "Yes"
+      ],
+      "radiotherapy": [
+        "No",
+        "Yes"
+      ],
+      "chemotherapy": [
+        "No",
+        "Yes"
+      ],
+      "mets_bone": [
+        "No",
+        "Yes"
+      ],
+      "mets_brain": [
+        "No",
+        "Yes"
+      ],
+      "mets_lung": [
+        "No",
+        "Yes"
+      ]
+    },
+    "grade_labels": {
+      "diagnostic": {
+        "1": "1",
+        "2": "2",
+        "3": "3",
+        "4": "4"
+      },
+      "prognostic": {
+        "1": "I",
+        "2": "II",
+        "3": "III",
+        "4": "IV"
+      }
+    },
+    "passthrough_factors": [
+      "race",
+      "histology_paper",
+      "histology_prognostic_group",
+      "primary_site_group",
+      "ajcc_t",
+      "tumor_size_group"
+    ],
+    "numeric": [
+      "age_at_diagnosis"
+    ]
+  },
+  "evaluation": {
+    "diagnostic_outcome": "mets_liver",
+    "time_var": "os_months",
+    "event_var": "os_event",
+    "time_horizons_months": [
+      12,
+      24,
+      36
+    ],
+    "time_horizon_labels": [
+      "1-year",
+      "2-year",
+      "3-year"
+    ],
+    "probability_clip_for_logit": 1e-06,
+    "time_roc": {
+      "package": "timeROC",
+      "weighting": "marginal",
+      "censoring_estimator": "Kaplan-Meier of the censoring distribution (timeROC weighting='marginal')",
+      "cause": 1,
+      "iid_for_secondary_se": true
+    },
+    "survival_brier": {
+      "package_point_estimate": "riskRegression::Score",
+      "cens_model": "km",
+      "bootstrap_engine": "module implementation of the same IPCW estimator (validated against riskRegression::Score and pec::pec)"
+    },
+    "c_index": {
+      "package": "survival::concordance",
+      "definition": "Harrell C; higher linear predictor = higher risk (reverse = TRUE); tied predictions count 1/2"
+    },
+    "diagnostic_calibration_groups": {
+      "quantile_groups": 3,
+      "fallback_group_counts": [
+        2
+      ],
+      "min_group_n": 5,
+      "require_both_outcomes": true,
+      "grouping": "cut at type-7 quantiles of predicted probability, include.lowest"
+    },
+    "prognostic_calibration_groups": {
+      "quantile_groups": 3,
+      "min_group_n": 3,
+      "label": "exploratory_small_sample"
+    },
+    "dca": {
+      "thresholds": {
+        "from": 0.01,
+        "to": 0.99,
+        "by": 0.01
+      },
+      "diagnostic_display_threshold_range": [
+        0.01,
+        0.99
+      ],
+      "prognostic_display_threshold_range": [
+        0.01,
+        0.99
+      ],
+      "prognostic_min_eligible": 20,
+      "prognostic_min_events": 5,
+      "prognostic_estimand": "mortality risk 1 - S_hat(t); patients censored before t excluded; event by t is the binary outcome (09_survival_dca.R)",
+      "display_note": "v2: full 0.01-0.99 threshold axis as in the reference figures (user request); table always holds 0.01-0.99."
+    },
+    "km": {
+      "cutpoint_source": "analysis/03_reference_models/prognostic/outputs/tables/risk_cutpoint_summary.csv",
+      "cutpoint_rule": "lp <= cutpoint -> Low-risk; lp > cutpoint -> High-risk (10_kaplan_meier_risk_groups.R)",
+      "lp_model": "nomogram_figure",
+      "risk_table_break_months": 25,
+      "conf_type": "log",
+      "group_colors": {
+        "High-risk": "#2166ac",
+        "Low-risk": "#d6604d"
+      },
+      "min_patients_for_plot": 10
+    },
+    "evaluation_sets": [
+      "model_specific",
+      "common_complete_case"
+    ]
+  },
+  "bootstrap": {
+    "seed": 20230529,
+    "rng_kind": [
+      "Mersenne-Twister",
+      "Inversion",
+      "Rejection"
+    ],
+    "draws": 5000,
+    "confidence_level": 0.95,
+    "interval_method": "percentile",
+    "diagnostic_sampling": "stratified_by_mets_liver",
+    "prognostic_sampling": "ordinary_patient_level_nonparametric",
+    "redraw_failed_draws": false,
+    "support_rules": {
+      "supported_min_valid_draws": 1000,
+      "supported_min_valid_fraction": 0.5,
+      "fragile_min_valid_draws": 200
+    },
+    "draw_validity": {
+      "auc": "both outcome classes among evaluable resampled patients",
+      "brier": "at least one evaluable resampled patient",
+      "calibration_in_the_large": "both classes; glm converged; finite estimate",
+      "calibration_slope": "both classes; glm converged; finite estimate; logit(p) not constant",
+      "calibration_intercept_joint": "both classes; glm converged; finite estimate; logit(p) not constant",
+      "dca_net_benefit": "at least one evaluable resampled patient",
+      "c_index": "at least one comparable pair",
+      "time_auc": "at least one case (event by t) and one control (time > t); finite timeROC AUC",
+      "brier_ipcw": "finite IPCW Brier; censoring survival positive where weights are required",
+      "km_calibration_gap": "Kaplan-Meier estimable at t (follow-up reaches t or survival reaches 0 before t)"
+    },
+    "validator_sampled_draws": 40
+  },
+  "figures": {
+    "format_source": "01_RefPaper_DiagnosticModel/scripts/10_combined_diagnostic_figures.R; 01_RefPaper_PrognosticModel/scripts/07_time_dependent_roc.R, 09_survival_dca.R, 10_kaplan_meier_risk_groups.R",
+    "dpi": 150,
+    "palette": {
+      "nomogram_figure": "#ff7f0e",
+      "paper_text": "#1f77b4",
+      "pipeline_selected": "#2ca02c",
+      "tnm_baseline": "#9467bd",
+      "tn_baseline": "#9467bd",
+      "Treat All": "#333333",
+      "Treat None": "#999999"
+    },
+    "linetypes": {
+      "nomogram_figure": "solid",
+      "paper_text": "solid",
+      "pipeline_selected": "solid",
+      "tnm_baseline": "solid",
+      "tn_baseline": "solid",
+      "Treat All": "dashed",
+      "Treat None": "dotted"
+    },
+    "style": {
+      "diagnostic": {
+        "base_size": 11,
+        "tag_size": 14,
+        "title_size": null,
+        "subtitle_size": 8.5,
+        "legend_text_size": 8.2,
+        "legend_key_cm": 0.5,
+        "legend_key_width_cm": 0.7,
+        "line_width": 1.1,
+        "dca_line_width": 1.0
+      },
+      "prognostic": {
+        "base_size": 10,
+        "tag_size": 13,
+        "title_size": 10,
+        "subtitle_size": 8,
+        "legend_text_size": 7,
+        "legend_key_cm": 0.4,
+        "legend_key_width_cm": 0.7,
+        "line_width": 1.1,
+        "dca_line_width": 1.0
+      }
+    },
+    "sizes_in": {
+      "diagnostic_external_roc": [
+        7.5,
+        9.4
+      ],
+      "diagnostic_external_calibration": [
+        13,
+        12.5
+      ],
+      "diagnostic_external_dca": [
+        8,
+        9.2
+      ],
+      "diagnostic_external_evaluation_3panel": [
+        21,
+        8.6
+      ],
+      "prognostic_external_time_roc_3panel": [
+        18,
+        6.4
+      ],
+      "prognostic_external_calibration_3panel": [
+        18,
+        6.8
+      ],
+      "prognostic_external_dca_3panel": [
+        18,
+        6.0
+      ],
+      "prognostic_external_km_risk_groups": [
+        8,
+        7
+      ]
+    },
+    "cohort_display_name": "UK-Erlangen external"
+  },
+  "internal_context_sources": [
+    {
+      "task": "diagnostic",
+      "file": "analysis/03_reference_models/diagnostic/outputs/tables/roc_auc_diagnostic.csv",
+      "cohort_label": "SEER derivation cohort (apparent, full data)",
+      "design": "apparent performance on the same 2,672 SEER patients used to fit the models; pROC bootstrap CI"
+    },
+    {
+      "task": "diagnostic",
+      "file": "analysis/03_reference_models/diagnostic/outputs/tables/calibration_metrics_diagnostic.csv",
+      "cohort_label": "SEER derivation cohort (apparent, full data)",
+      "design": "apparent; nomogram_figure only; intercept from joint glm(y ~ logit p)"
+    },
+    {
+      "task": "prognostic",
+      "file": "analysis/03_reference_models/prognostic/outputs/tables/multivariable_cox_model_summary.csv",
+      "cohort_label": "SEER training cohort (apparent)",
+      "design": "Harrell C on the 323-patient training cohort used for fitting; analytic SE"
+    },
+    {
+      "task": "prognostic",
+      "file": "analysis/03_reference_models/prognostic/outputs/tables/calibration_survival_metrics.csv",
+      "cohort_label": "SEER training (bootstrap-corrected) and internal validation (grouped KM)",
+      "design": "slope/intercept of observed vs predicted over groups; different estimand from the external calibration gap"
+    },
+    {
+      "task": "prognostic",
+      "file": "analysis/03_reference_models/prognostic/outputs/tables/km_risk_group_summary.csv",
+      "cohort_label": "SEER training and internal validation",
+      "design": "same frozen cutpoint; KM by risk group"
+    },
+    {
+      "task": "prognostic",
+      "file": "analysis/03_reference_models/prognostic/outputs/tables/time_dependent_roc_auc.csv",
+      "cohort_label": "SEER training and internal validation",
+      "design": "timeROC marginal IPCW; iid CI"
+    }
+  ]
+}

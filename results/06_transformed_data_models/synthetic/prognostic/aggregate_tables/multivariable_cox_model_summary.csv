@@ -1,0 +1,7 @@
+model,n_obs,n_events,concordance,se_concordance,c_index_lower,c_index_upper,aic,global_p_lrt
+nomogram_figure,323,217,0.7064,0.0178,0.6715,0.7413,2192.03,NA
+text_screened,323,217,0.6907,0.0185,0.6544,0.7269,2205.23,NA
+cox_aic_selected,323,217,0.732,0.0166,0.6994,0.7645,2179.76,NA
+rf_rfe_selected,323,217,0.7021,0.018,0.6669,0.73740000000000006,2195.87,NA
+pipeline_selected,323,217,0.7186,0.0171,0.685,0.7522,2183.54,NA
+tn_baseline,323,217,0.5384,0.0194,0.5004,0.5764,2276.71,NA

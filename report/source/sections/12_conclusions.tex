@@ -1,0 +1,168 @@
+\section{Conclusions and Future Work}
+\label{sec:conclusion}
+
+\subsection{Answer to the central research question}
+
+This project examined whether published diagnostic and prognostic workflows for
+liver metastasis in pancreatic neuroendocrine tumours could be reconstructed
+using the available Surveillance, Epidemiology, and End Results (SEER) data. It
+also asked whether Tabular Prior-Data Fitted Network (TabPFN) representations,
+synthetic data, multilayer perceptrons (MLPs) and other tabular foundation models
+could improve prediction.
+
+The reference workflows could be reconstructed and produced strong diagnostic
+discrimination and meaningful prognostic risk ordering in the available SEER
+cohorts. Exact replication of the published results was not possible because
+the original SEER release and external cohorts were no longer available. The
+independent University Hospital Erlangen (UK Erlangen) cohort provided an
+external evaluation of the reproduced reference models. Their predictive
+ranking remained encouraging, but the cohort of 30 diagnostic and 11
+prognostic patients was too small to estimate performance precisely or support
+claims of clinical utility.
+
+The additional modelling experiments produced a more selective answer. Three
+tabular foundation models achieved small diagnostic improvements over logistic
+regression when they were evaluated on the same SEER test patients. The tested
+MLP did not provide a general improvement, and none of the foundation models or
+the MLP improved prognostic discrimination reliably. Synthetic augmentation
+benefited diagnostic XGBoost, but the improvement did not extend consistently
+to the other diagnostic models or to prognosis.
+
+The central conclusion is therefore that foundation models and synthetic data
+can provide useful gains in specific settings, but their benefit is not
+automatic. Performance depends on the prediction task, the model, the amount
+and quality of real data, the evaluation design and the clinical relationships
+preserved by the transformation. Generated records and more complex models did
+not replace the need for appropriate survival methods or independent patients.
+
+\subsection{Main scientific conclusions}
+
+\paragraph{Reconstruction of the reference study.}
+The eligibility criteria and preprocessing procedure based on the reference
+study produced a diagnostic cohort of 2,672 patients and a prognostic cohort of
+462 patients with liver metastasis. The reconstructed diagnostic and prognostic
+analyses recovered the main predictive patterns reported in the publication.
+Numerical differences remain expected because the available SEER release,
+patients and some variable definitions differ from those of the original study.
+
+\paragraph{External evaluation of the reproduced models.}
+In the common set of 29 UK Erlangen diagnostic patients, the primary
+five-variable nomogram achieved an area under the receiver operating
+characteristic curve (ROC AUC) of 0.934, with a 95\% confidence interval from
+0.809 to 1.000. In all 11 prognostic patients, the primary five-variable Cox
+nomogram achieved a Harrell concordance index of 0.833, with a confidence
+interval from 0.625 to 1.000. These results show that the unchanged SEER-trained
+models retained predictive ranking in the available hospital cohort. The wide
+intervals, small calibration groups and survival groups of only four and seven
+patients prevent conclusions about stable performance or clinical benefit.
+
+\paragraph{Diagnostic model comparison.}
+TabPFN-3, TabICLv2 and TabDPT achieved ROC AUCs of 0.902--0.903 in the repeated
+SEER evaluation. Their improvements over logistic regression ranged from
+0.0074 to 0.0088 when the models were compared on the same patients. These are
+small internal gains rather than evidence of clinically important superiority.
+The clinical MLP performed competitively but did not improve consistently over
+the simpler comparison models. Adding a generic nonlinear prediction model was
+therefore not sufficient to reproduce the strongest diagnostic results.
+
+\paragraph{Prognostic model comparison.}
+No foundation model or MLP showed a reliable concordance improvement in
+prognosis. Random survival forest achieved the lowest integrated Brier score
+(IBS) of 0.153 and improved IBS by 0.0071 relative to Cox elastic net when both
+models were evaluated on the same patients. This modest probability-error
+advantage favoured an established survival method. More generally, the
+prognostic results show that improvements in binary diagnosis should not be
+assumed to transfer to a smaller, censored survival task.
+
+\paragraph{Representations and synthetic data.}
+The TabPFN embeddings retained predictive information and much of the local
+patient-neighbourhood structure. However, they were created from the complete
+cohorts using outcome information, so their downstream results remain
+exploratory. The complete synthetic datasets reproduced many individual
+variable distributions and allowed the diagnostic and prognostic pipelines to
+run, but grade 4 was not generated, survival distributions shifted and several
+relationships between clinical variables were not fully preserved. These
+datasets are useful for studying representation and fidelity; they are not
+independent clinical evidence.
+
+\paragraph{Synthetic augmentation.}
+For each evaluation partition, synthetic records were generated using only the
+real training patients, and performance was measured only in held-out real
+patients. At the largest augmentation size of 15,000 records, diagnostic
+XGBoost improved ROC AUC by 0.0126 and reduced Brier score by 0.0060 compared
+with training on real data alone. Other diagnostic models did not improve
+consistently, and prognostic augmentation provided no benefit. Some strong
+models performed worse as synthetic records formed a larger share of the
+training data. Synthetic sample size should therefore not be interpreted as an
+equivalent increase in the number of observed patients.
+
+\subsection{Contributions of the project}
+
+Within the limitations described in Section~\ref{sec:limitations}, the project
+makes five main contributions:
+
+\begin{enumerate}[label=\textbf{C\arabic*.},ref=C\arabic*]
+\item It constructs clearly defined diagnostic and prognostic cohorts from the
+SEER registry using eligibility, coding and preprocessing decisions based on
+the reference study.
+
+\item It reconstructs the reference diagnostic and prognostic workflows on the
+closest available SEER population and evaluates the resulting models without
+modification in an independent UK Erlangen cohort.
+
+\item It creates and evaluates TabPFN embeddings and complete synthetic
+datasets for predictive information, structural similarity, category support
+and preservation of clinically relevant relationships.
+
+\item It compares conventional models, tabular foundation models and MLPs on
+the same real-patient evaluation partitions, enabling direct comparison between
+model families.
+
+\item It tests synthetic augmentation by generating records only from the real
+training patients and evaluating models in held-out real patients, separating
+practical utility from descriptive similarity.
+\end{enumerate}
+
+These contributions do not constitute a deployed clinical system, a causal
+analysis of treatment effects or a formal privacy guarantee.
+
+\subsection{Priorities for future research}
+
+Future work should first strengthen the clinical evidence.
+
+\begin{enumerate}[label=\textbf{P\arabic*.},ref=P\arabic*]
+\item \textbf{Larger external validation.} Evaluate the most promising
+approaches in larger multicentre and temporally distinct cohorts, with outcomes
+and predictor timing specified before the models are applied.
+
+\item \textbf{Training-only transformations and complete uncertainty.} Learn
+embeddings, select variables, train synthetic-data generators and calibrate
+predictions using training patients only. Repeat the complete development
+process to measure both construction and evaluation uncertainty.
+
+\item \textbf{Clinically constrained synthetic data.} Preserve rare categories
+such as grade 4, enforce agreement between linked fields and use methods
+designed for censored outcomes. Evaluate utility, fidelity and privacy risk
+together, preferably in independent data.
+
+\item \textbf{Survival-specific foundation models.} Develop and test models
+that account for censoring and produce valid survival probabilities across time.
+Use larger cohorts with more observed deaths and retain strong conventional
+survival methods as comparisons.
+
+\item \textbf{Prospective clinical evaluation.} After adequate external
+validation, define thresholds in advance, examine calibration and subgroup
+performance, and test whether model use improves clinical decisions or
+patient-relevant outcomes.
+\end{enumerate}
+
+\subsection{Final conclusion}
+
+Modern tabular foundation models and synthetic data can support rare-tumour
+registry research, but greater complexity does not guarantee clinical value.
+The strongest findings are small internal diagnostic gains, a selective
+augmentation benefit for XGBoost and encouraging but imprecise external results
+for the reproduced reference models. No general prognostic, MLP or augmentation
+advantage was demonstrated. Larger independent clinical cohorts are now
+essential; until then, the models and generated records should remain research
+tools rather than validated support for clinical decisions.

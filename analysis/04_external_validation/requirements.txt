@@ -1,0 +1,10 @@
+# Script 1 (Python 3.11)
+pandas>=2.0
+numpy>=1.26
+openpyxl>=3.1
+pytest>=8  # tests only
+
+# Script 2 (R >= 4.5; install manually, the scripts never install packages):
+#   survival, rms, timeROC, pROC, riskRegression, prodlim, ggplot2, patchwork,
+#   jsonlite, digest, readr, dplyr, scales, ragg
+# Test-only R packages: Hmisc, pec

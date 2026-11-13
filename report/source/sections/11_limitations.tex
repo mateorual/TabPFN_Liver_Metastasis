@@ -1,0 +1,210 @@
+\section{Limitations and Scope of Interpretation}
+\label{sec:limitations}
+
+\subsection{Purpose of this section}
+
+This section brings together the limitations that affect the interpretation of
+the study. They fall into three broad groups: limitations of the available
+clinical data, limitations of the evaluation designs and limitations on how far
+the results can be applied beyond the studied patients. These issues do not make
+the analyses invalid, but they determine which conclusions the evidence can
+support.
+
+Table~\ref{tab:limitations:matrix} summarises the main limitations, their effect
+on interpretation and the additional evidence needed to address them. The
+proposed next steps describe future work; they were not part of the present
+study.
+
+\begin{table}[htbp]
+\centering\scriptsize
+\setlength{\tabcolsep}{3pt}
+\caption{Main study limitations, their effect on interpretation and the
+additional evidence needed to address them.}
+\label{tab:limitations:matrix}
+\begin{tabularx}{\linewidth}{@{}p{2.15cm}p{3.55cm}p{3.55cm}Y@{}}
+\toprule
+Area & Main limitation & Effect on interpretation & What future work should add \\
+\midrule
+\csname @@input\endcsname{tables/limitations/limitations_matrix_rows.tex}
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\subsection{Data source, cohort selection and measurement}
+
+The study is retrospective and uses one release of the Surveillance,
+Epidemiology, and End Results (SEER) programme. The diagnostic cohort contains
+2,672 patients after applying the eligibility and preprocessing procedure based
+on the reference study. This represents 46.4\% of the 5,761 exported records.
+The largest exclusion removed 1,903 records with at least one unknown required
+field. Because the analysis uses complete records, the retained patients may
+differ systematically from those who were excluded. The models describe the
+available cohort; they cannot correct for patients or clinical information that
+are absent from it.
+
+Several variables are simplified versions of the underlying clinical
+information. Stage values from different diagnosis years and assessment types
+were combined into common categories. Histology and pancreatic site were also
+grouped, age was top-coded, and some treatment codes combine ``no treatment''
+with ``unknown''. The data do not establish whether every treatment variable
+would have been known at the intended prediction time. Associations involving
+treatment should therefore be interpreted as predictive relationships, not as
+evidence that a treatment caused an outcome. A model intended for prospective
+use would need clearly time-stamped predictors available before the prediction
+is made.
+
+The outcomes are also specific. The diagnostic task predicts liver metastasis
+recorded at the initial diagnosis; it does not predict metastasis that develops
+later. The prognostic task evaluates all-cause survival in the 462 patients who
+already had liver metastasis at diagnosis. It does not estimate cancer-specific
+survival and does not represent all patients with pancreatic neuroendocrine
+tumours. Twelve prognostic records have zero recorded survival months. They were
+retained as recorded, with a positive-time adjustment used only where required
+by a model. This convention permits the analyses to run but cannot resolve
+possible uncertainty in the recorded timing.
+
+The SEER release used here is newer than the dataset used in the reference
+study, because the earlier release was no longer available. Differences between
+the published and reproduced results may therefore arise from changes in the
+patients, calendar period, variable definitions or implementation. The work is
+best understood as a reconstruction of the published methodology on the
+available SEER data, rather than an exact replication on the original cohort.
+
+\subsection{External validation and statistical uncertainty}
+
+The reproduced reference models were evaluated without modification in the
+independent University Hospital Erlangen (UK Erlangen) cohort. This is an
+important external test, but the cohort is small. It contains 30 patients for
+the diagnostic task and 11 patients with liver metastasis for the prognostic
+task. The four diagnostic models could be compared in a common set of 29
+patients because one patient had missing nodal stage. The prognostic nomogram
+could be evaluated in all 11 patients, whereas its comparison with the tumour-
+and nodal-stage model used 10. Confidence intervals were consequently wide,
+survival-risk groups contained only three to seven patients, and the prognostic
+sample was too small for decision-curve analysis. These results show whether the
+unchanged models can be applied to the available hospital data, but they cannot
+establish stable clinical thresholds, subgroup safety or performance across
+different hospitals.
+
+The foundation-model, multilayer perceptron (MLP), embedding and synthetic-data
+experiments were evaluated only within SEER. Repeated partitions reduce
+dependence on one arbitrary train--test division, but all partitions still come
+from the same registry release. They do not replace evaluation in patients from
+a different time period, institution or country.
+
+The report also contains several evaluation designs that answer different
+questions. The reference-study reconstruction, external evaluation, complete-
+cohort embedding analyses, synthetic-cohort analyses and repeated held-out
+SEER comparisons do not use the same patients or the same validation procedure.
+Their performance values should therefore be interpreted within their own
+designs and should not be combined into a single ranking of all models.
+
+Most 95\% confidence intervals were calculated by resampling the evaluated
+patients while keeping the fitted models unchanged. They quantify uncertainty
+associated with the available evaluation patients, but not the additional
+variation that could arise from repeating feature selection, model fitting,
+representation learning, synthetic-data generation or foundation-model
+pretraining. Most intervals are also pointwise and were not adjusted for the
+number of models, metrics and augmentation sizes examined. An interval that
+excludes zero supports a difference for that particular comparison; it does not
+by itself establish clinical superiority. Likewise, an interval that includes
+zero does not prove that two methods are equivalent. The three MLP
+initialisations provide a limited sensitivity check rather than a complete
+description of optimisation variability.
+
+Some secondary results have less statistical support. The planned confidence
+intervals for the prognostic Kaplan--Meier calibration comparisons in the
+augmentation experiment could not be reported because too few bootstrap
+samples retained adequate numbers of patients at risk. Decision-curve results
+were descriptive and no risk threshold was prospectively selected for clinical
+action. The study therefore does not demonstrate that using any model would
+improve patient outcomes.
+
+\subsection{Learned representations and synthetic data}
+
+The Tabular Prior-Data Fitted Network (TabPFN) embeddings were created from each
+complete task cohort using outcome information. A patient's own outcome was
+excluded when its representation was generated, but the transformation itself
+was not rebuilt separately within each later training partition. The embedding
+analyses show that the representations retain predictive information, but they
+do not establish how an embedding learned only from training patients would
+perform in previously unseen patients. The prognostic time representation also
+used observed follow-up time as a regression target and did not model censoring
+directly, which further limits its interpretation as a survival representation.
+
+The synthetic cohorts generated from the complete SEER datasets have the same
+dependency on the full observed cohort. They are useful for studying whether
+distributions and modelling pipelines can be reproduced, but they are not
+independent validation data. In the augmentation experiment, this dependency
+was reduced by training a new generator only on the real training patients in
+each evaluation partition and testing the models only on held-out real
+patients. Even under this stronger design, generated records do not add new
+clinical observations. At the largest prognostic augmentation size, synthetic
+records formed 97.9\% of the combined training data, so the fitted model was
+dominated by the generator's approximation of a small real cohort.
+
+The fidelity results identify clinically relevant differences between real and
+synthetic records. Grade 4 was absent from every generated dataset, some
+continuous tumour sizes disagreed with their recorded size groups, and outcome
+frequency, survival time and relationships between variables were not always
+preserved. Similar distributions for individual variables therefore do not
+guarantee preservation of the combinations that matter to a prediction model.
+Conversely, the improvement observed for diagnostic XGBoost does not establish
+that the synthetic data were faithful in every respect.
+
+No formal privacy analysis was performed. The absence of exact duplicate rows
+and the use of new identifiers are useful integrity checks, but they do not
+measure whether information about individual patients could be inferred from
+the generated data. The synthetic records should therefore not be considered
+anonymous clinical substitutes or released on the basis of this study alone.
+
+\subsection{Model scope, subgroups and clinical applicability}
+
+The evaluated model set is substantial but not exhaustive. The MLP experiment
+tested one prespecified architecture and training procedure; it was not a search
+over all possible neural networks. The foundation-model results apply to the
+specific model versions, preprocessing choices and inference procedures used in
+this study. Their pretraining datasets were not independently reconstructed, so
+the analysis cannot determine how much of the observed performance arose from
+pretraining or rule out overlap with similar data sources. The absence of a
+prognostic advantage in this study does not prove that all future
+survival-focused foundation models will perform similarly.
+
+Rare clinical groups remain particularly uncertain. The prognostic cohort
+contains only three patients with brain metastasis and 33 with grade 4. The
+diagnostic cohort contains 60 patients with grade 4, but many individual
+evaluation partitions had too few such patients for a stable estimate. No
+prognostic partition met the prespecified support requirement for grade-4
+performance, and synthetic augmentation could not improve this because grade 4
+was absent from the generated data. A missing subgroup estimate is not evidence
+of equal performance, and strong overall results do not establish fairness or
+safety in rare groups.
+
+Finally, the study is predictive rather than causal. It does not estimate the
+effect of treatment, define a clinical intervention, compare healthcare
+workflows or measure prospective patient benefit. Discrimination, calibration,
+prediction error and decision curves are useful components of model evaluation,
+but they are not sufficient for deployment. Clinical use would require larger
+external cohorts, validation across time and centres, predefined decision
+thresholds, assessment of rare groups and a prospective study of clinical
+impact.
+
+\subsection{Implications for the conclusions}
+
+Within these limits, the matched internal comparisons support small diagnostic
+advantages for the three evaluated tabular foundation models over logistic
+regression. They also support a specific diagnostic augmentation benefit for
+XGBoost. The analyses did not establish a general advantage for the tested MLP,
+synthetic augmentation or foundation models in prognosis. The independent
+Erlangen results provide encouraging evidence that the reproduced reference
+models retained predictive ranking, but the sample is too small to determine
+their performance precisely.
+
+The study does not establish external performance for the foundation-model and
+synthetic-data experiments, causal benefit, formal privacy, reliable performance
+in rare subgroups or readiness for clinical deployment. Future work should
+evaluate all model families in larger and temporally distinct multicentre
+cohorts, learn every representation and synthetic-data generator using training
+patients only, recruit enough patients from rare clinical groups, repeat the
+complete model-development process when estimating uncertainty and assess both
+privacy risk and prospective clinical benefit.

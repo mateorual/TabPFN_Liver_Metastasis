@@ -1,0 +1,13 @@
+cohort,time_label,time_months,model,auc,auc_lower_95,auc_upper_95,n,n_events
+Training,1-year,12,nomogram_figure,0.8886,0.8416,0.9355,323,78
+Training,1-year,12,tn_baseline,0.6129,0.5392,0.6866,323,78
+Training,2-year,24,nomogram_figure,0.8259,0.7758,0.876,323,110
+Training,2-year,24,tn_baseline,0.6249,0.56,0.6898,323,110
+Training,3-year,36,nomogram_figure,0.8222,0.7751,0.8694,323,142
+Training,3-year,36,tn_baseline,0.5979,0.5361,0.6596,323,142
+Internal validation,1-year,12,nomogram_figure,0.8861,0.8261,0.9461,139,33
+Internal validation,1-year,12,tn_baseline,0.3909,0.2839,0.4978,139,33
+Internal validation,2-year,24,nomogram_figure,0.8734,0.8165,0.9302,139,50
+Internal validation,2-year,24,tn_baseline,0.4429,0.3463,0.5395,139,50
+Internal validation,3-year,36,nomogram_figure,0.8441,0.7786,0.9096,139,61
+Internal validation,3-year,36,tn_baseline,0.5046,0.4098,0.5994,139,61

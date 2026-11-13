@@ -1,0 +1,13 @@
+model,evaluation_set,horizon_months,brier_score_pkg,brier_engine,abs_diff
+nomogram_figure,model_specific,12,0.11631748538038883,0.11631748538038883,0
+nomogram_figure,model_specific,24,0.12335980188899778,0.12335980188899778,0
+nomogram_figure,model_specific,36,0.15269346638448572,0.15269346638448575,2.7755575615628914e-17
+tn_baseline,model_specific,12,0.19646079536784952,0.19646079536784952,0
+tn_baseline,model_specific,24,0.21384364414620807,0.21384364414620807,0
+tn_baseline,model_specific,36,0.208677014331976,0.208677014331976,0
+nomogram_figure,common_primary_comparison,12,0.12119237950659903,0.12119237950659903,0
+nomogram_figure,common_primary_comparison,24,0.1245607638542631,0.1245607638542631,0
+nomogram_figure,common_primary_comparison,36,0.15114241109821175,0.15114241109821175,0
+tn_baseline,common_primary_comparison,12,0.19646079536784952,0.19646079536784952,0
+tn_baseline,common_primary_comparison,24,0.21384364414620807,0.21384364414620807,0
+tn_baseline,common_primary_comparison,36,0.208677014331976,0.208677014331976,0

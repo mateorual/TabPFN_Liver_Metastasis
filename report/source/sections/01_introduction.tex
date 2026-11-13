@@ -1,0 +1,240 @@
+\section{Introduction}
+\label{sec:introduction}
+
+\subsection{Clinical setting and study premise}
+\label{sec:introduction:clinical}
+
+Pancreatic neuroendocrine tumours (\pNET{}s) are uncommon neoplasms with
+heterogeneous clinical behaviour. Liver metastasis is particularly relevant
+because it marks advanced disease and is associated with substantially different
+management and prognosis. This report addresses two related but distinct clinical
+prediction tasks in registry data. The \emph{diagnostic task} estimates whether
+liver metastasis is recorded at the time of the initial cancer diagnosis. The
+\emph{prognostic task} estimates overall survival among the subgroup of patients
+who already have liver metastasis at diagnosis. The diagnostic outcome therefore
+does not represent the later development of metastasis, and the prognostic cohort
+does not represent all patients with \pNET{}.
+
+The starting point is the multicentre study of \citet{Li2023}, which developed
+diagnostic and prognostic nomograms from Surveillance, Epidemiology, and End
+Results (SEER) data and evaluated them in additional hospital cohorts. SEER is a
+population-based cancer surveillance programme maintained by the US National
+Cancer Institute \citep{NCISEER}. Reconstructing the published workflows on the
+available SEER extract establishes clinically interpretable reference analyses,
+exposes differences between the published description and an executable
+pipeline, and provides a common baseline for the subsequent experiments.
+Reproduction in this report means reproducing the analytical logic as closely as
+the available variables and methodological description allow; it does not imply
+access to the original patient sample or the external validation cohorts used by
+the reference study. A separate 30-patient hospital cohort from
+Universit\"atsklinikum Erlangen (University Hospital Erlangen, hereafter
+UK--Erlangen) was subsequently made available. It is used to evaluate, without
+refitting, the diagnostic and prognostic models trained during the SEER-based
+reproduction of the reference study. This cohort is independent of the reference
+study's hospital cohorts and is not presented as their replication.
+
+\subsection{Scientific motivation}
+\label{sec:introduction:motivation}
+
+Modern tabular foundation models offer more than an additional prediction
+algorithm. A pretrained model may be used directly for in-context prediction,
+as a representation model that maps patients into a dense embedding space, or
+as a generator of synthetic tabular records. TabPFN provides a prominent example
+of this paradigm for small tabular datasets \citep{Hollmann2025}. Each role must
+be assessed differently. When the model is used for prediction, it must
+generalise to real patients who were not used for fitting. When it is used to
+create embeddings, the resulting representation should retain information that
+is useful for the clinical task. When it is used to generate synthetic records,
+the generated cohort should reproduce relevant clinical structure, but it must
+not be treated as independent patient evidence.
+
+Consequently, a higher score from one model is not sufficient to establish that
+a transformation is faithful or that synthetic augmentation is useful. The
+evaluation must also consider probability error, calibration, dataset
+similarity, subgroup support and the conditions under
+which uncertainty was estimated. Classical statistical and machine-learning
+models remain essential comparators because they distinguish gains associated
+with a foundation model from gains attributable to the evaluation protocol,
+model capacity or additional training records.
+
+The central research question is therefore:
+\begin{quote}
+\itshape
+How reliably can diagnostic and prognostic analyses for liver-metastatic
+\pNET{} be reproduced from the available SEER data, and what is gained or lost
+when the real clinical variables are replaced or supplemented by TabPFN-derived
+representations, synthetic records, MLP models and other tabular
+foundation models?
+\end{quote}
+
+\subsection{Aim and objectives}
+\label{sec:introduction:objectives}
+
+The overall aim is to evaluate tabular foundation-model methods as predictors,
+representations and data generators within a traceable clinical-registry
+workflow. The work is organised around nine objectives:
+
+\begin{enumerate}[label=\textbf{O\arabic*.},ref=O\arabic*]
+\item \label{obj:data}\textbf{SEER data preparation.}
+Document how the data were downloaded using SEER*Stat and how the cohort
+eligibility criteria, outcome definitions and preprocessing steps were based on
+the reference study and adapted where required to construct the diagnostic and
+prognostic datasets.
+
+\item \label{obj:reference}\textbf{Reference-study reproduction.}
+Reconstruct the diagnostic and prognostic workflows of \citet{Li2023} using the
+November 2023 SEER extract after preprocessing it according to the
+reference-study methodology. Record all necessary methodological adaptations and
+the limits of comparison because this extract is not the November 2019 SEER
+dataset used by the reference study, which was no longer available through the
+project's SEER*Stat access.
+
+\item \label{obj:external}\textbf{External validation of the reference models.}
+Apply, without refitting or recalibration, the diagnostic and prognostic models
+trained during the SEER-based reference-study reproduction to the independently
+supplied UK--Erlangen hospital cohort, and quantify discrimination, probability
+error, calibration and survival separation.
+
+\item \label{obj:transformations}\textbf{TabPFN-derived datasets.}
+Use TabPFN to create dense representations of the observed patients and to learn
+the joint distribution of the clinical variables and outcomes, from which
+complete synthetic patient records can be sampled.
+
+\item \label{obj:transformed-reproduction}\textbf{Reproduction on transformed data.}
+Apply the diagnostic and prognostic analysis pipelines to the embedding and
+complete synthetic datasets and compare these results with the real-data
+reproduction under their respective evaluation designs.
+
+\item \label{obj:similarity}\textbf{Similarity and synthetic-data fidelity.}
+Quantify the extent to which the transformations preserve marginal
+distributions, relationships among variables, local geometry, clinically
+important categories, overall and subgroup survival patterns, and downstream
+model performance.
+
+\item \label{obj:foundation-models}\textbf{Multi-model benchmarking.}
+Compare tabular foundation models, a survival-pretrained foundation model and
+classical baselines on matched real-patient evaluation units using
+task-appropriate discrimination, probability-error and calibration measures.
+
+\item \label{obj:mlp}\textbf{Nonlinear prediction with MLPs.}
+Assess whether multilayer-perceptron (MLP) models applied to the clinical
+variables improve upon the performance achieved by the initial reconstructed
+reference-study models. Use matched linear, tree-based and foundation-model
+results as additional context, and explore MLP models applied to the saved TabPFN
+embeddings separately.
+
+\item \label{obj:augmentation}\textbf{Synthetic augmentation.}
+For each evaluation split, use only the real training patients to generate a
+synthetic pool. Add 1,000, 5,000, 10,000 or 15,000 of these synthetic records to
+the same real training set, fit each model on the resulting combined dataset and
+evaluate it only on the held-out real patients. Compare every augmented condition
+with the same model trained on the real training set alone.
+\end{enumerate}
+
+\subsection{Analytical structure}
+\label{sec:introduction:structure}
+
+Table~\ref{tab:introduction:architecture} summarises how the experimental layers
+answer the central question. Each layer examines a different aspect of the
+project, so its findings must be interpreted according to its own purpose and
+evaluation design. Transformation fidelity, predictive accuracy and augmentation
+utility are therefore assessed separately.
+
+\begin{table}[htbp]
+\centering
+\caption{Analytical structure of the project. ``Real test'' denotes evaluation
+on observed patients who were excluded from fitting and, for augmentation,
+excluded from synthetic-data generation.}
+\label{tab:introduction:architecture}
+\small
+\begin{tabularx}{\textwidth}{@{}>{\RaggedRight\arraybackslash}p{0.19\textwidth}YY@{}}
+\toprule
+\textbf{Analytical layer} & \textbf{Principal comparison} & \textbf{Purpose} \\
+\midrule
+Data processing
+  & Raw SEER extract to task-specific diagnostic and prognostic cohorts
+  & Establishes the eligible populations, variables, outcomes and attrition. \\
+Reference reproduction
+  & Reconstructed nomogram workflows on real clinical variables
+  & Provides interpretable clinical baselines and documents reproducibility limits. \\
+External validation
+  & SEER-trained reference models applied unchanged to independent UK--Erlangen patients
+  & Tests whether the reference models retain predictive value in an independent cohort, while making the limitations of the small sample clear. \\
+TabPFN transformations
+  & Original clinical data compared with TabPFN embeddings and synthetic records containing clinical variables and outcomes
+  & Tests whether predictive and structural information survives transformation. \\
+Foundation-model benchmark
+  & Tabular foundation models and classical baselines trained and tested on the same SEER data splits
+  & Compares model families using the same patient groups and evaluation measures. \\
+MLP models
+  & MLPs compared with the initial reference models and with additional models trained and tested on the same SEER data splits
+  & Tests whether additional nonlinear capacity improves the previously achieved performance. \\
+Synthetic augmentation
+  & Real-only training versus real plus 1K, 5K, 10K or 15K synthetic rows
+  & Measures whether training-only generated records improve performance on held-out real patients. \\
+\bottomrule
+\end{tabularx}
+\end{table}
+\FloatBarrier
+
+\subsection{Scope and principles of interpretation}
+\label{sec:introduction:scope}
+
+This study evaluates how well models predict outcomes from previously recorded
+SEER data. It does not determine why an outcome occurred or whether a treatment
+caused benefit or harm. Treatment information in the registry may be incomplete,
+and some treatments may not have been known at the time when a prediction would
+need to be made. The results should therefore be interpreted as an evaluation of
+predictive performance, not as evidence for treatment decisions or causal
+relationships.
+
+Most comparative experiments use internal SEER validation. The reference study's
+hospital cohorts were unavailable, but an independently supplied UK--Erlangen
+cohort of 30 patients permits external validation of the conventional diagnostic
+and prognostic models trained during the SEER-based reproduction. Only 11
+patients enter the prognostic analysis. This small
+evaluation supports a preliminary assessment of transportability, not precise
+subgroup inference, deployment readiness or patient benefit. The foundation-
+model, representation, MLP and augmentation experiments remain internally
+evaluated and are not externally validated by this cohort.
+
+The uncertainty estimates are interpreted according to what was resampled.
+Intervals obtained by resampling predictions from fixed fitted models quantify
+test-patient sampling variability conditional on those models. They do not
+include the uncertainty that would arise from repeating model selection,
+training or synthetic-data generation. Repeated folds and overlapping test sets
+are likewise not treated as independent studies.
+
+The project uses synthetic records in two ways. First, complete synthetic
+datasets containing both clinical variables and outcomes are compared with the
+original SEER data to examine which distributions and clinical relationships are
+preserved. These generated records are not independent patients and therefore
+cannot be used as external validation data. Second, the augmentation experiments
+generate synthetic records using only the real patients assigned to the training
+set in each evaluation split. The generated records are added only to that
+training set, and model performance is measured on the held-out real patients.
+Important limitations remain: grade~4 is absent from the synthetic data, and a
+small proportion of generated records contain a tumour-size category that does
+not agree with the generated tumour size in millimetres. Analyses based on the
+saved embeddings are considered exploratory because those embeddings were
+created from the full cohort before the later training and test splits were
+defined.
+
+\subsection{Organisation of the report}
+\label{sec:introduction:organisation}
+
+The report follows the analytical sequence in Table~\ref{tab:introduction:architecture}.
+It first documents SEER data acquisition, cohort construction and preprocessing,
+then presents the reference diagnostic and prognostic reproductions and their
+evaluation in the independent UK--Erlangen cohort. Subsequent sections describe
+the TabPFN transformations, reproduction on transformed data,
+dataset-similarity and synthetic-fidelity analyses, and a comparison of tabular
+foundation models trained and evaluated on the same SEER patient splits with the
+same performance measures. The final experimental sections assess nonlinear MLP models and
+synthetic augmentation in which generated records are added only to the training
+data and performance is evaluated on held-out real patients. An integrated discussion
+then compares the findings across experiments, distinguishes supported results
+from exploratory or unsupported ones, and closes with study limitations and
+conclusions. Readers who need further technical detail can consult the additional
+metric definitions, source records, code, tables and figures stored with the
+project files.

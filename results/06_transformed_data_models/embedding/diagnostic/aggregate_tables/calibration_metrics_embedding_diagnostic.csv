@@ -1,0 +1,4 @@
+metric,value
+brier_score,0.0872
+calibration_intercept_deciles,0.002
+calibration_slope_deciles,0.986

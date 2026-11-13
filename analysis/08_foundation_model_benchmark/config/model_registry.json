@@ -1,0 +1,269 @@
+{
+ "_comment": "Declarative model registry. 'family' groups models for signal-agreement analysis. 'weight_class' marks whether a model is heavy (FM/discovery-side) or lightweight (distillation/deployment-side). 'leakage_caveat' is non-null when a model's inputs were derived using the full cohort, making its scores NOT directly comparable to honestly cross-validated models.",
+ "diagnostic": [
+  {
+   "model_id": "tabpfn_classifier",
+   "adapter": "tabpfn_adapter.TabPFNClassifierAdapter",
+   "family": "foundation_model",
+   "weight_class": "heavy",
+   "requires": [
+    "tabpfn"
+   ],
+   "description": "TabPFN tabular foundation model, in-context classification on raw clinical features.",
+   "provenance": {
+    "package": "tabpfn",
+    "checkpoint": "tabpfn-v3-classifier-v3_default.ckpt (TabPFN-3; EXPLICITLY PINNED in benchmark_config.json -> tabpfn_checkpoint_pin, sha256 d0d865d54dfbc524f5703104be90620182dca7e5fb2c16de72e9959ea18f3988, verified against the checksum Prior-Labs/tabpfn_3 publishes for this filename, and confirmed by the loaded architecture reporting tabpfn_v3). CORRECTED 2026-09-21: this field previously read 'tabpfn-v2-classifier (default bundled checkpoint)', a static description that was never derived from a loaded model and was wrong - tabpfn 8.0.8 resolves generation v3 by default. The ORIGINAL benchmark's saved manifest still records the old description and is preserved as the historical record; which checkpoint that run actually loaded is graded inferred_not_proven in outputs/foundation_model_completion/tables/historical_provenance_amendments.csv.",
+    "model_kind": "genuine_foundation_model",
+    "pretraining": "TabPFN-3, pretrained on synthetic tabular classification tasks",
+    "weights_source": "local TabPFN cache, resolved through the explicit pin and hash-verified. Neither the availability probe nor the fit path may fall back to the package default, and neither downloads.",
+    "adapter_limitations": "in-context learning: the 'fit' call stores the training set rather than updating weights, so runtime scales with cohort size at predict time. Feature signals come from model-agnostic permutation importance, not from internal attention."
+   }
+  },
+  {
+   "model_id": "tabpfn_embedding_ridge",
+   "adapter": "tabpfn_adapter.TabPFNEmbeddingRidgeAdapter",
+   "family": "foundation_model_embedding",
+   "weight_class": "heavy",
+   "requires": [],
+   "leakage_caveat": "Uses precomputed out-of-fold TabPFN embeddings generated once over the FULL cohort (see 00_TabPFN_Transformations/01_Embedding_Transformation). The embedding transform therefore saw every benchmark test fold's rows during its own fitting, so these scores are optimistic and NOT head-to-head comparable with the honestly cross-validated models. Reported for continuity with 02_TabPFN_EmbeddingTransformation, flagged everywhere.",
+   "description": "Ridge logistic regression on precomputed 512-dim TabPFN embeddings.",
+   "provenance": {
+    "package": "scikit-learn (on precomputed TabPFN embeddings)",
+    "checkpoint": "n/a - consumes 512-dim embeddings precomputed in 00_TabPFN_Transformations/01_Embedding_Transformation",
+    "model_kind": "local_adaptation_of_foundation_model_embeddings",
+    "pretraining": "none in this component; the FM was used upstream to produce the embeddings",
+    "weights_source": "n/a - reads embedding CSVs from disk",
+    "adapter_limitations": "EMBEDDINGS WERE PRECOMPUTED ONCE OVER THE FULL COHORT and are not regenerated inside each outer split, so scores are exploratory and not head-to-head comparable with honestly split raw-feature models."
+   }
+  },
+  {
+   "model_id": "tabicl_v2",
+   "adapter": "tabicl_adapter.TabICLAdapter",
+   "family": "foundation_model",
+   "weight_class": "heavy",
+   "requires": [
+    "tabicl"
+   ],
+   "description": "TabICLv2 in-context tabular classifier (tabicl>=2.x, checkpoint tabicl-classifier-v2). Second genuine foundation model in the benchmark alongside TabPFN.",
+   "provenance": {
+    "package": "tabicl",
+    "checkpoint": "tabicl-classifier-v2",
+    "model_kind": "genuine_foundation_model",
+    "pretraining": "pretrained in-context tabular classifier (TabICLv2)",
+    "weights_source": "installed package cache (checkpoint resolved and load-tested during the availability probe)",
+    "adapter_limitations": "ordinal-encoded inputs; no native survival mode, so it is benchmarked on the diagnostic task only. Uncertainty is predictive entropy, not epistemic. Signals via permutation importance."
+   }
+  },
+  {
+   "model_id": "tabdpt",
+   "adapter": "tabdpt_adapter.TabDPTAdapter",
+   "family": "foundation_model",
+   "weight_class": "heavy",
+   "requires": [
+    "tabdpt"
+   ],
+   "description": "TabDPT (Layer6) discriminative pretrained tabular transformer, tabdpt>=1.2. Third genuine foundation model in the benchmark. Runs with compile/flash-attention disabled on this machine (toolchain/kernel unavailable) - a speed setting, not a modelling change.",
+   "provenance": {
+    "package": "tabdpt",
+    "checkpoint": "tabdpt-v1.2 (default bundled checkpoint)",
+    "model_kind": "genuine_foundation_model",
+    "pretraining": "discriminative pretrained tabular transformer (Layer6)",
+    "weights_source": "installed package cache (weights load-tested during the availability probe)",
+    "adapter_limitations": "run with compile=False (torch.compile inductor backend needs a C++/Triton toolchain absent on this Windows machine) and use_flash=False (no flash-attention kernel for this GPU). Both are SPEED settings and do not change predictions. Diagnostic task only; no native survival mode. Requires torch>=2.6."
+   }
+  },
+  {
+   "model_id": "xgboost_or_histgb",
+   "adapter": "classical_baselines.GradientBoostingAdapter",
+   "family": "gradient_boosting",
+   "weight_class": "lightweight",
+   "requires": [],
+   "description": "XGBoost if installed, else sklearn HistGradientBoostingClassifier. Strong classical tabular baseline and a primary distillation target.",
+   "provenance": {
+    "package": "xgboost (fallback: scikit-learn HistGradientBoosting)",
+    "checkpoint": "n/a - trained from scratch per split",
+    "model_kind": "classical_baseline",
+    "pretraining": "none",
+    "weights_source": "n/a - fitted locally",
+    "adapter_limitations": "primary lightweight distillation target; no pretraining, so it must be refit per deployment site."
+   }
+  },
+  {
+   "model_id": "regularized_logistic",
+   "adapter": "classical_baselines.RegularizedLogisticAdapter",
+   "family": "linear",
+   "weight_class": "lightweight",
+   "requires": [],
+   "description": "L2-regularized logistic regression on one-hot encoded clinical features. Interpretable distillation target.",
+   "provenance": {
+    "package": "scikit-learn",
+    "checkpoint": "n/a - trained from scratch per split",
+    "model_kind": "classical_baseline",
+    "pretraining": "none",
+    "weights_source": "n/a - fitted locally",
+    "adapter_limitations": "interpretable lightweight distillation target; linear in one-hot features."
+   }
+  }
+ ],
+ "prognostic": [
+  {
+   "model_id": "tabpfn_landmark_survival",
+   "adapter": "survival_adapter.TabPFNLandmarkSurvivalAdapter",
+   "family": "foundation_model",
+   "weight_class": "heavy",
+   "requires": [
+    "tabpfn"
+   ],
+   "description": "Survival-adapted TabPFN-3: one TabPFN classifier per landmark horizon (12/24/36 months) on patients whose status at that horizon is known. Our own censored-data adaptation of a CLASSIFICATION FM. CORRECTED 2026-09-21: this description used to end 'since no survival-pretrained FM is installed', which is no longer true - see the survivalpfn_native entry in prognostic_extension. It remains an adaptation either way.",
+   "provenance": {
+    "package": "tabpfn",
+    "checkpoint": "tabpfn-v3-classifier-v3_default.ckpt (TabPFN-3; EXPLICITLY PINNED in benchmark_config.json -> tabpfn_checkpoint_pin, sha256 d0d865d54dfbc524f5703104be90620182dca7e5fb2c16de72e9959ea18f3988, verified against the checksum Prior-Labs/tabpfn_3 publishes for this filename, and confirmed by the loaded architecture reporting tabpfn_v3). CORRECTED 2026-09-21: this field previously read 'tabpfn-v2-classifier (default bundled checkpoint)', a static description that was never derived from a loaded model and was wrong - tabpfn 8.0.8 resolves generation v3 by default. The ORIGINAL benchmark's saved manifest still records the old description and is preserved as the historical record; which checkpoint that run actually loaded is graded inferred_not_proven in outputs/foundation_model_completion/tables/historical_provenance_amendments.csv.",
+    "model_kind": "local_adaptation_of_classification_fm",
+    "pretraining": "TabPFN-3 classification pretraining; the survival handling is OUR landmarking wrapper, not pretrained survival behaviour",
+    "weights_source": "local TabPFN cache, resolved through the explicit pin and hash-verified; every landmark horizon loads the SAME pinned checkpoint",
+    "adapter_limitations": "NOT a survival foundation model. One TabPFN classifier per landmark horizon (12/24/36m) fitted on patients whose status at that horizon is known; patients censored before a horizon are excluded from THAT horizon's classifier. Survival probabilities are therefore piecewise across three horizons, not a continuous S(t)."
+   }
+  },
+  {
+   "model_id": "tabpfn_embedding_cox",
+   "adapter": "survival_adapter.EmbeddingRidgeCoxAdapter",
+   "family": "foundation_model_embedding",
+   "weight_class": "heavy",
+   "requires": [],
+   "leakage_caveat": "Uses precomputed out-of-fold TabPFN embeddings generated once over the FULL cohort; the embedding transform saw the held-out rows during its own fitting. Scores are optimistic and NOT head-to-head comparable with honestly split models. Flagged everywhere; reported for continuity with 02_TabPFN_EmbeddingTransformation.",
+   "description": "Ridge-penalized Cox model on precomputed 1024-dim TabPFN embeddings (event_emb + time_emb).",
+   "provenance": {
+    "package": "lifelines (on precomputed TabPFN embeddings)",
+    "checkpoint": "n/a - consumes 1024-dim embeddings (event_emb + time_emb) precomputed upstream",
+    "model_kind": "local_adaptation_of_foundation_model_embeddings",
+    "pretraining": "none in this component",
+    "weights_source": "n/a - reads embedding CSVs from disk",
+    "adapter_limitations": "EMBEDDINGS WERE PRECOMPUTED ONCE OVER THE FULL COHORT; exploratory only, not head-to-head comparable with honestly split models."
+   }
+  },
+  {
+   "model_id": "survival_fm",
+   "adapter": "survival_adapter.SurvivalFMPlaceholderAdapter",
+   "family": "foundation_model",
+   "weight_class": "heavy",
+   "requires": [
+    "survival_fm_placeholder_never_importable"
+   ],
+   "description": "Non-runnable reserved slot retained only to distinguish the landmark TabPFN adaptation from the native SurvivalPFN model listed below.",
+   "provenance": {
+    "package": "none installed at the time of the original benchmark",
+    "checkpoint": "n/a",
+    "model_kind": "reserved_slot_unfilled_in_the_original_benchmark",
+    "pretraining": "n/a",
+    "weights_source": "n/a",
+    "adapter_limitations": "Kept not_installed on purpose. It is not aliased to tabpfn_landmark_survival (an adaptation of a CLASSIFICATION FM, reported separately) and it is not aliased to survivalpfn_native either: the original benchmark's prognostic tables contain no survival-pretrained FM and must keep saying so. See outputs/foundation_model_completion/ for the model that did run."
+   }
+  },
+  {
+   "model_id": "cox_elastic_net",
+   "adapter": "classical_baselines.CoxElasticNetAdapter",
+   "family": "linear",
+   "weight_class": "lightweight",
+   "requires": [
+    "lifelines"
+   ],
+   "description": "Elastic-net penalized Cox proportional hazards model. Interpretable distillation target.",
+   "provenance": {
+    "package": "lifelines",
+    "checkpoint": "n/a - trained from scratch per split",
+    "model_kind": "classical_baseline",
+    "pretraining": "none",
+    "weights_source": "n/a - fitted locally",
+    "adapter_limitations": "interpretable lightweight distillation target; proportional-hazards assumption not formally tested here."
+   }
+  },
+  {
+   "model_id": "random_survival_forest_or_fallback",
+   "adapter": "survival_adapter.RandomSurvivalForestAdapter",
+   "family": "tree_ensemble",
+   "weight_class": "lightweight",
+   "requires": [],
+   "description": "scikit-survival RandomSurvivalForest (a proper right-censored survival model) when installed - which it now is; otherwise a documented landmark RandomForest-per-horizon fallback.",
+   "provenance": {
+    "package": "scikit-survival (fallback: scikit-learn landmark RandomForest per horizon)",
+    "checkpoint": "n/a - trained from scratch per split",
+    "model_kind": "classical_baseline",
+    "pretraining": "none",
+    "weights_source": "n/a - fitted locally",
+    "adapter_limitations": "scikit-survival IS installed here, so the proper right-censored RandomSurvivalForest is used rather than the landmark fallback. Feature signals come from permutation importance against the C-index."
+   }
+  }
+ ],
+ "_prognostic_extension_comment": "The native SurvivalPFN model and its matched comparators are listed separately because the completed experiment pipeline evaluates them on the same fixed partitions and preprocessing rules.",
+ "prognostic_extension": [
+  {
+   "model_id": "survivalpfn_native",
+   "adapter": "survival_fm_adapter.SurvivalPFNNativeAdapter",
+   "family": "survival_foundation_model",
+   "weight_class": "heavy",
+   "requires": [],
+   "description": "SurvivalPFN (Qi et al. 2026, arXiv:2605.15488): a prior-data fitted network pretrained on synthetic RIGHT-CENSORED survival tasks. In-context inference on raw clinical covariates; the training split including censored patients is the context. Released checkpoint survivalpfn_v0.1.pt, Apache-2.0.",
+   "provenance": {
+    "package": "survivalpfn (vendored source, NOT pip-installed; third_party/survivalpfn_c8a47d8, upstream commit c8a47d84724274e7d42d49bad2cb62721c3c90be)",
+    "checkpoint": "survivalpfn_v0.1.pt (shi-ang/SurvivalPFN @ a4ccf9950c73723ca20296f624e649f344e2165a, sha256 a7b844809ad2dc5a675384704f7b6d85dfb88e96b82031c4542ce90a4fd439bb, 75,435,990 bytes)",
+    "model_kind": "genuine_survival_pretrained_foundation_model",
+    "pretraining": "negative log-likelihood of a discretised event-time distribution under right censoring, on synthetic survival tasks drawn from survival priors. The CENSORING-AWARE PRETRAINING OBJECTIVE is the basis for this model_kind - not the repository name, not a Cox head, and not its score.",
+    "weights_source": "Hugging Face shi-ang/SurvivalPFN, downloaded once with explicit user approval, sha256-verified before deserialization, loaded with torch.load(weights_only=True); no unsafe pickle path is used and inference is offline",
+    "adapter_limitations": "Runs in an isolated worker subprocess (the vendored source root ships its own top-level tests/ and train.py, which would shadow this repository's tests package). Risk score is -RMST of the predicted event-time distribution, predeclared before any validation score. Uncertainty is NOT exposed. The authors' own held-out benchmark includes SEER_liver/SEER_brain, so this is internal evaluation and is NOT claimed to be uncontaminated external validation; patient-level overlap with this extract is not_reported, which is not verified absent."
+   }
+  },
+  {
+   "model_id": "cox_elastic_net",
+   "adapter": "classical_baselines.CoxElasticNetAdapter",
+   "family": "linear",
+   "weight_class": "lightweight",
+   "requires": [
+    "lifelines"
+   ],
+   "description": "Matched comparator, refit inside the extension namespace on the same frozen splits and preprocessing as survivalpfn_native. Same adapter as the prognostic entry above.",
+   "provenance": {
+    "package": "lifelines",
+    "checkpoint": "n/a - trained from scratch per split",
+    "model_kind": "classical_baseline",
+    "pretraining": "none",
+    "weights_source": "n/a - fitted locally",
+    "adapter_limitations": "interpretable lightweight distillation target; proportional-hazards assumption not formally tested here."
+   }
+  },
+  {
+   "model_id": "random_survival_forest_or_fallback",
+   "adapter": "survival_adapter.RandomSurvivalForestAdapter",
+   "family": "tree_ensemble",
+   "weight_class": "lightweight",
+   "requires": [],
+   "description": "Matched comparator: the ACTUAL native scikit-survival RandomSurvivalForest backend (scikit-survival is installed), refit inside the extension namespace.",
+   "provenance": {
+    "package": "scikit-survival",
+    "checkpoint": "n/a - trained from scratch per split",
+    "model_kind": "classical_baseline",
+    "pretraining": "none",
+    "weights_source": "n/a - fitted locally",
+    "adapter_limitations": "proper right-censored RandomSurvivalForest backend; feature signals come from permutation importance against the C-index."
+   }
+  },
+  {
+   "model_id": "tabpfn_landmark_survival",
+   "adapter": "survival_adapter.TabPFNLandmarkSurvivalAdapter",
+   "family": "foundation_model",
+   "weight_class": "heavy",
+   "requires": [
+    "tabpfn"
+   ],
+   "description": "Matched comparator and the scientifically interesting contrast: an adaptation of a CLASSIFICATION foundation model to censored data by landmarking, against a model whose pretraining objective was censoring-aware. Now pinned to the verified TabPFN-3 checkpoint.",
+   "provenance": {
+    "package": "tabpfn",
+    "checkpoint": "tabpfn-v3-classifier-v3_default.ckpt (explicitly pinned; sha256 d0d865d54dfbc524f5703104be90620182dca7e5fb2c16de72e9959ea18f3988)",
+    "model_kind": "local_adaptation_of_classification_fm",
+    "pretraining": "TabPFN-3 classification pretraining; the survival handling is OUR landmarking wrapper, not pretrained survival behaviour",
+    "weights_source": "local TabPFN cache, pinned and hash-verified (see benchmark_config.json tabpfn_checkpoint_pin)",
+    "adapter_limitations": "NOT a survival foundation model. Patients censored before a horizon are DROPPED from that horizon's classifier rather than IPCW-reweighted, so its horizon risks are unweighted known-status classification; treating early censoring as independent does not in general make that an unbiased horizon risk. Its claims are unchanged by this work package."
+   }
+  }
+ ],
+ "_provenance_comment": "Each model carries a 'provenance' block recording package, checkpoint, model_kind (genuine_foundation_model vs local_adaptation vs classical_baseline), pretraining, weights_source and adapter_limitations. Static facts live here; the version actually installed and the device actually used are probed at runtime by scripts/00_check_model_availability.py so the two can never drift apart."
+}

@@ -1,0 +1,80 @@
+{
+  "config_version": "1.0.0",
+  "bundle_schema_version": "mlp_bundle/1",
+  "selection_status": "prespecified_defaults_evaluated_without_tuning",
+  "_selection_status_note": "These architecture and optimiser settings were prespecified rather than tuned, then evaluated in the completed matched experiment recorded under results/09_nonlinear_mlp_heads and results/10_synthetic_augmentation.",
+
+  "base_seed": 20230529,
+
+  "device": "cuda",
+  "allow_cpu_fallback": false,
+  "_device_note": "CUDA is the research default. If CUDA is requested and unavailable, fitting refuses with status blocked_missing_cuda_or_resources. CPU only on an explicit --device cpu / device='cpu' (portability, unit and smoke tests).",
+  "dtype": "float32",
+  "allow_tf32": false,
+  "deterministic_algorithms": true,
+  "cublas_workspace_config": ":4096:8",
+
+  "clinical_schema_source": "analysis/08_foundation_model_benchmark/config/benchmark_config.json",
+  "fitted_preprocessing_source": "analysis/08_foundation_model_benchmark/src/fitted_preprocessing.py",
+  "min_category_count": 15,
+  "_min_category_count_note": "Same threshold as component 05's corrected train-only protocol (foundation_model_corrections_config.json).",
+  "embedding_files": {
+    "diagnostic": "data/restricted/tabpfn_embeddings/seer_diagnostic_tabpfn_embeddings.csv",
+    "prognostic": "data/restricted/tabpfn_embeddings/seer_prognostic_tabpfn_embeddings.csv"
+  },
+  "embedding_prefixes": {
+    "diagnostic": ["emb_"],
+    "prognostic": ["event_emb_", "time_emb_"]
+  },
+  "_embedding_note": "Prognostic uses the documented 'combined' block (512 event + 512 time dimensions = 1,024), as in component 05. The saved embeddings were computed once across the full cohort, so embedding-mode results are not automatically a strict head-to-head with clinical-variable mode.",
+
+  "forbidden_predictors": ["patient_id", "mets_liver", "os_months", "os_event", "repeat", "fold",
+                           "split", "role", "cohort", "row_origin", "synthetic_pool_index",
+                           "augmentation_size", "synthetic_rows", "generator_seed", "seed",
+                           "unit_id", "task"],
+
+  "inner_validation": {
+    "fraction": 0.2,
+    "diagnostic_stratify": "mets_liver",
+    "prognostic_stratify": "os_event x tertile of os_months (tertile cut points from the outer-training rows); falls back to os_event alone, then to unstratified, when a stratum has fewer than min_stratum_size rows",
+    "min_stratum_size": 2
+  },
+
+  "diagnostic": {
+    "hidden_widths": [64, 32],
+    "activation": "relu",
+    "dropout": 0.2,
+    "batch_norm": false,
+    "weight_decay": 0.0001,
+    "optimizer": "adamw",
+    "learning_rate": 0.001,
+    "max_epochs": 300,
+    "batch_size": 128,
+    "early_stopping_patience": 20,
+    "early_stopping_min_delta": 0.0001,
+    "loss": "bce_with_logits",
+    "class_weighting": "none",
+    "_class_weighting_note": "'balanced' sets pos_weight = n_negative / n_positive computed from the fit rows only."
+  },
+
+  "prognostic": {
+    "hidden_widths": [32, 16],
+    "activation": "relu",
+    "dropout": 0.2,
+    "batch_norm": false,
+    "weight_decay": 0.0001,
+    "optimizer": "adamw",
+    "learning_rate": 0.001,
+    "max_epochs": 300,
+    "batch_size": null,
+    "_batch_size_note": "null = full batch, so every Cox risk set is the complete set of fit rows at risk. A finite batch size computes the partial likelihood within each batch (a documented approximation).",
+    "early_stopping_patience": 20,
+    "early_stopping_min_delta": 0.0001,
+    "loss": "cox_negative_partial_log_likelihood",
+    "cox_ties": "breslow",
+    "baseline_hazard": "breslow",
+    "survival_horizons_months": [12, 24, 36]
+  },
+
+  "serialization_tolerance": {"rtol": 1e-6, "atol": 1e-6}
+}

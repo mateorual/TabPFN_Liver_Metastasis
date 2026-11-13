@@ -1,0 +1,25 @@
+# Core (required)
+pandas>=2.3
+numpy>=1.26,<2
+scikit-learn>=1.6
+scipy>=1.16
+statsmodels>=0.14
+lifelines>=0.30
+matplotlib>=3.10
+tabulate>=0.9
+
+# Tabular foundation models benchmarked here (all three installed and verified)
+tabpfn>=8.0            # needs locally cached weights; no download is triggered by this component
+tabicl>=2.1            # TabICLv2 checkpoint
+tabdpt>=1.2            # REQUIRES torch>=2.6
+torch>=2.6             # install the CUDA build from https://download.pytorch.org/whl/cu124 to keep GPU;
+                       # plain PyPI wheels on Windows are CPU-only and make FM runs far slower
+
+# Classical baselines / survival
+xgboost>=3.0           # falls back to sklearn HistGradientBoosting if absent
+scikit-survival>=0.24  # enables a true RandomSurvivalForest; without it a landmark RF fallback is used
+                       # NOTE: scikit-survival>=0.25 pulls numpy>=2 and scikit-learn>=1.9; 0.24.1 is
+                       # pinned-compatible with the numpy 1.26 stack used here
+
+# OPTIONAL - not currently used
+# shap                 # would enable SHAP-based signal extraction

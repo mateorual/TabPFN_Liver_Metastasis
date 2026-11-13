@@ -1,0 +1,7 @@
+cohort,time_label,time_months,cal_slope,cal_intercept
+Training,1-year,12,1.0175,-0.0105
+Training,2-year,24,1.4476,-0.5005
+Training,3-year,36,1.5821,-0.7188
+Internal validation,1-year,12,1.4867,-0.4049
+Internal validation,2-year,24,1.3227,-0.1806
+Internal validation,3-year,36,1.2262,-0.1089

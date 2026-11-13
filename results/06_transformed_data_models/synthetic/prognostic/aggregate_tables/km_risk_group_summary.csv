@@ -1,0 +1,5 @@
+cohort,risk_group,n_patients,n_events,median_os,logrank_p,cutpoint
+Training,Low-risk,162,79,98,0,-0.0754
+Training,High-risk,161,138,22,0,-0.0754
+Internal validation,Low-risk,70,35,94,0,-0.0754
+Internal validation,High-risk,69,59,24,0,-0.0754

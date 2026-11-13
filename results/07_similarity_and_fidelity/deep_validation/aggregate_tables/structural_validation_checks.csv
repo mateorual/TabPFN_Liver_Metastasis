@@ -1,0 +1,13 @@
+dataset,synthetic_strategy,check,real_value,synthetic_value,passed,detail
+diagnostic,jointxy,column_set_and_order,21,21,True,identical
+diagnostic,jointxy,row_count,2672,3000,True,"row counts differ - all comparisons use rates/shares, not raw counts"
+diagnostic,jointxy,missing_values,0,0,True,synthetic data must not introduce missingness
+diagnostic,jointxy,outcome_prevalence,0.1729,0.157,True,absolute difference -0.0159
+diagnostic,jointxy,range_age_at_diagnosis,"[4, 90]","[4, 90]",True,synthetic values should stay within a plausible real range
+prognostic,jointxy,column_set_and_order,23,23,True,identical
+prognostic,jointxy,row_count,462,462,True,equal
+prognostic,jointxy,missing_values,0,0,True,synthetic data must not introduce missingness
+prognostic,jointxy,event_rate,0.6732,0.6732,True,absolute difference +0.0000
+prognostic,jointxy,survival_time_validity,0.0,0.0,True,0 negative survival times in synthetic
+prognostic,jointxy,median_survival_months,41.0,47.5,True,descriptive
+prognostic,jointxy,range_age_at_diagnosis,"[4, 90]","[13, 90]",True,synthetic values should stay within a plausible real range
